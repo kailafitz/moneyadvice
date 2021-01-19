@@ -24,6 +24,7 @@ body {
 .f-h4 {
   font-size: 1.2em;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 .f-p {
@@ -37,12 +38,13 @@ body {
 }
 
 #f-AppBar {
+  width: 100%;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
-  position: fixed;
+  position: relative;
 }
 #f-AppBar #f-NavBarLogo {
   width: 25%;
@@ -71,7 +73,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: overlay;
   display: flex;
   padding: 10em 0;
   height: 70vh;
@@ -170,6 +171,52 @@ body {
   border-radius: 10px;
   color: #ffffff;
   box-shadow: -2px 3px 10px -3px #111111;
+}
+
+footer {
+  background-color: #068095;
+  color: #ffffff;
+  padding: 5em;
+  font-family: "Roboto", sans-serif;
+}
+footer #f-BigColumnDiv {
+  width: 60%;
+  flex-grow: 1;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+footer #f-BigColumnDiv .f-FooterColumn {
+  margin: 0 2em;
+}
+footer #f-BigColumnDiv #f-LogoColumn {
+  width: 30%;
+}
+footer #f-BigColumnDiv #f-LogoColumn img {
+  margin: 1em auto;
+  width: 80%;
+}
+footer #f-BigColumnDiv #f-OurCompanyColumn {
+  width: 20%;
+}
+footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul {
+  padding: 0;
+}
+footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li {
+  list-style-type: none;
+  font-weight: 300;
+  margin: none;
+}
+footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li a:hover {
+  text-decoration: underline;
+}
+footer #f-BigColumnDiv #f-ContactUsColumn {
+  width: 30%;
 }
 
 /*# sourceMappingURL=app.css.map */

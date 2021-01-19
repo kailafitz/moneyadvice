@@ -15,6 +15,7 @@ import StandardLife from "../Images/Partner-Logos/StandardLife.png"
 import Zurich from "../Images/Partner-Logos/Zurich.png"
 import Conexim from "../Images/Partner-Logos/Conexim.png"
 import { Testimonial } from "../Components/Testimonial";
+import Footer from "../Components/Footer";
 
 
 const Home = () => (
@@ -50,6 +51,7 @@ const Home = () => (
         <button className="f-h3" id="f-ActionButton">
             Call us today for your demo and a quotation!
         </button>
+        <Footer />
   </>
 );
 

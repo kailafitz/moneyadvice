@@ -33,6 +33,7 @@ body {
 .f-h4 {
     font-size: 1.2em;
     font-family: $roboto;
+    font-weight: 300;
 }
 
 .f-p {
@@ -46,12 +47,13 @@ body {
 }
 
 #f-AppBar {
+    width: 100%;
     background-color: $wh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1em;
-    position: fixed;
+    position: relative;
     // box-shadow: 0 8px 6px -6px black;
 
     // Logo-Sm.png
@@ -86,7 +88,6 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat:  no-repeat;
-    background-blend-mode: overlay;
     display: flex;
     padding: 10em 0;
     height: 70vh;
@@ -208,4 +209,65 @@ body {
     border-radius: 10px;
     color: $wh;
     box-shadow: -2px 3px 10px -3px #111111;
+}
+
+footer {
+    background-color: #068095;
+    color: $wh;
+    padding: 5em;
+    font-family: $roboto;
+
+    #f-BigColumnDiv {
+        width: 60%;
+        flex-grow: 1;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+        // display: grid;
+        // grid-template-columns: repeat(3, 30%);
+
+        .f-FooterColumn {
+            margin: 0 2em;
+        }
+
+        #f-LogoColumn {
+            width: 30%;
+
+            img {
+                margin: 1em auto;
+                width: 80%;
+            }
+        }
+
+        #f-OurCompanyColumn {
+            width: 20%;
+
+            #f-FooterLinks {
+                
+                ul {
+                    padding: 0;
+
+                    li {
+                        list-style-type: none;
+                        font-weight: 300;
+                        margin: none;
+                        
+                        a {
+                            color: $wh;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #f-ContactUsColumn {
+            width: 30%;
+        }
+    }
 }
