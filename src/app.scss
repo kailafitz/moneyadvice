@@ -1,0 +1,211 @@
+$wh: #ffffff;
+$grey-dark: #7d7d7d;
+$grey-light: #f3f3f3;
+$logo-blue: #068095;
+$logo-purple: #732c4e;
+$logo-green: #b8d30c;
+$logo-peach: #f0ad8c;
+$roboto: 'Roboto', sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.f-h1 {
+    font-size: 3em;
+    font-family: $roboto;
+    text-align: center;
+}
+
+.f-h2 {
+    font-size: 2em;
+    font-family: $roboto;
+    text-align: center;
+    color: $grey-dark;
+}
+
+.f-h3 {
+    font-size: 1.5em;
+    font-family: $roboto;
+}
+
+.f-h4 {
+    font-size: 1.2em;
+    font-family: $roboto;
+}
+
+.f-p {
+    font-size: 1em;
+    font-family: $roboto;
+    font-style: italic;
+}
+
+#f-Navbar {
+    background-color: $wh;
+}
+
+#f-AppBar {
+    background-color: $wh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    position: fixed;
+    // box-shadow: 0 8px 6px -6px black;
+
+    // Logo-Sm.png
+    #f-NavBarLogo {
+        width: 25%;
+        height: auto;
+        max-width: auto;
+        max-height: auto;
+        object-fit: contain;
+        // margin: 0 2em;
+    }
+
+    .f-AppBarLinks {
+        color: $logo-blue;
+        font-family: $roboto;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 80%;
+        padding: .5em;
+        margin: .8em;
+    }
+
+    #f-LoginBtn {
+        background-color: $logo-blue;
+        color: $wh;
+        margin: .8em;
+    }
+}
+
+#f-BigLogoContainer {
+    background-image: url("./Images/index-bgImg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    padding: 10em 0;
+    height: 70vh;
+    align-items: center;
+    justify-content: space-evenly;
+
+    #f-BigLogo {
+        width: 30%;
+    }
+
+    #f-BigLogoContainer-Text {
+        width: 50%;
+        font-size: 2vw;
+        font-family: $roboto;
+        color: $grey-dark;
+        text-align: left;
+        background: -webkit-linear-gradient(#068095,  #732c4e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+#f-CardContainer {
+    width: 100%;
+    padding: 3em 0;
+    background-color: #068095;
+    display: flex;
+    justify-content: space-evenly;
+
+    .f-Card {
+        width: 20%;
+        background-color: #068095;
+        border: none;
+        transition: none;
+        box-shadow: none;
+
+        .f-CardMedia {
+            width: 20%;
+        }
+
+        // .f-Lottie {
+        //     width: 5%;
+        // }
+
+        .f-title {
+            text-align: center;
+            font-family: $roboto;
+            color: $wh;
+            text-transform: uppercase;
+        }
+    }
+}
+
+#f-PartnerLogosContainer {
+    width: 70%;
+    margin: 12em auto;
+    display: block;
+    
+
+    #f-PartnerLogosContainer-Heading {
+        h2 {
+            text-align: center;
+            color: $grey-dark;
+        }
+    }
+
+    #f-PartnerLogosContainer-Logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        .f-PartnerLogo {
+            width: 8vw;
+            padding: 1em;
+            margin: 0 2em;
+        }
+    }
+}
+
+#f-TestimonialContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    .f-TestimonialWrapperDiv {
+        width: 30%;
+        margin: 0 15px;
+        // display: grid;
+        // gap: 10px;
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-auto-flow: dense;
+        // align-content: space-around;
+
+        .f-TestimonialCard {
+            width: 100%;
+            // height: auto;
+            background: $grey-light;        
+            text-align: center;
+            padding: 1em;
+            margin: 10px auto;
+        }
+    }
+}
+
+#f-ActionButton {
+    background-color: $logo-blue;
+    font-family: $roboto;
+    text-align: center;
+    padding: 1em;
+    display: block;
+    width: 30%;
+    margin: 10em auto;
+    outline: 0;
+    border: none;
+    border-radius: 10px;
+    color: $wh;
+    box-shadow: -2px 3px 10px -3px #111111;
+}

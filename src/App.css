@@ -1,38 +1,175 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.f-h1 {
+  font-size: 3em;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.f-h2 {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #7d7d7d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.f-h3 {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.f-h4 {
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.f-p {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}
+
+#f-Navbar {
+  background-color: #ffffff;
+}
+
+#f-AppBar {
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  position: fixed;
+}
+#f-AppBar #f-NavBarLogo {
+  width: 25%;
+  height: auto;
+  max-width: auto;
+  max-height: auto;
+  object-fit: contain;
+}
+#f-AppBar .f-AppBarLinks {
+  color: #068095;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 80%;
+  padding: 0.5em;
+  margin: 0.8em;
+}
+#f-AppBar #f-LoginBtn {
+  background-color: #068095;
+  color: #ffffff;
+  margin: 0.8em;
+}
+
+#f-BigLogoContainer {
+  background-image: url("./Images/index-bgImg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  display: flex;
+  padding: 10em 0;
+  height: 70vh;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+}
+#f-BigLogoContainer #f-BigLogo {
+  width: 30%;
+}
+#f-BigLogoContainer #f-BigLogoContainer-Text {
+  width: 50%;
+  font-size: 2vw;
+  font-family: "Roboto", sans-serif;
+  color: #7d7d7d;
+  text-align: left;
+  background: -webkit-linear-gradient(#068095, #732c4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+#f-CardContainer {
+  width: 100%;
+  padding: 3em 0;
+  background-color: #068095;
+  display: flex;
+  justify-content: space-evenly;
+}
+#f-CardContainer .f-Card {
+  width: 20%;
+  background-color: #068095;
+  border: none;
+  transition: none;
+  box-shadow: none;
+}
+#f-CardContainer .f-Card .f-CardMedia {
+  width: 20%;
+}
+#f-CardContainer .f-Card .f-title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#f-PartnerLogosContainer {
+  width: 70%;
+  margin: 12em auto;
+  display: block;
 }
+#f-PartnerLogosContainer #f-PartnerLogosContainer-Heading h2 {
+  text-align: center;
+  color: #7d7d7d;
+}
+#f-PartnerLogosContainer #f-PartnerLogosContainer-Logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#f-PartnerLogosContainer #f-PartnerLogosContainer-Logos .f-PartnerLogo {
+  width: 8vw;
+  padding: 1em;
+  margin: 0 2em;
+}
+
+#f-TestimonialContainer {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+#f-TestimonialContainer .f-TestimonialWrapperDiv {
+  width: 30%;
+  margin: 0 15px;
+}
+#f-TestimonialContainer .f-TestimonialWrapperDiv .f-TestimonialCard {
+  width: 100%;
+  background: #f3f3f3;
+  text-align: center;
+  padding: 1em;
+  margin: 10px auto;
+}
+
+#f-ActionButton {
+  background-color: #068095;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 1em;
+  display: block;
+  width: 30%;
+  margin: 10em auto;
+  outline: 0;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: -2px 3px 10px -3px #111111;
+}
+
+/*# sourceMappingURL=app.css.map */
