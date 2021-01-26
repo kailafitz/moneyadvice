@@ -44,7 +44,6 @@ export const Employees = () => {
     useEffect(() => {
         if(Data && Data.size > 0) {
             setDataReady(true);
-            console.log("hi")
         }     
     }, [Data])
 

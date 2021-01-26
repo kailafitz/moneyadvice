@@ -15,7 +15,7 @@ export default function ContainedButtons() {
 
   return (
     <div className={classes.root}>
-      <Button className="f-h3" id="f-ActionButton" href="/contactus" variant="contained">
+      <Button id="f-ActionButton" href="/contactus" variant="contained" size="large">
         Call us today for your demo and a quotation!
       </Button>
     </div>

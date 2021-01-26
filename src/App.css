@@ -131,7 +131,7 @@ body {
   margin: 12em auto;
   display: block;
   padding: 3em;
-  box-shadow: inset 0px 0px 14px 7px #FFFFFF;
+  box-shadow: inset 0px 0px 30px 18px #FFFFFF;
   border-radius: 10px;
 }
 #f-PartnerLogosContainer #f-PartnerLogosContainer-Heading h2 {
@@ -258,6 +258,18 @@ footer .f-FooterIconContainer h4 {
   padding-top: 12em;
   display: block;
 }
+#f-AboutBodyContainer .f-CEOCard {
+  width: 70%;
+  padding: 1em;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+}
+#f-AboutBodyContainer .f-CEOCard .f-CEOAvatar {
+  margin: 0 auto;
+  height: auto;
+  width: 130px;
+}
 
 #f-EmployeeBody {
   display: block;
@@ -350,6 +362,16 @@ footer .f-FooterIconContainer h4 {
   background-color: #068095;
   color: #ffffff;
   margin-right: 2em;
+}
+
+#f-PrivacyPolicyBody {
+  padding-top: 12em;
+}
+#f-PrivacyPolicyBody #f-PrivacyPolicyAccordion {
+  margin: 2em auto;
+}
+#f-PrivacyPolicyBody #f-PrivacyPolicyAccordion h4 {
+  color: #732c4e;
 }
 
 /*# sourceMappingURL=app.css.map */

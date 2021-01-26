@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from '@material-ui/core/Link';
 import FooterLogo from '../Images/FooterLogo.png'
 
 export default function Footer() {
@@ -13,9 +13,10 @@ export default function Footer() {
                     <div id="f-FooterLinks">
                         <h3 className="f-h3">Our Company</h3>
                         <ul>
-                            <li className="f-h4"><Link exact path="/about">About</Link></li>
-                            <li className="f-h4"><Link exact path="/productfeatures">Poduct Features</Link></li>
-                            <li className="f-h4"><Link exact path="/additionalfeatures">Additional Features</Link></li>
+                            <li className="f-h4"><Link href="/about">About</Link></li>
+                            <li className="f-h4"><Link href="/features">Features</Link></li>
+                            <li className="f-h4"><Link href="#">Additional Features</Link></li>
+                            <li className="f-h4"><Link href="/privacypolicy">Privacy Policy</Link></li>
                         </ul>
                     </div>
                     <div className="f-FooterIconContainer">
