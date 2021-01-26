@@ -16,14 +16,16 @@ import Zurich from "../Images/Partner-Logos/Zurich.png"
 import Conexim from "../Images/Partner-Logos/Conexim.png"
 import { Testimonial } from "../Components/Testimonial";
 import Footer from "../Components/Footer";
+import { useNavigate } from 'react-router-dom'
+import ContainedButtons from "../Components/ActionButton";
 
 
 const Home = () => (
-    <>
+    <div>
         <div id="f-BigLogoContainer">
             <img alt="Logo" src={BigLogo} id="f-BigLogo"/>
             <div id="f-BigLogoContainer-Text">
-                <h2>The best CRM system for financial and property advisors - all in one.</h2>
+                <h1 className="f-h1">The best CRM system for financial and property advisors - all in one.</h1>
             </div>
         </div>
         <div id="f-CardContainer">
@@ -48,11 +50,12 @@ const Home = () => (
             </div>
         </Container>
         <Testimonial />
-        <button className="f-h3" id="f-ActionButton">
+        <ContainedButtons />
+        {/* <button className="f-h3" id="f-ActionButton">
             Call us today for your demo and a quotation!
-        </button>
+        </button> */}
         <Footer />
-  </>
+  </div>
 );
 
 export default Home;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import JSONData from "../TestData/TestimonialData.json";
+import JSONData from "../JSON_Data/TestimonialData.json";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 
@@ -54,7 +54,7 @@ export const Testimonial = () => {
   useEffect(() => {
     if (data && data.length > 0) {
       setValidData(true);
-      console.log("Hello");
+      // console.log("Hello");
     } else {
       createFunction();
     }
@@ -75,9 +75,9 @@ export const Testimonial = () => {
                     src={person[0].profile_picture}
                     className={classes.large}
                   />
-                  <h3 className="f-h3">
+                  <h4 className="f-h4">
                     {person[0].first_name + " " + person[0].sur_name}
-                  </h3>
+                  </h4>
                   {/* <h4 className="f-h4">{person.company_name}</h4> */}
                   <img alt={person[0].company_name} src={person[0].company_logo} />
                   <p className="f-p">{person[0].testimonial}</p>
@@ -88,9 +88,9 @@ export const Testimonial = () => {
                     src={person[1].profile_picture}
                     className={classes.large}
                   />
-                  <h3 className="f-h3">
+                  <h4 className="f-h4">
                     {person[1].first_name + " " + person[1].sur_name}
-                  </h3>
+                  </h4>
                   {/* <h4 className="f-h4">{person.company_name}</h4> */}
                   <img alt={person[1].company_name} src={person[1].company_logo} />
                   <p className="f-p">{person[1].testimonial}</p>

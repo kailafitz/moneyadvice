@@ -1,12 +1,14 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .f-h1 {
-  font-size: 3em;
+  font-size: 4em;
   font-family: "Roboto", sans-serif;
-  text-align: center;
 }
 
 .f-h2 {
@@ -44,7 +46,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
-  position: relative;
+  position: fixed;
 }
 #f-AppBar #f-NavBarLogo {
   width: 25%;
@@ -58,7 +60,7 @@ body {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   font-weight: bold;
-  font-size: 80%;
+  font-size: 100%;
   padding: 0.5em;
   margin: 0.8em;
 }
@@ -73,6 +75,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   padding: 10em 0;
   height: 70vh;
@@ -81,10 +84,11 @@ body {
 }
 #f-BigLogoContainer #f-BigLogo {
   width: 30%;
+  border-radius: 7px;
+  box-shadow: -2px 3px 10px -3px #111111;
 }
 #f-BigLogoContainer #f-BigLogoContainer-Text {
   width: 50%;
-  font-size: 2vw;
   font-family: "Roboto", sans-serif;
   color: #7d7d7d;
   text-align: left;
@@ -118,9 +122,17 @@ body {
 }
 
 #f-PartnerLogosContainer {
+  background-image: url("./Images/index-bgImg2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 70%;
   margin: 12em auto;
   display: block;
+  padding: 3em;
+  box-shadow: inset 0px 0px 14px 7px #FFFFFF;
+  border-radius: 10px;
 }
 #f-PartnerLogosContainer #f-PartnerLogosContainer-Heading h2 {
   text-align: center;
@@ -165,22 +177,28 @@ body {
   padding: 1em;
   display: block;
   width: 30%;
-  margin: 10em auto;
+  margin: 8em auto;
   outline: 0;
   border: none;
   border-radius: 10px;
   color: #ffffff;
   box-shadow: -2px 3px 10px -3px #111111;
+  transition: transform ease 1s;
+}
+#f-ActionButton:hover {
+  cursor: pointer;
+  background-color: #b8d30c;
+  transform: scale(1.1);
 }
 
 footer {
   background-color: #068095;
   color: #ffffff;
-  padding: 5em;
+  padding: 7em 3em;
   font-family: "Roboto", sans-serif;
 }
 footer #f-BigColumnDiv {
-  width: 60%;
+  width: 80%;
   flex-grow: 1;
   margin: 0 auto;
   display: flex;
@@ -195,10 +213,11 @@ footer #f-BigColumnDiv #f-LogoColumn {
 }
 footer #f-BigColumnDiv #f-LogoColumn img {
   margin: 1em auto;
-  width: 80%;
+  width: 90%;
 }
 footer #f-BigColumnDiv #f-OurCompanyColumn {
   width: 20%;
+  display: block;
 }
 footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul {
   padding: 0;
@@ -217,6 +236,120 @@ footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li a:hover {
 }
 footer #f-BigColumnDiv #f-ContactUsColumn {
   width: 30%;
+}
+footer .f-FooterIconContainer {
+  display: flex;
+  align-items: center;
+}
+footer .f-FooterIconContainer i {
+  font-size: 3em;
+}
+footer .f-FooterIconContainer h4 {
+  padding-left: 0.5em;
+}
+
+#f-FeaturesBody {
+  padding-top: 12em;
+}
+
+#f-AboutBodyContainer {
+  margin: 0 auto;
+  padding: 2em;
+  padding-top: 12em;
+  display: block;
+}
+
+#f-EmployeeBody {
+  display: block;
+  width: 100%;
+}
+#f-EmployeeBody .f-EmployeeTeamContainer {
+  display: block;
+  text-align: center;
+  background-color: #f3f3f3;
+  border-radius: 7px;
+  padding: 2em;
+  margin: 2em;
+}
+#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer .f-EmployeeCard {
+  padding: 1em;
+  margin: 2em;
+  display: block;
+  text-align: center;
+  background-color: #068095;
+  border-radius: 7px;
+  box-shadow: -2px 3px 10px -3px #111111;
+}
+#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer .f-EmployeeCard .f-EmployeeAvatar {
+  margin: 0 auto;
+  width: 120px;
+  height: auto;
+}
+#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer .f-EmployeeCard h4 {
+  color: #ffffff;
+}
+
+.f-PageTitle {
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 7em;
+}
+
+#f-ContactBodyContainer {
+  width: 70%;
+  margin: 0 auto;
+  height: 50%;
+  padding: 2em;
+  padding-top: 12em;
+  padding-bottom: 10em;
+  display: block;
+}
+#f-ContactBodyContainer #f-ContactWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactIconWrapper {
+  width: 30%;
+  margin: 0 auto;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactIconWrapper .f-ContactIconContainer {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactIconWrapper .f-ContactIconContainer i {
+  font-size: 3em;
+  color: #068095;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactIconWrapper .f-ContactIconContainer h4 {
+  padding-left: 2em;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper {
+  width: 40%;
+  margin: 0 auto;
+  text-align: right;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form {
+  display: block;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form .f-contactforminput {
+  width: 60%;
+  margin: 2.33em auto;
+  margin-bottom: 2em;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form button {
+  background-color: #068095;
+  color: #ffffff;
+  margin-right: 2em;
 }
 
 /*# sourceMappingURL=app.css.map */

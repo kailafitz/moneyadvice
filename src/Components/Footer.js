@@ -18,9 +18,11 @@ export default function Footer() {
                             <li className="f-h4"><Link exact path="/additionalfeatures">Additional Features</Link></li>
                         </ul>
                     </div>
-                    <div id="f-FooterLinkedIn">
-
+                    <div className="f-FooterIconContainer">
+                        <i className="f-FooterIcon" class="fab fa-linkedin"></i>
+                        <h4 className="f-h4">Follow us on LinkedIn</h4>
                     </div>
+
                 </div>
                 <div className="f-FooterColumn" id="f-ContactUsColumn">
                     <h3 className="f-h3">Contact Us</h3>
@@ -33,7 +35,17 @@ export default function Footer() {
                         Co. Clare,<br/>
                         Ireland<br/>
                         V95 FN79
+                        <br/>
                     </h4>
+                    <div className="f-FooterIconContainer">
+                        <i class="fas fa-phone-square-alt"></i>
+                        <h4 className="f-h4">+353 65 684 9675</h4>
+                    </div>
+                    <div className="f-FooterIconContainer">
+                        <i class="fas fa-envelope-square"></i>
+                        <h4 className="f-h4">support@moneyadvice.ie</h4>
+                    </div>
+                    
                 </div>
             </div>            
         </footer>

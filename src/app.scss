@@ -10,12 +10,14 @@ $roboto: 'Roboto', sans-serif;
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .f-h1 {
-    font-size: 3em;
+    font-size: 4em;
     font-family: $roboto;
-    text-align: center;
 }
 
 .f-h2 {
@@ -53,7 +55,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 1em;
-    position: relative;
+    position: fixed;
     // box-shadow: 0 8px 6px -6px black;
 
     // Logo-Sm.png
@@ -71,7 +73,7 @@ body {
         font-family: $roboto;
         text-decoration: none;
         font-weight: bold;
-        font-size: 80%;
+        font-size: 100%;
         padding: .5em;
         margin: .8em;
     }
@@ -88,6 +90,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat:  no-repeat;
+    background-attachment: fixed;
     display: flex;
     padding: 10em 0;
     height: 70vh;
@@ -96,11 +99,12 @@ body {
 
     #f-BigLogo {
         width: 30%;
+        border-radius: 7px;
+        box-shadow: -2px 3px 10px -3px #111111;
     }
 
     #f-BigLogoContainer-Text {
         width: 50%;
-        font-size: 2vw;
         font-family: $roboto;
         color: $grey-dark;
         text-align: left;
@@ -142,10 +146,17 @@ body {
 }
 
 #f-PartnerLogosContainer {
+    background-image: url("./Images/index-bgImg2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
     width: 70%;
     margin: 12em auto;
     display: block;
-    
+    padding: 3em;
+    box-shadow: inset 0px 0px 14px 7px #FFFFFF;  
+    border-radius: 10px;
 
     #f-PartnerLogosContainer-Heading {
         h2 {
@@ -203,27 +214,35 @@ body {
     padding: 1em;
     display: block;
     width: 30%;
-    margin: 10em auto;
+    margin: 8em auto;
     outline: 0;
     border: none;
     border-radius: 10px;
     color: $wh;
     box-shadow: -2px 3px 10px -3px #111111;
+    transition: transform ease 1s;    
+
+    &:hover {
+        cursor: pointer;
+        background-color: $logo-green;
+        transform: scale(1.1);
+    }
 }
 
 footer {
     background-color: #068095;
     color: $wh;
-    padding: 5em;
+    padding: 7em 3em;
     font-family: $roboto;
 
     #f-BigColumnDiv {
-        width: 60%;
+        width: 80%;
         flex-grow: 1;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
         align-content: flex-start;
+        
         // display: grid;
         // grid-template-columns: repeat(3, 30%);
 
@@ -236,12 +255,13 @@ footer {
 
             img {
                 margin: 1em auto;
-                width: 80%;
+                width: 90%;
             }
         }
 
         #f-OurCompanyColumn {
             width: 20%;
+            display: block;
 
             #f-FooterLinks {
                 
@@ -268,6 +288,144 @@ footer {
 
         #f-ContactUsColumn {
             width: 30%;
+        }
+    }
+
+    .f-FooterIconContainer {
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 3em;
+        }
+
+        h4 {
+            padding-left: .5em;
+        }
+    }
+}
+
+// --------------------- Features ---------------------
+
+#f-FeaturesBody {
+    padding-top: 12em;
+}
+
+// ------------------------ About ----------------------
+
+#f-AboutBodyContainer {
+    margin: 0 auto;
+    padding: 2em;
+    padding-top: 12em;
+    display: block;
+}
+
+#f-EmployeeBody {
+    display: block;
+    width: 100%;
+
+    .f-EmployeeTeamContainer {
+        display: block;
+        text-align: center;
+        background-color: $grey-light;
+        border-radius: 7px;
+        padding: 2em;
+        margin: 2em;
+
+        .f-EmployeeCardContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+        
+            .f-EmployeeCard {
+                padding: 1em;
+                margin: 2em;
+                display: block;
+                text-align: center;
+                background-color: #068095;
+                border-radius: 7px;
+                box-shadow: -2px 3px 10px -3px #111111;
+        
+                .f-EmployeeAvatar {
+                    margin: 0 auto;
+                    width: 120px;
+                    height: auto;
+                }
+        
+                h4 {
+                    color: $wh;
+                }
+            }
+        }
+    }
+}
+
+
+// ------------------------ Contact Us ----------------------
+
+.f-PageTitle {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+}
+
+#f-ContactBodyContainer {
+    width: 70%;
+    margin: 0 auto;
+    height: 50%;
+    padding: 2em;
+    padding-top: 12em;
+    padding-bottom: 10em;
+    display: block;
+
+    #f-ContactWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;    
+
+        #f-ContactIconWrapper {
+            width: 30%;
+            margin: 0 auto;
+
+            .f-ContactIconContainer {
+                display: flex;
+                align-items: center;
+                margin: 1em 0;
+
+                i {
+                    font-size: 3em;
+                    color: $logo-blue;
+                }
+
+                h4 {
+                    padding-left: 2em;
+                }
+            }
+        }
+
+        #f-ContactFormWrapper {
+            width: 40%;
+            margin: 0 auto;
+            text-align: right;
+
+            form {
+                display: block;
+
+                .f-contactforminput {
+                    width: 60%;
+                    margin: 2.33em auto;
+                    margin-bottom: 2em;
+                }
+
+                button {
+                    background-color: $logo-blue;
+                    color: $wh;
+                    margin-right: 2em;
+                }
+            }
         }
     }
 }

@@ -38,8 +38,8 @@ export default function ButtonAppBar() {
           <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/about">
               About
           </NavLink>
-          <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/news">
-              News
+          <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/contactus">
+              Contact Us
           </NavLink>
           <Button color="inherit" id="f-LoginBtn">Login</Button>
         </Toolbar>

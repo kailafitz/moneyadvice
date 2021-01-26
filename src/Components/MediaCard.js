@@ -9,12 +9,17 @@ import Lottie from 'react-lottie';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    "&:hover": {
+      backgroundColor: "#068095"
+    },
   },
   media: {
     // height: 140,
     width: "80%",
     margin: "0 auto",
-
+    "&:hover": {
+      "background-color": "#068095"
+    },
   },
 });
 
@@ -32,13 +37,11 @@ export default function MediaCard( { animationData, title } ) {
 
   return (
     <Card className={classes.root} className="f-Card drop-shadow">
-      <CardActionArea>
         <CardMedia
           className={classes.media}
           // className="f-CardMedia"
         ><Lottie className="f-Lottie" options={defaultOptions}/>
         </CardMedia>
-      </CardActionArea>
       <CardContent>
         <h2 className="f-title">{title}</h2>
       </CardContent>
