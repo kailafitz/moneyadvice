@@ -2,9 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
 import { NavLink } from 'react-router-dom'
 import Logo from '../Images/Logo-Sm.png'
+import SimpleModal from './SimpleModal';
+import { DeviceSize } from './ScreenWidths';
+import { useMediaQuery } from 'react-responsive';
+import MobileMenu from './MobileMenu';
+import NavbarLinks from './NavbarLinks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,33 +20,27 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  toolbar: {
+    "justify-content": "space-between",
+    "align-content": "center",
+    "align-items": "center"
+  },
 }));
 
 export default function ButtonAppBar() {
   const classes = useStyles();
+  const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
 
   return (
     <div className={classes.root} >
-      <AppBar position="static" id="f-AppBar">    
-          <img alt="Logo" src={Logo} id="f-NavBarLogo"/>
-          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton> */}
-          <Toolbar>
-          <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/">
-              Home
-          </NavLink>
-          <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/features">
-              Features
-          </NavLink>
-          <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/about">
-              About
-          </NavLink>
-          <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/contactus">
-              Contact Us
-          </NavLink>
-          <Button color="inherit" id="f-LoginBtn">Login</Button>
-        </Toolbar>
+      <AppBar position="sticky" elevation={24} id="f-AppBar">
+          <Toolbar className={classes.toolbar} id="f-Toolbar">
+                <div id="f-NavBarLogo">
+                  <img alt="Logo" src={Logo}/>
+                </div>
+                {!isMobile && <NavbarLinks />}
+                {isMobile && <MobileMenu />}
+            </Toolbar>
       </AppBar>
     </div>
   );

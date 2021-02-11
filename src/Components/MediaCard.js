@@ -1,10 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Lottie from 'react-lottie';
+import LottieAnimation from './LottieAnimation';
 
 const useStyles = makeStyles({
   root: {
@@ -33,17 +32,18 @@ export default function MediaCard( { animationData, title } ) {
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
-  };
+};
 
   return (
-    <Card className={classes.root} className="f-Card drop-shadow">
+    <Card className={classes.root} className="f-Card">
         <CardMedia
           className={classes.media}
-          // className="f-CardMedia"
-        ><Lottie className="f-Lottie" options={defaultOptions}/>
+        >
+          <LottieAnimation animationData={animationData}/>
+          {/* <Lottie className="f-Lottie" options={defaultOptions}/> */}
         </CardMedia>
       <CardContent>
-        <h2 className="f-title">{title}</h2>
+        <h2 className="f-Title f-TextCenter">{title}</h2>
       </CardContent>
     </Card>
   );

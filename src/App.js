@@ -1,5 +1,6 @@
+import React, { useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import './app.css'
+import './App.css'
 import ButtonAppBar from './Components/ButtonAppBar';
 import About from "./Pages/About";
 import ContactUs from './Pages/ContactUs';
@@ -8,6 +9,7 @@ import Home from "./Pages/Home";
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 
 function App() {
+
   return (
     <>
       <BrowserRouter>

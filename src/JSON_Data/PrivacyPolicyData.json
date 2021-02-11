@@ -9,7 +9,8 @@
     },
     {
         "title": "Use of Information",
-        "details": "We never share or process personal information. In the course of our business with our clients and acting on their instructions we may use your information in the performance of our contract, account set up, delivering our technical and customer support including account management, and investigating complaints. We may exceptionally share personal information in the following circumstances; - When required to do so by legal or court demands - When required to report to Government Bodies - If requested and properly authorised to do so by a broker client - If required to do so to assist with a data subject request from a broker’s customer - If necessary, to provide technical support or investigate a data breach - To ensure the security of our systems and networks - If necessary, to improve our products and services - If necessary, to monitor users' abuse on our systems - For the purposes of fraud protection/prevention. For systems or financial audit purposes - Your broker will of course share your information with lenders, insurers, and others to provide services to you - If required, please clarify this with your broker through your financial advisor or the firm’s privacy statement."
+        "details": "We never share or process personal information. In the course of our business with our clients and acting on their instructions we may use your information in the performance of our contract, account set up, delivering our technical and customer support including account management, and investigating complaints. We may exceptionally share personal information in the following circumstances;",
+        "policyBulletPoints": ["When required to do so by legal or court demands", "When required to report to Government Bodies", "If requested and properly authorised to do so by a broker client", "If required to do so to assist with a data subject request from a broker’s customer", "If necessary, to provide technical support or investigate a data breach", "To ensure the security of our systems and networks", "If necessary, to improve our products and services", "If necessary, to monitor users' abuse on our systems", "For the purposes of fraud protection/prevention", "For systems or financial audit purposes", "Your broker will of course share your information with lenders, insurers, and others to provide services to you", "If required, please clarify this with your broker through your financial advisor or the firm’s privacy statement"]
     },
     {
         "title": "Communication",
@@ -17,7 +18,7 @@
     },
     {
         "title": "Cookies",
-        "details": "LT does not use cookies to store other confidential user and session information, but instead implements more advanced security methods based on dynamic data and encoded session IDs."
+        "details": "Lunar Technologies does not use cookies to store other confidential user and session information, but instead implements more advanced security methods based on dynamic data and encoded session IDs."
     },
     {
         "title": "Informatiion Security",

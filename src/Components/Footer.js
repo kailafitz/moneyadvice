@@ -15,8 +15,10 @@ export default function Footer() {
                         <ul>
                             <li className="f-h4"><Link href="/about">About</Link></li>
                             <li className="f-h4"><Link href="/features">Features</Link></li>
-                            <li className="f-h4"><Link href="#">Additional Features</Link></li>
+                            <li className="f-h4"><Link href="/contactus">Contact Us</Link></li>
                             <li className="f-h4"><Link href="/privacypolicy">Privacy Policy</Link></li>
+                            <li className="f-h4"><Link href="/">Meet our Team</Link></li>
+                            <li className="f-h4"><Link href="/">Downloads</Link></li>
                         </ul>
                     </div>
                     <div className="f-FooterIconContainer">

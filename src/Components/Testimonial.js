@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import JSONData from "../JSON_Data/TestimonialData.json";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
+import SectionTitle from "./SectionTitle";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,45 +63,48 @@ export const Testimonial = () => {
 
   return (
     <>
-      <h2 className="f-h2">What Our Customers Say</h2>
+      <SectionTitle title="What our Customers Say" />
       <div id="f-TestimonialContainer">
         {console.log(validData)}
-        {validData ? (
-          data.map((person) => {
-            return (
-              <div className="f-TestimonialWrapperDiv">
-                <div className="f-TestimonialCard">
-                  <Avatar
-                    alt={person[0].first_name + " " + person[0].sur_name}
-                    src={person[0].profile_picture}
-                    className={classes.large}
-                  />
-                  <h4 className="f-h4">
-                    {person[0].first_name + " " + person[0].sur_name}
-                  </h4>
-                  {/* <h4 className="f-h4">{person.company_name}</h4> */}
-                  <img alt={person[0].company_name} src={person[0].company_logo} />
-                  <p className="f-p">{person[0].testimonial}</p>
+        {
+          validData ? (
+            data.map((person) => {
+              return (
+                <div className="f-TestimonialWrapperDiv">
+                  <div className="f-TestimonialCard">
+                    <Avatar
+                      alt={person[0].first_name + " " + person[0].sur_name}
+                      src={person[0].profile_picture}
+                      className={classes.large}
+                    />
+                    <h4 className="f-h4">
+                      {/* <i class="fas fa-minus"></i>  */}
+                      {person[0].first_name + " " + person[0].sur_name}
+                    </h4>
+                    {/* <h4 className="f-h4">{person.company_name}</h4> */}
+                    <img alt={person[0].company_name} src={person[0].company_logo} />
+                    <p className="f-p f-TextLeft">{person[0].testimonial}</p>
+                  </div>
+                  <div className="f-TestimonialCard">
+                    <Avatar
+                      alt={person[1].first_name + " " + person[1].sur_name}
+                      src={person[1].profile_picture}
+                      className={classes.large}
+                    />
+                    <h4 className="f-h4">
+                      {person[1].first_name + " " + person[1].sur_name}
+                    </h4>
+                    {/* <h4 className="f-h4">{person.company_name}</h4> */}
+                    <img alt={person[1].company_name} src={person[1].company_logo} />
+                    <p className="f-p f-TextLeft">{person[1].testimonial}</p>
+                  </div>
                 </div>
-                <div className="f-TestimonialCard">
-                  <Avatar
-                    alt={person[1].first_name + " " + person[1].sur_name}
-                    src={person[1].profile_picture}
-                    className={classes.large}
-                  />
-                  <h4 className="f-h4">
-                    {person[1].first_name + " " + person[1].sur_name}
-                  </h4>
-                  {/* <h4 className="f-h4">{person.company_name}</h4> */}
-                  <img alt={person[1].company_name} src={person[1].company_logo} />
-                  <p className="f-p">{person[1].testimonial}</p>
-                </div>
-              </div>
-            );
-          })
-        ) : (
+              );
+            })
+          ) : (
           <h2>Data not found</h2>
-        )}
+          )
+        }
       </div>
     </>
   );

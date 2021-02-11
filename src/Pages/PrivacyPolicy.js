@@ -1,13 +1,16 @@
 import React from 'react'
 import Footer from '../Components/Footer';
 import { PrivacyPolicyComponent } from '../Components/PrivacyPolicyComponent';
+import SectionTitle from '../Components/SectionTitle';
 
 export default function PrivacyPolicy() {
     return (
-        <div id="f-PrivacyPolicyBody">
-            <h2 className="f-h2">Privacy Policy</h2>
-            <PrivacyPolicyComponent />
+        <>
+            <div id="f-PrivacyPolicyBody">
+                <SectionTitle title="Privacy Policy" />
+                <PrivacyPolicyComponent />
+            </div>
             <Footer />
-        </div>
+        </>
     )
 }

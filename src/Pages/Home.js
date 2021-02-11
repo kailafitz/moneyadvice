@@ -16,27 +16,26 @@ import Zurich from "../Images/Partner-Logos/Zurich.png"
 import Conexim from "../Images/Partner-Logos/Conexim.png"
 import { Testimonial } from "../Components/Testimonial";
 import Footer from "../Components/Footer";
-import { useNavigate } from 'react-router-dom'
-import ContainedButtons from "../Components/ActionButton";
-
+import ContactUsButton from "../Components/ContactUsButton";
+import SectionTitle from "../Components/SectionTitle";
+import LottieAnimation from "../Components/LottieAnimation";
+import Phone from "../Lottie/Phone.json";
 
 const Home = () => (
     <div>
         <div id="f-BigLogoContainer">
             <img alt="Logo" src={BigLogo} id="f-BigLogo"/>
             <div id="f-BigLogoContainer-Text">
-                <h1 className="f-h1">The best CRM system for financial and property advisors - all in one.</h1>
+                <h1 className="f-h1 f-TextLeft">THE only CRM system for financial and mortgage advisors - all in one.</h1>
             </div>
         </div>
         <div id="f-CardContainer">
-            <MediaCard animationData={Finance} title="Stay Efficient with Reliable Calculation" />
-            <MediaCard animationData={Chart} title="Track Your Clients in a Single View" />
-            <MediaCard animationData={MachineCog} title="An Integrated System for all your needs" />
+            <MediaCard animationData={Finance} title="Maximum efficiency in recording & managing your clients' profiles" />
+            <MediaCard animationData={Chart} title="Algorithms to aid & support client assessments and advisory services" />
+            <MediaCard animationData={MachineCog} title="Heavily equipped with all the right tools; to help you, help your clients" />
         </div>
         <Container id="f-PartnerLogosContainer">
-            <div id="f-PartnerLogosContainer-Heading">
-                <h2 className="f-h2">Our Partners</h2>
-            </div>
+            <SectionTitle title="Our Partners" />
             <div id="f-PartnerLogosContainer-Logos">
                 <img alt="Aviva" src={Aviva} className="f-PartnerLogo" />
                 <img alt="BCP" src={BCP} className="f-PartnerLogo" />
@@ -50,10 +49,12 @@ const Home = () => (
             </div>
         </Container>
         <Testimonial />
-        <ContainedButtons />
-        {/* <button className="f-h3" id="f-ActionButton">
-            Call us today for your demo and a quotation!
-        </button> */}
+        <div id="f-ButtonDiv">
+            <div id="f-LottieDiv">
+                <LottieAnimation animationData={Phone} />
+            </div>
+            <ContactUsButton label="Call us today for your demo and a quotation!"/>
+        </div>
         <Footer />
   </div>
 );

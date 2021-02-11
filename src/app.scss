@@ -1,13 +1,16 @@
 $wh: #ffffff;
+$trans-wh: #ffffffc2;
 $grey-dark: #7d7d7d;
 $grey-light: #f3f3f3;
 $logo-blue: #068095;
+$logo-trans-blue: #067f95b6;
 $logo-purple: #732c4e;
 $logo-green: #b8d30c;
 $logo-peach: #f0ad8c;
 $roboto: 'Roboto', sans-serif;
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,7 +26,6 @@ body {
 .f-h2 {
     font-size: 2em;
     font-family: $roboto;
-    text-align: center;
     color: $grey-dark;
 }
 
@@ -41,7 +43,50 @@ body {
 .f-p {
     font-size: 1em;
     font-family: $roboto;
+}
+
+.f-i {
     font-style: italic;
+}
+
+.f-b {
+    font-weight: 800;
+}
+
+.f-TextCenter {
+    text-align: center;
+}
+
+.f-TextLeft {
+    text-align: left;
+}
+
+.f-MarginAuto {
+    margin: 0 auto;
+}
+
+.f-BlueFont {
+    color: $logo-blue;
+}
+
+.f-CheckListIcon {
+    color: $logo-green;
+}
+
+.f-BulletPointIcon {
+    color: $logo-purple;
+}
+
+.f-SectionTitle {
+    width: 70%;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+
+.f-Lottie {
+    width: 30%;
+    margin: 0 1em;
 }
 
 #f-Navbar {
@@ -50,38 +95,87 @@ body {
 
 #f-AppBar {
     width: 100%;
-    background-color: $wh;
+    background-color: $trans-wh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1em;
-    position: fixed;
-    // box-shadow: 0 8px 6px -6px black;
+    align-items: center;
+    padding: 0 .5em;
 
-    // Logo-Sm.png
-    #f-NavBarLogo {
-        width: 25%;
-        height: auto;
-        max-width: auto;
-        max-height: auto;
-        object-fit: contain;
-        // margin: 0 2em;
+    #f-Toolbar {
+        display: flex;
+        align-items: center;
+
+        // Logo-Sm.png
+        #f-NavBarLogo {
+            width: 25%;
+            // height: auto;
+            // max-width: auto;
+            // max-height: auto;
+            object-fit: contain;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 
-    .f-AppBarLinks {
-        color: $logo-blue;
-        font-family: $roboto;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 100%;
-        padding: .5em;
-        margin: .8em;
+    #f-NavBarLinkDiv {
+        display: flex;
+
+        .f-AppBarLinks {
+            color: $logo-blue;
+            font-family: $roboto;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 100%;
+            padding: .5em;
+            margin: .8em;
+            border-bottom: 2px solid transparent;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                border-bottom: 2px solid $logo-blue;
+            }
+        }
     }
 
     #f-LoginBtn {
         background-color: $logo-blue;
         color: $wh;
         margin: .8em;
+        transition: .7s ease-in background-color;
+        transition: .2s ease-in color;
+
+        &:hover {
+            background-color: $logo-green;
+            color: $grey-dark;
+        }
+    }
+}
+
+#f-ModalContainer {
+    padding: 1em;
+
+    #f-ModalLogo {
+        width: 50%;
+        margin: auto;
+    }
+
+    #f-ModalButtonDiv {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+
+        .f-ModalButton {
+            width: 100%;
+            background-color: $grey-dark;
+            color: $wh;
+            margin: 1em 0;
+            transition: .5s ease background-color;
+
+            &:hover {
+                background-color: $logo-blue;
+            }
+        }
     }
 }
 
@@ -92,8 +186,8 @@ body {
     background-repeat:  no-repeat;
     background-attachment: fixed;
     display: flex;
-    padding: 10em 0;
-    height: 70vh;
+    padding: 0 .5em;
+    height: 100vh;
     align-items: center;
     justify-content: space-evenly;
 
@@ -107,7 +201,6 @@ body {
         width: 50%;
         font-family: $roboto;
         color: $grey-dark;
-        text-align: left;
         background: -webkit-linear-gradient(#068095,  #732c4e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -132,15 +225,10 @@ body {
             width: 20%;
         }
 
-        // .f-Lottie {
-        //     width: 5%;
-        // }
-
-        .f-title {
-            text-align: center;
+        .f-Title {
             font-family: $roboto;
             color: $wh;
-            text-transform: uppercase;
+            // text-transform: capitalize;
         }
     }
 }
@@ -181,52 +269,58 @@ body {
 }
 
 #f-TestimonialContainer {
-    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: center;
 
     .f-TestimonialWrapperDiv {
         width: 30%;
         margin: 0 15px;
-        // display: grid;
-        // gap: 10px;
-        // grid-template-columns: repeat(3, 1fr);
-        // grid-auto-flow: dense;
-        // align-content: space-around;
 
         .f-TestimonialCard {
-            width: 100%;
+            width: 80%;
             // height: auto;
+            margin: 5% auto;
             background: $grey-light;        
             text-align: center;
             padding: 1em;
-            margin: 10px auto;
         }
     }
 }
 
-#f-ActionButton {
+#f-ButtonDiv {
+    padding: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #f-LottieDiv {
+        width: 30%;
+    }
+}
+
+#f-ContactUsButton {
     background-color: $logo-blue;
     font-family: $roboto;
-    text-align: center;
     padding: 1em;
-    display: block;
-    width: 30%;
-    margin: 8em auto;
+    display: flex;
+    justify-content: center;
     outline: 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     color: $wh;
     box-shadow: -2px 3px 10px -3px #111111;
-    transition: transform ease 1s;    
+    transition: transform ease 1s;
+    transition: .5s ease background-color;
+    transition: .5s ease color;
 
     &:hover {
         cursor: pointer;
-        background-color: $logo-green;
-        transform: scale(1.1);
+        background-color: $wh;
+        color: $logo-blue;
+        transform: scale(1.01);
     }
 }
 
@@ -243,9 +337,6 @@ footer {
         display: flex;
         justify-content: space-around;
         align-content: flex-start;
-        
-        // display: grid;
-        // grid-template-columns: repeat(3, 30%);
 
         .f-FooterColumn {
             margin: 0 2em;
@@ -309,36 +400,117 @@ footer {
 // --------------------- Features ---------------------
 
 #f-FeaturesBody {
-    padding-top: 12em;
+    
+}
+
+.f-TabPanel {
+    background-color: $grey-light;
+    padding: 1em;
+    flex-grow: 1;
+
+    #f-FeatureMainImage {
+        padding: 1em 0;
+    }
+
+    .f-FeatureImagesContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .f-FeatureCard {
+            width: 40%;
+            padding: 1em;
+            margin: 2em 0;
+
+            #test {
+                width: 100%;
+            }
+        }
+    }
 }
 
 // ------------------------ About ----------------------
 
-#f-AboutBodyContainer {
-    margin: 0 auto;
-    padding: 2em;
-    padding-top: 12em;
-    display: block;
+#f-AboutHeader {
+    background-image: url("./Images/about-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
 
-    // #f-CEOIntro {
-    //     display: block;
-    //     width: 70%;
-    //     margin: 0 auto;
-    //     text-align: center;
-    // }
+    .f-Overlay {
+        background-color: $logo-trans-blue;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        align-items: center;
 
-    .f-CEOCard {
-        width: 70%;
-        padding: 1em;
-        margin: 1em auto;
-        display: block;
-        text-align: center;
+        #f-HeaderWrapper {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            align-items: center;
 
-        .f-CEOAvatar {
-            margin: 0 auto;
-            height: auto;
-            width: 130px;
+            h2 {
+                font-size: 3em;
+                color: $wh;
+                letter-spacing: 2px;
+            }
+
+            h3 {
+                color: $grey-light;
+            }
+    
+            #f-AboutButtonDiv {
+                width: 100%;
+                display: flex;
+                padding: 1em 0;
+            }
         }
+    }
+}
+
+#f-ProductOverview {
+    width: 70%;    
+}
+
+#f-BlockBulletPointWrapper {
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    #f-BlockBulletPoint {
+        display: block;
+        background-color: $logo-blue;
+        color: $wh;
+        padding: 1em;
+        margin: 1em;
+        text-align: center;
+        width: 20%;
+        border-radius: 4px;
+
+        i {
+            font-size: 4em;
+        }
+    }
+}
+
+#f-TeamDiv {
+    width: 100%;
+    padding: 1em 0;
+    margin-top: 6em;
+    background-color: $logo-trans-blue;
+
+    #f-TeamWrapper {
+        width: 70%;
+        margin: auto;
     }
 }
 
@@ -348,11 +520,14 @@ footer {
 
     .f-EmployeeTeamContainer {
         display: block;
-        text-align: center;
-        background-color: $grey-light;
-        border-radius: 7px;
+        background-color: $trans-wh;
+        border-radius: 3px;
         padding: 2em;
         margin: 2em;
+
+        h3 {
+            letter-spacing: 1.5px;
+        }
 
         .f-EmployeeCardContainer {
             display: flex;
@@ -360,46 +535,55 @@ footer {
             align-items: center;
             align-content: center;
             flex-wrap: wrap;
-        
-            .f-EmployeeCard {
-                padding: 1em;
-                margin: 2em;
-                display: block;
-                text-align: center;
-                background-color: #068095;
-                border-radius: 7px;
-                box-shadow: -2px 3px 10px -3px #111111;
-            
-                .f-EmployeeAvatar {
-                    margin: 0 auto;
-                    width: 120px;
-                    height: auto;
-                }
-        
-                h4 {
-                    color: $wh;
-                }
-            }
         }
+    }
+}
+
+.f-EmployeeCard {
+    width: 10vw;
+    padding: 1em;
+    margin: 2em auto;
+    display: block;
+    background-color: #068095;
+    border-radius: 7px;
+    box-shadow: -2px 3px 10px -3px #111111;
+
+    .f-EmployeeAvatar {
+        margin: .5em auto;
+        width: 120px;
+        height: auto;
+    }
+
+    h4, p {
+        color: $wh;
     }
 }
 
 // ------------------------ Contact Us ----------------------
 
-.f-PageTitle {
-    width: 30%;
-    margin: 0 auto;
-    margin-bottom: 7em;
+.f-HeaderImage {
+    height: 50vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./Images/contact-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -6;
 }
 
 #f-ContactBodyContainer {
     width: 70%;
+    background-color: $wh;
     margin: 0 auto;
+    margin-top: 12em;
+    padding: 1em .5em;
     height: 50%;
-    padding: 2em;
-    padding-top: 12em;
     padding-bottom: 10em;
     display: block;
+    box-shadow: 0px -10px 14px -9px #515151;
 
     #f-ContactWrapper {
         width: 100%;
@@ -435,8 +619,8 @@ footer {
             form {
                 display: block;
 
-                .f-contactforminput {
-                    width: 60%;
+                .f-ContactFormInput {
+                    width: 90%;
                     margin: 2.33em auto;
                     margin-bottom: 2em;
                 }
@@ -454,13 +638,64 @@ footer {
 // --------------------- Privacy Policy ----------------------
 
 #f-PrivacyPolicyBody {
-    padding-top: 12em;
+    padding: 2em .5em;
 
     #f-PrivacyPolicyAccordion {
         margin: 2em auto;
 
-        h4 {
-            color: $logo-purple;
+        .f-PolicyTitle {
+            color: $logo-blue;
+            font-weight: 500;
+        }
+    }
+}
+
+// -------------------- Mobile Menu -------------------------
+
+#f-MobileMenuButton {
+    z-index: 99;
+    cursor: pointer;
+}
+
+.f-MobileMenu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    #f-MobileLinksWrapper {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100%;
+        list-style: none;
+        background-color: $logo-green;
+        width: 100%;
+        flex-direction: column;
+        position: fixed;
+        top: 65px;
+        left: 0;
+
+        a {
+            font-size: 1rem;
+            font-family: $roboto;
+            text-transform: uppercase;
+            padding: 1rem 0;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s linear;
+            color: $grey-dark;
+            margin: 0 .8em;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .f-MobileMenu {
+        width: 100%;
+
+        a {
+            font-size: 1.5rem;
+            text-align: center;
         }
     }
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import EmployeeData from '../JSON_Data/EmployeeData.json'
 import { makeStyles } from '@material-ui/core/styles';
-import { Avatar } from "@material-ui/core"
-import ChairmanProfileImage from '../Images/About-Imgs/ChairmanProfileImage.jpg'
+import Employee1 from '../Images/About-Imgs/Employee1.jpg';
+import { EmployeeProfileCard } from './EmployeeProfileCard';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -51,63 +51,39 @@ export const Employees = () => {
         <>
             <div id="f-EmployeeBody">                
                 {
-                    DataReady ? <div className="f-EmployeeTeamContainer"> 
-                        <h3 className="f-h3">Devlopment Team</h3>
+                    DataReady ? <div className="f-EmployeeTeamContainer f-TextCenter"> 
+                        <h3 className="f-h3">Development</h3>
+                        <p className="f-p">Our development team are spread across the country and the globe. We have a sophisticated team of developers in the great country of India who keep the platform secure and up-to-date.</p>
                         <div className="f-EmployeeCardContainer">
                             {Data.get("Development Team").map((employee) => {
                                 return (
-                                    <div className={classes.root} className="f-EmployeeCard">
-                                        <Avatar
-                                        alt="Chairman Profile Image"
-                                        src={ChairmanProfileImage}
-                                        className={classes.large}
-                                        className="f-EmployeeAvatar"
-                                        />
-                                        <h4 className="f-h4">{ employee.first_name + " " + employee.sur_name }</h4>
-                                        <p className="f-p">{ employee.job_description }</p>
-                                    </div>
+                                    <EmployeeProfileCard img={Employee1} empName={ employee.first_name + " " + employee.sur_name } title={ employee.job_description } />
                                 );
                             })}
                         </div>
                     </div> : null
                 }
                 {
-                    DataReady ? <div className="f-EmployeeTeamContainer">
-                        <h3 className="f-h3">Support Team</h3>
+                    DataReady ? <div className="f-EmployeeTeamContainer f-TextCenter">
+                        <h3 className="f-h3">Support</h3>
+                        <p className="f-p">Our support team are available and happy to help you with any queries you may have about our product and services.</p>
                         <div className="f-EmployeeCardContainer">
                             {Data.get("Support Team").map((employee) => {
                                 return (
-                                    <div className={classes.root} className="f-EmployeeCard">
-                                        <Avatar
-                                        alt="Chairman Profile Image"
-                                        src={ChairmanProfileImage}
-                                        className={classes.large}
-                                        className="f-EmployeeAvatar"
-                                        />
-                                        <h4 className="f-h4">{ employee.first_name + " " + employee.sur_name }</h4>
-                                        <p className="f-p">{ employee.job_description }</p>
-                                    </div>
+                                    <EmployeeProfileCard img={Employee1} empName={ employee.first_name + " " + employee.sur_name } title={ employee.job_description } />
                                 );
                             })}
                         </div>
                     </div> : null
                 }
                 {
-                    DataReady ? <div className="f-EmployeeTeamContainer"> 
-                        <h3 className="f-h3">Admin Team</h3>
+                    DataReady ? <div className="f-EmployeeTeamContainer f-TextCenter"> 
+                        <h3 className="f-h3">Administration</h3>
+                        <p className="f-p">Our administration team are continuously supporting our business, supporting you.</p>
                         <div className="f-EmployeeCardContainer">
                             {Data.get("Admin Team").map((employee) => {
                                 return (
-                                    <div className={classes.root} className="f-EmployeeCard">
-                                        <Avatar
-                                        alt="Chairman Profile Image"
-                                        src={ChairmanProfileImage}
-                                        className={classes.large}
-                                        className="f-EmployeeAvatar"
-                                        />
-                                        <h4 className="f-h4">{ employee.first_name + " " + employee.sur_name }</h4>
-                                        <p className="f-p">{ employee.job_description }</p>
-                                    </div>
+                                    <EmployeeProfileCard img={Employee1} empName={ employee.first_name + " " + employee.sur_name } title={ employee.job_description } />
                                 );
                             })}
 

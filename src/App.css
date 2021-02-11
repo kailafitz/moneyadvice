@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,7 +15,6 @@ body {
 .f-h2 {
   font-size: 2em;
   font-family: "Roboto", sans-serif;
-  text-align: center;
   color: #7d7d7d;
 }
 
@@ -32,7 +32,50 @@ body {
 .f-p {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
+}
+
+.f-i {
   font-style: italic;
+}
+
+.f-b {
+  font-weight: 800;
+}
+
+.f-TextCenter {
+  text-align: center;
+}
+
+.f-TextLeft {
+  text-align: left;
+}
+
+.f-MarginAuto {
+  margin: 0 auto;
+}
+
+.f-BlueFont {
+  color: #068095;
+}
+
+.f-CheckListIcon {
+  color: #b8d30c;
+}
+
+.f-BulletPointIcon {
+  color: #732c4e;
+}
+
+.f-SectionTitle {
+  width: 70%;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+
+.f-Lottie {
+  width: 30%;
+  margin: 0 1em;
 }
 
 #f-Navbar {
@@ -41,21 +84,26 @@ body {
 
 #f-AppBar {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #ffffffc2;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1em;
-  position: fixed;
+  align-items: center;
+  padding: 0 0.5em;
 }
-#f-AppBar #f-NavBarLogo {
+#f-AppBar #f-Toolbar {
+  display: flex;
+  align-items: center;
+}
+#f-AppBar #f-Toolbar #f-NavBarLogo {
   width: 25%;
-  height: auto;
-  max-width: auto;
-  max-height: auto;
   object-fit: contain;
 }
-#f-AppBar .f-AppBarLinks {
+#f-AppBar #f-Toolbar #f-NavBarLogo img {
+  width: 100%;
+}
+#f-AppBar #f-NavBarLinkDiv {
+  display: flex;
+}
+#f-AppBar #f-NavBarLinkDiv .f-AppBarLinks {
   color: #068095;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
@@ -63,11 +111,45 @@ body {
   font-size: 100%;
   padding: 0.5em;
   margin: 0.8em;
+  border-bottom: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+#f-AppBar #f-NavBarLinkDiv .f-AppBarLinks:hover {
+  border-bottom: 2px solid #068095;
 }
 #f-AppBar #f-LoginBtn {
   background-color: #068095;
   color: #ffffff;
   margin: 0.8em;
+  transition: 0.7s ease-in background-color;
+  transition: 0.2s ease-in color;
+}
+#f-AppBar #f-LoginBtn:hover {
+  background-color: #b8d30c;
+  color: #7d7d7d;
+}
+
+#f-ModalContainer {
+  padding: 1em;
+}
+#f-ModalContainer #f-ModalLogo {
+  width: 50%;
+  margin: auto;
+}
+#f-ModalContainer #f-ModalButtonDiv {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+#f-ModalContainer #f-ModalButtonDiv .f-ModalButton {
+  width: 100%;
+  background-color: #7d7d7d;
+  color: #ffffff;
+  margin: 1em 0;
+  transition: 0.5s ease background-color;
+}
+#f-ModalContainer #f-ModalButtonDiv .f-ModalButton:hover {
+  background-color: #068095;
 }
 
 #f-BigLogoContainer {
@@ -77,8 +159,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
-  padding: 10em 0;
-  height: 70vh;
+  padding: 0 0.5em;
+  height: 100vh;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -91,7 +173,6 @@ body {
   width: 50%;
   font-family: "Roboto", sans-serif;
   color: #7d7d7d;
-  text-align: left;
   background: -webkit-linear-gradient(#068095, #732c4e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,11 +195,9 @@ body {
 #f-CardContainer .f-Card .f-CardMedia {
   width: 20%;
 }
-#f-CardContainer .f-Card .f-title {
-  text-align: center;
+#f-CardContainer .f-Card .f-Title {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
-  text-transform: uppercase;
 }
 
 #f-PartnerLogosContainer {
@@ -151,44 +230,54 @@ body {
 }
 
 #f-TestimonialContainer {
-  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 #f-TestimonialContainer .f-TestimonialWrapperDiv {
   width: 30%;
   margin: 0 15px;
 }
 #f-TestimonialContainer .f-TestimonialWrapperDiv .f-TestimonialCard {
-  width: 100%;
+  width: 80%;
+  margin: 5% auto;
   background: #f3f3f3;
   text-align: center;
   padding: 1em;
-  margin: 10px auto;
 }
 
-#f-ActionButton {
+#f-ButtonDiv {
+  padding: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-ButtonDiv #f-LottieDiv {
+  width: 30%;
+}
+
+#f-ContactUsButton {
   background-color: #068095;
   font-family: "Roboto", sans-serif;
-  text-align: center;
   padding: 1em;
-  display: block;
-  width: 30%;
-  margin: 8em auto;
+  display: flex;
+  justify-content: center;
   outline: 0;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #ffffff;
   box-shadow: -2px 3px 10px -3px #111111;
   transition: transform ease 1s;
+  transition: 0.5s ease background-color;
+  transition: 0.5s ease color;
 }
-#f-ActionButton:hover {
+#f-ContactUsButton:hover {
   cursor: pointer;
-  background-color: #b8d30c;
-  transform: scale(1.1);
+  background-color: #ffffff;
+  color: #068095;
+  transform: scale(1.01);
 }
 
 footer {
@@ -248,27 +337,101 @@ footer .f-FooterIconContainer h4 {
   padding-left: 0.5em;
 }
 
-#f-FeaturesBody {
-  padding-top: 12em;
+.f-TabPanel {
+  background-color: #f3f3f3;
+  padding: 1em;
+  flex-grow: 1;
+}
+.f-TabPanel #f-FeatureMainImage {
+  padding: 1em 0;
+}
+.f-TabPanel .f-FeatureImagesContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.f-TabPanel .f-FeatureImagesContainer .f-FeatureCard {
+  width: 40%;
+  padding: 1em;
+  margin: 2em 0;
+}
+.f-TabPanel .f-FeatureImagesContainer .f-FeatureCard #test {
+  width: 100%;
 }
 
-#f-AboutBodyContainer {
-  margin: 0 auto;
-  padding: 2em;
-  padding-top: 12em;
-  display: block;
+#f-AboutHeader {
+  background-image: url("./Images/about-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
 }
-#f-AboutBodyContainer .f-CEOCard {
+#f-AboutHeader .f-Overlay {
+  background-color: #067f95b6;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+#f-AboutHeader .f-Overlay #f-HeaderWrapper {
   width: 70%;
-  padding: 1em;
-  margin: 1em auto;
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
 }
-#f-AboutBodyContainer .f-CEOCard .f-CEOAvatar {
-  margin: 0 auto;
-  height: auto;
-  width: 130px;
+#f-AboutHeader .f-Overlay #f-HeaderWrapper h2 {
+  font-size: 3em;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+#f-AboutHeader .f-Overlay #f-HeaderWrapper h3 {
+  color: #f3f3f3;
+}
+#f-AboutHeader .f-Overlay #f-HeaderWrapper #f-AboutButtonDiv {
+  width: 100%;
+  display: flex;
+  padding: 1em 0;
+}
+
+#f-ProductOverview {
+  width: 70%;
+}
+
+#f-BlockBulletPointWrapper {
+  width: 100%;
+  margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#f-BlockBulletPointWrapper #f-BlockBulletPoint {
+  display: block;
+  background-color: #068095;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+  width: 20%;
+  border-radius: 4px;
+}
+#f-BlockBulletPointWrapper #f-BlockBulletPoint i {
+  font-size: 4em;
+}
+
+#f-TeamDiv {
+  width: 100%;
+  padding: 1em 0;
+  margin-top: 6em;
+  background-color: #067f95b6;
+}
+#f-TeamDiv #f-TeamWrapper {
+  width: 70%;
+  margin: auto;
 }
 
 #f-EmployeeBody {
@@ -277,11 +440,13 @@ footer .f-FooterIconContainer h4 {
 }
 #f-EmployeeBody .f-EmployeeTeamContainer {
   display: block;
-  text-align: center;
-  background-color: #f3f3f3;
-  border-radius: 7px;
+  background-color: #ffffffc2;
+  border-radius: 3px;
   padding: 2em;
   margin: 2em;
+}
+#f-EmployeeBody .f-EmployeeTeamContainer h3 {
+  letter-spacing: 1.5px;
 }
 #f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer {
   display: flex;
@@ -290,38 +455,48 @@ footer .f-FooterIconContainer h4 {
   align-content: center;
   flex-wrap: wrap;
 }
-#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer .f-EmployeeCard {
+
+.f-EmployeeCard {
+  width: 10vw;
   padding: 1em;
-  margin: 2em;
+  margin: 2em auto;
   display: block;
-  text-align: center;
   background-color: #068095;
   border-radius: 7px;
   box-shadow: -2px 3px 10px -3px #111111;
 }
-#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer .f-EmployeeCard .f-EmployeeAvatar {
-  margin: 0 auto;
+.f-EmployeeCard .f-EmployeeAvatar {
+  margin: 0.5em auto;
   width: 120px;
   height: auto;
 }
-#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer .f-EmployeeCard h4 {
+.f-EmployeeCard h4, .f-EmployeeCard p {
   color: #ffffff;
 }
 
-.f-PageTitle {
-  width: 30%;
-  margin: 0 auto;
-  margin-bottom: 7em;
+.f-HeaderImage {
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./Images/contact-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -6;
 }
 
 #f-ContactBodyContainer {
   width: 70%;
+  background-color: #ffffff;
   margin: 0 auto;
+  margin-top: 12em;
+  padding: 1em 0.5em;
   height: 50%;
-  padding: 2em;
-  padding-top: 12em;
   padding-bottom: 10em;
   display: block;
+  box-shadow: 0px -10px 14px -9px #515151;
 }
 #f-ContactBodyContainer #f-ContactWrapper {
   width: 100%;
@@ -353,8 +528,8 @@ footer .f-FooterIconContainer h4 {
 #f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form {
   display: block;
 }
-#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form .f-contactforminput {
-  width: 60%;
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form .f-ContactFormInput {
+  width: 90%;
   margin: 2.33em auto;
   margin-bottom: 2em;
 }
@@ -365,13 +540,59 @@ footer .f-FooterIconContainer h4 {
 }
 
 #f-PrivacyPolicyBody {
-  padding-top: 12em;
+  padding: 2em 0.5em;
 }
 #f-PrivacyPolicyBody #f-PrivacyPolicyAccordion {
   margin: 2em auto;
 }
-#f-PrivacyPolicyBody #f-PrivacyPolicyAccordion h4 {
-  color: #732c4e;
+#f-PrivacyPolicyBody #f-PrivacyPolicyAccordion .f-PolicyTitle {
+  color: #068095;
+  font-weight: 500;
+}
+
+#f-MobileMenuButton {
+  z-index: 99;
+  cursor: pointer;
+}
+
+.f-MobileMenu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.f-MobileMenu #f-MobileLinksWrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  list-style: none;
+  background-color: #b8d30c;
+  width: 100%;
+  flex-direction: column;
+  position: fixed;
+  top: 65px;
+  left: 0;
+}
+.f-MobileMenu #f-MobileLinksWrapper a {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s linear;
+  color: #7d7d7d;
+  margin: 0 0.8em;
+}
+
+@media only screen and (max-width: 600px) {
+  .f-MobileMenu {
+    width: 100%;
+  }
+  .f-MobileMenu a {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

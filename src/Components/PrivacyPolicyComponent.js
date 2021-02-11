@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: theme.typography.pxToRem(15),
       fontWeight: theme.typography.fontWeightRegular,
     },
+    displayBulletpoints: {
+        "display": "block",
+    }
 }));
 
 export const PrivacyPolicyComponent = () => {
@@ -39,26 +42,44 @@ export const PrivacyPolicyComponent = () => {
     return (
         <>         
             <div className={classes.root} id="f-PrivacyPolicyAccordion">
-            {validData ? (
-                data.map((policy) => {
-                    return (
-                            <Accordion>
-                                <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                                >
-                                <Typography className={classes.heading} className="f-h4">{ policy.title }</Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                <Typography>
-                                    { policy.details }
-                                </Typography>
-                                </AccordionDetails>
-                            </Accordion>
-                    );
-                })
-            )  : ( <h2>Data not found</h2>)
+            {
+                validData ? (
+                    data.map((policy) => {
+                        return (
+                                <Accordion>
+                                    <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                    >
+                                        <Typography className={classes.heading} className="f-h4 f-PolicyTitle">{policy.title}</Typography>
+                                    </AccordionSummary>
+                                    <AccordionDetails className={classes.displayBulletpoints}>
+                                        <Typography>
+                                            {policy.details}
+                                        </Typography>
+                                        <div>
+                                        {
+                                            policy.policyBulletPoints ?
+                                            policy.policyBulletPoints.map((bulletpoint) => {
+                                                return (
+                                                    <p className="f-p"><i class="fas fa-circle f-BulletPointIcon"></i> {bulletpoint}</p>
+                                                );
+                                            }): null
+                                        }
+                                        </div>
+                                        {/* {
+                                            policy.policyBulletPoints.map((bulletpoint) => {
+                                                return (
+                                                    <p><i class="fas fa-circle f-BulletPointIcon"></i> {bulletpoint}</p>
+                                                );
+                                            })
+                                        } */}
+                                    </AccordionDetails>
+                                </Accordion>
+                        );
+                    })
+                )  : ( <h2>Data not found</h2>)
             } </div>
         </>
     )
