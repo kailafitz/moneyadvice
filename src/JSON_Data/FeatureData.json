@@ -43,14 +43,41 @@
         "id": 3,
         "featureTitle": "Mortgages (Incl. Haven Online)",
         "featureSubtitle": "Money Advice +CRM provides state of the art, fully integrated mortgage solution software free to all its users:",
+        "featureParagraph": "You can also print mortgage applications for submission to other lenders who do not currently accept electronic submissions.",
         "featureMainImage": "http://moneyadvice.ie/images/mortgages_img1.jpg",
         "featureBulletPoints": ["As professional advisors you will expect that a mortgage software package has access to the whole of the mortgage market and that the data is updated on a regular basis. Our mortgage software solution provides exactly this", "Our mortgage analysis solution is integrated into our CRM and as such, data need not be keyed twice", "Advisors are able to select from a range of comprehensive filters to produce a highly defined series of mortgage results which can instantly be saved as evidence of research against the client", "There is no need to buy expensive additional mortgage software add-ons or pay for expensive 3rd party integration development - complimentary mortgage sourcing - who'd have thought!", "Please click here to download the mortgage process guide"],
-        "featureImages": []
+        "featureImages": [
+            {
+                "featureImageTitle": "Mortgage Enquiry Data Capture",
+                "featureImageDescription": "",
+                "featureImageURL": "http://moneyadvice.ie/images/mortgages_img2.jpg"
+
+            },
+            {
+                "featureImageTitle": "Check Affordability",
+                "featureImageDescription": "",
+                "featureImageURL": "http://moneyadvice.ie/images/mortgages_img3.jpg"
+
+            },
+            {
+                "featureImageTitle": "Haven Online Screen and Data Capture Screen",
+                "featureImageDescription": "",
+                "featureImageURL": "http://moneyadvice.ie/images/mortgages_img4.jpg"
+
+            },
+            {
+                "featureImageTitle": "Application Tracker",
+                "featureImageDescription": "",
+                "featureImageURL": "http://moneyadvice.ie/images/mortgages_img6.jpg"
+
+            }
+        ]
     },
     {
         "id": 4,
         "featureTitle": "Insurer Data Downloads",
         "featureSubtitle": "",
+        "featureParagraph": "Client and policy data are regularly updated on the system. Up to date policy data are received from: Aviva, BCP, Royal London, Friends First, Irish Life, New Ireland, Standard Life and Zurich. We have now created a tool in Money Advice which allows users to import policy data received in excel format from Aviva Health into the CRM system so that you get up to date health policy information.",
         "featureMainImage": "http://moneyadvice.ie/images/insurer_img1.jpg",
         "featureBulletPoints": [],
         "featureImages": []
@@ -61,7 +88,18 @@
         "featureSubtitle": "As You Might Expect, Money Advice +CRM Has Produced A Market Leading CRM Proposition And Delivers In Depth Functionality To Assist With All Your Desired Workflows To Make Your Working Day That Much Easier.",
         "featureMainImage": "http://moneyadvice.ie/images/tab-img6.jpg",
         "featureBulletPoints": ["Complete lead management processes, managing your leads through to conclusion with full range of compliance functionality", "Records of your introducers and sources of business", "Records of all pipeline business by product type, client, provider, individual sales person, teams, offices and probability", "Target records across the business and records of progress against those targets and appropriate management reports as required", "Management of KPI’s, key business trends, profitability, future clients, and prospects"],
-        "featureImages": []
+        "featureImages": [
+            {
+                "featureImageTitle": "",
+                "featureImageDescription": "Type and Status can be accurately monitored against each client individually or in a joint policy and the progress of the underwriting tracked in % terms of completion.",
+                "featureImageURL": "http://moneyadvice.ie/images/sales_img1.jpg"
+            },
+            {
+                "featureImageTitle": "",
+                "featureImageDescription": "All stages of Underwriting can be tracked against client & consultant.",
+                "featureImageURL": "http://moneyadvice.ie/images/sales_img2.jpg"
+            }
+        ]
     },
     {
         "id": 6,
@@ -98,13 +136,14 @@
     {
         "id": 10,
         "featureTitle": "Marketing",
-        "featureSubtitle": "",
+        "featureSubtitle": "As professional advisors we all know the importance of maintaining regular contacts with our customers from a best practice point of view and ensuring that we treat our customers fairly.",
+        "featureParagraph": "Money Advice +CRM has a suite of marketing tools that enables advisors extensively mine their database at a client and policy level. It provides a comprehensive range of marketing tools including mail merge letters, text messaging and email messages. Crucially the software logs and records all these communications, even mass communications.",
         "featureMainImage": "http://moneyadvice.ie/images/Fees_img1.jpg",
         "featureBulletPoints": [],
         "featureImages": [
             {
                 "featureImageTitle": "",
-                "featureImageDescription": "With Advanced Search users can drill down to specific clients for mail merges, SMS merges & marketing.",
+                "featureImageDescription": "With Advanced Search, users can drill down to specific clients for mail merges, SMS merges & marketing.",
                 "featureImageURL": "http://moneyadvice.ie/images/marketing_img1.jpg"
 
             },
@@ -126,7 +165,7 @@
     },
     {
         "id": 12,
-        "featureTitle": "Cash FLow Planner",
+        "featureTitle": "Cash Flow Planner",
         "featureSubtitle": "Cash Flow Projections And Financial Planning",
         "featureMainImage": "http://moneyadvice.ie/images/cashflow_img1.jpg",
         "featureBulletPoints": ["The client financial cash flow planner can also be completed within Money Advice +CRM by the advisor using a unique wizard reducing the time taken to enter client data", "The tool lets the user drag and drop various life time events onto the life time line of the client and calculate the savings required to meet the lifestyle expenses", "These expenses are then plotted into a client cash flow projections report to show the income, expenditure and balance sheet. A detailed asset, liability and net asset worth can also be generated from the tool. The tool will be improved further to include projections for what-if scenarios"],
@@ -146,7 +185,9 @@
         "featureSubtitle": "Integrated With Camscanner App, This Mobile App Provides A Way For The Users To Scan Important Documents Using Their Phone",
         "featureMainImage": "http://moneyadvice.ie/images/documentscan.jpg",
         "featureBulletPoints": ["The Camscanner app provides options to enhance the scanned image", "Option to scan multiple pages and create a single PDF document of all the scanned images", "Users are able to search the client bank in Money Advice + CRM and associate the documents to a particular client / policy / opportunity", "The PDF of the scanned images created can also be shared using email."],
-        "featureImages": []
+        "featureImages": [],
+        "featureButtonHref": "../Downloads/WebsiteContentReview",
+        "featureButtonLabel": "Download User Guide"
     },
     {
         "id": 15,

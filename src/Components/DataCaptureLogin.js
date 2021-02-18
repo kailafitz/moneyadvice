@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -44,8 +44,6 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // backgroundColor: "#ffffff",
-    // backgroundColor: theme.palette.background.paper,
     width: "100%",
     margin: "auto",
   },
@@ -56,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#068095",
     color: "#ffffff"
   },
-  custom: {
+  tabPanel: {
     backgroundColor: "#068095"
   },
 }
@@ -66,21 +64,21 @@ const formStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      width: '25ch',
+      width: '80%',
       "& .MuiFilledInput-root": {
         background: "#ffffff"
+      },
+      '& .MuiFilledInput-underline:after': { 
+        borderBottomColor: "#b8d30c",
+      },
+      '& .MuiFormLabel-root.Mui-focused': {
+        color: "#7d7d7d",
       }
-    },
-    "& .Mui-focused": {
-      color: "#7d7d7d",
     },
   },
   floatingLabelFocusStyle: {
     color: "#7d7d7d",
   },
-  focused: {
-    color: "#7d7d7d",
-  }
 }));
 
 export default function DataCaptureLogin() {
@@ -93,10 +91,6 @@ export default function DataCaptureLogin() {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
   return (
     <div className={classes.root}>
       <AppBar position="static" color="#ffffff" elevation={0}>
@@ -104,28 +98,82 @@ export default function DataCaptureLogin() {
           elevation={0}
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
           variant="fullWidth"
           aria-label="full width tabs example"
-          TabIndicatorProps={{ className: classes.indicator }}
+          TabIndicatorProps={{className: classes.indicator}}
           textColor="#ffffff"
         >
-          <Tab label="Advisor Login" 
-          classes={{ selected: classes.selected }} {...a11yProps(0)} />
-          <Tab label="Client Login" classes={{ selected: classes.selected }} {...a11yProps(1)} />
+          <Tab
+            label="Advisor Login"
+            classes={{ selected: classes.selected }}
+            {...a11yProps(0)}
+          />
+          <Tab
+            label="Client Login" 
+            classes={{ selected: classes.selected }}
+            {...a11yProps(1)}
+          />
         </Tabs>
       </AppBar>
-        <TabPanel value={value} index={0} dir={theme.direction} className={classes.custom}>
-          <form className={classesForms.root} noValidate autoComplete="off">
-            <TextField id="filled-basic" label="Advisor Email" variant="filled" InputProps={{ className: classesForms.input, }} InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}/>
-            <TextField id="filled-basic" label="Password" variant="filled" InputProps={{ className: classesForms.input, }} InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}/>
+        <TabPanel
+          value={value}
+          index={0}
+          dir={theme.direction}
+          className={classes.tabPanel}>
+          <form
+            className={classesForms.root} 
+            autoComplete="off"
+            action="/"
+            method="post"
+          >
+            <TextField
+              id="filled-basic"
+              label="Advisor Email"
+              variant="filled"
+              type="email"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+            <TextField
+              id="filled-basic"
+              label="Password"
+              variant="filled"
+              type="password"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+              <Button type="button" className={classes.button}>Login</Button>
           </form>
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction} className={classes.custom}>
-          <form className={classesForms.root} noValidate autoComplete="off">
-            <TextField id="filled-basic" label="Client Email" variant="filled" InputProps={{ className: classesForms.input, }} InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}/>
-            <TextField id="filled-basic" label="Password" variant="filled" InputProps={{ className: classesForms.input, }} InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}/>
+        <TabPanel
+          value={value}
+          index={1}
+          dir={theme.direction}
+          className={classes.tabPanel}
+        >
+          <form
+            className={classesForms.root}
+            autoComplete="off"
+            action="/"
+            method="post"
+          > 
+            <TextField
+              id="filled-basic"
+              label="Client Email"
+              variant="filled"
+              type="email"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+            <TextField
+              id="filled-basic"
+              label="Password"
+              variant="filled"
+              type="password"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+            <Button type="button" className="f-Button">Login</Button>
           </form>
         </TabPanel>
     </div>

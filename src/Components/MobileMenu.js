@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MenuToggle } from './MenuToggle';
-import SimpleModal from './SimpleModal';
+import LoginModal from './LoginModal';
 
 const MobileMenu = () => {
   const [isOpen, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const MobileMenu = () => {
           <a href="/contactus">
             Contact Us
           </a>
-          <SimpleModal />
+          <LoginModal />
         </div> 
       )}
     </div>

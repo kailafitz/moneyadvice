@@ -1,25 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-import SimpleModal from './SimpleModal';
-
+import LoginModal from './LoginModal';
 
 export default function NavbarLinks() {
 
   return (
         <div id="f-NavBarLinkDiv">
-            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/">
+            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/" exact>
             Home
             </NavLink>
-            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/features">
+            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/features" exact>
             Features
             </NavLink>
-            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/about">
+            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/about" exact>
             About
             </NavLink>
-            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/contactus">
+            <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/contactus" exact>
             Contact Us
             </NavLink>
-            <SimpleModal />
+            <LoginModal />
         </div>
     )
 }

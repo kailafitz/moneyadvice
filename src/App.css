@@ -9,29 +9,54 @@ body {
 
 .f-h1 {
   font-size: 4em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  color: #732c4e;
+  line-height: 1.1em;
+  letter-spacing: -0.035em;
 }
 
 .f-h2 {
-  font-size: 2em;
-  font-family: "Roboto", sans-serif;
+  font-size: 3em;
+  font-family: "Inter", sans-serif;
   color: #7d7d7d;
+  margin: 0;
+  padding-top: 1em;
+  font-weight: 800;
+  color: #732c4e;
+  line-height: 1.2em;
+  letter-spacing: -0.035em;
 }
 
 .f-h3 {
   font-size: 1.5em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 
 .f-h4 {
   font-size: 1.2em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
+}
+.f-h4 a {
+  text-decoration: none;
+  color: #393939;
 }
 
 .f-p {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
+  color: #393939;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.f-BlueFont {
+  color: #068095;
 }
 
 .f-i {
@@ -54,16 +79,29 @@ body {
   margin: 0 auto;
 }
 
-.f-BlueFont {
-  color: #068095;
-}
-
 .f-CheckListIcon {
   color: #b8d30c;
 }
 
 .f-BulletPointIcon {
   color: #732c4e;
+}
+
+.f-Button {
+  background-color: #068095;
+  color: #ffffff;
+  padding: 0.8em;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0.8em;
+  transition: 0.3s ease-in background-color, 0.2s ease-in color;
+  text-transform: uppercase;
+}
+.f-Button:hover {
+  background-color: #b8d30c;
+  color: #7d7d7d;
 }
 
 .f-SectionTitle {
@@ -78,32 +116,13 @@ body {
   margin: 0 1em;
 }
 
-#f-Navbar {
-  background-color: #ffffff;
-}
-
-#f-AppBar {
-  width: 100%;
-  background-color: #ffffffc2;
-  display: flex;
-  align-items: center;
-  padding: 0 0.5em;
-}
-#f-AppBar #f-Toolbar {
-  display: flex;
-  align-items: center;
-}
-#f-AppBar #f-Toolbar #f-NavBarLogo {
-  width: 25%;
-  object-fit: contain;
-}
-#f-AppBar #f-Toolbar #f-NavBarLogo img {
-  width: 100%;
-}
-#f-AppBar #f-NavBarLinkDiv {
+#f-NavBarLinkDiv {
   display: flex;
 }
-#f-AppBar #f-NavBarLinkDiv .f-AppBarLinks {
+#f-NavBarLinkDiv .is-active {
+  border-bottom: 2px solid #068095;
+}
+#f-NavBarLinkDiv .f-AppBarLinks {
   color: #068095;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
@@ -111,22 +130,21 @@ body {
   font-size: 100%;
   padding: 0.5em;
   margin: 0.8em;
-  border-bottom: 2px solid transparent;
   transition: all 200ms ease-in-out;
 }
-#f-AppBar #f-NavBarLinkDiv .f-AppBarLinks:hover {
+#f-NavBarLinkDiv .f-AppBarLinks:hover {
   border-bottom: 2px solid #068095;
 }
-#f-AppBar #f-LoginBtn {
-  background-color: #068095;
-  color: #ffffff;
-  margin: 0.8em;
-  transition: 0.7s ease-in background-color;
-  transition: 0.2s ease-in color;
+
+#f-NavigationBar {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
 }
-#f-AppBar #f-LoginBtn:hover {
-  background-color: #b8d30c;
-  color: #7d7d7d;
+#f-NavigationBar #f-NavbarLogo {
+  width: 25%;
 }
 
 #f-ModalContainer {
@@ -141,15 +159,8 @@ body {
   margin: 0 auto;
   display: block;
 }
-#f-ModalContainer #f-ModalButtonDiv .f-ModalButton {
-  width: 100%;
-  background-color: #7d7d7d;
-  color: #ffffff;
-  margin: 1em 0;
-  transition: 0.5s ease background-color;
-}
-#f-ModalContainer #f-ModalButtonDiv .f-ModalButton:hover {
-  background-color: #068095;
+#f-ModalContainer #f-ModalButtonDiv p {
+  padding-top: 2em;
 }
 
 #f-BigLogoContainer {
@@ -165,17 +176,45 @@ body {
   justify-content: space-evenly;
 }
 #f-BigLogoContainer #f-BigLogo {
-  width: 30%;
+  width: 40%;
   border-radius: 7px;
   box-shadow: -2px 3px 10px -3px #111111;
+}
+#f-BigLogoContainer #f-AnimationDiv {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+#f-BigLogoContainer #f-AnimationDiv .test {
+  width: 30%;
+  border-radius: 4px;
+  position: absolute;
+  margin: 1em;
+}
+#f-BigLogoContainer #f-AnimationDiv #blue {
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#f-BigLogoContainer #f-AnimationDiv #green {
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+#f-BigLogoContainer #f-AnimationDiv #peach {
+  bottom: 0;
+  left: 0;
+  z-index: -6;
+}
+#f-BigLogoContainer #f-AnimationDiv #purple {
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 #f-BigLogoContainer #f-BigLogoContainer-Text {
   width: 50%;
   font-family: "Roboto", sans-serif;
-  color: #7d7d7d;
-  background: -webkit-linear-gradient(#068095, #732c4e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 #f-CardContainer {
@@ -185,37 +224,19 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-#f-CardContainer .f-Card {
-  width: 20%;
-  background-color: #068095;
-  border: none;
-  transition: none;
-  box-shadow: none;
-}
-#f-CardContainer .f-Card .f-CardMedia {
+
+.f-LottieMediaCard {
   width: 20%;
 }
-#f-CardContainer .f-Card .f-Title {
-  font-family: "Roboto", sans-serif;
+.f-LottieMediaCard h3 {
   color: #ffffff;
 }
 
 #f-PartnerLogosContainer {
-  background-image: url("./Images/index-bgImg2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 70%;
-  margin: 12em auto;
+  width: 80%;
+  margin: 7em auto;
   display: block;
   padding: 3em;
-  box-shadow: inset 0px 0px 30px 18px #FFFFFF;
-  border-radius: 10px;
-}
-#f-PartnerLogosContainer #f-PartnerLogosContainer-Heading h2 {
-  text-align: center;
-  color: #7d7d7d;
 }
 #f-PartnerLogosContainer #f-PartnerLogosContainer-Logos {
   display: flex;
@@ -229,55 +250,85 @@ body {
   margin: 0 2em;
 }
 
-#f-TestimonialContainer {
+#f-test {
+  width: 80%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-}
-#f-TestimonialContainer .f-TestimonialWrapperDiv {
-  width: 30%;
-  margin: 0 15px;
-}
-#f-TestimonialContainer .f-TestimonialWrapperDiv .f-TestimonialCard {
-  width: 80%;
-  margin: 5% auto;
-  background: #f3f3f3;
-  text-align: center;
-  padding: 1em;
+  flex-flow: wrap;
+  justify-content: space-evenly;
 }
 
-#f-ButtonDiv {
+.swiper-container {
+  width: 80%;
+  margin: 0 auto;
+  color: red;
+}
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-wrapper {
+  padding-inline-start: 0;
+  display: flex;
+}
+
+.f-testimonialBackground {
+  width: 100%;
+  background-color: #E8DCE2;
+  padding: 3em 0;
+}
+.f-testimonialBackground .f-TestimonialCard {
+  width: 60%;
+  padding: 1.5em;
+  margin: 0 auto;
+  height: 400px;
+  overflow: hidden;
+  background-color: #8A4F6C;
+  color: #ffffff;
+  border-radius: 14px;
+}
+.f-testimonialBackground .f-TestimonialCard p {
+  color: #ffffff;
+  font-weight: 300;
+}
+.f-testimonialBackground .f-TestimonialCard:nth-child(even) {
+  background-color: #732c4e;
+}
+
+#f-ContactUsButtonContainer {
   padding: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#f-ButtonDiv #f-LottieDiv {
+#f-ContactUsButtonContainer #f-LottieDiv {
   width: 30%;
 }
 
 #f-ContactUsButton {
-  background-color: #068095;
-  font-family: "Roboto", sans-serif;
+  background-color: #ffffffc2;
+  font-family: "Inter", sans-serif;
   padding: 1em;
   display: flex;
   justify-content: center;
   outline: 0;
   border: none;
   border-radius: 4px;
-  color: #ffffff;
+  color: #732c4e;
   box-shadow: -2px 3px 10px -3px #111111;
+  box-shadow: none;
+  font-weight: 800;
+  font-size: 1.3em;
   transition: transform ease 1s;
-  transition: 0.5s ease background-color;
-  transition: 0.5s ease color;
+  transition: 0.8s ease background-color;
+  transition: 0.8s ease color;
+  transition: 0.8s ease transform;
 }
 #f-ContactUsButton:hover {
   cursor: pointer;
-  background-color: #ffffff;
   color: #068095;
-  transform: scale(1.01);
+  transform: scale(1.03);
 }
 
 footer {
@@ -344,6 +395,9 @@ footer .f-FooterIconContainer h4 {
 }
 .f-TabPanel #f-FeatureMainImage {
   padding: 1em 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 5px 18px -2px #bebebe;
+  box-shadow: 0 5px 18px -2px #bebebe;
 }
 .f-TabPanel .f-FeatureImagesContainer {
   display: flex;
@@ -356,7 +410,7 @@ footer .f-FooterIconContainer h4 {
   padding: 1em;
   margin: 2em 0;
 }
-.f-TabPanel .f-FeatureImagesContainer .f-FeatureCard #test {
+.f-TabPanel .f-FeatureImagesContainer .f-FeatureCard #f-FeatureImage {
   width: 100%;
 }
 
@@ -366,8 +420,8 @@ footer .f-FooterIconContainer h4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
 }
 #f-AboutHeader .f-Overlay {
   background-color: #067f95b6;
@@ -398,12 +452,9 @@ footer .f-FooterIconContainer h4 {
   padding: 1em 0;
 }
 
-#f-ProductOverview {
-  width: 70%;
-}
-
 #f-BlockBulletPointWrapper {
   width: 100%;
+  padding-bottom: 4em;
   margin: 1em 0;
   display: flex;
   flex-wrap: wrap;
@@ -415,7 +466,6 @@ footer .f-FooterIconContainer h4 {
   color: #ffffff;
   padding: 1em;
   margin: 1em;
-  text-align: center;
   width: 20%;
   border-radius: 4px;
 }
@@ -425,52 +475,66 @@ footer .f-FooterIconContainer h4 {
 
 #f-TeamDiv {
   width: 100%;
-  padding: 1em 0;
-  margin-top: 6em;
-  background-color: #067f95b6;
+  padding: 2em 0;
+  margin-top: 4em;
+  background-color: #f3f3f3;
 }
-#f-TeamDiv #f-TeamWrapper {
-  width: 70%;
-  margin: auto;
+#f-TeamDiv #f-CEOIntro {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  position: relative;
+  padding: 2em 1em;
+}
+#f-TeamDiv #f-CEOIntro #f-CEOIntroText {
+  padding: 1em;
+  border-radius: 4px;
+  color: #7d7d7d;
+}
+#f-TeamDiv #f-CEOIntro #f-ChairpersonAvatar {
+  width: 30%;
+  height: auto;
+  border-radius: 85px;
 }
 
-#f-EmployeeBody {
+#f-TeamsContainer {
   display: block;
-  width: 100%;
+  padding-top: 3em;
+  margin: 6em auto;
 }
-#f-EmployeeBody .f-EmployeeTeamContainer {
+#f-TeamsContainer .f-TeamTypeContainer {
   display: block;
-  background-color: #ffffffc2;
   border-radius: 3px;
-  padding: 2em;
-  margin: 2em;
+  padding: 0.5em;
+  margin: 1em 0;
 }
-#f-EmployeeBody .f-EmployeeTeamContainer h3 {
+#f-TeamsContainer .f-TeamTypeContainer h3 {
   letter-spacing: 1.5px;
+  color: #732c4e;
 }
-#f-EmployeeBody .f-EmployeeTeamContainer .f-EmployeeCardContainer {
+#f-TeamsContainer .f-TeamTypeContainer .f-EmployeeCardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-}
-
-.f-EmployeeCard {
-  width: 10vw;
-  padding: 1em;
-  margin: 2em auto;
-  display: block;
-  background-color: #068095;
-  border-radius: 7px;
+  border-radius: 4px;
+  background-color: #732c4e;
   box-shadow: -2px 3px 10px -3px #111111;
 }
-.f-EmployeeCard .f-EmployeeAvatar {
+
+#f-EmployeeCard {
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 7px;
+}
+#f-EmployeeCard #f-EmployeeAvatar {
   margin: 0.5em auto;
   width: 120px;
-  height: auto;
+  height: 120px;
 }
-.f-EmployeeCard h4, .f-EmployeeCard p {
+#f-EmployeeCard h4, #f-EmployeeCard p {
   color: #ffffff;
 }
 
@@ -489,6 +553,7 @@ footer .f-FooterIconContainer h4 {
 
 #f-ContactBodyContainer {
   width: 70%;
+  max-width: 90%;
   background-color: #ffffff;
   margin: 0 auto;
   margin-top: 12em;
@@ -497,6 +562,10 @@ footer .f-FooterIconContainer h4 {
   padding-bottom: 10em;
   display: block;
   box-shadow: 0px -10px 14px -9px #515151;
+}
+#f-ContactBodyContainer p {
+  width: 70%;
+  padding-bottom: 2em;
 }
 #f-ContactBodyContainer #f-ContactWrapper {
   width: 100%;
@@ -519,6 +588,7 @@ footer .f-FooterIconContainer h4 {
 }
 #f-ContactBodyContainer #f-ContactWrapper #f-ContactIconWrapper .f-ContactIconContainer h4 {
   padding-left: 2em;
+  color: #393939;
 }
 #f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper {
   width: 40%;
@@ -533,26 +603,22 @@ footer .f-FooterIconContainer h4 {
   margin: 2.33em auto;
   margin-bottom: 2em;
 }
-#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form button {
-  background-color: #068095;
-  color: #ffffff;
-  margin-right: 2em;
-}
 
 #f-PrivacyPolicyBody {
   padding: 2em 0.5em;
 }
-#f-PrivacyPolicyBody #f-PrivacyPolicyAccordion {
-  margin: 2em auto;
-}
-#f-PrivacyPolicyBody #f-PrivacyPolicyAccordion .f-PolicyTitle {
-  color: #068095;
-  font-weight: 500;
+
+#f-DownloadsContainer {
+  display: flex;
+  flex-grow: 1;
+  padding: 2em 0.5em;
 }
 
 #f-MobileMenuButton {
   z-index: 99;
   cursor: pointer;
+  height: 20px;
+  width: 20px;
 }
 
 .f-MobileMenu {
@@ -585,13 +651,52 @@ footer .f-FooterIconContainer h4 {
   margin: 0 0.8em;
 }
 
-@media only screen and (max-width: 600px) {
-  .f-MobileMenu {
-    width: 100%;
+@media only screen and (max-width: 768px) {
+  .f-h1 {
+    font-size: 2.5em;
   }
-  .f-MobileMenu a {
-    font-size: 1.5rem;
-    text-align: center;
+
+  .f-h3 {
+    font-size: 2em;
+  }
+
+  .f-h4 {
+    font-size: 1.7em;
+  }
+
+  #f-NavbarLogo {
+    width: 45%;
+  }
+
+  #f-BigLogoContainer {
+    display: block;
+  }
+  #f-BigLogoContainer #f-BigLogo {
+    margin: 0 auto;
+    width: 80%;
+  }
+  #f-BigLogoContainer #f-BigLogoContainer-Text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #f-CardContainer {
+    display: block;
+  }
+
+  .f-LottieMediaCard {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 3em 0.5em;
+  }
+  footer #f-BigColumnDiv {
+    display: block;
+  }
+  footer #f-BigColumnDiv #f-LogoColumn, footer #f-BigColumnDiv #f-OurCompanyColumn, footer #f-BigColumnDiv #f-ContactUsColumn {
+    width: 80%;
   }
 }
 

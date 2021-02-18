@@ -1,4 +1,5 @@
 $wh: #ffffff;
+$bl: #393939;
 $trans-wh: #ffffffc2;
 $grey-dark: #7d7d7d;
 $grey-light: #f3f3f3;
@@ -8,6 +9,230 @@ $logo-purple: #732c4e;
 $logo-green: #b8d30c;
 $logo-peach: #f0ad8c;
 $roboto: 'Roboto', sans-serif;
+$temp-font: 'Inter', sans-serif;
+
+// *,
+// *::before,
+// *::after {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// button {
+//   background: transparent;
+//   border: none;
+//   cursor: pointer;
+//   outline: none;
+// }
+
+// body {
+//   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+//   background: #456990;
+//   color: #fff;
+// }
+
+
+// /* .section SECTION
+// –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// .section {
+//   background: #F45B69;
+//   padding: 50px 0;
+// }
+
+// .section .container {
+//   width: 90%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   text-align: center;
+// }
+
+// .section h1 {
+//   font-size: 2.5rem;
+// }
+
+// .section h2 {
+//   font-size: 1.3rem;
+// }
+
+
+// /* TIMELINE
+// –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// .timeline {
+//   white-space: nowrap;
+//   overflow-x: hidden;
+// }
+
+// .timeline ol {
+//   font-size: 0;
+//   width: 100vw;
+//   padding: 250px 0;
+//   transition: all 1s;
+// }
+
+// .timeline ol li {
+//   position: relative;
+//   display: inline-block;
+//   list-style-type: none;
+//   width: 160px;
+//   height: 3px;
+//   background: #fff;
+// }
+
+// .timeline ol li:last-child {
+//   width: 280px;
+// }
+
+// .timeline ol li:not(:first-child) {
+//   margin-left: 14px;
+// }
+
+// .timeline ol li:not(:last-child)::after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: calc(100% + 1px);
+//   bottom: 0;
+//   width: 12px;
+//   height: 12px;
+//   transform: translateY(-50%);
+//   border-radius: 50%;
+//   background: #F45B69;
+// }
+
+// .timeline ol li div {
+//   position: absolute;
+//   left: calc(100% + 7px);
+//   width: 280px;
+//   padding: 15px;
+//   font-size: 1rem;
+//   white-space: normal;
+//   color: black;
+//   background: white;
+// }
+
+// .timeline ol li div::before {
+//   content: '';
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+// }
+
+// .timeline ol li:nth-child(odd) div {
+//   top: -16px;
+//   transform: translateY(-100%);
+// }
+
+// .timeline ol li:nth-child(odd) div::before {
+//   top: 100%;
+//   border-width: 8px 8px 0 0;
+//   border-color: white transparent transparent transparent;
+// }
+
+// .timeline ol li:nth-child(even) div {
+//   top: calc(100% + 16px);
+// }
+
+// .timeline ol li:nth-child(even) div::before {
+//   top: -8px;
+//   border-width: 8px 0 0 8px;
+//   border-color: transparent transparent transparent white;
+// }
+
+// .timeline time {
+//   display: block;
+//   font-size: 1.2rem;
+//   font-weight: bold;
+//   margin-bottom: 8px;
+// }
+
+
+// /* TIMELINE ARROWS
+// –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// .timeline .arrows {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 20px;
+// }
+
+// .timeline .arrows .arrow__prev {
+//   margin-right: 20px;
+// }
+
+// .timeline .disabled {
+//   opacity: .5;
+// }
+
+// .timeline .arrows img {
+//   width: 45px;
+//   height: 45px;
+// }
+
+
+// /* GENERAL MEDIA QUERIES
+// –––––––––––––––––––––––––––––––––––––––––––––––––– */
+// @media screen and (max-width: 599px) {
+//   .timeline ol,
+//   .timeline ol li {
+//     width: auto; 
+//   }
+  
+//   .timeline ol {
+//     padding: 0;
+//     transform: none !important;
+//   }
+  
+//   .timeline ol li {
+//     display: block;
+//     height: auto;
+//     background: transparent;
+//   }
+  
+//   .timeline ol li:first-child {
+//     margin-top: 25px;
+//   }
+  
+//   .timeline ol li:not(:first-child) {
+//     margin-left: auto;
+//   }
+  
+//   .timeline ol li div {
+//     width: 94%;
+//     height: auto !important;
+//     margin: 0 auto 25px;
+//   }
+  
+//   .timeline ol li div {
+//     position: static;
+//   }
+  
+//   .timeline ol li:nth-child(odd) div {
+//     transform: none;
+//   }
+  
+//   .timeline ol li:nth-child(odd) div::before,
+//   .timeline ol li:nth-child(even) div::before {
+//     left: 50%;
+//     top: 100%;
+//     transform: translateX(-50%);
+//     border: none;
+//     border-left: 1px solid white;
+//     height: 25px;
+//   }
+  
+//   .timeline ol li:last-child,
+//   .timeline ol li:nth-last-child(2) div::before,
+//   .timeline ol li:not(:last-child)::after,
+//   .timeline .arrows {
+//     display: none;
+//   }
+// }
 
 body {
     position: relative;
@@ -18,31 +243,59 @@ body {
     flex-direction: column;
 }
 
+// Typography Styles ----------------------------
+
 .f-h1 {
     font-size: 4em;
-    font-family: $roboto;
+    font-family: $temp-font;
+    font-weight: 800;
+    color: $logo-purple;
+    line-height: 1.1em;
+    letter-spacing: -.035em;
 }
 
 .f-h2 {
-    font-size: 2em;
-    font-family: $roboto;
+    font-size: 3em;
+    font-family: $temp-font;
     color: $grey-dark;
+    margin: 0;
+    padding-top: 1em;
+    font-weight: 800;
+    color: $logo-purple;
+    line-height: 1.2em;
+    letter-spacing: -.035em;
 }
 
 .f-h3 {
     font-size: 1.5em;
-    font-family: $roboto;
+    font-family: $temp-font;
+    font-weight: 600;
 }
 
 .f-h4 {
     font-size: 1.2em;
-    font-family: $roboto;
+    font-family: $temp-font;
     font-weight: 300;
+
+    a {
+        text-decoration: none;
+        color: $bl;
+    }
 }
 
 .f-p {
     font-size: 1em;
     font-family: $roboto;
+    color: $bl;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical; 
+}
+
+.f-BlueFont {
+    color: $logo-blue;
 }
 
 .f-i {
@@ -52,6 +305,8 @@ body {
 .f-b {
     font-weight: 800;
 }
+
+// Utilities ----------------------------
 
 .f-TextCenter {
     text-align: center;
@@ -65,9 +320,7 @@ body {
     margin: 0 auto;
 }
 
-.f-BlueFont {
-    color: $logo-blue;
-}
+// Icon Styles ----------------------------
 
 .f-CheckListIcon {
     color: $logo-green;
@@ -77,6 +330,27 @@ body {
     color: $logo-purple;
 }
 
+// Button Style ----------------------------
+
+.f-Button {
+    background-color: $logo-blue;
+    color: $wh;
+    padding: .8em;
+    border-radius: 4px;
+    font-family: $roboto;
+    font-weight: 500;
+    text-decoration: none;
+    margin: .8em;
+    transition: .3s ease-in background-color, .2s ease-in color;
+    text-transform: uppercase;
+    
+    &:hover {
+        background-color: $logo-green;
+        color: $grey-dark;
+    }
+}
+
+// SectionTitle.js ----------------------------
 .f-SectionTitle {
     width: 70%;
     max-width: 90%;
@@ -84,74 +358,51 @@ body {
     margin-bottom: 4em;
 }
 
+// LottieAnimation.js ----------------------------
 .f-Lottie {
     width: 30%;
     margin: 0 1em;
 }
 
-#f-Navbar {
-    background-color: $wh;
+// NavbarLinks.js ----------------------------
+#f-NavBarLinkDiv {
+display: flex;
+
+    .is-active {
+        border-bottom: 2px solid $logo-blue;
+    }
+
+    .f-AppBarLinks {
+        color: $logo-blue;
+        font-family: $roboto;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 100%;
+        padding: .5em;
+        margin: .8em;
+        // border-bottom: 2px solid transparent;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            border-bottom: 2px solid $logo-blue;
+        }
+    }
 }
 
-#f-AppBar {
+// NavigationBar.js ----------------------------
+#f-NavigationBar {
     width: 100%;
-    background-color: $trans-wh;
+    background-color: $wh;
     display: flex;
     align-items: center;
     padding: 0 .5em;
 
-    #f-Toolbar {
-        display: flex;
-        align-items: center;
-
-        // Logo-Sm.png
-        #f-NavBarLogo {
-            width: 25%;
-            // height: auto;
-            // max-width: auto;
-            // max-height: auto;
-            object-fit: contain;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    #f-NavBarLinkDiv {
-        display: flex;
-
-        .f-AppBarLinks {
-            color: $logo-blue;
-            font-family: $roboto;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 100%;
-            padding: .5em;
-            margin: .8em;
-            border-bottom: 2px solid transparent;
-            transition: all 200ms ease-in-out;
-
-            &:hover {
-                border-bottom: 2px solid $logo-blue;
-            }
-        }
-    }
-
-    #f-LoginBtn {
-        background-color: $logo-blue;
-        color: $wh;
-        margin: .8em;
-        transition: .7s ease-in background-color;
-        transition: .2s ease-in color;
-
-        &:hover {
-            background-color: $logo-green;
-            color: $grey-dark;
-        }
+    #f-NavbarLogo {
+        width: 25%;
     }
 }
 
+// LoginModal.js ----------------------------
 #f-ModalContainer {
     padding: 1em;
 
@@ -165,20 +416,13 @@ body {
         margin: 0 auto;
         display: block;
 
-        .f-ModalButton {
-            width: 100%;
-            background-color: $grey-dark;
-            color: $wh;
-            margin: 1em 0;
-            transition: .5s ease background-color;
-
-            &:hover {
-                background-color: $logo-blue;
-            }
+        p {
+            padding-top: 2em;
         }
     }
 }
 
+// Home.js ----------------------------
 #f-BigLogoContainer {
     background-image: url("./Images/index-bgImg.png");
     background-position: center;
@@ -192,18 +436,55 @@ body {
     justify-content: space-evenly;
 
     #f-BigLogo {
-        width: 30%;
+        width: 40%;
         border-radius: 7px;
         box-shadow: -2px 3px 10px -3px #111111;
+    }
+
+    #f-AnimationDiv {
+        width: 300px;
+        height: 300px;
+        position: relative;
+    
+        .test {
+            width: 30%;
+            border-radius: 4px;
+            position: absolute;
+            margin: 1em;
+        }
+
+        #blue {
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        #green {
+            top: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        #peach {
+            bottom: 0;
+            left: 0;
+            z-index: -6;
+        }
+
+        #purple {
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
     }
 
     #f-BigLogoContainer-Text {
         width: 50%;
         font-family: $roboto;
-        color: $grey-dark;
-        background: -webkit-linear-gradient(#068095,  #732c4e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: $wh;
+        // background: -webkit-linear-gradient(#068095,  #732c4e);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
     }
 }
 
@@ -213,46 +494,30 @@ body {
     background-color: #068095;
     display: flex;
     justify-content: space-evenly;
+}
 
-    .f-Card {
-        width: 20%;
-        background-color: #068095;
-        border: none;
-        transition: none;
-        box-shadow: none;
+// LottieMediaCard.js ----------------------------
+.f-LottieMediaCard {
+    width: 20%;
 
-        .f-CardMedia {
-            width: 20%;
-        }
-
-        .f-Title {
-            font-family: $roboto;
-            color: $wh;
-            // text-transform: capitalize;
-        }
+    h3 {
+        color: $wh;
     }
 }
 
+// Partners.js ----------------------------
 #f-PartnerLogosContainer {
-    background-image: url("./Images/index-bgImg2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    width: 70%;
-    margin: 12em auto;
+    // background-image: url("./Images/index-bgImg2.jpg");
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat:  no-repeat;
+    // background-attachment: fixed;
+    width: 80%;
+    margin: 7em auto;
     display: block;
     padding: 3em;
-    // box-shadow: inset 0px 0px 14px 7px #FFFFFF;
-    box-shadow: inset 0px 0px 30px 18px #FFFFFF; 
-    border-radius: 10px;
-
-    #f-PartnerLogosContainer-Heading {
-        h2 {
-            text-align: center;
-            color: $grey-dark;
-        }
-    }
+    // box-shadow: inset 0px 0px 30px 18px #FFFFFF; 
+    // border-radius: 10px;
 
     #f-PartnerLogosContainer-Logos {
         display: flex;
@@ -268,29 +533,57 @@ body {
     }
 }
 
-#f-TestimonialContainer {
+// Testimonial.js ----------------------------
+#f-test {
+    width:80%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
+    flex-flow: wrap;
+    justify-content: space-evenly;    
+}
 
-    .f-TestimonialWrapperDiv {
-        width: 30%;
-        margin: 0 15px;
+.swiper-container {
+    width: 80%;
+    margin: 0 auto;
+    color: red;
+}
+  
+.swiper-pagination {
+    bottom: 0;
+}
 
-        .f-TestimonialCard {
-            width: 80%;
-            // height: auto;
-            margin: 5% auto;
-            background: $grey-light;        
-            text-align: center;
-            padding: 1em;
+.swiper-wrapper {
+    padding-inline-start: 0;
+    display:flex;
+}
+
+.f-testimonialBackground {
+    width:100%;
+    background-color: #E8DCE2;
+    padding: 3em 0;
+
+    .f-TestimonialCard {  
+        width: 60%;      
+        padding: 1.5em;
+        margin: 0 auto;
+        height: 400px;
+        overflow: hidden;
+        background-color: #8A4F6C;
+        color: $wh;
+        border-radius: 14px;
+    
+        p {
+            color: $wh;
+            font-weight: 300;
+        }
+    
+        &:nth-child(even) {
+            background-color: $logo-purple;
         }
     }
 }
 
-#f-ButtonDiv {
+#f-ContactUsButtonContainer {
     padding: 4em;
     display: flex;
     justify-content: center;
@@ -301,29 +594,34 @@ body {
     }
 }
 
+// ContactUsButton.js ----------------------------
 #f-ContactUsButton {
-    background-color: $logo-blue;
-    font-family: $roboto;
+    background-color: $trans-wh;
+    font-family: $temp-font;
     padding: 1em;
     display: flex;
     justify-content: center;
     outline: 0;
     border: none;
     border-radius: 4px;
-    color: $wh;
+    color: $logo-purple;
     box-shadow: -2px 3px 10px -3px #111111;
+    box-shadow: none;
+    font-weight: 800;
+    font-size: 1.3em;
     transition: transform ease 1s;
-    transition: .5s ease background-color;
-    transition: .5s ease color;
+    transition: .8s ease background-color;
+    transition: .8s ease color;
+    transition: .8s ease transform;
 
     &:hover {
         cursor: pointer;
-        background-color: $wh;
         color: $logo-blue;
-        transform: scale(1.01);
+        transform: scale(1.03);
     }
 }
 
+// Footer.js ----------------------------
 footer {
     background-color: #068095;
     color: $wh;
@@ -397,12 +695,7 @@ footer {
     }
 }
 
-// --------------------- Features ---------------------
-
-#f-FeaturesBody {
-    
-}
-
+// Features.js ---------------------
 .f-TabPanel {
     background-color: $grey-light;
     padding: 1em;
@@ -410,6 +703,9 @@ footer {
 
     #f-FeatureMainImage {
         padding: 1em 0;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 5px 18px -2px #bebebe;
+        box-shadow: 0 5px 18px -2px #bebebe;
     }
 
     .f-FeatureImagesContainer {
@@ -423,7 +719,7 @@ footer {
             padding: 1em;
             margin: 2em 0;
 
-            #test {
+            #f-FeatureImage {
                 width: 100%;
             }
         }
@@ -438,8 +734,8 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
     overflow: hidden;
+    height: 100vh;
 
     .f-Overlay {
         background-color: $logo-trans-blue;
@@ -475,12 +771,9 @@ footer {
     }
 }
 
-#f-ProductOverview {
-    width: 70%;    
-}
-
 #f-BlockBulletPointWrapper {
     width: 100%;
+    padding-bottom: 4em;
     margin: 1em 0;
     display: flex;
     flex-wrap: wrap;
@@ -492,7 +785,6 @@ footer {
         color: $wh;
         padding: 1em;
         margin: 1em;
-        text-align: center;
         width: 20%;
         border-radius: 4px;
 
@@ -504,29 +796,46 @@ footer {
 
 #f-TeamDiv {
     width: 100%;
-    padding: 1em 0;
-    margin-top: 6em;
-    background-color: $logo-trans-blue;
+    padding: 2em 0;
+    margin-top: 4em;
+    background-color: $grey-light;
 
-    #f-TeamWrapper {
-        width: 70%;
-        margin: auto;
+    #f-CEOIntro {
+        display: flex;
+        justify-content: stretch;
+        align-items: flex-start;
+        position: relative;
+        padding: 2em 1em;
+
+        #f-CEOIntroText {
+            padding: 1em;
+            border-radius: 4px;
+            color: $grey-dark;
+        }
+
+        #f-ChairpersonAvatar {
+            width: 30%;
+            height: auto;
+            border-radius: 85px;
+        }
     }
 }
 
-#f-EmployeeBody {
+// Employees.js ---------------------
+#f-TeamsContainer {
     display: block;
-    width: 100%;
+    padding-top: 3em;
+    margin: 6em auto;
 
-    .f-EmployeeTeamContainer {
+    .f-TeamTypeContainer {
         display: block;
-        background-color: $trans-wh;
         border-radius: 3px;
-        padding: 2em;
-        margin: 2em;
+        padding: .5em;
+        margin: 1em 0;
 
         h3 {
             letter-spacing: 1.5px;
+            color: $logo-purple;
         }
 
         .f-EmployeeCardContainer {
@@ -535,23 +844,24 @@ footer {
             align-items: center;
             align-content: center;
             flex-wrap: wrap;
+            border-radius: 4px;
+            background-color: $logo-purple;
+            box-shadow: -2px 3px 10px -3px #111111;
         }
     }
 }
 
-.f-EmployeeCard {
-    width: 10vw;
+// EmployeeProfileCard.js ---------------------
+#f-EmployeeCard {
+    width: auto;
     padding: 1em;
-    margin: 2em auto;
-    display: block;
-    background-color: #068095;
+    margin: 1em;
     border-radius: 7px;
-    box-shadow: -2px 3px 10px -3px #111111;
 
-    .f-EmployeeAvatar {
+    #f-EmployeeAvatar {
         margin: .5em auto;
         width: 120px;
-        height: auto;
+        height: 120px;
     }
 
     h4, p {
@@ -576,6 +886,7 @@ footer {
 
 #f-ContactBodyContainer {
     width: 70%;
+    max-width: 90%;
     background-color: $wh;
     margin: 0 auto;
     margin-top: 12em;
@@ -584,6 +895,11 @@ footer {
     padding-bottom: 10em;
     display: block;
     box-shadow: 0px -10px 14px -9px #515151;
+
+    p {
+        width: 70%;
+        padding-bottom: 2em;
+    }
 
     #f-ContactWrapper {
         width: 100%;
@@ -607,6 +923,7 @@ footer {
 
                 h4 {
                     padding-left: 2em;
+                    color: $bl;
                 }
             }
         }
@@ -624,12 +941,6 @@ footer {
                     margin: 2.33em auto;
                     margin-bottom: 2em;
                 }
-
-                button {
-                    background-color: $logo-blue;
-                    color: $wh;
-                    margin-right: 2em;
-                }
             }
         }
     }
@@ -639,15 +950,14 @@ footer {
 
 #f-PrivacyPolicyBody {
     padding: 2em .5em;
+}
 
-    #f-PrivacyPolicyAccordion {
-        margin: 2em auto;
+// ------------------------ Downloads ------------------------
 
-        .f-PolicyTitle {
-            color: $logo-blue;
-            font-weight: 500;
-        }
-    }
+#f-DownloadsContainer{
+    display: flex;
+    flex-grow: 1;
+    padding: 2em .5em;
 }
 
 // -------------------- Mobile Menu -------------------------
@@ -655,6 +965,8 @@ footer {
 #f-MobileMenuButton {
     z-index: 99;
     cursor: pointer;
+    height: 20px;
+    width: 20px;
 }
 
 .f-MobileMenu {
@@ -689,13 +1001,65 @@ footer {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .f-MobileMenu {
-        width: 100%;
+@media only screen and (max-width: 768px) {
+    // .f-MobileMenu {
+    //     width: 100%;
 
-        a {
-            font-size: 1.5rem;
-            text-align: center;
+    //     a {
+    //         font-size: 1.5rem;
+    //         text-align: center;
+    //     }
+    // }
+
+    .f-h1 {
+        font-size: 2.5em;
+    }
+
+    .f-h3 {
+        font-size: 2em;
+    }
+
+    .f-h4 {
+        font-size: 1.7em;
+    }
+
+    #f-NavbarLogo {
+        width: 45%;
+    }
+
+    #f-BigLogoContainer {
+        display: block;
+
+        #f-BigLogo {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        #f-BigLogoContainer-Text {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+    }
+
+    #f-CardContainer {
+        display: block;
+    }
+
+    .f-LottieMediaCard {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 3em .5em;
+
+        #f-BigColumnDiv {
+            display: block;
+
+            #f-LogoColumn, #f-OurCompanyColumn, #f-ContactUsColumn {
+                width: 80%;
+            }
         }
     }
 }

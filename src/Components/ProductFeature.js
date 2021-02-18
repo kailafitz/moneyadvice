@@ -8,60 +8,80 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import { Button } from '@material-ui/core';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
   
     return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`vertical-tabpanel-${index}`}
-        aria-labelledby={`vertical-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`vertical-tabpanel-${index}`}
+            aria-labelledby={`vertical-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+            <Box p={3}>
+                <Typography>{children}</Typography>
+            </Box>
+            )}
       </div>
     );
-  }
+}
   
-  TabPanel.propTypes = {
+TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.any.isRequired,
     value: PropTypes.any.isRequired,
-  };
-  
-  function a11yProps(index) {
+};
+
+function a11yProps(index) {
     return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+        id: `vertical-tab-${index}`,
+        'aria-controls': `vertical-tabpanel-${index}`,
     };
 }
   
-  const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       backgroundColor: theme.palette.background.paper,
       display: 'flex',
     },
     tabs: {
-      borderRight: `1px solid ${theme.palette.divider}`,
       overflow: "visible",
       "max-width": "20%",
       "min-width": "20%",
+      backgroundColor: "#067f95b6",
+      color: "#ffffff",
+      textTransform: "capitalize",
     },
     indicator: {
-        backgroundColor: "green",
+        backgroundColor: "#f3f3f3",
         height: "10px",
         top: "45px"
+    },
+    wrapper: {
+        textAlign: "left",
+        justifyContent: "left",
+        flexDirection: "row",
+        fontWeight: "500",
+    },
+    selected: {
+        backgroundColor: "#f3f3f3",
+        color: "#068095",
+    },
+    button: {
+        backgroundColor: "#068095",
+        color: "#ffffff",
+        margin: ".8em auto",
+        transition: ".3s ease-in background-color, .2s ease-in color",
+        "&:hover": {
+            backgroundColor: "#b8d30c",
+            color: "#7d7d7d",
+        },
     },
 }));
 
@@ -99,15 +119,20 @@ export const ProductFeature = () => {
                     aria-label="Vertical tabs example"
                     className={classes.tabs}
                     TabIndicatorProps={{ className: classes.indicator }}
-                    centered
                 >
                     {
                         data.map((feature) => {
                             return (
-                                <Tab label={feature.featureTitle} {...a11yProps(feature.id)}/>
+                                <Tab
+                                classes={{
+                                    wrapper: classes.wrapper,
+                                    selected: classes.selected,
+                                }}
+                                disableRipple
+                                label={feature.featureTitle}
+                                {...a11yProps(feature.id)}/>
                             );
-                        })
-                    
+                        })                    
                     }
 
                 </Tabs>
@@ -119,8 +144,9 @@ export const ProductFeature = () => {
                                 <Typography variant="h4">{feature.featureSubtitle}</Typography> */}
                                 <h2 className="f-h2">{feature.featureTitle}</h2>
                                 <h3 className="f-h3 f-BlueFont">{feature.featureSubtitle}</h3>
+                                <p className="f-p">{feature.featureParagraph}</p>
                                 <div className="f-TextCenter f-MarginAuto">
-                                    <img id="f-FeatureMainImage" src={feature.featureMainImage}/>
+                                    <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/>
                                 </div>
                                 {
                                     feature.featureBulletPoints.map((bulletpoint) => {
@@ -135,8 +161,8 @@ export const ProductFeature = () => {
                                             return (
                                                 <Card className="f-FeatureCard">
                                                     <CardActionArea>
-                                                        <img id="test" src={imageObject.featureImageURL}
-                                                        title={imageObject.featureImageTitle}
+                                                        <img id="f-FeatureImage" src={imageObject.featureImageURL}
+                                                        title={imageObject.featureImageTitle} alt="Feature"
                                                         />
                                                         <CardContent>
                                                         <Typography gutterBottom variant="h5" component="h2">
@@ -152,6 +178,9 @@ export const ProductFeature = () => {
                                         })
                                     }
                                 </div>
+                                {/* <div>
+                                    <Button className={classes.button} href={feature.featureButtonHref}>{feature.featureButtonLabel}</Button>
+                                </div> */}
                             </TabPanel>
                         );
                     })

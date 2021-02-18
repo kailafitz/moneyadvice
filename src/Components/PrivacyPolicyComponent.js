@@ -10,15 +10,19 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '70%',
-      margin: "0 auto",
+      margin: "2em auto",
     },
     heading: {
-      fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular,
+    //   fontSize: theme.typography.pxToRem(15),
+    //   fontWeight: theme.typography.fontWeightRegular,
+        color: "#068095",
+        fontWeight: "500",
+        margin: ".2em 0",
+        fontFamily: "Roboto",
     },
     displayBulletpoints: {
         "display": "block",
-    }
+    },
 }));
 
 export const PrivacyPolicyComponent = () => {
@@ -41,7 +45,7 @@ export const PrivacyPolicyComponent = () => {
 
     return (
         <>         
-            <div className={classes.root} id="f-PrivacyPolicyAccordion">
+            <div className={classes.root}>
             {
                 validData ? (
                     data.map((policy) => {
@@ -52,7 +56,7 @@ export const PrivacyPolicyComponent = () => {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                     >
-                                        <Typography className={classes.heading} className="f-h4 f-PolicyTitle">{policy.title}</Typography>
+                                        <p className={classes.heading}>{policy.title}</p>
                                     </AccordionSummary>
                                     <AccordionDetails className={classes.displayBulletpoints}>
                                         <Typography>
@@ -63,18 +67,11 @@ export const PrivacyPolicyComponent = () => {
                                             policy.policyBulletPoints ?
                                             policy.policyBulletPoints.map((bulletpoint) => {
                                                 return (
-                                                    <p className="f-p"><i class="fas fa-circle f-BulletPointIcon"></i> {bulletpoint}</p>
+                                                    <p className="f-p"><i class="fas fa-genderless f-BulletPointIcon"></i> {bulletpoint}</p>
                                                 );
                                             }): null
                                         }
                                         </div>
-                                        {/* {
-                                            policy.policyBulletPoints.map((bulletpoint) => {
-                                                return (
-                                                    <p><i class="fas fa-circle f-BulletPointIcon"></i> {bulletpoint}</p>
-                                                );
-                                            })
-                                        } */}
                                     </AccordionDetails>
                                 </Accordion>
                         );

@@ -14,7 +14,8 @@
     },
     {
         "title": "Communication",
-        "details": "We do not envisage communicating with broker customers on our platform except in the following circumstances: - Where we are instructed to do so by our broker client - Where we are required to do so by law, court order or in the public interest. - If instructed to do so by a Public Body, duly authorised. - Where a broker customer requires us to do so for legitimate reasons and the broker is not available to instruct us in the matter. - Where legitimate circumstances exist. - If we are required to fulfil contractual commitments. - If we sell or buy any business or assets, in which case we may disclose your personal information to the prospective seller or buyer of such business or assets. - We contract with a third-party processor, contractor, or subcontractor to process personal information on our behalf in relation to the delivery of our services to brokers."
+        "details": "We do not envisage communicating with broker customers on our platform except in the following circumstances;",
+        "policyBulletPoints": ["Where we are instructed to do so by our broker client", "Where we are required to do so by law, court order or in the public interest", "If instructed to do so by a Public Body, duly authorised", "Where a broker customer requires us to do so for legitimate reasons and the broker is not available to instruct us in the matter", "Where legitimate circumstances exist", "If we are required to fulfil contractual commitments", "If we sell or buy any business or assets, in which case we may disclose your personal information to the prospective seller or buyer of such business or assets", "We contract with a third-party processor, contractor, or subcontractor to process personal information on our behalf in relation to the delivery of our services to brokers"]
     },
     {
         "title": "Cookies",

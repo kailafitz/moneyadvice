@@ -3,6 +3,13 @@ import JSONData from "../JSON_Data/TestimonialData.json";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import SectionTitle from "./SectionTitle";
+import Modal from '@material-ui/core/Modal';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from 'swiper';
+import 'swiper/swiper-bundle.css';
+
+SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,97 +21,118 @@ const useStyles = makeStyles((theme) => ({
   large: {
     width: theme.spacing(7),
     height: theme.spacing(7),
-    margin: "0 auto",
   },
 }));
 
 export const Testimonial = () => {
   const classes = useStyles();
-
-  const [data, setData] = useState([]);
   const [validData, setValidData] = useState(false);
+  const [slides, setSlides] = useState([]);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [controlledSwiper, setControlledSwiper] = useState(null);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = (event) => {
+    console.log(event.target.attributes['slide-id'].value)
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const body = (
+    <div className={classes.paper}>
+      <h2 id="simple-modal-title">Text in a modal</h2>
+      <p id="simple-modal-description">
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+      </p>
+    </div>
+  );
 
   const createFunction = () => {
-    // console.log(JSONData);
-    setData(JSONData);
-    // console.log(data)
-    let tempData = [];
-    let tempSmData = [];
-
-    let minNum = 0;
-
-    for (let i = 0; i < JSONData.length; i++) {
-      if (i % 2 == 0 && i != 0) {
-        tempData.push(JSONData.slice(minNum, i));
-        minNum = i;
-      }
-
-      if (i == JSONData.length - 2) {
-        tempData.push(JSONData.slice(i, JSONData.length));
-      }
+    let slides = [];
+    for (let i = 0; i < JSONData.length; i ++) {
+      console.log(JSONData[i]);
+      slides.push(
+        <SwiperSlide key={`slide-${i}`} tag="li">
+          <div className="f-TestimonialCard">
+            <Avatar
+              alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
+              src={JSONData[i].profile_picture}
+              className={classes.large}
+            />
+            <h4 className="f-h4">
+              {JSONData[i].first_name + " " + JSONData[i].sur_name}
+            </h4>
+            <img alt={JSONData[i].company_name} src={JSONData[i].company_logo} />
+            <p className="f-p f-TextLeft">{JSONData[i].testimonial}</p>
+            <button type="button" onClick={handleOpen} slide-id={i}>
+              View More
+            </button>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="simple-modal-title"
+              aria-describedby="simple-modal-description"
+            >
+                <div className="f-TestimonialCard">
+                  <Avatar
+                    alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
+                    src={JSONData[i].profile_picture}
+                    className={classes.large}
+                  />
+                  <h4 className="f-h4">
+                    {JSONData[i].first_name + " " + JSONData[i].sur_name}
+                  </h4>
+                  <img alt={JSONData[i].company_name} src={JSONData[i].company_logo} />
+                  <p className="f-p f-TextLeft" style={{'-webkit-line-clamp': 'none'}}>{JSONData[i].testimonial}</p>
+                </div>
+            </Modal>
+        </div>
+        </SwiperSlide>
+      );
     }
 
-    // console.log(JSONData.slice(0, 2))
-    // console.log(JSONData.slice(2, 4))
-    // console.log(JSONData.slice(4, 6))
-
-    console.log(tempData);
-    setData(tempData);
+    console.log(slides);
+    setSlides(slides);
   };
 
   useEffect(() => {
-    if (data && data.length > 0) {
+    if (slides && slides.length > 0) {
       setValidData(true);
-      // console.log("Hello");
+      console.log("Hello");
     } else {
       createFunction();
     }
-  }, [data]);
+  }, [slides]);
 
   return (
     <>
-      <SectionTitle title="What our Customers Say" />
-      <div id="f-TestimonialContainer">
-        {console.log(validData)}
+      <SectionTitle title="What our Customers Say" style={{'color': '#732C4E'}}/>
+      <div className="f-testimonialBackground">
+        <Swiper
+          id="main"
+          thumbs={{ swiper: thumbsSwiper }}
+          controller={{ control: controlledSwiper }}
+          tag="section"
+          wrapperTag="ul"
+          navigation
+          pagination
+          spaceBetween={0}
+          slidesPerView={2}
+          onInit={(swiper) => console.log('Swiper initialized!', swiper)}
+          onSlideChange={(swiper) => {
+            console.log('Slide index changed to: ', swiper.activeIndex);
+          }}
+          onReachEnd={() => console.log('Swiper end reached')}
+        >
         {
-          validData ? (
-            data.map((person) => {
-              return (
-                <div className="f-TestimonialWrapperDiv">
-                  <div className="f-TestimonialCard">
-                    <Avatar
-                      alt={person[0].first_name + " " + person[0].sur_name}
-                      src={person[0].profile_picture}
-                      className={classes.large}
-                    />
-                    <h4 className="f-h4">
-                      {/* <i class="fas fa-minus"></i>  */}
-                      {person[0].first_name + " " + person[0].sur_name}
-                    </h4>
-                    {/* <h4 className="f-h4">{person.company_name}</h4> */}
-                    <img alt={person[0].company_name} src={person[0].company_logo} />
-                    <p className="f-p f-TextLeft">{person[0].testimonial}</p>
-                  </div>
-                  <div className="f-TestimonialCard">
-                    <Avatar
-                      alt={person[1].first_name + " " + person[1].sur_name}
-                      src={person[1].profile_picture}
-                      className={classes.large}
-                    />
-                    <h4 className="f-h4">
-                      {person[1].first_name + " " + person[1].sur_name}
-                    </h4>
-                    {/* <h4 className="f-h4">{person.company_name}</h4> */}
-                    <img alt={person[1].company_name} src={person[1].company_logo} />
-                    <p className="f-p f-TextLeft">{person[1].testimonial}</p>
-                  </div>
-                </div>
-              );
-            })
-          ) : (
-          <h2>Data not found</h2>
-          )
-        }
+              validData ? slides : (
+              <h2>No testimonials currently available</h2>
+              )
+            }
+      </Swiper>
       </div>
     </>
   );

@@ -11,23 +11,24 @@ const useStyles = makeStyles((theme) => ({
       },
       large:  {
         wclassNameth: theme.spacing(7),
-        height: theme.spacing(7),
-      },
+        height: theme.spacing(7),        
+      }
     },
 }));
 
-export const EmployeeProfileCard = ({img, empName, title}) => {
+export const EmployeeProfileCard = ({img, empName}) => {
     const classes = useStyles();
     return (
-        <div className={classes.root} className="f-EmployeeCard f-TextCenter">
+        <div
+          className={classes.root}
+          id="f-EmployeeCard">
             <Avatar
             alt="Profile Image"
             src={img}
             className={classes.large}
-            className="f-EmployeeAvatar"
+            id="f-EmployeeAvatar"
             />
             <h4 className="f-h4">{empName}</h4>
-            <p className="f-p">{title}</p>
         </div>
     )
 }

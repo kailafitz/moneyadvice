@@ -7,13 +7,16 @@ import LottieAnimation from './LottieAnimation';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    // maxWidth: 345,
     "&:hover": {
       backgroundColor: "#068095"
     },
+    backgroundColor: "#068095",
+    border: "none",
+    transition: "none",
+    boxShadow: "none",
   },
   media: {
-    // height: 140,
     width: "80%",
     margin: "0 auto",
     "&:hover": {
@@ -22,28 +25,18 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard( { animationData, title } ) {
+export default function LottieMediaCard( { animationData, title } ) {
   const classes = useStyles();
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-};
-
   return (
-    <Card className={classes.root} className="f-Card">
+    <Card className={classes.root + " f-LottieMediaCard"}>
         <CardMedia
           className={classes.media}
         >
           <LottieAnimation animationData={animationData}/>
-          {/* <Lottie className="f-Lottie" options={defaultOptions}/> */}
         </CardMedia>
       <CardContent>
-        <h2 className="f-Title f-TextCenter">{title}</h2>
+        <h3 className="f-h3 f-TextCenter">{title}</h3>
       </CardContent>
     </Card>
   );
