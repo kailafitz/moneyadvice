@@ -869,8 +869,7 @@ footer {
     }
 }
 
-// ------------------------ Contact Us ----------------------
-
+// ContactUs.js ---------------------
 .f-HeaderImage {
     height: 50vh;
     width: 100vw;
@@ -946,13 +945,13 @@ footer {
     }
 }
 
-// --------------------- Privacy Policy ----------------------
+// PrivacyPolicy.js ---------------------
 
 #f-PrivacyPolicyBody {
     padding: 2em .5em;
 }
 
-// ------------------------ Downloads ------------------------
+// Downloads.js ---------------------
 
 #f-DownloadsContainer{
     display: flex;
@@ -960,8 +959,7 @@ footer {
     padding: 2em .5em;
 }
 
-// -------------------- Mobile Menu -------------------------
-
+// MenuToggle.js ---------------------
 #f-MobileMenuButton {
     z-index: 99;
     cursor: pointer;
@@ -969,6 +967,7 @@ footer {
     width: 20px;
 }
 
+// MobileMenu.js ---------------------
 .f-MobileMenu {
     height: 100%;
     display: flex;

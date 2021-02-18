@@ -25,9 +25,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     alignContent: "center",
     display: "flex",
-    // "& img": {
-    //   width: "45%",
-    // },
+    padding: "0",
   },
 }));
 
