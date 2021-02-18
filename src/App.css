@@ -149,6 +149,7 @@ body {
 
 #f-ModalContainer {
   padding: 1em;
+  width: 30%;
 }
 #f-ModalContainer #f-ModalLogo {
   width: 50%;
@@ -177,8 +178,11 @@ body {
 }
 #f-BigLogoContainer #f-BigLogo {
   width: 40%;
+}
+#f-BigLogoContainer #f-BigLogo img {
+  width: 100%;
   border-radius: 7px;
-  box-shadow: -2px 3px 10px -3px #111111;
+  box-shadow: -2px 3px 10px -3px #7d7d7d;
 }
 #f-BigLogoContainer #f-AnimationDiv {
   width: 300px;
@@ -297,7 +301,7 @@ body {
 }
 
 #f-ContactUsButtonContainer {
-  padding: 4em;
+  padding: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,23 +311,21 @@ body {
 }
 
 #f-ContactUsButton {
-  background-color: #ffffffc2;
+  background-color: #f3f3f3;
   font-family: "Inter", sans-serif;
   padding: 1em;
   display: flex;
   justify-content: center;
   outline: 0;
   border: none;
+  text-align: center;
   border-radius: 4px;
   color: #732c4e;
   box-shadow: -2px 3px 10px -3px #111111;
   box-shadow: none;
   font-weight: 800;
   font-size: 1.3em;
-  transition: transform ease 1s;
-  transition: 0.8s ease background-color;
-  transition: 0.8s ease color;
-  transition: 0.8s ease transform;
+  transition: 0.8s ease background-color, 0.8s ease color, 0.8s ease transform;
 }
 #f-ContactUsButton:hover {
   cursor: pointer;
@@ -632,7 +634,7 @@ footer .f-FooterIconContainer h4 {
   display: flex;
   height: 100%;
   list-style: none;
-  background-color: #b8d30c;
+  background-color: #ffffffc2;
   width: 100%;
   flex-direction: column;
   position: fixed;
@@ -640,7 +642,7 @@ footer .f-FooterIconContainer h4 {
   left: 0;
 }
 .f-MobileMenu #f-MobileLinksWrapper a {
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   padding: 1rem 0;
@@ -653,7 +655,7 @@ footer .f-FooterIconContainer h4 {
 
 @media only screen and (max-width: 768px) {
   .f-h1 {
-    font-size: 2.5em;
+    font-size: 4.5em;
   }
 
   .f-h3 {
@@ -664,12 +666,18 @@ footer .f-FooterIconContainer h4 {
     font-size: 1.7em;
   }
 
-  #f-NavbarLogo {
+  #f-NavigationBar #f-NavbarLogo {
     width: 45%;
   }
 
+  #f-ModalContainer {
+    width: 70%;
+  }
+
   #f-BigLogoContainer {
-    display: block;
+    flex-direction: column;
+    background-size: auto;
+    justify-content: center;
   }
   #f-BigLogoContainer #f-BigLogo {
     margin: 0 auto;
@@ -687,6 +695,27 @@ footer .f-FooterIconContainer h4 {
   .f-LottieMediaCard {
     width: 80%;
     margin: 0 auto;
+  }
+
+  #f-PartnerLogosContainer {
+    width: 90%;
+    padding: 0;
+  }
+  #f-PartnerLogosContainer #f-PartnerLogosContainer-Logos .f-PartnerLogo {
+    width: 20vw;
+  }
+
+  #f-ContactUsButtonContainer {
+    padding: 2em;
+    display: block;
+  }
+  #f-ContactUsButtonContainer #f-LottieDiv {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #f-CardMediaMobile {
+    width: 50%;
   }
 
   footer {

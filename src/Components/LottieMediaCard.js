@@ -32,6 +32,7 @@ export default function LottieMediaCard( { animationData, title } ) {
     <Card className={classes.root + " f-LottieMediaCard"}>
         <CardMedia
           className={classes.media}
+          id="f-CardMediaMobile"
         >
           <LottieAnimation animationData={animationData}/>
         </CardMedia>

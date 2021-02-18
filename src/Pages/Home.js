@@ -8,7 +8,7 @@ import { Testimonial } from "../Components/Testimonial";
 import Footer from "../Components/Footer";
 import ContactUsButton from "../Components/ContactUsButton";
 import LottieAnimation from "../Components/LottieAnimation";
-import Phone from "../Lottie/Phone.json";
+import ContactUs from "../Lottie/ContactUs.json";
 import Partners from "../Components/Partners";
 import Blue from '../Images/BlueSquare.png';
 import Green from '../Images/GreenSquare.png';
@@ -46,7 +46,9 @@ export default function Home() {
     return (
     <>
         <div id="f-BigLogoContainer">
-            <img alt="Logo" src={BigLogo} id="f-BigLogo"/>
+            <div id="f-BigLogo" className="f-MarginAuto">
+                <img alt="Logo" src={BigLogo}/>
+            </div>
             {/* <div id="f-AnimationDiv">
                 <Frame
                     backgroundColor="none"
@@ -80,7 +82,7 @@ export default function Home() {
         <Testimonial />
         <div id="f-ContactUsButtonContainer">
             <div id="f-LottieDiv">
-                <LottieAnimation animationData={Phone} />
+                <LottieAnimation animationData={ContactUs} />
             </div>
             <ContactUsButton label="Call us today for your demo and a quotation!"/>
         </div>

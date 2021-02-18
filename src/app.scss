@@ -244,7 +244,6 @@ body {
 }
 
 // Typography Styles ----------------------------
-
 .f-h1 {
     font-size: 4em;
     font-family: $temp-font;
@@ -307,7 +306,6 @@ body {
 }
 
 // Utilities ----------------------------
-
 .f-TextCenter {
     text-align: center;
 }
@@ -321,7 +319,6 @@ body {
 }
 
 // Icon Styles ----------------------------
-
 .f-CheckListIcon {
     color: $logo-green;
 }
@@ -331,7 +328,6 @@ body {
 }
 
 // Button Style ----------------------------
-
 .f-Button {
     background-color: $logo-blue;
     color: $wh;
@@ -366,7 +362,7 @@ body {
 
 // NavbarLinks.js ----------------------------
 #f-NavBarLinkDiv {
-display: flex;
+    display: flex;
 
     .is-active {
         border-bottom: 2px solid $logo-blue;
@@ -405,6 +401,7 @@ display: flex;
 // LoginModal.js ----------------------------
 #f-ModalContainer {
     padding: 1em;
+    width: 30%;
 
     #f-ModalLogo {
         width: 50%;
@@ -437,8 +434,12 @@ display: flex;
 
     #f-BigLogo {
         width: 40%;
-        border-radius: 7px;
-        box-shadow: -2px 3px 10px -3px #111111;
+
+        img {
+            width: 100%;
+            border-radius: 7px;
+            box-shadow: -2px 3px 10px -3px $grey-dark;
+        }
     }
 
     #f-AnimationDiv {
@@ -584,7 +585,7 @@ display: flex;
 }
 
 #f-ContactUsButtonContainer {
-    padding: 4em;
+    padding: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -596,23 +597,21 @@ display: flex;
 
 // ContactUsButton.js ----------------------------
 #f-ContactUsButton {
-    background-color: $trans-wh;
+    background-color: $grey-light;
     font-family: $temp-font;
     padding: 1em;
     display: flex;
     justify-content: center;
     outline: 0;
     border: none;
+    text-align: center;
     border-radius: 4px;
     color: $logo-purple;
     box-shadow: -2px 3px 10px -3px #111111;
     box-shadow: none;
     font-weight: 800;
     font-size: 1.3em;
-    transition: transform ease 1s;
-    transition: .8s ease background-color;
-    transition: .8s ease color;
-    transition: .8s ease transform;
+    transition: .8s ease background-color, .8s ease color, .8s ease transform;
 
     &:hover {
         cursor: pointer;
@@ -979,7 +978,7 @@ footer {
         display: flex;
         height: 100%;
         list-style: none;
-        background-color: $logo-green;
+        background-color: $trans-wh;
         width: 100%;
         flex-direction: column;
         position: fixed;
@@ -987,7 +986,7 @@ footer {
         left: 0;
 
         a {
-            font-size: 1rem;
+            font-size: 2rem;
             font-family: $roboto;
             text-transform: uppercase;
             padding: 1rem 0;
@@ -1001,17 +1000,9 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    // .f-MobileMenu {
-    //     width: 100%;
-
-    //     a {
-    //         font-size: 1.5rem;
-    //         text-align: center;
-    //     }
-    // }
 
     .f-h1 {
-        font-size: 2.5em;
+        font-size: 4.5em;
     }
 
     .f-h3 {
@@ -1022,12 +1013,21 @@ footer {
         font-size: 1.7em;
     }
 
-    #f-NavbarLogo {
-        width: 45%;
+    #f-NavigationBar {
+
+        #f-NavbarLogo {
+            width: 45%;
+        }
+    }
+
+    #f-ModalContainer {
+        width: 70%;
     }
 
     #f-BigLogoContainer {
-        display: block;
+        flex-direction: column;
+        background-size: auto;
+        justify-content: center;
 
         #f-BigLogo {
             margin: 0 auto;
@@ -1048,6 +1048,29 @@ footer {
     .f-LottieMediaCard {
         width: 80%;
         margin: 0 auto;
+    }
+
+    #f-PartnerLogosContainer {
+        width: 90%;
+        padding: 0;
+
+        #f-PartnerLogosContainer-Logos .f-PartnerLogo {
+            width: 20vw;
+        }
+    }
+
+    #f-ContactUsButtonContainer {
+        padding: 2em;
+        display: block;
+
+        #f-LottieDiv {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    #f-CardMediaMobile {
+        width: 50%;
     }
 
     footer {
