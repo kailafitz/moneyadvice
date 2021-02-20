@@ -1,25 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import EmployeeData from '../JSON_Data/EmployeeData.json'
 import { makeStyles } from '@material-ui/core/styles';
-import Employee1 from '../Images/About-Imgs/Employee1.jpg';
 import { EmployeeProfileCard } from './EmployeeProfileCard';
 import { Container } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-      '& > *': {
-        margin: theme.spacing(1),
-      },
-      large: {
-        wclassNameth: theme.spacing(7),
-        height: theme.spacing(7),
-      },
-    },
-}));
-
 export const Employees = () => {
-    const classes = useStyles();
 
     const [Data, setData] = useState(new Map());
     const [DataReady, setDataReady] = useState(false);
@@ -59,7 +44,11 @@ export const Employees = () => {
                         <div className="f-EmployeeCardContainer">
                             {Data.get("Development Team").map((employee) => {
                                 return (
-                                    <EmployeeProfileCard img={Employee1} empName={ employee.first_name + " " + employee.sur_name } />
+                                    <EmployeeProfileCard
+                                        img={employee.profile_img}
+                                        empName={employee.first_name + " " + employee.sur_name}
+                                        role={employee.role}
+                                    />
                                 );
                             })}
                         </div>
@@ -73,7 +62,11 @@ export const Employees = () => {
                         <div className="f-EmployeeCardContainer">
                             {Data.get("Support Team").map((employee) => {
                                 return (
-                                    <EmployeeProfileCard img={Employee1} empName={ employee.first_name + " " + employee.sur_name } />
+                                    <EmployeeProfileCard
+                                        img={employee.profile_img}
+                                        empName={employee.first_name + " " + employee.sur_name}
+                                        role={employee.role}
+                                    />
                                 );
                             })}
                         </div>
@@ -87,7 +80,11 @@ export const Employees = () => {
                         <div className="f-EmployeeCardContainer">
                             {Data.get("Admin Team").map((employee) => {
                                 return (
-                                    <EmployeeProfileCard img={Employee1} empName={ employee.first_name + " " + employee.sur_name } />
+                                    <EmployeeProfileCard
+                                        img={employee.profile_img}
+                                        empName={employee.first_name + " " + employee.sur_name}
+                                        role={employee.role}
+                                    />
                                 );
                             })}
 

@@ -546,7 +546,7 @@ body {
 .swiper-container {
     width: 80%;
     margin: 0 auto;
-    color: red;
+    color: transparent;
 }
   
 .swiper-pagination {
@@ -556,6 +556,14 @@ body {
 .swiper-wrapper {
     padding-inline-start: 0;
     display:flex;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: $logo-blue !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: $logo-blue !important;
 }
 
 .f-testimonialBackground {
@@ -572,6 +580,17 @@ body {
         background-color: #8A4F6C;
         color: $wh;
         border-radius: 14px;
+
+        #f-TestimonialCardHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            #f-TestimonialHeaderDetails {
+                display: block;
+                text-align: left;
+            }
+        }
     
         p {
             color: $wh;
@@ -624,7 +643,7 @@ body {
 footer {
     background-color: #068095;
     color: $wh;
-    padding: 7em 3em;
+    padding: 2em 1em;
     font-family: $roboto;
 
     #f-BigColumnDiv {
@@ -677,6 +696,10 @@ footer {
 
         #f-ContactUsColumn {
             width: 30%;
+
+            p {
+                color: $wh;
+            }
         }
     }
 
@@ -688,8 +711,9 @@ footer {
             font-size: 3em;
         }
 
-        h4 {
+        p {
             padding-left: .5em;
+            color: $wh;
         }
     }
 }
@@ -861,6 +885,7 @@ footer {
         margin: .5em auto;
         width: 120px;
         height: 120px;
+        border-radius: 4%;
     }
 
     h4, p {
@@ -936,8 +961,13 @@ footer {
 
                 .f-ContactFormInput {
                     width: 90%;
-                    margin: 2.33em auto;
-                    margin-bottom: 2em;
+                    margin-bottom: 1em;
+
+                    .f-FormField {
+                        background-color: $grey-light;
+                        margin-bottom: 1em;
+                        border-radius: 4px;
+                    }
                 }
             }
         }
@@ -1022,6 +1052,7 @@ footer {
 
     #f-ModalContainer {
         width: 70%;
+        overflow: scroll;
     }
 
     #f-BigLogoContainer {

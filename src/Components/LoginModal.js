@@ -30,15 +30,15 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     outline: 0,
+    overflow: 'scroll',
   },
   button: {
     backgroundColor: "#068095",
     color: "#ffffff",
     margin: ".8em",
-    transition: ".3s ease-in background-color, .2s ease-in color",
+    transition: ".3s ease-in background-color",
     "&:hover": {
         backgroundColor: "#b8d30c",
-        color: "#7d7d7d",
     },
   }
 }));
@@ -85,6 +85,7 @@ export default function LoginModal() {
         aria-labelledby="login-modal-title"
         aria-describedby="login-modal-description"
         closeAfterTransition
+        disableScrollLock={true}
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,

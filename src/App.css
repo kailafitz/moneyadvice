@@ -265,7 +265,7 @@ body {
 .swiper-container {
   width: 80%;
   margin: 0 auto;
-  color: red;
+  color: transparent;
 }
 
 .swiper-pagination {
@@ -275,6 +275,14 @@ body {
 .swiper-wrapper {
   padding-inline-start: 0;
   display: flex;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #068095 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #068095 !important;
 }
 
 .f-testimonialBackground {
@@ -291,6 +299,15 @@ body {
   background-color: #8A4F6C;
   color: #ffffff;
   border-radius: 14px;
+}
+.f-testimonialBackground .f-TestimonialCard #f-TestimonialCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.f-testimonialBackground .f-TestimonialCard #f-TestimonialCardHeader #f-TestimonialHeaderDetails {
+  display: block;
+  text-align: left;
 }
 .f-testimonialBackground .f-TestimonialCard p {
   color: #ffffff;
@@ -336,7 +353,7 @@ body {
 footer {
   background-color: #068095;
   color: #ffffff;
-  padding: 7em 3em;
+  padding: 2em 1em;
   font-family: "Roboto", sans-serif;
 }
 footer #f-BigColumnDiv {
@@ -379,6 +396,9 @@ footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li a:hover {
 footer #f-BigColumnDiv #f-ContactUsColumn {
   width: 30%;
 }
+footer #f-BigColumnDiv #f-ContactUsColumn p {
+  color: #ffffff;
+}
 footer .f-FooterIconContainer {
   display: flex;
   align-items: center;
@@ -386,8 +406,9 @@ footer .f-FooterIconContainer {
 footer .f-FooterIconContainer i {
   font-size: 3em;
 }
-footer .f-FooterIconContainer h4 {
+footer .f-FooterIconContainer p {
   padding-left: 0.5em;
+  color: #ffffff;
 }
 
 .f-TabPanel {
@@ -535,6 +556,7 @@ footer .f-FooterIconContainer h4 {
   margin: 0.5em auto;
   width: 120px;
   height: 120px;
+  border-radius: 4%;
 }
 #f-EmployeeCard h4, #f-EmployeeCard p {
   color: #ffffff;
@@ -602,8 +624,12 @@ footer .f-FooterIconContainer h4 {
 }
 #f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form .f-ContactFormInput {
   width: 90%;
-  margin: 2.33em auto;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+}
+#f-ContactBodyContainer #f-ContactWrapper #f-ContactFormWrapper form .f-ContactFormInput .f-FormField {
+  background-color: #f3f3f3;
+  margin-bottom: 1em;
+  border-radius: 4px;
 }
 
 #f-PrivacyPolicyBody {
@@ -672,6 +698,7 @@ footer .f-FooterIconContainer h4 {
 
   #f-ModalContainer {
     width: 70%;
+    overflow: scroll;
   }
 
   #f-BigLogoContainer {

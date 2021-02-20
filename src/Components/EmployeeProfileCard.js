@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const EmployeeProfileCard = ({img, empName}) => {
+export const EmployeeProfileCard = ({img, empName, role}) => {
     const classes = useStyles();
     return (
         <div
@@ -28,7 +28,8 @@ export const EmployeeProfileCard = ({img, empName}) => {
             className={classes.large}
             id="f-EmployeeAvatar"
             />
-            <h4 className="f-h4">{empName}</h4>
+            <h4 className="f-h4 f-TextCenter">{empName}</h4>
+            <p className="f-p f-TextCenter">{role}</p>
         </div>
     )
 }

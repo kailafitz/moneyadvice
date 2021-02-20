@@ -34,23 +34,14 @@
         "company_name": "DFP Consultants",
         "company_logo": "https://www.moneyadvice.ie/images/edfp-small.jpg",
         "testimonial": "DFP Pension & Investment Consultants have been customers of Money Advice since 2012 and have found the staff and system to be of the very highest quality. The reason I initially chose Broker CRM, as it was called then, had nothing to do with my understanding of CRM systems but that I was impressed with Philip’s passion for the system and I knew him when I was a young fella in Ennis. I still don’t know much about CRM but I’m sure glad DFP partnered with Money Advice in 2012."
-    },  
-    {
-        "id": 5,
-        "first_name": "John",
-        "sur_name": "McColgan",
-        "profile_picture": "https://www.moneyadvice.ie/images/customer3.jpg",
-        "company_name": "McColgan Financial",
-        "company_logo": "https://www.moneyadvice.ie/images/mccolgan-small.jpg",
-        "testimonial": "We moved to Money Advice as we were using a separate CRM system and software for quoting and doing protection and pension quotations and we wanted one system which could do this as well as log all phone calls, tasks etc. The staff at Money Advice were excellent in facilitating the export of client data and logs from our old CRM system to Money Advice. I took the free trial period and having tested it out myself was convinced of the merits of the system."
     },
     {
-        "id": 6,
+        "id": 5,
         "first_name": "Bill",
         "sur_name": "Coyne",
         "profile_picture": "https://www.moneyadvice.ie/images/customer4.jpg",
         "company_name": "McColgan Financial",
         "company_logo": "https://www.moneyadvice.ie/images/lifepath-small.jpg",
-        "testimonial": "I've been a client on Moneyadvice for over a year, having been a customer of Broker CRM since 2006, and have found the new system to be quicker and easier to use than the old one. Updates are continually added and the system meets all the needs of my firm. Staff and service are of a high level and I continue to recommend this system to any advisors that I meet"
+        "testimonial": "I've been a client on Moneyadvice for over a year, having been a customer of Broker CRM since 2006, and have found the new system to be quicker and easier to use than the old one. Updates are continually added and the system meets all the needs of my firm. Staff and service are of a high level and I continue to recommend this system to any advisors that I meet."
     }
 ]

@@ -13,23 +13,23 @@ export default function Footer() {
                     <div id="f-FooterLinks">
                         <h3 className="f-h3">Our Company</h3>
                         <ul>
-                            <li className="f-h4"><Link href="/about">About</Link></li>
-                            <li className="f-h4"><Link href="/features">Features</Link></li>
-                            <li className="f-h4"><Link href="/contactus">Contact Us</Link></li>
-                            <li className="f-h4"><Link href="/privacypolicy">Privacy Policy</Link></li>
-                            <li className="f-h4"><Link href="/">Meet our Team</Link></li>
-                            <li className="f-h4"><Link href="/downloads">Downloads</Link></li>
+                            <li className="f-p"><Link href="/about">About</Link></li>
+                            <li className="f-p"><Link href="/features">Features</Link></li>
+                            <li className="f-p"><Link href="/contactus">Contact Us</Link></li>
+                            <li className="f-p"><Link href="/privacypolicy">Privacy Policy</Link></li>
+                            <li className="f-p"><Link href="/">Meet our Team</Link></li>
+                            <li className="f-p"><Link href="/downloads">Downloads</Link></li>
                         </ul>
                     </div>
                     <div className="f-FooterIconContainer">
                         <i className="f-FooterIcon" class="fab fa-linkedin"></i>
-                        <h4 className="f-h4">Follow us on LinkedIn</h4>
+                        <p className="f-p">Follow us on LinkedIn</p>
                     </div>
 
                 </div>
                 <div className="f-FooterColumn" id="f-ContactUsColumn">
                     <h3 className="f-h3">Contact Us</h3>
-                    <h4 className="f-h4">Lunar Technologies Ltd t/a Money Advice,
+                    <p className="f-p">Lunar Technologies Ltd t/a Money Advice,
                         Registered in Ireland, Registered No: 504675.
                         <br/>
                         <br/>
@@ -39,16 +39,15 @@ export default function Footer() {
                         Ireland<br/>
                         V95 FN79
                         <br/>
-                    </h4>
+                    </p>
                     <div className="f-FooterIconContainer">
                         <i class="fas fa-phone-square-alt"></i>
-                        <h4 className="f-h4">+353 65 684 9675</h4>
+                        <p className="f-p">+353 65 684 9675</p>
                     </div>
                     <div className="f-FooterIconContainer">
                         <i class="fas fa-envelope-square"></i>
-                        <h4 className="f-h4">support@moneyadvice.ie</h4>
-                    </div>
-                    
+                        <p className="f-p">support@moneyadvice.ie</p>
+                    </div>                    
                 </div>
             </div>            
         </footer>

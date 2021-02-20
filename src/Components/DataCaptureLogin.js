@@ -57,6 +57,15 @@ const useStyles = makeStyles((theme) => ({
   tabPanel: {
     backgroundColor: "#068095"
   },
+  button: {
+    backgroundColor: "#068095",
+    color: "#ffffff",
+    margin: ".8em",
+    transition: ".3s ease-in background-color",
+    "&:hover": {
+        backgroundColor: "#b8d30c",
+    },
+  }
 }
 ));
 
@@ -128,7 +137,7 @@ export default function DataCaptureLogin() {
           >
             <TextField
               id="filled-basic"
-              label="Advisor Email"
+              label="Username"
               variant="filled"
               type="email"
               required={true}
@@ -137,6 +146,14 @@ export default function DataCaptureLogin() {
             <TextField
               id="filled-basic"
               label="Password"
+              variant="filled"
+              type="password"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+            <TextField
+              id="filled-basic"
+              label="Pin"
               variant="filled"
               type="password"
               required={true}
@@ -156,10 +173,26 @@ export default function DataCaptureLogin() {
             autoComplete="off"
             action="/"
             method="post"
-          > 
+          >
             <TextField
               id="filled-basic"
-              label="Client Email"
+              label="Forename"
+              variant="filled"
+              type="text"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+            <TextField
+              id="filled-basic"
+              label="Surname"
+              variant="filled"
+              type="text"
+              required={true}
+              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+            />
+            <TextField
+              id="filled-basic"
+              label="Email"
               variant="filled"
               type="email"
               required={true}
@@ -167,13 +200,13 @@ export default function DataCaptureLogin() {
             />
             <TextField
               id="filled-basic"
-              label="Password"
+              label="Security Code"
               variant="filled"
               type="password"
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <Button type="button" className="f-Button">Login</Button>
+            <Button type="button" className={classes.button}>Login</Button>
           </form>
         </TabPanel>
     </div>

@@ -1,0 +1,65 @@
+[
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Client, Product Data Downloads from Life Insurance Providers",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    },
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Tasks",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    },
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Appointments / Diary (Add an appointment in Outlook from Money Advice)",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    },
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Logs",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    },
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Complaints Management",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    },
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Meeting Memos with outcome management",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    },
+    {
+        "featureTable": "CRM, Workflow & Compliance",
+        "featureName": "Client Reviews",
+        "featureOfMoney": "Yes",
+        "featureOfMoney+CRM": "Yes",
+        "newRelease": "No",
+        "nextRelease": "No",
+        "futureRelease": "No"
+    }
+]

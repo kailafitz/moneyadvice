@@ -26,10 +26,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#068095",
         color: "#ffffff",
         margin: ".8em",
-        transition: ".3s ease-in background-color, .2s ease-in color",
+        transition: ".3s ease-in background-color",
         "&:hover": {
             backgroundColor: "#b8d30c",
-            color: "#7d7d7d",
         },
     }
 }));
@@ -44,6 +43,7 @@ export default function ContactUs() {
 
     const [input, setInput] = useState({
         email: '',
+        name: '',
         message: ''
     });
 
@@ -61,6 +61,7 @@ export default function ContactUs() {
         event.preventDefault();
         const newMessage = {
             email: input.email,
+            name: input.name,
             message: input.message
         }
         
@@ -125,7 +126,21 @@ export default function ContactUs() {
                                     variant="filled"
                                     size="normal"
                                     fullWidth
+                                    className="f-FormField"
                                     value={input.email}
+                                    onChange={handleChange}
+                                    InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
+                                />
+                                <TextField
+                                    name="name"
+                                    required
+                                    id="filled-full-width"
+                                    label="Your Name"
+                                    variant="filled"
+                                    size="normal"
+                                    fullWidth
+                                    className="f-FormField"
+                                    value={input.name}
                                     onChange={handleChange}
                                     InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
                                 />
@@ -142,6 +157,7 @@ export default function ContactUs() {
                                     variant="filled"
                                     size="normal"
                                     fullWidth
+                                    className="f-FormField"
                                     InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
                                 />
                             </div>
