@@ -14,21 +14,11 @@ import breakpoint from '../breakpoints';
 
 const FeaturesPage = styled.div`
     width:100%;
-    display:flex;
-
-    @media only screen and ${breakpoint.device.xs}{
-        flex-flow: column-reverse;
-    }
-    @media only screen and ${breakpoint.device.sm}{
-        flex-flow: nowrap;
-    }
-    @media only screen and ${breakpoint.device.lg}{
-        flex-flow: nowrap;
-    }
 `
 
 const FeaturesPageInfo =styled.div`
     margin: 0.8em;
+    width:100%;
     
     .f-TabPanel{
         padding: 3em;
@@ -41,10 +31,10 @@ const FeaturesPageInfo =styled.div`
     }
 
     @media only screen and ${breakpoint.device.xs}{
-        width:100%;
         margin:0;
 
         .f-FeatureImagesContainer{
+            width:100%;
             align-items: normal;
 
             .MuiCard-root{
@@ -56,8 +46,8 @@ const FeaturesPageInfo =styled.div`
             padding: 2em;
         }
     }
+
     @media only screen and ${breakpoint.device.sm}{
-        width:75%;
 
         #f-FeatureMainImage{
             width: 40%;
@@ -67,12 +57,11 @@ const FeaturesPageInfo =styled.div`
             align-items: normal;
             justify-content: space-between;
             .MuiCard-root{
-                width: 40%;
+                width: 100%;
             }
         }
     }
     @media only screen and ${breakpoint.device.lg}{
-        width:75%;
 
         #f-FeatureMainImage{
             width: 40%;
@@ -93,6 +82,8 @@ const FeaturesPageMenu = styled.div`
     position: sticky;
     top: 0;
     border-radius: 4px;
+    width:100%;
+    text-align: center;
 
     #simple-menu .MuiPopover-paper {
         top: 0;
@@ -103,25 +94,21 @@ const FeaturesPageMenu = styled.div`
     }
 
     button { 
-        width: 100%;
+        width: 30%;
         background-color: #732c4e!important;
         color: white;
         padding: 0.5em 0 0.5em 0.5em;
-        margin: 0.8em 0;
         position: sticky;
         top: 0.8em;
     }
 
     @media only screen and ${breakpoint.device.xs}{
-        width:90%;
         margin: 0 auto;
     }   
     @media only screen and ${breakpoint.device.sm}{
-        width:25%;
         margin: 0.8em;
     }
     @media only screen and ${breakpoint.device.lg}{
-        width:25%;
         margin: 0.8em;
     }
 `
@@ -169,6 +156,24 @@ export const FeaturesDetail = () => {
       {
           validData ?
           <>
+          <FeaturesPageMenu>
+            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                {feature.featureTitle}
+            </Button>
+            <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+            >
+                {
+                    data.map(feature => {
+                        return <MenuItem onClick={handleClose} data-id={feature.id}>{feature.featureTitle}</MenuItem>
+                    })
+                }
+            </Menu>
+        </FeaturesPageMenu>
           <FeaturesPageInfo>
               <div className="f-TabPanel">
                   {/* <Typography variant="h2">{feature.featureTitle}</Typography>
@@ -211,24 +216,6 @@ export const FeaturesDetail = () => {
                   </div>
               </div>
             </FeaturesPageInfo>
-            <FeaturesPageMenu>
-                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                    {feature.featureTitle}
-                </Button>
-                <Menu
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    keepMounted
-                    open={Boolean(anchorEl)}
-                    onClose={handleClose}
-                >
-                    {
-                        data.map(feature => {
-                            return <MenuItem onClick={handleClose} data-id={feature.id}>{feature.featureTitle}</MenuItem>
-                        })
-                    }
-                </Menu>
-            </FeaturesPageMenu>
         </>: null
       }
       </FeaturesPage>

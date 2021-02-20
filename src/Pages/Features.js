@@ -7,9 +7,9 @@ import { ProductFeature } from '../Components/ProductFeature'
 export default function Features() {
     return (
         <> 
-            <ProductFeature />
+            {/* <ProductFeature /> */}
+            <FeaturesDetail />
             <FeatureChecklistTable />
-            {/* <FeaturesDetail /> */}
             <Footer />
         </>
     )
