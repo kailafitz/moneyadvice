@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
                     <div className="f-FooterIconContainer">
                         <i className="f-FooterIcon" class="fab fa-linkedin"></i>
-                        <p className="f-p">Follow us on LinkedIn</p>
+                        <p className="f-p"><a href="https://www.linkedin.com/company/money-advice/">Follow us on LinkedIn</a></p>
                     </div>
 
                 </div>
@@ -42,11 +42,11 @@ export default function Footer() {
                     </p>
                     <div className="f-FooterIconContainer">
                         <i class="fas fa-phone-square-alt"></i>
-                        <p className="f-p">+353 65 684 9675</p>
+                        <p className="f-p"><a href="tel:00353656849675">+353 65 684 9675</a></p>
                     </div>
                     <div className="f-FooterIconContainer">
                         <i class="fas fa-envelope-square"></i>
-                        <p className="f-p">support@moneyadvice.ie</p>
+                        <p className="f-p"><a href="mailto:support@moneyadvice.ie">support@moneyadvice.ie</a></p>
                     </div>                    
                 </div>
             </div>            

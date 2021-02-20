@@ -276,6 +276,7 @@ body {
     font-family: $temp-font;
     font-weight: 300;
 
+    // contact page p links with a tag
     a {
         text-decoration: none;
         color: $bl;
@@ -290,7 +291,13 @@ body {
     overflow : hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 8;
-    -webkit-box-orient: vertical; 
+    -webkit-box-orient: vertical;
+
+    // footer p links with a tag
+    a {
+        text-decoration: none;
+        color: $wh;
+    }
 }
 
 .f-BlueFont {
