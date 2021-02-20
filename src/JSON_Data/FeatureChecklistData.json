@@ -1,65 +1,325 @@
 [
     {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Client, Product Data Downloads from Life Insurance Providers",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
+        "CRM, Workflow & Compliance" : [
+            {
+                
+                "featureName": "Client, Product Data Downloads from Life Insurance Providers",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Tasks",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Appointments / Diary (Add an appointment in Outlook from Money Advice)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Logs",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Complaints Management",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Meeting Memos with outcome management",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Client Reviews",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Document Management and Cloud Storage (support for indexing of emails from Outlook added)",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Letter, E-mail Merge Facility (support for attaching needs analysis reports / documents from hard disk added)",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Text messaging and merge facility using templates. Logging of texts against client record",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Advanced Market Segmentation and search to facilitate marketing at client and policy level",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Pipeline Management",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Client Fact Find",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Portfolio Reports",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Financial Statement / Debt Restructure Plan",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Financial Planner with cash flow projections and assset statements",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Compliance Management and reporting (Managing compliance at broker)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Underwriting Report. (Tracking progress of underwriting by percentage completed for both single and joint policies)",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Client Risk Profiler",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "MIS reports on tasks, logs and appointments activity & case tracking",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Commissions",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Fees, tracking hours and Invoice generation",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Client Needs Report",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Financial Data capture form that clients and new enquiries can fill online and have it populate CRM",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Data capture form that clients and new enquiries can fill online and have it populate CRM",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
     },
     {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Tasks",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
-    },
-    {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Appointments / Diary (Add an appointment in Outlook from Money Advice)",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
-    },
-    {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Logs",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
-    },
-    {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Complaints Management",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
-    },
-    {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Meeting Memos with outcome management",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
-    },
-    {
-        "featureTable": "CRM, Workflow & Compliance",
-        "featureName": "Client Reviews",
-        "featureOfMoney": "Yes",
-        "featureOfMoney+CRM": "Yes",
-        "newRelease": "No",
-        "nextRelease": "No",
-        "futureRelease": "No"
+        "Mortgages" : [
+            {
+                
+                "featureName": "Mortgage Rates",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Loan Consolidation Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Repayment Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Repayment Quick Quote",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Review - Compare Mortgages",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Review - Extra Payment Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Review - Lump Sum Payment",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Affordability Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Mortgage Applications (Online for Haven + Generic Application form for other providers)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Stamp Duty Calculations",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
     }
 ]
