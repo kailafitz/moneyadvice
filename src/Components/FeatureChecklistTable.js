@@ -14,7 +14,6 @@ import { colors }  from '../colors';
 const DataGridDiv = styled.div`
   width: 100%;
 
-
   .table-header{
     color: ${colors.wh};
     background-color: ${colors.logo_blue};
@@ -26,15 +25,16 @@ const DataGridDiv = styled.div`
 
   div[data-value='✓']{
     color:  #4BB543;
-  }
-  
+  }  
 
   @media only screen and ${breakpoint.device.xs}{
     height: 400px;
-  }   
+  }
+
   @media only screen and ${breakpoint.device.sm}{
     height: 700px;
   }
+  
   @media only screen and ${breakpoint.device.lg}{
     height: 700px;
   }

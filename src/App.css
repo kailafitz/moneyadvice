@@ -28,12 +28,6 @@ body {
   letter-spacing: -0.035em;
 }
 
-.f-h3 {
-  font-size: 1.5em;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-}
-
 .f-h4 {
   font-size: 1.2em;
   font-family: "Inter", sans-serif;
@@ -588,16 +582,6 @@ body {
 
   #f-CardMediaMobile {
     width: 50%;
-  }
-
-  footer {
-    padding: 3em 0.5em;
-  }
-  footer #f-BigColumnDiv {
-    display: block;
-  }
-  footer #f-BigColumnDiv #f-LogoColumn, footer #f-BigColumnDiv #f-OurCompanyColumn, footer #f-BigColumnDiv #f-ContactUsColumn {
-    width: 80%;
   }
 }
 

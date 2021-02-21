@@ -9,87 +9,136 @@ import {colors} from '../colors';
 const FooterDiv = styled.footer `
     background-color: ${colors.logo_blue};
     color: ${colors.wh};
-    padding: 2em 1em;
     font-family: ${fonts.roboto};
 
-    #f-BigColumnDiv {
-        width: 80%;
-        flex-grow: 1;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-content: flex-start;
+    @media only screen and ${breakpoint.device.xs} {
+        padding: 3em .5em;
 
-        .f-FooterColumn {
-            margin: 0 2em;
-            color: ${colors.wh};
-        }
-
-        #f-LogoColumn {
-            width: 30%;
-
-            img {
-                margin: 1em auto;
-                width: 90%;
-            }
-        }
-
-        #f-OurCompanyColumn {
-            width: 20%;
+        #f-FooterWrapper {
+            width: 80%;
             display: block;
+            margin: 0 auto;
 
-            #f-FooterLinks {
-                
-                ul {
-                    padding: 0;
+            #f-LogoColumn {
+                width: 80%;
+    
+                img {
+                    margin: 1em auto;
+                    width: 90%;
+                }
+            }
 
-                    li {
-                        list-style-type: none;
-                        font-weight: 300;
-                        margin: none;
-                        
-                        a {
-                            color: ${colors.wh};
-                            text-decoration: none;
-
-                            &:hover {
-                                text-decoration: underline;
+            #f-OurCompanyColumn {
+                width: 80%;
+                display: block;
+    
+                #f-FooterLinks {
+                    
+                    ul {
+                        padding: 0;
+    
+                        li {
+                            list-style-type: none;
+                            font-weight: 300;
+                            margin: 6px 0;
+                            
+                            a {
+                                color: ${colors.wh};
+                                text-decoration: none;
+                                font-size: 1.3em;
+    
+                                &:hover {
+                                    text-decoration: underline;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
-        #f-ContactUsColumn {
-            width: 30%;
+            #f-ContactUsColumn {
+                width: 80%;
 
-            p {
-                color: ${colors.wh};
-
-                a {
-                    text-decoration: none;
-                    color: $wh;
+                p {
+                    font-size: 1.3em;
                 }
+            }
+    
+            .f-FooterColumn {
+                margin: 0 2em;
+    
+                h3 {
+                    font-size: 1.5em;
+                    font-family: ${fonts.temp_font};
+                    font-weight: 600;
+                }
+            }
+
+
+        }
+        .f-FooterIconContainer {
+            display: flex;
+            align-items: center;
+    
+            i {
+                font-size: 2em;
+            }
+    
+            a {
+                text-decoration: none;
+                color: ${colors.wh};
+                padding-left: 10px;
+                font-size: 1.3em;
             }
         }
     }
 
-    .f-FooterIconContainer {
-        display: flex;
-        align-items: center;
+    @media only screen and ${breakpoint.device.sm} {
+        padding: 2em 1em;
 
-        i {
-            font-size: 2em;
+        #f-FooterWrapper {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-around;
+            align-content: flex-start;
+
+            #f-OurCompanyColumn {
+
+                #f-FooterLinks {
+                    ul {
+                        li {
+                            a {
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #f-ContactUsColumn {
+                p {
+                    font-size: 1em;
+                }
+            }
         }
-
-        p {
-            padding-left: .5em;
-            color: ${colors.wh};
-
+        .f-FooterIconContainer {
+            i {
+                font-size: 1.5em;
+            }
+    
             a {
-                text-decoration: none;
-                color: $wh;
+                font-size: 1em;
+            }
+        }
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+
+        #f-FooterWrapper {
+            #f-LogoColumn {
+                img {
+                    max-width: 300px;
+                }
             }
         }
     }
@@ -98,30 +147,30 @@ const FooterDiv = styled.footer `
 export default function Footer() {
     return (
         <FooterDiv>
-            <div id="f-BigColumnDiv">
+            <div id="f-FooterWrapper">
                 <div id="f-LogoColumn" className="f-FooterColumn">
                     <img alt="Logo" src={FooterLogo} />
                 </div>
                 <div className="f-FooterColumn" id="f-OurCompanyColumn">
                     <div id="f-FooterLinks">
-                        <h3 className="f-h3">Our Company</h3>
+                        <h3>Our Company</h3>
                         <ul>
-                            <li className="f-p"><Link href="/about">About</Link></li>
-                            <li className="f-p"><Link href="/features">Features</Link></li>
-                            <li className="f-p"><Link href="/contactus">Contact Us</Link></li>
-                            <li className="f-p"><Link href="/privacypolicy">Privacy Policy</Link></li>
-                            <li className="f-p"><Link href="/">Meet our Team</Link></li>
-                            <li className="f-p"><Link href="/downloads">Downloads</Link></li>
+                            <li><Link href="/about">About</Link></li>
+                            <li><Link href="/features">Features</Link></li>
+                            <li><Link href="/contactus">Contact Us</Link></li>
+                            <li><Link href="/privacypolicy">Privacy Policy</Link></li>
+                            <li><Link href="/">Meet our Team</Link></li>
+                            <li><Link href="/downloads">Downloads</Link></li>
                         </ul>
                     </div>
                     <div className="f-FooterIconContainer">
                         <i className="f-FooterIcon" class="fab fa-linkedin"></i>
-                        <p className="f-p"><a href="https://www.linkedin.com/company/money-advice/">Follow us on LinkedIn</a></p>
+                        <a href="https://www.linkedin.com/company/money-advice/">Follow us on LinkedIn</a>
                     </div>
                 </div>
                 <div className="f-FooterColumn" id="f-ContactUsColumn">
-                    <h3 className="f-h3">Contact Us</h3>
-                    <p className="f-p">Lunar Technologies Ltd t/a Money Advice,
+                    <h3>Contact Us</h3>
+                    <p>Lunar Technologies Ltd t/a Money Advice,
                         Registered in Ireland, Registered No: 504675.
                         <br/>
                         <br/>
@@ -134,11 +183,11 @@ export default function Footer() {
                     </p>
                     <div className="f-FooterIconContainer">
                         <i class="fas fa-phone-square-alt"></i>
-                        <p className="f-p"><a href="tel:00353656849675">+353 65 684 9675</a></p>
+                        <a href="tel:00353656849675">+353 65 684 9675</a>
                     </div>
                     <div className="f-FooterIconContainer">
                         <i class="fas fa-envelope-square"></i>
-                        <p className="f-p"><a href="mailto:support@moneyadvice.ie">support@moneyadvice.ie</a></p>
+                        <a href="mailto:support@moneyadvice.ie">support@moneyadvice.ie</a>
                     </div>                    
                 </div>
             </div>            

@@ -265,11 +265,11 @@ body {
     letter-spacing: -.035em;
 }
 
-.f-h3 {
-    font-size: 1.5em;
-    font-family: $temp-font;
-    font-weight: 600;
-}
+// .f-h3 {
+//     font-size: 1.5em;
+//     font-family: $temp-font;
+//     font-weight: 600;
+// }
 
 .f-h4 {
     font-size: 1.2em;
@@ -1092,15 +1092,15 @@ body {
         width: 50%;
     }
 
-    footer {
-        padding: 3em .5em;
+    // footer {
+    //     padding: 3em .5em;
 
-        #f-BigColumnDiv {
-            display: block;
+    //     #f-BigColumnDiv {
+    //         display: block;
 
-            #f-LogoColumn, #f-OurCompanyColumn, #f-ContactUsColumn {
-                width: 80%;
-            }
-        }
-    }
+    //         #f-LogoColumn, #f-OurCompanyColumn, #f-ContactUsColumn {
+    //             width: 80%;
+    //         }
+    //     }
+    // }
 }
