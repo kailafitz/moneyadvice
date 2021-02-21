@@ -1,12 +1,105 @@
 import React from 'react'
 import Link from '@material-ui/core/Link';
 import FooterLogo from '../Images/FooterLogo.png'
+import styled from 'styled-components';
+import breakpoint from '../breakpoints';
+import {fonts} from '../fonts';
+import {colors} from '../colors';
+
+const FooterDiv = styled.footer `
+    background-color: ${colors.logo_blue};
+    color: ${colors.wh};
+    padding: 2em 1em;
+    font-family: ${fonts.roboto};
+
+    #f-BigColumnDiv {
+        width: 80%;
+        flex-grow: 1;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+
+        .f-FooterColumn {
+            margin: 0 2em;
+            color: ${colors.wh};
+        }
+
+        #f-LogoColumn {
+            width: 30%;
+
+            img {
+                margin: 1em auto;
+                width: 90%;
+            }
+        }
+
+        #f-OurCompanyColumn {
+            width: 20%;
+            display: block;
+
+            #f-FooterLinks {
+                
+                ul {
+                    padding: 0;
+
+                    li {
+                        list-style-type: none;
+                        font-weight: 300;
+                        margin: none;
+                        
+                        a {
+                            color: ${colors.wh};
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #f-ContactUsColumn {
+            width: 30%;
+
+            p {
+                color: ${colors.wh};
+
+                a {
+                    text-decoration: none;
+                    color: $wh;
+                }
+            }
+        }
+    }
+
+    .f-FooterIconContainer {
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 2em;
+        }
+
+        p {
+            padding-left: .5em;
+            color: ${colors.wh};
+
+            a {
+                text-decoration: none;
+                color: $wh;
+            }
+        }
+    }
+`
 
 export default function Footer() {
     return (
-        <footer>
+        <FooterDiv>
             <div id="f-BigColumnDiv">
-                <div className="f-FooterColumn" id="f-LogoColumn">
+                <div id="f-LogoColumn" className="f-FooterColumn">
                     <img alt="Logo" src={FooterLogo} />
                 </div>
                 <div className="f-FooterColumn" id="f-OurCompanyColumn">
@@ -25,7 +118,6 @@ export default function Footer() {
                         <i className="f-FooterIcon" class="fab fa-linkedin"></i>
                         <p className="f-p"><a href="https://www.linkedin.com/company/money-advice/">Follow us on LinkedIn</a></p>
                     </div>
-
                 </div>
                 <div className="f-FooterColumn" id="f-ContactUsColumn">
                     <h3 className="f-h3">Contact Us</h3>
@@ -50,6 +142,6 @@ export default function Footer() {
                     </div>                    
                 </div>
             </div>            
-        </footer>
+        </FooterDiv>
     )
 }

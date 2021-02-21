@@ -1,35 +1,56 @@
 import React from 'react';
 import { Avatar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
+import breakpoint from '../breakpoints';
+import {fonts} from '../fonts';
+import {colors} from '../colors';
+
+const Styledh4 = styled.h4 `
+  font-size: 1.2em;
+  font-family: ${fonts.roboto};
+  font-weight: 300;
+  color: ${colors.wh};
+  text-align: "center";
+`
+
+const Styledp = styled.p `
+  font-size: 1em;
+  font-family: ${fonts.roboto};
+  color: ${colors.wh};
+`
+
+const StyledAvatar = styled(Avatar) `
+  margin: .5em auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 4%;
+`
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      width: "auto",
+      padding: "1em",
+      margin: "1em",
+      borderRadius: "7px",
       display: "block",
-      margin: "auto",
+      // margin: "auto",
       '& > *': {
         margin: theme.spacing(1),
       },
-      large:  {
-        wclassNameth: theme.spacing(7),
-        height: theme.spacing(7),        
-      }
     },
 }));
 
 export const EmployeeProfileCard = ({img, empName, role}) => {
-    const classes = useStyles();
-    return (
-        <div
-          className={classes.root}
-          id="f-EmployeeCard">
-            <Avatar
-            alt="Profile Image"
-            src={img}
-            className={classes.large}
-            id="f-EmployeeAvatar"
-            />
-            <h4 className="f-h4 f-TextCenter">{empName}</h4>
-            <p className="f-p f-TextCenter">{role}</p>
-        </div>
-    )
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+        <StyledAvatar
+        alt="Profile Image"
+        src={img}
+        />
+        <Styledh4>{empName}</Styledh4>
+        <Styledp>{role}</Styledp>
+    </div>
+  )
 }

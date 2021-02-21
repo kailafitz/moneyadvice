@@ -34,19 +34,14 @@ body {
   font-weight: 600;
 }
 
-.f-p {
-  font-size: 1em;
-  font-family: "Roboto", sans-serif;
-  color: #393939;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
+.f-h4 {
+  font-size: 1.2em;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
-.f-p a {
+.f-h4 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #393939;
 }
 
 .f-BlueFont {
@@ -303,67 +298,6 @@ body {
   width: 30%;
 }
 
-footer {
-  background-color: #068095;
-  color: #ffffff;
-  padding: 2em 1em;
-  font-family: "Roboto", sans-serif;
-}
-footer #f-BigColumnDiv {
-  width: 80%;
-  flex-grow: 1;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-content: flex-start;
-}
-footer #f-BigColumnDiv .f-FooterColumn {
-  margin: 0 2em;
-}
-footer #f-BigColumnDiv #f-LogoColumn {
-  width: 30%;
-}
-footer #f-BigColumnDiv #f-LogoColumn img {
-  margin: 1em auto;
-  width: 90%;
-}
-footer #f-BigColumnDiv #f-OurCompanyColumn {
-  width: 20%;
-  display: block;
-}
-footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul {
-  padding: 0;
-}
-footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li {
-  list-style-type: none;
-  font-weight: 300;
-  margin: none;
-}
-footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-footer #f-BigColumnDiv #f-OurCompanyColumn #f-FooterLinks ul li a:hover {
-  text-decoration: underline;
-}
-footer #f-BigColumnDiv #f-ContactUsColumn {
-  width: 30%;
-}
-footer #f-BigColumnDiv #f-ContactUsColumn p {
-  color: #ffffff;
-}
-footer .f-FooterIconContainer {
-  display: flex;
-  align-items: center;
-}
-footer .f-FooterIconContainer i {
-  font-size: 3em;
-}
-footer .f-FooterIconContainer p {
-  padding-left: 0.5em;
-  color: #ffffff;
-}
-
 .f-TabPanel {
   background-color: #f3f3f3;
   padding: 1em;
@@ -473,44 +407,6 @@ footer .f-FooterIconContainer p {
   border-radius: 85px;
 }
 
-#f-TeamsContainer {
-  display: block;
-  padding-top: 3em;
-  margin: 6em auto;
-}
-#f-TeamsContainer .f-TeamTypeContainer {
-  display: block;
-  border-radius: 3px;
-  padding: 0.5em;
-  margin: 1em 0;
-}
-#f-TeamsContainer .f-TeamTypeContainer h3 {
-  letter-spacing: 1.5px;
-  color: #732c4e;
-}
-#f-TeamsContainer .f-TeamTypeContainer .f-EmployeeCardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  border-radius: 4px;
-  background-color: #732c4e;
-  box-shadow: -2px 3px 10px -3px #111111;
-}
-
-#f-EmployeeCard {
-  width: auto;
-  padding: 1em;
-  margin: 1em;
-  border-radius: 7px;
-}
-#f-EmployeeCard #f-EmployeeAvatar {
-  margin: 0.5em auto;
-  width: 120px;
-  height: 120px;
-  border-radius: 4%;
-}
 #f-EmployeeCard h4, #f-EmployeeCard p {
   color: #ffffff;
 }

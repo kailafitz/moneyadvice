@@ -271,34 +271,34 @@ body {
     font-weight: 600;
 }
 
-// .f-h4 {
-//     font-size: 1.2em;
-//     font-family: $temp-font;
-//     font-weight: 300;
+.f-h4 {
+    font-size: 1.2em;
+    font-family: $temp-font;
+    font-weight: 300;
 
-//     // contact page p links with a tag
-//     a {
-//         text-decoration: none;
-//         color: $bl;
-//     }
-// }
-
-.f-p {
-    font-size: 1em;
-    font-family: $roboto;
-    color: $bl;
-    display: -webkit-box;
-    overflow : hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 8;
-    -webkit-box-orient: vertical;
-
-    // footer p links with a tag
+    // contact page p links with a tag
     a {
         text-decoration: none;
-        color: $wh;
+        color: $bl;
     }
 }
+
+// .f-p {
+//     font-size: 1em;
+//     font-family: $roboto;
+//     color: $bl;
+//     display: -webkit-box;
+//     overflow : hidden;
+//     text-overflow: ellipsis;
+//     -webkit-line-clamp: 8;
+//     -webkit-box-orient: vertical;
+
+//     // footer p links with a tag
+//     a {
+//         text-decoration: none;
+//         color: $wh;
+//     }
+// }
 
 .f-BlueFont {
     color: $logo-blue;
@@ -622,83 +622,83 @@ body {
 
 
 // Footer.js ----------------------------
-footer {
-    background-color: #068095;
-    color: $wh;
-    padding: 2em 1em;
-    font-family: $roboto;
+// footer {
+//     background-color: #068095;
+//     color: $wh;
+//     padding: 2em 1em;
+//     font-family: $roboto;
 
-    #f-BigColumnDiv {
-        width: 80%;
-        flex-grow: 1;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-content: flex-start;
+//     #f-BigColumnDiv {
+//         width: 80%;
+//         flex-grow: 1;
+//         margin: 0 auto;
+//         display: flex;
+//         justify-content: space-around;
+//         align-content: flex-start;
 
-        .f-FooterColumn {
-            margin: 0 2em;
-        }
+//         .f-FooterColumn {
+//             margin: 0 2em;
+//         }
 
-        #f-LogoColumn {
-            width: 30%;
+//         #f-LogoColumn {
+//             width: 30%;
 
-            img {
-                margin: 1em auto;
-                width: 90%;
-            }
-        }
+//             img {
+//                 margin: 1em auto;
+//                 width: 90%;
+//             }
+//         }
 
-        #f-OurCompanyColumn {
-            width: 20%;
-            display: block;
+//         #f-OurCompanyColumn {
+//             width: 20%;
+//             display: block;
 
-            #f-FooterLinks {
+//             #f-FooterLinks {
                 
-                ul {
-                    padding: 0;
+//                 ul {
+//                     padding: 0;
 
-                    li {
-                        list-style-type: none;
-                        font-weight: 300;
-                        margin: none;
+//                     li {
+//                         list-style-type: none;
+//                         font-weight: 300;
+//                         margin: none;
                         
-                        a {
-                            color: $wh;
-                            text-decoration: none;
+//                         a {
+//                             color: $wh;
+//                             text-decoration: none;
 
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+//                             &:hover {
+//                                 text-decoration: underline;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
 
-        #f-ContactUsColumn {
-            width: 30%;
+//         #f-ContactUsColumn {
+//             width: 30%;
 
-            p {
-                color: $wh;
-            }
-        }
-    }
+//             p {
+//                 color: $wh;
+//             }
+//         }
+//     }
 
-    .f-FooterIconContainer {
-        display: flex;
-        align-items: center;
+//     .f-FooterIconContainer {
+//         display: flex;
+//         align-items: center;
 
-        i {
-            font-size: 3em;
-        }
+//         i {
+//             font-size: 3em;
+//         }
 
-        p {
-            padding-left: .5em;
-            color: $wh;
-        }
-    }
-}
+//         p {
+//             padding-left: .5em;
+//             color: $wh;
+//         }
+//     }
+// }
 
 // Features.js ---------------------
 .f-TabPanel {
@@ -827,47 +827,47 @@ footer {
 }
 
 // Employees.js ---------------------
-#f-TeamsContainer {
-    display: block;
-    padding-top: 3em;
-    margin: 6em auto;
+// #f-TeamsContainer {
+//     display: block;
+//     padding-top: 3em;
+//     margin: 6em auto;
 
-    .f-TeamTypeContainer {
-        display: block;
-        border-radius: 3px;
-        padding: .5em;
-        margin: 1em 0;
+//     .f-TeamTypeContainer {
+//         display: block;
+//         border-radius: 3px;
+//         padding: .5em;
+//         margin: 1em 0;
 
-        h3 {
-            letter-spacing: 1.5px;
-            color: $logo-purple;
-        }
+//         h3 {
+//             letter-spacing: 1.5px;
+//             color: $logo-purple;
+//         }
 
-        .f-EmployeeCardContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            border-radius: 4px;
-            background-color: $logo-purple;
-            box-shadow: -2px 3px 10px -3px #111111;
-        }
-    }
-}
+//         .f-EmployeeCardContainer {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             align-content: center;
+//             flex-wrap: wrap;
+//             border-radius: 4px;
+//             background-color: $logo-purple;
+//             box-shadow: -2px 3px 10px -3px #111111;
+//         }
+//     }
+// }
 
 // EmployeeProfileCard.js ---------------------
 #f-EmployeeCard {
-    width: auto;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 7px;
+    // width: auto;
+    // padding: 1em;
+    // margin: 1em;
+    // border-radius: 7px;
 
     #f-EmployeeAvatar {
-        margin: .5em auto;
-        width: 120px;
-        height: 120px;
-        border-radius: 4%;
+        // margin: .5em auto;
+        // width: 120px;
+        // height: 120px;
+        // border-radius: 4%;
     }
 
     h4, p {

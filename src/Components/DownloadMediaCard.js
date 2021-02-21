@@ -8,12 +8,12 @@ import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
 
-const h4 = styled.h4`
+const Styledh4 = styled.h4`
   font-size: 1.2em;
   font-family: ${fonts.roboto};
   font-weight: 300;
-  color: ${colors.wh},
-  text-align: "left",
+  color: ${colors.wh};
+  text-align: "left";
 `
 
 const useStyles = makeStyles({
@@ -37,11 +37,6 @@ const useStyles = makeStyles({
   content: {
     display: "block",
   },
-  f_CardText: {
-    color: "#ffffff",
-    textAlign: "left",
-    fontFamily: "Roboto",
-  },
 });
 
 export default function DownloadMediaCard( { src, title } ) {
@@ -55,7 +50,7 @@ export default function DownloadMediaCard( { src, title } ) {
 
         </CardMedia> */}
       <CardContent className={classes.content}>
-        <h4 className={classes.f_CardText + " f-h4"}>{title}</h4>
+        <Styledh4>{title}</Styledh4>
         <DownloadableLink src={src}/>
       </CardContent>
     </Card>
