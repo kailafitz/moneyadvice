@@ -82,7 +82,6 @@ const FeaturesPageMenu = styled.div`
     position: sticky;
     top: 0;
     border-radius: 4px;
-    width:100%;
     text-align: center;
 
     #simple-menu .MuiPopover-paper {

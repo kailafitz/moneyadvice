@@ -6,6 +6,40 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { DataGrid } from '@material-ui/data-grid';
+import styled from "styled-components";
+import breakpoint from '../breakpoints';
+import { colors }  from '../colors';
+
+const DataGridDiv = styled.div`
+  width: 100%;
+
+
+  .table-header{
+    color: ${colors.wh};
+    background-color: ${colors.logo_blue};
+  }
+
+  div[data-value='✗']{
+    color: #ff0f0f;
+  }
+
+  div[data-value='✓']{
+    color:  #4BB543;
+  }
+  
+
+  @media only screen and ${breakpoint.device.xs}{
+    height: 400px;
+  }   
+  @media only screen and ${breakpoint.device.sm}{
+    height: 700px;
+  }
+  @media only screen and ${breakpoint.device.lg}{
+    height: 700px;
+  }
+
+`
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,6 +51,62 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+const columns = [
+
+  { field: 'featureName', headerName: 'Name', flex: 3, headerClassName: 'table-header',},
+  { field: 'featureOfMoney', headerName: 'Money', flex: 1, headerClassName: 'table-header',},
+  { field: 'featureOfMoneyCRM', headerName: 'MoneyCRM', flex: 1, headerClassName: 'table-header',},
+  {
+    field: 'newRelease',
+    headerName: 'New release',
+    flex: 1,
+    headerClassName: 'table-header'
+  },
+  {
+    field: 'nextRelease',
+    headerName: 'Next Release',
+    flex: 1,
+    headerClassName: 'table-header',
+  },
+  {
+    field: 'futureRelease',
+    headerName: 'Future Release',
+    flex: 1,
+    headerClassName: 'table-header',
+  }
+];
+
+const rows = [
+  {
+      id: 0,      
+      featureName: "Client, Product Data Downloads from Life Insurance Providers",
+      featureOfMoney: "Yes",
+      featureOfMoneyCRM: "Yes",
+      newRelease: "No",
+      nextRelease: "No",
+      futureRelease: "No"
+  },
+  {
+      id: 1,
+      featureName: "Tasks",
+      featureOfMoney: "Yes",
+      featureOfMoneyCRM: "Yes",
+      newRelease: "No",
+      nextRelease: "No",
+      futureRelease: "No"
+  },
+  {
+      id: 3,
+      featureName: "Appointments / Diary (Add an appointment in Outlook from Money Advice)",
+      featureOfMoney: "Yes",
+      featureOfMoneyCRM: "Yes",
+      newRelease: "No",
+      nextRelease: "No",
+      futureRelease: "No"
+  }
+];
+
 export default function FeatureChecklistTable() {
   const [data, setData] = useState([]);
   const [validData, setValidData] = useState(false);
@@ -24,6 +114,28 @@ export default function FeatureChecklistTable() {
 
   const createFunction = () => {
     setData(FeatureChecklistData);
+  }
+
+  const addTickOrCross = (data) => {
+    for(let [key, value] of Object.entries(data)){
+      console.log(value)
+      if (value == "Yes") {
+        console.log(value)
+        data[key] = "✓"
+      }else if (value == "No"){
+        console.log(value)
+        data[key] = "✗"
+      }
+    }
+    return data
+  }
+
+  const createRows = (data) => {
+    for(let [index, element] of data.entries()){
+      element["id"] = index
+      element = addTickOrCross(element)
+    }
+    return data
   }
 
   useEffect(() => {
@@ -52,13 +164,12 @@ export default function FeatureChecklistTable() {
                     <Typography className={classes.heading}>{Object.keys(feature)[0]}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                  {
-                    Object.values(feature)[0].map(value => {
-                      return <>
-                        <h1>{value.featureName}</h1>
-                      </>
-                    })
-                  }
+                  {/* {
+                    createRows(Object.values(feature)[0])
+                  } */}
+                    <DataGridDiv>
+                      <DataGrid rows={createRows(Object.values(feature)[0])} columns={columns} pagination />
+                    </DataGridDiv>
                   </AccordionDetails>
                 </Accordion>
           

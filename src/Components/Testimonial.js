@@ -41,25 +41,15 @@ export const Testimonial = () => {
   const [slides, setSlides] = useState([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [controlledSwiper, setControlledSwiper] = useState(null);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
-  const handleOpen = (event) => {
-    console.log(event.target.attributes['slide-id'].value)
+  const handleOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
-
-  // const body = (
-  //   <div className={classes.paper}>
-  //     <h2 id="simple-modal-title">Text in a modal</h2>
-  //     <p id="simple-modal-description">
-  //       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-  //     </p>
-  //   </div>
-  // );
 
   const createFunction = () => {
     let slides = [];
@@ -68,43 +58,24 @@ export const Testimonial = () => {
       slides.push(
         <SwiperSlide key={`slide-${i}`} tag="li">
           <div className="f-TestimonialCard">
-            <div id="f-TestimonialCardHeader">
-              <Avatar
-                alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
-                src={JSONData[i].profile_picture}
-                className={classes.large}
-              />
-              <div id="f-TestimonialHeaderDetails">
-                <h3 className="f-h3">
-                  {JSONData[i].first_name + " " + JSONData[i].sur_name}
-                </h3>
-                <img alt={JSONData[i].company_name} src={JSONData[i].company_logo} />
-              </div>              
-            </div>            
-            <p className="f-p f-TextLeft">{JSONData[i].testimonial}</p>
-            <Button type="button" className={classes.button} onClick={handleOpen} slide-id={i}>
-              View More
-            </Button>
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="simple-modal-title"
-              aria-describedby="simple-modal-description"
-            >
-                <div className="f-TestimonialCard">
-                  <Avatar
-                    alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
-                    src={JSONData[i].profile_picture}
-                    className={classes.large}
-                  />
-                  <h4 className="f-h4">
+              <div id="f-TestimonialCardHeader">
+                <Avatar
+                  alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
+                  src={JSONData[i].profile_picture}
+                  className={classes.large}
+                />
+                <div id="f-TestimonialHeaderDetails">
+                  <h3 className="f-h3">
                     {JSONData[i].first_name + " " + JSONData[i].sur_name}
-                  </h4>
+                  </h3>
                   <img alt={JSONData[i].company_name} src={JSONData[i].company_logo} />
-                  <p className="f-p f-TextLeft" style={{'-webkit-line-clamp': 'none'}}>{JSONData[i].testimonial}</p>
-                </div>
-            </Modal>
-        </div>
+                </div>              
+              </div>            
+              <p className="f-p f-TextLeft">{JSONData[i].testimonial}</p>
+              <Button type="button" className={classes.button} onClick={handleOpen} slide-id={i}>
+                View More
+              </Button>
+          </div>
         </SwiperSlide>
       );
     }
@@ -125,6 +96,25 @@ export const Testimonial = () => {
   return (
     <>
       <SectionTitle title="What our Customers Say" style={{'color': '#732C4E'}}/>
+      {/* <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+            <div className="f-TestimonialCard">
+              <Avatar
+                alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
+                src={JSONData[i].profile_picture}
+                className={classes.large}
+              />
+              <h4 className="f-h4">
+                {JSONData[i].first_name + " " + JSONData[i].sur_name}
+              </h4>
+              <img alt={JSONData[i].company_name} src={JSONData[i].company_logo} />
+              <p className="f-p f-TextLeft" style={{'-webkit-line-clamp': 'none'}}>{JSONData[i].testimonial}</p>
+            </div>
+      </Modal> */}
       <div className="f-testimonialBackground">
         <Swiper
           id="main"
