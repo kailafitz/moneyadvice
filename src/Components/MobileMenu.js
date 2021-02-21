@@ -13,15 +13,19 @@ const MobileMenu = () => {
           <a href="/home">
             Home
           </a>
+          <hr />
           <a href="/features">
             Features
           </a>
+          <hr />
           <a href="/about">
             About
           </a>
+          <hr />
           <a href="/contactus">
             Contact Us
           </a>
+          <hr />
           <LoginModal />
         </div> 
       )}

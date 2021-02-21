@@ -1,37 +1,44 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
 import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
 import Logo from '../Images/Logo-Sm.png'
 import SectionTitle from './SectionTitle';
 import DataCaptureLogin from './DataCaptureLogin';
+import breakpoint from '../breakpoints';
+import styled from 'styled-components';
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
+const StyledModalContainer = styled.div`
+  margin: 0 auto;
+  padding: 1em;
 
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
+  #f-ModalLogo {
+    width: 50%;
+    margin: auto;
+  }
 
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
+  #f-ModalButtonDiv {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+
+    p {
+        padding-top: 2em;
+    }
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  // @media only screen and ${breakpoint.device.xs} {
+  //   width: 90%;
+  // }
+`
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    textAlign: "center",
-    position: 'absolute',
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    outline: 0,
-    overflow: 'scroll',
-  },
   button: {
     backgroundColor: "#068095",
     color: "#ffffff",
@@ -43,13 +50,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function LoginModal() {
-  const classes = useStyles();
-  // getModalStyle is not a pure function, we roll the style only on the first render
-  const [modalStyle] = React.useState(getModalStyle);
+export default function FormDialog() {
+  const classes = useStyles();  
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
+  const handleClickOpen = () => {
     setOpen(true);
   };
 
@@ -57,42 +62,29 @@ export default function LoginModal() {
     setOpen(false);
   };
 
-  const body = (
-    <div style={modalStyle} className={classes.paper} id="f-ModalContainer">
-      <img alt="Logo" src={Logo} id="f-ModalLogo"/>
-      <div id="f-ModalButtonDiv">
-        <SectionTitle title="Login" />
-        <h4 className="f-h4">Data Capture Logins</h4>
-        <DataCaptureLogin />
-        <p className="f-p">or login directly to MoneyAdviceCRM</p>
-        <Button type="button" className={classes.button}>MoneyAdviceCRM Login</Button>
-      </div>
-    </div>
-  );
-
   return (
     <div>
       <Button
         className={classes.button}
         type="button"
-        onClick={handleOpen}
+        onClick={handleClickOpen}
       >
         Login
       </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="login-modal-title"
-        aria-describedby="login-modal-description"
-        closeAfterTransition
-        disableScrollLock={true}
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        {body}
-      </Modal>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" className="f-TextCenter">
+        <SectionTitle title="Login" />
+        <DialogContent>
+          <StyledModalContainer>
+          <img alt="Logo" src={Logo} id="f-ModalLogo"/>
+            <div id="f-ModalButtonDiv">
+              <h4 className="f-h4">Data Capture Logins</h4>
+              <DataCaptureLogin />
+              <p className="f-p">or login directly to MoneyAdviceCRM</p>
+              <Button type="button" className={classes.button}>MoneyAdviceCRM Login</Button>
+            </div>
+         </StyledModalContainer>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
