@@ -2,8 +2,19 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
 import DownloadableLink from './DownloadableLink';
+import styled from 'styled-components';
+import breakpoint from '../breakpoints';
+import {fonts} from '../fonts';
+import {colors} from '../colors';
+
+const h4 = styled.h4`
+  font-size: 1.2em;
+  font-family: ${fonts.roboto};
+  font-weight: 300;
+  color: ${colors.wh},
+  text-align: "left",
+`
 
 const useStyles = makeStyles({
   root: {

@@ -271,17 +271,17 @@ body {
     font-weight: 600;
 }
 
-.f-h4 {
-    font-size: 1.2em;
-    font-family: $temp-font;
-    font-weight: 300;
+// .f-h4 {
+//     font-size: 1.2em;
+//     font-family: $temp-font;
+//     font-weight: 300;
 
-    // contact page p links with a tag
-    a {
-        text-decoration: none;
-        color: $bl;
-    }
-}
+//     // contact page p links with a tag
+//     a {
+//         text-decoration: none;
+//         color: $bl;
+//     }
+// }
 
 .f-p {
     font-size: 1em;
@@ -398,7 +398,6 @@ body {
     background-color: $wh;
     display: flex;
     align-items: center;
-    padding: 0 .5em;
 
     #f-NavbarLogo {
         width: 25%;
@@ -406,25 +405,23 @@ body {
 }
 
 // LoginModal.js ----------------------------
-#f-ModalContainer {
-    padding: 1em;
-    width: 30%;
+// #f-ModalContainer {
 
-    #f-ModalLogo {
-        width: 50%;
-        margin: auto;
-    }
+//     #f-ModalLogo {
+//         width: 50%;
+//         margin: auto;
+//     }
 
-    #f-ModalButtonDiv {
-        width: 100%;
-        margin: 0 auto;
-        display: block;
+//     #f-ModalButtonDiv {
+//         width: 100%;
+//         margin: 0 auto;
+//         display: block;
 
-        p {
-            padding-top: 2em;
-        }
-    }
-}
+//         p {
+//             padding-top: 2em;
+//         }
+//     }
+// }
 
 // Home.js ----------------------------
 #f-BigLogoContainer {
@@ -622,29 +619,7 @@ body {
 }
 
 // ContactUsButton.js ----------------------------
-#f-ContactUsButton {
-    background-color: $grey-light;
-    font-family: $temp-font;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    outline: 0;
-    border: none;
-    text-align: center;
-    border-radius: 4px;
-    color: $logo-purple;
-    box-shadow: -2px 3px 10px -3px #111111;
-    box-shadow: none;
-    font-weight: 800;
-    font-size: 1.3em;
-    transition: .8s ease background-color, .8s ease color, .8s ease transform;
 
-    &:hover {
-        cursor: pointer;
-        color: $logo-blue;
-        transform: scale(1.03);
-    }
-}
 
 // Footer.js ----------------------------
 footer {
@@ -1008,22 +983,28 @@ footer {
     height: 100%;
     display: flex;
     align-items: center;
+    padding-right: 18px;
 
     #f-MobileLinksWrapper {
         margin: 0;
         padding: 0;
         display: flex;
-        height: 100%;
+        height: auto;
         list-style: none;
-        background-color: $trans-wh;
+        background-color: $wh;
         width: 100%;
         flex-direction: column;
         position: fixed;
-        top: 65px;
+        top: 55px;
         left: 0;
 
+        hr {
+            width: 100%;
+            color: $logo-trans-blue;
+        }
+
         a {
-            font-size: 2rem;
+            font-size: 1.2rem;
             font-family: $roboto;
             text-transform: uppercase;
             padding: 1rem 0;
@@ -1046,9 +1027,9 @@ footer {
         font-size: 2em;
     }
 
-    .f-h4 {
-        font-size: 1.7em;
-    }
+    // .f-h4 {
+    //     font-size: 1.7em;
+    // }
 
     #f-NavigationBar {
 
@@ -1057,10 +1038,10 @@ footer {
         }
     }
 
-    #f-ModalContainer {
-        width: 70%;
-        overflow: scroll;
-    }
+    // #f-ModalContainer {
+    //     width: 90%;
+    //     margin: 0 auto;
+    // }
 
     #f-BigLogoContainer {
         flex-direction: column;

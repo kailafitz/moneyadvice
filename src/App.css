@@ -34,16 +34,6 @@ body {
   font-weight: 600;
 }
 
-.f-h4 {
-  font-size: 1.2em;
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-}
-.f-h4 a {
-  text-decoration: none;
-  color: #393939;
-}
-
 .f-p {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
@@ -145,27 +135,9 @@ body {
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  padding: 0 0.5em;
 }
 #f-NavigationBar #f-NavbarLogo {
   width: 25%;
-}
-
-#f-ModalContainer {
-  padding: 1em;
-  width: 30%;
-}
-#f-ModalContainer #f-ModalLogo {
-  width: 50%;
-  margin: auto;
-}
-#f-ModalContainer #f-ModalButtonDiv {
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-#f-ModalContainer #f-ModalButtonDiv p {
-  padding-top: 2em;
 }
 
 #f-BigLogoContainer {
@@ -329,29 +301,6 @@ body {
 }
 #f-ContactUsButtonContainer #f-LottieDiv {
   width: 30%;
-}
-
-#f-ContactUsButton {
-  background-color: #f3f3f3;
-  font-family: "Inter", sans-serif;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  outline: 0;
-  border: none;
-  text-align: center;
-  border-radius: 4px;
-  color: #732c4e;
-  box-shadow: -2px 3px 10px -3px #111111;
-  box-shadow: none;
-  font-weight: 800;
-  font-size: 1.3em;
-  transition: 0.8s ease background-color, 0.8s ease color, 0.8s ease transform;
-}
-#f-ContactUsButton:hover {
-  cursor: pointer;
-  color: #068095;
-  transform: scale(1.03);
 }
 
 footer {
@@ -657,22 +606,27 @@ footer .f-FooterIconContainer p {
   height: 100%;
   display: flex;
   align-items: center;
+  padding-right: 18px;
 }
 .f-MobileMenu #f-MobileLinksWrapper {
   margin: 0;
   padding: 0;
   display: flex;
-  height: 100%;
+  height: auto;
   list-style: none;
-  background-color: #ffffffc2;
+  background-color: #ffffff;
   width: 100%;
   flex-direction: column;
   position: fixed;
-  top: 65px;
+  top: 55px;
   left: 0;
 }
+.f-MobileMenu #f-MobileLinksWrapper hr {
+  width: 100%;
+  color: #067f95b6;
+}
 .f-MobileMenu #f-MobileLinksWrapper a {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   padding: 1rem 0;
@@ -692,17 +646,8 @@ footer .f-FooterIconContainer p {
     font-size: 2em;
   }
 
-  .f-h4 {
-    font-size: 1.7em;
-  }
-
   #f-NavigationBar #f-NavbarLogo {
     width: 45%;
-  }
-
-  #f-ModalContainer {
-    width: 70%;
-    overflow: scroll;
   }
 
   #f-BigLogoContainer {
