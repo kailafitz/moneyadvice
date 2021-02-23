@@ -36,7 +36,7 @@ export default function NavigationBar() {
   return (
     <HideOnScroll>
       <div className={classes.root} >
-          <AppBar position="sticky" elevation={24} id="f-NavigationBar">
+          <AppBar position="sticky" elevation={3} id="f-NavigationBar">
               <Toolbar className={classes.toolbar}>
                   <img id="f-NavbarLogo" alt="Logo" src={Logo}/>
                   {!isMobile && <NavbarLinks />}

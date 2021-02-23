@@ -201,91 +201,97 @@ body {
 // }
 
 // Home.js ----------------------------
-#f-BigLogoContainer {
-    // background-image: url("./Images/index-bgImg.png");
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat:  no-repeat;
-    // background-attachment: fixed;
-    display: flex;
-    padding: 0 .5em;
-    height: 100vh;
-    align-items: center;
-    justify-content: space-evenly;
+// #f-BigLogoContainer {
+//     position: relative;
+//     // background-image: url("./Images/index-bgImg.png");
+//     // background-position: center;
+//     // background-size: cover;
+//     // background-repeat:  no-repeat;
+//     // background-attachment: fixed;
+//     display: flex;
+//     padding: 0 .5em;
+//     height: 70vh;
+//     align-items: center;
+//     justify-content: space-evenly;
 
-    #f-BigLogo {
-        width: 40%;
+//     #f-BigLogo {
+//         width: 30%;
 
-        img {
-            width: 100%;
-            border-radius: 7px;
-            box-shadow: -2px 3px 10px -3px $grey-dark;
-        }
-    }
+//         img {
+//             width: 100%;
+//             border-radius: 7px;
+//             // box-shadow: -2px 3px 10px -3px $grey-dark;
+//         }
+//     }
 
-    #f-AnimationDiv {
-        width: 300px;
-        height: 300px;
-        position: relative;
+//     #f-AnimationDiv {
+//         width: 300px;
+//         height: 300px;
+//         position: relative;
     
-        .test {
-            width: 30%;
-            border-radius: 4px;
-            position: absolute;
-            margin: 1em;
-        }
+//         .test {
+//             width: 40%;
+//             border-radius: 4px;
+//             position: absolute;
+//             margin: 1em;
+//         }
 
-        #blue {
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
+//         #blue {
+//             top: 0;
+//             left: 0;
+//             z-index: 2;
+//         }
 
-        #green {
-            top: 0;
-            right: 0;
-            z-index: 3;
-        }
+//         #green {
+//             top: 0;
+//             right: 0;
+//             z-index: 3;
+//         }
 
-        #peach {
-            bottom: 0;
-            left: 0;
-            z-index: -6;
-        }
+//         #peach {
+//             bottom: 0;
+//             left: 0;
+//             z-index: -6;
+//         }
 
-        #purple {
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-        }
-    }
+//         #purple {
+//             bottom: 0;
+//             right: 0;
+//             z-index: -1;
+//         }
+//     }
 
-    #f-BigLogoContainer-Text {
-        width: 50%;
-        font-family: $roboto;
-        color: $wh;
-        // background: -webkit-linear-gradient(#068095,  #732c4e);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
-    }
-}
+//     #f-BigLogoContainer-Text {
+//         width: 60%;
+//         margin: 0 auto;
+//         font-family: $roboto;
+//         color: $wh;
+//         // background: -webkit-linear-gradient(#068095,  #732c4e);
+//         // -webkit-background-clip: text;
+//         // -webkit-text-fill-color: transparent;
 
-#f-CardContainer {
-    width: 100%;
-    padding: 3em 0;
-    background-color: #068095;
-    display: flex;
-    justify-content: space-evenly;
-}
+//         h4 {
+//             color: $grey-dark;
+//         }
+//     }
+// }
+
+// #f-CardContainer {
+//     width: 100%;
+//     padding: 3em 0;
+//     background-color: #068095;
+//     display: flex;
+//     justify-content: space-evenly;
+// }
 
 // LottieMediaCard.js ----------------------------
-.f-LottieMediaCard {
-    width: 20%;
+// .f-LottieMediaCard {
+//     width: 20%;
 
-    h3 {
-        color: $wh;
-    }
-}
+//     h3 {
+//         color: $wh;
+//     }
+// }
 
 // Partners.js ----------------------------
 #f-PartnerLogosContainer {

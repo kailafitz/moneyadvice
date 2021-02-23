@@ -1,9 +1,23 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import LottieAnimation from './LottieAnimation';
+import {colors} from '../colors'
+import {fonts} from '../fonts'
+
+const StyledLottieCard = styled(Card) `
+  width: 20%;
+
+  h3 {
+    font-size: 1.5em;
+    font-family: ${fonts.temp_font};
+    font-weight: 600;
+    color: ${colors.wh};
+  }
+`
 
 const useStyles = makeStyles({
   root: {
@@ -29,7 +43,7 @@ export default function LottieMediaCard( { animationData, title } ) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root + " f-LottieMediaCard"}>
+    <StyledLottieCard className={classes.root}>
         <CardMedia
           className={classes.media}
           id="f-CardMediaMobile"
@@ -39,6 +53,6 @@ export default function LottieMediaCard( { animationData, title } ) {
       <CardContent>
         <h3 className="f-h3 f-TextCenter">{title}</h3>
       </CardContent>
-    </Card>
+    </StyledLottieCard>
   );
 }

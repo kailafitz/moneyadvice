@@ -15,6 +15,7 @@
     "axios": "^0.21.1",
     "framer": "^1.2.24",
     "framer-motion": "^3.3.0",
+    "infinite-react-carousel": "^1.2.11",
     "material-ui-popup-state": "^1.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

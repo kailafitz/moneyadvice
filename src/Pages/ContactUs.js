@@ -24,7 +24,7 @@ const HeaderImage = styled.div `
     z-index: -6;
 
     @media only screen and ${breakpoint.device.xs} {
-        height: 30vh;
+        height: 50vh;
     }
 
     @media only screen and ${breakpoint.device.sm} {
@@ -99,7 +99,7 @@ const ContactPageContainer = styled.div `
         width: 90%;
 
         p {
-            font-size: 1.5em;
+            font-size: 1.1em;
         }
 
         #f-ContactWrapper {
@@ -117,13 +117,13 @@ const ContactPageContainer = styled.div `
                 }
 
                 h4 {
-                    font-size: 1.7em;
+                    font-size: 1em;
                     padding-left: 2em;
                 }
             }
 
             #f-ContactFormWrapper {
-                width: 80%;
+                width: 90%;
 
                 form {
     
@@ -133,12 +133,12 @@ const ContactPageContainer = styled.div `
                         .f-FormField {
                             .MuiInputBase-root {
                                 input {
-                                    font-size: 2.3em;
+                                    font-size: 1.5em;
                                 }
                             }
 
                             .MuiFormLabel-root {
-                                font-size: 1.5em;
+                                font-size: 1.3em;
                             }                            
                         }
                     }
