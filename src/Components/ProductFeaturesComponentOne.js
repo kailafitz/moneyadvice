@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const ProductFeature = () => {
+export const ProductFeaturesComponentOne = () => {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 

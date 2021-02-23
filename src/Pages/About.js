@@ -7,11 +7,66 @@ import SectionTitle from '../Components/SectionTitle';
 import Philip from '../Images/About-Imgs/Philip_OReilly.png'
 import Container from '@material-ui/core/Container';
 import Timeline from '../Components/Timeline';
+import styled from 'styled-components';
+import {colors} from '../colors';
+import breakpoint from '../breakpoints';
+
+const AboutHeader = styled.div `
+  background-image: url("./Images/about-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  height: 100vh;
+
+  .f-Overlay {
+      background-color: ${colors.logo_trans_blue};
+      height: 100%;
+      width: 100%;
+      display: flex;
+      margin: auto;
+      align-items: center;
+
+      #f-HeaderWrapper {
+          width: 70%;
+          display: flex;
+          flex-wrap: wrap;
+          margin: auto;
+          align-items: center;
+
+          h2 {
+              font-size: 3em;
+              color: ${colors.wh};
+              letter-spacing: 2px;
+          }
+
+          h3 {
+              color: ${colors.grey_light};
+          }
+
+          #f-AboutButtonDiv {
+              width: 100%;
+              display: flex;
+              padding: 1em 0;
+          }
+      }
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+  }
+
+  @media only screen and ${breakpoint.device.lg} {
+  }
+`
 
 export default function About() {
   return (
     <>
-      <div id="f-AboutHeader">
+      <AboutHeader>
         <div className="f-Overlay">
           <div id="f-HeaderWrapper">
             <h2 className="f-h2 f-TextLeft f-MarginAuto">With MoneyAdvice CRM, we care about your customers and the services that you offer.
@@ -23,7 +78,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </AboutHeader>
 
       {/* <Timeline /> */}
 

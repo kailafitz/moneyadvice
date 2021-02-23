@@ -1,6 +1,7 @@
 import React from "react";
 import LottieMediaCard from "../Components/LottieMediaCard";
 import BigLogo from "../Images/LogoBlue-Md.png";
+import SmallLogo from "../Images/CompanyName.jpg";
 import Finance from "../Lottie/Cash.json"
 import Chart from "../Lottie/Chart.json"
 import MachineCog from "../Lottie/MachineCog.json"
@@ -46,16 +47,16 @@ export default function Home() {
     return (
     <>
         <div id="f-BigLogoContainer">
-            <div id="f-BigLogo" className="f-MarginAuto">
+            {/* <div id="f-BigLogo" className="f-MarginAuto">
                 <img alt="Logo" src={BigLogo}/>
-            </div>
-            {/* <div id="f-AnimationDiv">
+            </div> */}
+            <div id="f-AnimationDiv">
                 <Frame
                     backgroundColor="none"
                     animate={{ rotate: 360 }}
                     transition = {transition}
                 >
-                    <motion.div style={{ y: y1 }}>
+                    {/* <motion.div style={{ y: y1 }}>
                         <img className="test" id="blue" src={Blue} />
                     </motion.div>
                     <motion.div style={{ y: y2 }}>
@@ -66,10 +67,15 @@ export default function Home() {
                     </motion.div>
                     <motion.div style={{ y: y4 }}>
                         <img className="test" id="purple" src={Purple} />
-                    </motion.div>
+                    </motion.div> */}
+                        <img className="test" id="blue" src={Blue} />
+                        <img className="test" id="green" src={Green} />
+                        <img className="test" id="peach" src={Peach} />                 
+                        <img className="test" id="purple" src={Purple} />
                 </Frame>
-            </div> */}
+            </div>
             <div id="f-BigLogoContainer-Text">
+                <img src={SmallLogo} />
                 <h1 className="f-h1 f-TextLeft">The only CRM system for financial and mortgage advisors - all in one.</h1>
             </div>
         </div>

@@ -135,6 +135,8 @@ const FooterDiv = styled.footer `
     @media only screen and ${breakpoint.device.lg} {
 
         #f-FooterWrapper {
+            max-width: 70%;
+
             #f-LogoColumn {
                 img {
                     max-width: 300px;

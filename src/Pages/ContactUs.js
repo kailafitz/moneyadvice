@@ -6,6 +6,265 @@ import Footer from '../Components/Footer';
 import axios from 'axios';
 import SectionTitle from '../Components/SectionTitle';
 import AlertMessage from '../Components/AlertMessage';
+import styled from 'styled-components';
+import {fonts} from '../fonts';
+import {colors} from '../colors';
+import breakpoint from '../breakpoints';
+import BackgroundImage from '../Images/contact-bg.jpg'
+
+const HeaderImage = styled.div `
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(${BackgroundImage});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -6;
+
+    @media only screen and ${breakpoint.device.xs} {
+        height: 30vh;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        height: 40vh;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        height: 45vh;
+    }
+`
+
+const ContactPageContainer = styled.div `
+    background-color: ${colors.wh};
+    margin: 0 auto;
+    margin-top: 12em;
+    padding: 1em .5em;
+    height: 50%;
+    padding-bottom: 10em;
+    display: block;
+    box-shadow: 0px -10px 14px -9px #515151;
+
+    p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 5em;
+    }
+
+    #f-ContactWrapper {
+
+        #f-ContactIconWrapper {
+
+            .f-ContactIconContainer {
+                display: flex;
+                align-items: center;
+                margin: 1em 0;
+
+                i {
+                    color: ${colors.logo_blue};
+                }
+
+                h4 {
+                    font-family: ${fonts.temp_font};
+                    font-weight: 300;
+                    color: ${colors.bl};
+                }
+            }
+        }
+
+        #f-ContactFormWrapper {
+            margin: 0 auto;
+            text-align: right;
+
+            form {
+                display: block;
+
+                .f-ContactFormInput {
+                    width: 90%;
+                    margin-bottom: 1em;
+
+                    .f-FormField {
+                        background-color: ${colors.grey_light};
+                        margin-bottom: 1em;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        width: 90%;
+
+        p {
+            font-size: 1.5em;
+        }
+
+        #f-ContactWrapper {
+            margin: 0 auto;
+            width: 100%;
+            display: block;
+
+            #f-ContactIconWrapper {
+                width: 75%;
+                margin: 0 auto;
+                margin-bottom: 4em;
+
+                i {
+                    font-size: 3em;
+                }
+
+                h4 {
+                    font-size: 1.7em;
+                    padding-left: 2em;
+                }
+            }
+
+            #f-ContactFormWrapper {
+                width: 80%;
+
+                form {
+    
+                    .f-ContactFormInput {
+                        
+    
+                        .f-FormField {
+                            .MuiInputBase-root {
+                                input {
+                                    font-size: 2.3em;
+                                }
+                            }
+
+                            .MuiFormLabel-root {
+                                font-size: 1.5em;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        width: 85%;
+
+        p {
+            font-size: 1em;
+        }
+
+        #f-ContactWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+    
+            #f-ContactIconWrapper {
+                width: 30%;
+                margin: 0 auto;
+    
+                .f-ContactIconContainer {
+                    display: flex;
+                    align-items: center;
+                    margin: 1em 0;
+    
+                    i {
+                        font-size: 3em;
+                    }
+    
+                    h4 {
+                        font-size: 1.2em;
+                        padding-left: 2em;
+                    }
+                }
+            }
+    
+            #f-ContactFormWrapper {
+                width: 40%;
+                margin: 0 auto;
+                text-align: right;
+    
+                form {
+    
+                    .f-ContactFormInput {
+    
+                        .f-FormField {
+                            .MuiInputBase-root {
+                                input {
+                                    font-size: 1em;
+                                }
+                            }
+
+                            .MuiFormLabel-root {
+                                font-size: 0.8em;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        max-width: 70%;
+
+        p {
+            font-size: 1em;
+        }
+
+        #f-ContactWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: flex-start; 
+    
+            #f-ContactIconWrapper {
+                width: 30%;
+                margin: 0 auto;
+    
+                .f-ContactIconContainer {
+                    display: flex;
+                    align-items: center;
+                    margin: 1em 0;
+    
+                    i {
+                        font-size: 3em;
+                    }
+    
+                    h4 {
+                        font-size: 1.2em;
+                        padding-left: 2em;
+                    }
+                }
+            }
+    
+            #f-ContactFormWrapper {
+                width: 40%;
+                margin: 0 auto;
+                text-align: right;
+    
+                form {
+    
+                    .f-ContactFormInput {
+    
+                        .f-FormField {
+                            .MuiInputBase-root {
+                                input {
+                                    font-size: 1em;
+                                }
+                            }
+
+                            .MuiFormLabel-root {
+                                font-size: 0.8em;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -86,11 +345,11 @@ export default function ContactUs() {
 
     return (
         <>
-        <div className="f-HeaderImage"></div>
+        <HeaderImage className="f-HeaderImage"></HeaderImage>
             <AlertMessage {...alertDetails}/>
-            <div id="f-ContactBodyContainer">
+            <ContactPageContainer>
                 <SectionTitle title="Contact Us" />
-                <p className="f-p f-MarginAuto f-TextCenter">If you have any queries, please fill out the form below and we will respond as soon as possible.
+                <p className="f-p">If you have any queries, please fill out the form below and we will respond as soon as possible.
                 <br/>
                 <br/>
                 For any urgent matters, please call us on the number below. Though our offices are based in Ennis, we do not facilitate walk-ins.</p>
@@ -171,7 +430,7 @@ export default function ContactUs() {
                         </form>
                     </div>
                 </div>
-                </div>               
+                </ContactPageContainer>               
             <Footer />
         </>
     )

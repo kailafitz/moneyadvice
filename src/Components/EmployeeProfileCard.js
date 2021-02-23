@@ -10,21 +10,27 @@ const Styledh4 = styled.h4 `
   font-size: 1.2em;
   font-family: ${fonts.roboto};
   font-weight: 300;
-  color: ${colors.wh};
+  color: ${colors.logo_blue};
   text-align: "center";
 `
 
 const Styledp = styled.p `
   font-size: 1em;
   font-family: ${fonts.roboto};
-  color: ${colors.wh};
+  color: ${colors.bl};
 `
 
 const StyledAvatar = styled(Avatar) `
-  margin: .5em auto;
-  width: 120px;
-  height: 120px;
-  border-radius: 4%;
+  margin: 1.5em auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 0%;
+  filter: grayscale(100%);
+
+  img {
+    border-radius: 4px;
+    object-fit: contain;
+  }
 `
 
 const useStyles = makeStyles((theme) => ({

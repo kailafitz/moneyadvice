@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import {colors} from '../colors';
 import breakpoint from '../breakpoints';
 
 const StyledBlockBulletPointDiv = styled.div`
     display: block;
-    background-color: #068095;
-    color: #ffffff;
+    background-color: ${colors.logo_blue};
+    color: ${colors.wh};
     padding: 1em;
     margin: 1em;
     border-radius: 4px;
@@ -20,7 +21,7 @@ const StyledBlockBulletPointDiv = styled.div`
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        width: 38%;
+        width: 20%;
     }
 
     @media only screen and ${breakpoint.device.lg} {

@@ -17,7 +17,8 @@ const TeamType = styled.div `
     display: block;
     border-radius: 3px;
     padding: .5em;
-    margin: 1em 0;`
+    margin: 1em 0;
+`
 
 const EmployeeCardContainer = styled.div `
     display: flex;
@@ -26,8 +27,8 @@ const EmployeeCardContainer = styled.div `
     align-content: center;
     flex-wrap: wrap;
     border-radius: 4px;
-    background-color: ${colors.logo_purple};
-    box-shadow: -2px 3px 10px -3px #111111;
+    // background-color: ${colors.logo_purple};
+    // box-shadow: -2px 3px 10px -3px #111111;
 `
 const Styledh3 = styled.h3 `
     text-align: center;

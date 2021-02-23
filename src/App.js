@@ -5,9 +5,10 @@ import NavigationBar from './Components/NavigationBar';
 import About from "./Pages/About";
 import ContactUs from './Pages/ContactUs';
 import Downloads from './Pages/Downloads';
-import Features from './Pages/Features';
+import ProductFeatures from './Pages/ProductFeatures';
 import Home from "./Pages/Home";
 import PrivacyPolicy from './Pages/PrivacyPolicy';
+import ProductComparison from './Pages/ProductComparison';
 
 function App() {
 
@@ -19,8 +20,11 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path="/features">
-                <Features />
+              <Route exact path="/productfeatures">
+                <ProductFeatures />
+              </Route>
+              <Route exact path="/productcomparison">
+                <ProductComparison />
               </Route>
               <Route exact path="/about">
                 <About />

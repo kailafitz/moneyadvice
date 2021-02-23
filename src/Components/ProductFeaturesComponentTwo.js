@@ -12,32 +12,33 @@ import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 
 
-const FeaturesPage = styled.div`
-    width:100%;
+const FeaturesPage = styled.div `
+    width: 100%;
 `
 
-const FeaturesPageInfo =styled.div`
+const FeaturesPageInfo =styled.div` 
     margin: 0.8em;
-    width:100%;
+    z-index: 999;
+    width: 100%;
     
-    .f-TabPanel{
+    .f-TabPanel {
         padding: 3em;
     }
 
-    #f-FeatureMainImage{
-        width:100%;
+    #f-FeatureMainImage {
+        width: 100%;
         margin: 0 auto;
         padding: 0;
     }
 
-    @media only screen and ${breakpoint.device.xs}{
+    @media only screen and ${breakpoint.device.xs} {
         margin:0;
 
-        .f-FeatureImagesContainer{
-            width:100%;
+        .f-FeatureImagesContainer {
+            width: 100%;
             align-items: normal;
 
-            .MuiCard-root{
+            .MuiCard-root {
                 width: 100%;
             }
         }
@@ -47,13 +48,13 @@ const FeaturesPageInfo =styled.div`
         }
     }
 
-    @media only screen and ${breakpoint.device.sm}{
+    @media only screen and ${breakpoint.device.sm} {
 
-        #f-FeatureMainImage{
+        #f-FeatureMainImage {
             width: 40%;
         }
 
-        .f-FeatureImagesContainer{
+        .f-FeatureImagesContainer {
             align-items: normal;
             justify-content: space-between;
             .MuiCard-root{
@@ -61,18 +62,18 @@ const FeaturesPageInfo =styled.div`
             }
         }
     }
-    @media only screen and ${breakpoint.device.lg}{
 
-        #f-FeatureMainImage{
+    @media only screen and ${breakpoint.device.lg} {
+
+        #f-FeatureMainImage {
             width: 40%;
         }
 
-        .f-FeatureImagesContainer{
+        .f-FeatureImagesContainer {
             align-items: normal;
             justify-content: space-between;
-            .MuiCard-root{
-                width: 40%;
-            
+            .MuiCard-root {
+                width: 40%;            
             }
         }
     }
@@ -112,7 +113,7 @@ const FeaturesPageMenu = styled.div`
     }
 `
 
-export const FeaturesDetail = () => {
+export const ProductFeaturesComponentTwo = () => {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);
