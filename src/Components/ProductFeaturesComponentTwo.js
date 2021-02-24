@@ -10,7 +10,34 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
+import {colors} from '../colors';
+import {fonts} from '../fonts';
 
+
+const DownloadLink = styled.button`
+    background-color: ${colors.logo_blue};
+    color: ${colors.wh};
+    transition: .3s ease-in background-color, .2s ease-in color;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    :hover {
+        background-color: ${colors.logo_green};
+        color: white;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        width:100%;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        width: 20%;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+    }
+`
 
 const FeaturesPage = styled.div `
     width: 100%;
@@ -84,6 +111,7 @@ const FeaturesPageMenu = styled.div`
     top: 0;
     border-radius: 4px;
     text-align: center;
+    z-index: 1000;
 
     #simple-menu .MuiPopover-paper {
         top: 0;
@@ -95,7 +123,7 @@ const FeaturesPageMenu = styled.div`
 
     button { 
         width: 30%;
-        background-color: #732c4e!important;
+        background-color: ${colors.logo_purple}!important;
         color: white;
         padding: 0.5em 0 0.5em 0.5em;
         position: sticky;
@@ -104,9 +132,16 @@ const FeaturesPageMenu = styled.div`
 
     @media only screen and ${breakpoint.device.xs}{
         margin: 0 auto;
+
+        button { 
+            width: 90%;
+        }
     }   
     @media only screen and ${breakpoint.device.sm}{
         margin: 0.8em;
+        button { 
+            width: 40%;
+        }
     }
     @media only screen and ${breakpoint.device.lg}{
         margin: 0.8em;
@@ -156,24 +191,24 @@ export const ProductFeaturesComponentTwo = () => {
       {
           validData ?
           <>
-          <FeaturesPageMenu>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                {feature.featureTitle}
-            </Button>
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                {
-                    data.map(feature => {
-                        return <MenuItem onClick={handleClose} data-id={feature.id}>{feature.featureTitle}</MenuItem>
-                    })
-                }
-            </Menu>
-        </FeaturesPageMenu>
+            <FeaturesPageMenu>
+                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                    {feature.featureTitle}
+                </Button>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    {
+                        data.map(feature => {
+                            return <MenuItem onClick={handleClose} data-id={feature.id}>{feature.featureTitle}</MenuItem>
+                        })
+                    }
+                </Menu>
+            </FeaturesPageMenu>
           <FeaturesPageInfo>
               <div className="f-TabPanel">
                   {/* <Typography variant="h2">{feature.featureTitle}</Typography>
@@ -190,6 +225,11 @@ export const ProductFeaturesComponentTwo = () => {
                               <p className="f-p"><i class="fas fa-check-square f-CheckListIcon"></i>  {bulletpoint}</p>
                           );
                       })
+                  }
+                  {
+                      feature.featureButtonHref ?
+                      <DownloadLink download href={feature.featureButtonHref}>{feature.featureButtonLabel}</DownloadLink>:
+                      null
                   }
                   <div className="f-FeatureImagesContainer">
                       {

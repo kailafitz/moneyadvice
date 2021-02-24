@@ -17,10 +17,28 @@ const ContainerDiv = styled.div `
   margin: 0 auto;
 `
 
+const StyledAccordion = styled(Accordion)`
+
+  @media only screen and ${breakpoint.device.xs} {
+    overflow-x:scroll;
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+    overflow-x: auto;
+  }
+  
+`
+
 const DataGridDiv = styled.div `
   width: 100%;
 
+  .MuiDataGrid-root .MuiDataGrid-columnsContainer{
+    background-color: ${colors.logo_blue};
+    width: 100%;
+  }
+
   .table-header{
+    width: 100%;
     color: ${colors.wh};
     background-color: ${colors.logo_blue};
   }
@@ -35,14 +53,14 @@ const DataGridDiv = styled.div `
 
   @media only screen and ${breakpoint.device.xs} {
     height: 400px;
+    min-width: 800px;
   }
 
   @media only screen and ${breakpoint.device.sm} {
-    height: 700px;
+    min-width: 0px;
   }
   
   @media only screen and ${breakpoint.device.lg} {
-    height: 700px;
   }
 
 `
@@ -59,58 +77,11 @@ const useStyles = makeStyles((theme) => ({
 
 const columns = [
 
-  { field: 'featureName', headerName: 'Name', flex: 3, headerClassName: 'table-header',},
-  { field: 'featureOfMoney', headerName: 'MoneyAdvice', flex: 1, headerClassName: 'table-header',},
-  { field: 'featureOfMoneyCRM', headerName: 'MoneAdvice+CRM', flex: 1, headerClassName: 'table-header',},
-  // {
-  //   field: 'newRelease',
-  //   headerName: 'New Release',
-  //   flex: 1,
-  //   headerClassName: 'table-header'
-  // },
-  // {
-  //   field: 'nextRelease',
-  //   headerName: 'Next Release',
-  //   flex: 1,
-  //   headerClassName: 'table-header',
-  // },
-  // {
-  //   field: 'futureRelease',
-  //   headerName: 'Future Release',
-  //   flex: 1,
-  //   headerClassName: 'table-header',
-  // }
+  { field: 'featureName', headerName: 'Name', flex: 2, headerClassName: 'table-header'},
+  { field: 'featureOfMoney', headerName: 'MoneyAdvice', flex: 1, headerClassName: 'table-header'},
+  { field: 'featureOfMoneyCRM', headerName: 'MoneAdvice+CRM', flex: 1, headerClassName: 'table-header'},
 ];
 
-const rows = [
-  {
-    id: 0,      
-    featureName: "Client, Product Data Downloads from Life Insurance Providers",
-    featureOfMoney: "Yes",
-    featureOfMoneyCRM: "Yes",
-    newRelease: "No",
-    nextRelease: "No",
-    futureRelease: "No"
-  },
-  {
-    id: 1,
-    featureName: "Tasks",
-    featureOfMoney: "Yes",
-    featureOfMoneyCRM: "Yes",
-    newRelease: "No",
-    nextRelease: "No",
-    futureRelease: "No"
-  },
-  {
-    id: 3,
-    featureName: "Appointments / Diary (Add an appointment in Outlook from Money Advice)",
-    featureOfMoney: "Yes",
-    featureOfMoneyCRM: "Yes",
-    newRelease: "No",
-    nextRelease: "No",
-    futureRelease: "No"
-  }
-];
 
 export default function ProductComparisonTables() {
   const [data, setData] = useState([]);
@@ -159,7 +130,7 @@ export default function ProductComparisonTables() {
       {
         data.map(feature => {
           return <> {
-            <Accordion>
+            <StyledAccordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -168,41 +139,17 @@ export default function ProductComparisonTables() {
                 <Typography className={classes.heading}>{Object.keys(feature)[0]}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              {/* {
-                createRows(Object.values(feature)[0])
-              } */}
                 <DataGridDiv>
-                  {/* <DataGrid rows={createRows(Object.values(feature)[0])} columns={columns} pagination /> */}
                   <DataGrid
                     rows={createRows(Object.values(feature)[0])}
                     columns={columns}
                     hideFooterPagination={true}
                     hideFooterRowCount={true}
                     hideFooter={true}
-                    scrollbarSize={100}
                   />
                 </DataGridDiv>
               </AccordionDetails>
-            </Accordion>
-          
-            
-            // feature.map((title, values) => {
-            //   <Accordion>
-            //     <AccordionSummary
-            //       expandIcon={<ExpandMoreIcon />}
-            //       aria-controls="panel1a-content"
-            //       id="panel1a-header"
-            //     >
-            //       <Typography className={classes.heading}>{title}</Typography>
-            //     </AccordionSummary>
-            //     <AccordionDetails>
-            //       <Typography>
-            //         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            //         sit amet blandit leo lobortis eget.
-            //       </Typography>
-            //     </AccordionDetails>
-            //   </Accordion>
-            // })
+            </StyledAccordion>
           } </>
         })
       }   

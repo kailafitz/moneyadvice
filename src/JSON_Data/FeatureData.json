@@ -186,7 +186,7 @@
         "featureMainImage": "http://moneyadvice.ie/images/documentscan.jpg",
         "featureBulletPoints": ["The Camscanner app provides options to enhance the scanned image", "Option to scan multiple pages and create a single PDF document of all the scanned images", "Users are able to search the client bank in Money Advice + CRM and associate the documents to a particular client / policy / opportunity", "The PDF of the scanned images created can also be shared using email."],
         "featureImages": [],
-        "featureButtonHref": "../Downloads/WebsiteContentReview",
+        "featureButtonHref": "../Downloads/WebsiteContentReview.pdf",
         "featureButtonLabel": "Download User Guide"
     },
     {
