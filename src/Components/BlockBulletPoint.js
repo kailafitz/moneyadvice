@@ -6,12 +6,15 @@ import breakpoint from '../breakpoints';
 const StyledBlockBulletPointDiv = styled.div`
     display: block;
     background-color: ${colors.logo_blue};
-    color: ${colors.wh};
     border-radius: 4px;
     text-align: center;
 
     i {
-        font-size: 4em;
+        color: ${colors.logo_green};
+    }
+
+    h4 {
+        ${colors.wh};
     }
 
     @media only screen and ${breakpoint.device.xs} {
@@ -42,8 +45,8 @@ const StyledBlockBulletPointDiv = styled.div`
 export const BlockBulletPoint = ({bulletPoint}) => {
     return (
         <StyledBlockBulletPointDiv>
-            <i class="fas fa-check-square f-CheckListIcon"></i>
-            <h4 className="f-h4">{bulletPoint}</h4>
+            <i class="fas fa-check-square"></i>
+            <h4>{bulletPoint}</h4>
         </StyledBlockBulletPointDiv>
     )
 }
