@@ -13,7 +13,8 @@ import { colors }  from '../colors';
 
 const ContainerDiv = styled.div `
   height: 100%;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 `
 
 const DataGridDiv = styled.div `
@@ -59,26 +60,26 @@ const useStyles = makeStyles((theme) => ({
 const columns = [
 
   { field: 'featureName', headerName: 'Name', flex: 3, headerClassName: 'table-header',},
-  { field: 'featureOfMoney', headerName: 'Money', flex: 1, headerClassName: 'table-header',},
-  { field: 'featureOfMoneyCRM', headerName: 'MoneyCRM', flex: 1, headerClassName: 'table-header',},
-  {
-    field: 'newRelease',
-    headerName: 'New Release',
-    flex: 1,
-    headerClassName: 'table-header'
-  },
-  {
-    field: 'nextRelease',
-    headerName: 'Next Release',
-    flex: 1,
-    headerClassName: 'table-header',
-  },
-  {
-    field: 'futureRelease',
-    headerName: 'Future Release',
-    flex: 1,
-    headerClassName: 'table-header',
-  }
+  { field: 'featureOfMoney', headerName: 'MoneyAdvice', flex: 1, headerClassName: 'table-header',},
+  { field: 'featureOfMoneyCRM', headerName: 'MoneAdvice+CRM', flex: 1, headerClassName: 'table-header',},
+  // {
+  //   field: 'newRelease',
+  //   headerName: 'New Release',
+  //   flex: 1,
+  //   headerClassName: 'table-header'
+  // },
+  // {
+  //   field: 'nextRelease',
+  //   headerName: 'Next Release',
+  //   flex: 1,
+  //   headerClassName: 'table-header',
+  // },
+  // {
+  //   field: 'futureRelease',
+  //   headerName: 'Future Release',
+  //   flex: 1,
+  //   headerClassName: 'table-header',
+  // }
 ];
 
 const rows = [
@@ -126,7 +127,7 @@ export default function ProductComparisonTables() {
       if (value == "Yes") {
         console.log(value)
         data[key] = "✓"
-      }else if (value == "No"){
+      } else if (value == "No"){
         console.log(value)
         data[key] = "✗"
       }
@@ -171,7 +172,15 @@ export default function ProductComparisonTables() {
                 createRows(Object.values(feature)[0])
               } */}
                 <DataGridDiv>
-                  <DataGrid rows={createRows(Object.values(feature)[0])} columns={columns} pagination />
+                  {/* <DataGrid rows={createRows(Object.values(feature)[0])} columns={columns} pagination /> */}
+                  <DataGrid
+                    rows={createRows(Object.values(feature)[0])}
+                    columns={columns}
+                    hideFooterPagination={true}
+                    hideFooterRowCount={true}
+                    hideFooter={true}
+                    scrollbarSize={100}
+                  />
                 </DataGridDiv>
               </AccordionDetails>
             </Accordion>

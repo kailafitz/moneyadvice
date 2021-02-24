@@ -34,11 +34,9 @@ body {
     font-size: 3em;
     font-family: $temp-font;
     color: $grey-dark;
-    margin: 0;
     padding-top: 1em;
     font-weight: 800;
     color: $logo-purple;
-    line-height: 1.2em;
     letter-spacing: -.035em;
 }
 
@@ -64,11 +62,11 @@ body {
     font-size: 1em;
     font-family: $roboto;
     color: $bl;
-    display: -webkit-box;
-    overflow : hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 8;
-    -webkit-box-orient: vertical;
+    // display: -webkit-box;
+    // overflow : hidden;
+    // text-overflow: ellipsis;
+    // -webkit-line-clamp: 8;
+    // -webkit-box-orient: vertical;
 
     // footer p links with a tag
     a {
@@ -131,12 +129,12 @@ body {
 }
 
 // SectionTitle.js ----------------------------
-.f-SectionTitle {
-    width: 70%;
-    max-width: 90%;
-    margin: 0 auto;
-    margin-bottom: 4em;
-}
+// .f-SectionTitle {
+//     width: 70%;
+//     max-width: 90%;
+//     margin: 0 auto;
+//     margin-bottom: 4em;
+// }
 
 // LottieAnimation.js ----------------------------
 .f-Lottie {
@@ -294,32 +292,25 @@ body {
 // }
 
 // Partners.js ----------------------------
-#f-PartnerLogosContainer {
-    // background-image: url("./Images/index-bgImg2.jpg");
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat:  no-repeat;
-    // background-attachment: fixed;
-    width: 80%;
-    margin: 7em auto;
-    display: block;
-    padding: 3em;
-    // box-shadow: inset 0px 0px 30px 18px #FFFFFF; 
-    // border-radius: 10px;
+// #f-PartnerLogosContainer {
+//     width: 80%;
+//     margin: 7em auto;
+//     display: block;
+//     padding: 3em;
 
-    #f-PartnerLogosContainer-Logos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+//     #f-PartnerLogosContainer-Logos {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-around;
+//         align-items: center;
 
-        .f-PartnerLogo {
-            width: 8vw;
-            padding: 1em;
-            margin: 0 2em;
-        }
-    }
-}
+//         .f-PartnerLogo {
+//             width: 8vw;
+//             padding: 1em;
+//             margin: 0 2em;
+//         }
+//     }
+// }
 
 // Testimonial.js ----------------------------
 #f-test {
@@ -582,32 +573,32 @@ body {
     }
 }
 
-#f-TeamDiv {
-    width: 100%;
-    padding: 2em 0;
-    margin-top: 4em;
-    background-color: $grey-light;
+// #f-TeamDiv {
+//     width: 100%;
+//     padding: 2em 0;
+//     margin-top: 4em;
+//     background-color: $grey-light;
 
-    #f-CEOIntro {
-        display: flex;
-        justify-content: stretch;
-        align-items: flex-start;
-        position: relative;
-        padding: 2em 1em;
+//     #f-CEOIntro {
+//         display: flex;
+//         justify-content: stretch;
+//         align-items: flex-start;
+//         position: relative;
+//         padding: 2em 1em;
 
-        #f-CEOIntroText {
-            padding: 1em;
-            border-radius: 4px;
-            color: $grey-dark;
-        }
+//         #f-CEOIntroText {
+//             padding: 1em;
+//             border-radius: 4px;
+//             color: $grey-dark;
+//         }
 
-        #f-ChairpersonAvatar {
-            width: 30%;
-            height: auto;
-            border-radius: 85px;
-        }
-    }
-}
+//         #f-ChairpersonAvatar {
+//             width: 30%;
+//             height: auto;
+//             border-radius: 85px;
+//         }
+//     }
+// }
 
 // Employees.js ---------------------
 // #f-TeamsContainer {
@@ -826,40 +817,40 @@ body {
     //     margin: 0 auto;
     // }
 
-    #f-BigLogoContainer {
-        flex-direction: column;
-        background-size: auto;
-        justify-content: center;
+    // #f-BigLogoContainer {
+    //     flex-direction: column;
+    //     background-size: auto;
+    //     justify-content: center;
 
-        #f-BigLogo {
-            margin: 0 auto;
-            width: 80%;
-        }
+    //     #f-BigLogo {
+    //         margin: 0 auto;
+    //         width: 80%;
+    //     }
 
-        #f-BigLogoContainer-Text {
-            width: 80%;
-            margin: 0 auto;
-        }
+    //     #f-BigLogoContainer-Text {
+    //         width: 80%;
+    //         margin: 0 auto;
+    //     }
 
-    }
+    // }
 
-    #f-CardContainer {
-        display: block;
-    }
+    // #f-CardContainer {
+    //     display: block;
+    // }
 
-    .f-LottieMediaCard {
-        width: 80%;
-        margin: 0 auto;
-    }
+    // .f-LottieMediaCard {
+    //     width: 80%;
+    //     margin: 0 auto;
+    // }
 
-    #f-PartnerLogosContainer {
-        width: 90%;
-        padding: 0;
+    // #f-PartnerLogosContainer {
+    //     width: 90%;
+    //     padding: 0;
 
-        #f-PartnerLogosContainer-Logos .f-PartnerLogo {
-            width: 20vw;
-        }
-    }
+    //     #f-PartnerLogosContainer-Logos .f-PartnerLogo {
+    //         width: 20vw;
+    //     }
+    // }
 
     #f-ContactUsButtonContainer {
         padding: 2em;

@@ -265,7 +265,6 @@ const ContactPageContainer = styled.div `
         }
     }
 `
-
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from '@material-ui/core/Link';
+import { HashLink } from 'react-router-hash-link';
 import FooterLogo from '../Images/FooterLogo.png'
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
@@ -161,7 +162,7 @@ export default function Footer() {
                             <li><Link href="/features">Features</Link></li>
                             <li><Link href="/contactus">Contact Us</Link></li>
                             <li><Link href="/privacypolicy">Privacy Policy</Link></li>
-                            <li><Link href="/">Meet our Team</Link></li>
+                            <li><HashLink to="about/#f-CEOIntro">Meet our Team</HashLink></li>
                             <li><Link href="/downloads">Downloads</Link></li>
                         </ul>
                     </div>

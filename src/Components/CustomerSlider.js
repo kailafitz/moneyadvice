@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from 'infinite-react-carousel';
 import styled from 'styled-components';
+import breakpoint from '../breakpoints';
 import Aviva from "../Images/Customer-Logos/AcumenTrust.jpg"
 import BCP from "../Images/Customer-Logos/afsAylward.jpg"
 import Haven from "../Images/Customer-Logos/Alliance.jpg"
@@ -18,26 +19,24 @@ const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, St
 const StyledSlider = styled(Slider) `
     width: 80%;
     margin: 0 auto;
-    padding: 6em 0;
 
-    .carousel-initialized {
-        button {
-            display: none;
-        }
-    }
-
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        margin: auto;
-        text-align: center;
+    div {        
 
         #f-CustomerLogo {
             width: 90%;
         }
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        padding: 2em 0;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        padding: 4em 0;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        padding: 6em 0;
     }
 `
 
@@ -46,13 +45,12 @@ const CustomerSlider = () => {
         <>
             <SectionTitle title="Our Customers"/>
             <StyledSlider
-                autoplay="true"
-                autoplaySpeed="800"
-                duration="10"
-                arrows="true"
-                arrowsBlock="true"
-                slidesToShow="5"
-                pauseOnHover="false"
+                autoplay={true}
+                autoplaySpeed="600"
+                arrows={false}
+                arrowsBlock={false}
+                slidesToShow={5}
+                pauseOnHover={false}
             >
                 {
                     CustomerLogos.map((logo) => {

@@ -32,10 +32,6 @@ const StyledModalContainer = styled.div`
     width: 90%;
     margin: 0 auto;
   }
-
-  // @media only screen and ${breakpoint.device.xs} {
-  //   width: 90%;
-  // }
 `
 
 const useStyles = makeStyles((theme) => ({

@@ -28,7 +28,9 @@ const StyledAvatar = styled(Avatar) `
   filter: grayscale(100%);
 
   img {
-    border-radius: 4px;
+    width: auto;
+    height: auto;
+    border-radius: 7px;
     object-fit: contain;
   }
 `

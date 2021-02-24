@@ -7,8 +7,6 @@ const StyledBlockBulletPointDiv = styled.div`
     display: block;
     background-color: ${colors.logo_blue};
     color: ${colors.wh};
-    padding: 1em;
-    margin: 1em;
     border-radius: 4px;
     text-align: center;
 
@@ -18,14 +16,26 @@ const StyledBlockBulletPointDiv = styled.div`
 
     @media only screen and ${breakpoint.device.xs} {
         width: 38%;
+        padding: .5em;
+        margin: .5em;
+
+        i {
+            font-size: 3em;
+        }
     }
 
     @media only screen and ${breakpoint.device.sm} {
         width: 20%;
+        padding: 1em;
+        margin: 1em;
     }
 
     @media only screen and ${breakpoint.device.lg} {
         width: 20%;
+
+        i {
+            font-size: 4em;
+        }
     }
 `
 

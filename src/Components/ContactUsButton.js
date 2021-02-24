@@ -1,6 +1,7 @@
-import { Button } from '@material-ui/core';
 import React from 'react';
+import { Button } from '@material-ui/core';
 import styled from 'styled-components';
+import breakpoint from '../breakpoints';
 import {colors} from '../colors';
 import {fonts} from '../fonts';
 
@@ -16,13 +17,24 @@ const StyledContactUsButton = styled(Button)`
   border-radius: 4px;
   color: ${colors.logo_purple};
   font-weight: 800;
-  font-size: 1.3em;
   transition: .8s ease background-color, .8s ease color, .8s ease transform;
 
   &:hover {
     cursor: pointer;
     color: ${colors.logo_blue};
     transform: scale(1.03);
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+    font-size: 0.9em;
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+    font-size: 1.1em;
+  }
+
+  @media only screen and ${breakpoint.device.lg} {
+    font-size: 1.3em;
   }
 `
 

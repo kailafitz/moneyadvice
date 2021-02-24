@@ -15,7 +15,7 @@ import {fonts} from '../fonts';
 import {colors} from '../colors';
 
 const TestimonialBackground = styled.div`
-  width:100%;
+  width: 100%;
   background-color: #E8DCE2;
   padding: 3em 0;
 
@@ -51,8 +51,6 @@ const TestimonialBackground = styled.div`
       margin: 0 auto;
       color: transparent;
     }
-
-
   }
 
   @media only screen and ${breakpoint.device.lg} {
@@ -113,6 +111,7 @@ const TestimonialCard = styled.div`
 
 const TestimonialCardHeaderDetails = styled.div`
   display: block;
+  padding-left: 0.5em;
   text-align: left;
 `
 
@@ -121,8 +120,6 @@ const TestimonialCardHeader = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-
-
 const ButtonStyled = styled.button`
     box-shadow: none;
     background-color: ${colors.logo_blue};

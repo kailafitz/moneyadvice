@@ -27,6 +27,7 @@ const LinksDiv = styled.div `
         font-size: 100%;
         padding: .5em;
         margin: .8em;
+        border-top: 2px solid transparent;
         border-bottom: 2px solid transparent;
         transition: all 200ms ease-in-out;
 

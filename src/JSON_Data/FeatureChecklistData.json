@@ -321,5 +321,439 @@
                 "futureRelease": "No"
             }
         ]
+    },
+    {
+        "Protection" : [
+            {
+                
+                "featureName": "Protection Review Calculator (with needs analysis & research reports)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Inheritance Tax Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Term Assurance Quotations",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Pension Term Quotations",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Unit Linked Quotations",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Whole Of Life Quotations",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Income Protection Quotations",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Business Assurance Templates",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "New Ireland Life Choice",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "New Convertible Mortgage Protection",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Serious Illness Comparison List",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
+    },
+    {
+        "Investment" : [
+            {
+                
+                "featureName": "Savings Planner",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Future Funds Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Funds Search",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Funds Profile + Ratings (from Moneymate)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Investment Quotations (projected values)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Funds Factsheets (Fund information from MoneyMate of over 900 funds)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Integration with Fund Focus (from MoneyMate)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Market Commentaries",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Education Planner",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Unit Linked Bonds",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "With Profit Bonds",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Tracker Bonds",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Savings Plans",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
+    },
+    {
+        "Pension" : [
+            {
+                
+                "featureName": "Pension Needs Calculator",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Pension Quotations (projected values)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Group Pensions",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Regular Premium PRSA",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Regular Premium (Personal/Executive/AVC",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Single Premium (Personal/Executive/Buy Out Bond)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "ARF/AMRF",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Annuity Rates (ILAC)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
+    },
+    {
+        "General Insurance" : [
+            {
+                
+                "featureName": "Zurich Home Insurance Quick Quote",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Zurich Home Insurance Full Quotation (including business placement facility)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Link to HIA website",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Import tool for Aviva Health Policies)",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Links to Aviva Health website",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
+    },
+    {
+        "Tools" : [
+            {
+                
+                "featureName": "Product Library with document links",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Quotation/Research Reports",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Reports with broker own branding, logo",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Reasons Why Letter Generation",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Deloitte Personal Tax Calculator",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Website Links",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "FAQ",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "User Preferences/Administration",
+                "featureOfMoney": "Yes",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            },
+            {
+                
+                "featureName": "Save Quote/Report",
+                "featureOfMoney": "No",
+                "featureOfMoneyCRM": "Yes",
+                "newRelease": "No",
+                "nextRelease": "No",
+                "futureRelease": "No"
+            }
+        ]
     }
 ]
