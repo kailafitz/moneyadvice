@@ -11,32 +11,32 @@ const TeamsContainer = styled(Container) `
     display: block;
     padding-top: 3em;
     margin: 6em auto;
-`
-const TeamType = styled.div `
-    text-align: center;
-    display: block;
-    border-radius: 3px;
-    padding: .5em;
-    margin: 1em 0;
-`
 
-const EmployeeCardContainer = styled.div `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    border-radius: 4px;
-    // background-color: ${colors.logo_purple};
-    // box-shadow: -2px 3px 10px -3px #111111;
-`
-const Styledh3 = styled.h3 `
-    text-align: center;
-    font-size: 1.5em;
-    font-family: ${fonts.temp_font};
-    font-weight: 300;
-    letter-spacing: 1.5px;
-    color: ${colors.logo_purple};
+    h3 {
+        text-align: center;
+        font-size: 1.5em;
+        font-family: ${fonts.temp_font};
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        color: ${colors.logo_purple};
+    }
+
+    #f-TeamType {
+        text-align: center;
+        display: block;
+        border-radius: 3px;
+        padding: .5em;
+        margin: 1em 0;
+
+        #f-EmployeeCardContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            border-radius: 4px;
+        }
+    }
 `
 
 export const Employees = () => {
@@ -72,11 +72,11 @@ export const Employees = () => {
         <>
             <TeamsContainer maxWidth="lg">                
                 {
-                    DataReady ? <TeamType>
-                        <Styledh3>Development</Styledh3>
+                    DataReady ? <div id="f-TeamType">
+                        <h3>Development</h3>
                         {/* <p className="f-p">Our development team are spread across the country and the globe. We have a sophisticated team of developers in the great country of India who keep the platform secure and up-to-date.</p> */}
                         <hr />
-                        <EmployeeCardContainer>
+                        <div id="f-EmployeeCardContainer">
                             {Data.get("Development Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
@@ -86,15 +86,15 @@ export const Employees = () => {
                                     />
                                 );
                             })}
-                        </EmployeeCardContainer>
-                    </TeamType> : null
+                        </div>
+                    </div> : null
                 }
                 {
-                    DataReady ? <TeamType>
-                        <Styledh3>Support</Styledh3>
+                    DataReady ? <div id="f-TeamType">
+                        <h3>Support</h3>
                         {/* <p className="f-p">Our support team are available and happy to help you with any queries you may have about our product and services.</p> */}
                         <hr />
-                        <EmployeeCardContainer>
+                        <div id="f-EmployeeCardContainer">
                             {Data.get("Support Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
@@ -104,15 +104,15 @@ export const Employees = () => {
                                     />
                                 );
                             })}
-                        </EmployeeCardContainer>
-                    </TeamType> : null
+                        </div>
+                    </div> : null
                 }
                 {
-                    DataReady ? <TeamType> 
-                        <Styledh3>Administration</Styledh3>
+                    DataReady ? <div id="f-TeamType"> 
+                        <h3>Administration</h3>
                         {/* <p className="f-p">Our administration team are continuously supporting our business, supporting you.</p> */}
                         <hr />
-                        <EmployeeCardContainer>
+                        <div id="f-EmployeeCardContainer">
                             {Data.get("Admin Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
@@ -123,9 +123,9 @@ export const Employees = () => {
                                 );
                             })}
 
-                        </EmployeeCardContainer>
+                        </div>
                         
-                    </TeamType> :null                    
+                    </div> :null                    
                 }
 
             </TeamsContainer>

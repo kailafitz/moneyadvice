@@ -18,11 +18,7 @@ import breakpoint from '../breakpoints';
 const OverviewContainer = styled(Container) `
     margin: 0 auto;
 
-    h4 {
-        font-family: ${fonts.temp_font};
-        font-weight: 300;
-        color: ${colors.logo_blue};
-    }
+    
 
     #f-OverviwMainDescription {
         p {
@@ -43,8 +39,10 @@ const OverviewContainer = styled(Container) `
         color: ${colors.logo_blue};
     }
 
-    .f-BulletPointIcon {
-        ${colors.logo_purple};
+    h4 {
+        font-family: ${fonts.temp_font};
+        font-weight: 300;
+        color: ${colors.logo_blue};
     }
 
     @media only screen and ${breakpoint.device.xs} {
@@ -58,7 +56,7 @@ const OverviewContainer = styled(Container) `
         }
 
         #f-OverviwMainDescription {
-            paddingBottom: 2em;
+            padding-bottom: 2em;
             column-count: 1;
 
             p {
@@ -82,13 +80,17 @@ const OverviewContainer = styled(Container) `
 
     @media only screen and ${breakpoint.device.sm} {
         #f-OverviwMainDescription {
-            paddingBottom: 4em;
+            padding-bottom: 4em;
             -webkit-column-count: 2;
             -moz-column-count: 2;
             column-count: 2;
             -webkit-column-gap: 20px;
             -moz-column-gap: 20px;
             column-gap: 20px;
+
+            p {
+                font-size: 1.1em;
+            }
         }
 
         #f-OverviewTableContainer {
@@ -98,10 +100,6 @@ const OverviewContainer = styled(Container) `
 
             h4 {
                 width: 40%;
-            }
-
-            h4 {
-                width: 100%;
             }
         }
     }
@@ -117,13 +115,6 @@ const OverviewContainer = styled(Container) `
         }
         
         #f-OverviwMainDescription {
-            paddingBottom: 4em;
-            -webkit-column-count: 2;
-            -moz-column-count: 2;
-            column-count: 2;
-            -webkit-column-gap: 20px;
-            -moz-column-gap: 20px;
-            column-gap: 20px;
 
             p {
                 font-size: 1em;
@@ -146,12 +137,29 @@ const OverviewContainer = styled(Container) `
     }
 `
 const StyledTable = styled(TableContainer) `
+    .f-BulletPointIcon {
+        ${colors.logo_purple};
+    }
+
     @media only screen and ${breakpoint.device.xs} {
         width: 100%;
+
+        .MuiTableCell-root {
+            font-size: 1.2em;
+        }
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        width: 55%;
+
     }
 
     @media only screen and ${breakpoint.device.lg} {
         width: 55%;
+
+        .MuiTableCell-root {
+            font-size: 1em;
+        }
     }
 `
 
@@ -200,19 +208,19 @@ export default function ProductOverview() {
                                 }
                                 </div>
                                 <h3>Compliance tools (CPC 2012) are a strong feature of the system with helpful checklists and prompts.</h3>
-                                <div id="f_OverviewTableContainer">
+                                <div id="f-OverviewTableContainer">
                                     <h4>The system produces compliance reports on a product, advisor, and office wide basis.
                                     <br />
                                     <br />
                                     The product library is a powerful resource in the system and includes links to insurer's libraries and also PDF's of actual documents. Having access to a web based system allows access to client files and systems from anywhere with an internet connection, enabling users track sales activity at an office, individual or a team level</h4>
-                                    <StyledTable component={Paper} className={classes.root}>
+                                    <StyledTable component={Paper}>
                                         <Table size="small" aria-label="a dense table">
                                             <TableBody>
                                                 {
                                                     overview.overviewTable.map((cell) => (
                                                         <TableRow>
                                                             <TableCell component="th" scope="row" align="left">
-                                                                <i class="fas fa-genderless f-BulletPointIcon"></i> {cell}
+                                                                <i className="fas fa-genderless f-BulletPointIcon"></i> {cell}
                                                             </TableCell>
                                                         </TableRow>
                                                         )

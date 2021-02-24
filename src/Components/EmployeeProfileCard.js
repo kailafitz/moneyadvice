@@ -2,23 +2,8 @@ import React from 'react';
 import { Avatar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
-import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
-
-const Styledh4 = styled.h4 `
-  font-size: 1.2em;
-  font-family: ${fonts.roboto};
-  font-weight: 300;
-  color: ${colors.logo_blue};
-  text-align: "center";
-`
-
-const Styledp = styled.p `
-  font-size: 1em;
-  font-family: ${fonts.roboto};
-  color: ${colors.bl};
-`
 
 const StyledAvatar = styled(Avatar) `
   margin: 1.5em auto;
@@ -35,11 +20,25 @@ const StyledAvatar = styled(Avatar) `
   }
 `
 
+const Styledh4 = styled.h4 `
+  font-size: 1.2em;
+  font-family: ${fonts.roboto};
+  font-weight: 300;
+  color: ${colors.logo_blue};
+  text-align: "center";
+`
+
+const Styledp = styled.p `
+  font-size: 1em;
+  font-family: ${fonts.roboto};
+  color: ${colors.bl};
+`
+
 const useStyles = makeStyles((theme) => ({
     root: {
       width: "auto",
-      padding: "1em",
-      margin: "1em",
+      padding: ".5em",
+      margin: ".5em",
       borderRadius: "7px",
       display: "block",
       // margin: "auto",

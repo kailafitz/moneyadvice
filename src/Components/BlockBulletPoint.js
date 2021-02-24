@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {colors} from '../colors';
+import {fonts} from '../fonts';
 import breakpoint from '../breakpoints';
 
 const StyledBlockBulletPointDiv = styled.div`
@@ -13,8 +14,10 @@ const StyledBlockBulletPointDiv = styled.div`
         color: ${colors.logo_green};
     }
 
-    h4 {
-        ${colors.wh};
+    h1 {
+        font-family: ${fonts.temp_font};
+        font-weight: 300;
+        color: ${colors.wh};
     }
 
     @media only screen and ${breakpoint.device.xs} {
@@ -22,8 +25,12 @@ const StyledBlockBulletPointDiv = styled.div`
         padding: .5em;
         margin: .5em;
 
+        h1 {
+            font-size: 1.1em;
+        }
+
         i {
-            font-size: 3em;
+            font-size: 2.5em;
         }
     }
 
@@ -31,22 +38,25 @@ const StyledBlockBulletPointDiv = styled.div`
         width: 20%;
         padding: 1em;
         margin: 1em;
+
+        h1 {
+            font-size: 1em;
+        }
+
+        i {
+            font-size: 2em;
+        }
     }
 
     @media only screen and ${breakpoint.device.lg} {
-        width: 20%;
-
-        i {
-            font-size: 4em;
-        }
     }
 `
 
 export const BlockBulletPoint = ({bulletPoint}) => {
     return (
         <StyledBlockBulletPointDiv>
-            <i class="fas fa-check-square"></i>
-            <h4>{bulletPoint}</h4>
+            <i className="fas fa-check-square"></i>
+            <h1>{bulletPoint}</h1>
         </StyledBlockBulletPointDiv>
     )
 }

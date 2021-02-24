@@ -38,7 +38,6 @@ const AboutHeader = styled.div `
 
       h2 {
         font-family: ${fonts.temp_font};
-        font-size: 3em;
         color: ${colors.wh};
         letter-spacing: 2px;
         tex-align: left;
@@ -72,6 +71,26 @@ const AboutHeader = styled.div `
       }
     }
   }
+
+  @media only screen and ${breakpoint.device.sm} {
+    .f-Overlay #f-HeaderWrapper {
+      width: 80%;
+
+      h2 {
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  @media only screen and ${breakpoint.device.lg} {
+    .f-Overlay #f-HeaderWrapper {
+      width: 80%;
+
+      h2 {
+        font-size: 3.5em;
+      }
+    }
+  }
 `
 
 const StyledTeamDiv = styled.div `
@@ -90,12 +109,12 @@ const StyledTeamDiv = styled.div `
     #f-CEOIntroText {
       padding: 1em;
       border-radius: 4px;
-      color: ${colors.grey_light};
 
       h4 {
         font-size: 1.2em;
-        font-family: ${fonts.temp_fonts};
+        font-family: ${fonts.temp_font};
         font-weight: 300;
+        color: ${colors.grey_dark};
       }
 
       p {
@@ -148,7 +167,7 @@ export default function About() {
       
       <StyledTeamDiv>
             <SectionTitle title="Meet our Team" />
-            <Container id="f-CEOIntro">
+            <Container maxWidth="md" id="f-CEOIntro">
               <div id="f-CEOIntroText">
                 <h4>Philip O'Reilly, an experienced financial planner and chartered surveyor with over 30 years industry experience, has been developing advisor software since 1995.
                 </h4>

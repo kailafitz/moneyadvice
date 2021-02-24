@@ -73,7 +73,7 @@ const MobileMenu = () => {
       <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
       {isOpen && (
         <div id="f-MobileLinksWrapper">
-          <a href="/home">
+          <a href="/">
             Home
           </a>
           <hr />

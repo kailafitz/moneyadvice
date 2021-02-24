@@ -21,8 +21,9 @@ const StyledContactUsButton = styled(Button)`
 
   &:hover {
     cursor: pointer;
+    background-color: ${colors.wh};
     color: ${colors.logo_blue};
-    transform: scale(1.03);
+    transform: scale(1.06);
   }
 
   @media only screen and ${breakpoint.device.xs} {
