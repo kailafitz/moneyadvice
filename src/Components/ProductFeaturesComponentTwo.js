@@ -1,30 +1,35 @@
 import React, { useEffect, useState } from 'react'
+
+// Local JSON file
 import FeatureData from '../JSON_Data/FeatureData.json'
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
+
+// styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 import {colors} from '../colors';
 import {fonts} from '../fonts';
 
+// MaterialUI
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
 
-const DownloadLink = styled.button`
+const DownloadLink = styled(Button)`
     background-color: ${colors.logo_blue};
     color: ${colors.wh};
     transition: .3s ease-in background-color, .2s ease-in color;
     padding: 10px;
     border: none;
     cursor: pointer;
+    text-transform: uppercase;
 
     :hover {
         background-color: ${colors.logo_green};
-        color: white;
+        color: ${colors.grey_dark};
     }
 
     @media only screen and ${breakpoint.device.xs} {
@@ -41,6 +46,32 @@ const DownloadLink = styled.button`
 
 const FeaturesPage = styled.div `
     width: 100%;
+
+    .f-CheckListIcon {
+        color: ${colors.logo_green};
+    }
+
+    h2 {
+        font-size: 3em;
+        font-family: ${fonts.temp_font};
+        color: ${colors.grey_dark};
+        padding-top: 1em;
+        font-weight: 800;
+        color: ${colors.logo_purple};
+        letter-spacing: -.035em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-family: ${fonts.temp_font};
+        font-weight: 500;
+        color: ${colors.grey_dark};
+    }
+
+    p {
+        font-family: ${fonts.roboto};
+        color: ${colors.bl};
+    }
 `
 
 const FeaturesPageInfo =styled.div` 
@@ -53,8 +84,9 @@ const FeaturesPageInfo =styled.div`
     }
 
     #f-FeatureMainImage {
+        display: block;
         width: 100%;
-        margin: 0 auto;
+        margin: 1em auto;
         padding: 0;
     }
 
@@ -211,50 +243,48 @@ export const ProductFeaturesComponentTwo = () => {
             </FeaturesPageMenu>
           <FeaturesPageInfo>
               <div className="f-TabPanel">
-                  {/* <Typography variant="h2">{feature.featureTitle}</Typography>
-                  <Typography variant="h4">{feature.featureSubtitle}</Typography> */}
-                  <h2 className="f-h2">{feature.featureTitle}</h2>
-                  <h3 className="f-h3 f-BlueFont">{feature.featureSubtitle}</h3>
-                  <p className="f-p">{feature.featureParagraph}</p>
-                  <div class="f-TextCenter">
+                    {/* <Typography variant="h2">{feature.featureTitle}</Typography>
+                    <Typography variant="h4">{feature.featureSubtitle}</Typography> */}
+                    <h2>{feature.featureTitle}</h2>
+                    <h3>{feature.featureSubtitle}</h3>
+                    <p>{feature.featureParagraph}</p>
                     <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/>
-                  </div>
-                  {
-                      feature.featureBulletPoints.map((bulletpoint) => {
-                          return (
-                              <p className="f-p"><i class="fas fa-check-square f-CheckListIcon"></i>  {bulletpoint}</p>
-                          );
-                      })
-                  }
-                  {
-                      feature.featureButtonHref ?
-                      <DownloadLink download href={feature.featureButtonHref}>{feature.featureButtonLabel}</DownloadLink>:
-                      null
-                  }
-                  <div className="f-FeatureImagesContainer">
-                      {
-                          feature.featureImages.map((imageObject) => {
-                              return (
-                                  <Card className="f-FeatureCard">
-                                      <CardActionArea>
-                                          <img id="f-FeatureImage" src={imageObject.featureImageURL}
-                                          title={imageObject.featureImageTitle} alt="Feature"
-                                          />
-                                          <CardContent>
-                                          <Typography gutterBottom variant="h5" component="h2">
-                                              {imageObject.featureImageTitle}
-                                          </Typography>
-                                          <Typography variant="body2" color="textSecondary" component="p">
-                                              {imageObject.featureImageDescription}
-                                          </Typography>
-                                          </CardContent>
-                                      </CardActionArea>
-                                  </Card>
-                              );
-                          })
-                      }
-                  </div>
-              </div>
+                    {
+                        feature.featureBulletPoints.map((bulletpoint) => {
+                            return (
+                                <p><i class="fas fa-check-square f-CheckListIcon"></i>  {bulletpoint}</p>
+                            );
+                        })
+                    }
+                    {
+                        feature.featureButtonHref ?
+                        <DownloadLink download="WebsiteContentReview.pdf" href={feature.featureButtonHref}>{feature.featureButtonLabel}</DownloadLink>:
+                        null
+                    }
+                    <div className="f-FeatureImagesContainer">
+                        {
+                            feature.featureImages.map((imageObject) => {
+                                return (
+                                    <Card className="f-FeatureCard">
+                                        <CardActionArea>
+                                            <img id="f-FeatureImage" src={imageObject.featureImageURL}
+                                            title={imageObject.featureImageTitle} alt="Feature"
+                                            />
+                                            <CardContent>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                {imageObject.featureImageTitle}
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                {imageObject.featureImageDescription}
+                                            </Typography>
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                );
+                            })
+                        }
+                    </div>
+                </div>
             </FeaturesPageInfo>
         </>: null
       }

@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
+
+// Local JSON file
 import OverviewData from '../JSON_Data/ProductOverview.json'
+
+// styled-components imports
+import styled from 'styled-components';
+import {colors} from '../colors';
+import {fonts} from '../fonts'
+import breakpoint from '../breakpoints';
+
+// MaterialUI
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Container from '@material-ui/core/Container';
+
+// Component imports
 import SectionTitle from './SectionTitle';
 import { BlockBulletPoint } from './BlockBulletPoint';
-import Container from '@material-ui/core/Container';
-import styled from 'styled-components';
-import {colors} from '../colors';
-import {fonts} from '../fonts'
-import breakpoint from '../breakpoints';
+
 
 const OverviewContainer = styled(Container) `
     margin: 0 auto;
-
-    
 
     #f-OverviwMainDescription {
         p {
@@ -31,7 +38,20 @@ const OverviewContainer = styled(Container) `
             font-weight: 300;
             color: ${colors.logo_blue};
         }
-    }    
+    }
+
+    #f-BlockBulletPointWrapper {
+        width: 100%;
+        padding-bottom: 4em;
+        margin: 1em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        h4 {
+            color: ${colors.wh};
+        }
+    }
 
     h3 {
         font-weight: 600;
@@ -46,6 +66,7 @@ const OverviewContainer = styled(Container) `
     }
 
     @media only screen and ${breakpoint.device.xs} {
+
         h4 {
             font-size: 1.2em;
         }
@@ -79,6 +100,12 @@ const OverviewContainer = styled(Container) `
     }
 
     @media only screen and ${breakpoint.device.sm} {
+
+        h3 {
+            font-size: 1.5em;
+            text-align: left;
+        }
+
         #f-OverviwMainDescription {
             padding-bottom: 4em;
             -webkit-column-count: 2;
@@ -111,7 +138,6 @@ const OverviewContainer = styled(Container) `
     
         h3 {
             font-size: 1.5em;
-            text-align: center;
         }
         
         #f-OverviwMainDescription {

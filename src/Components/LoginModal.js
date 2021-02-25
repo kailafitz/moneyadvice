@@ -1,13 +1,21 @@
 import React from 'react';
+
+// styled-components imports
+import breakpoint from '../breakpoints';
+import styled from 'styled-components';
+
+// MaterialUI
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-import Logo from '../Images/Logo-Sm.png'
+
+// Component imports
 import SectionTitle from './SectionTitle';
 import DataCaptureLogin from './DataCaptureLogin';
-import breakpoint from '../breakpoints';
-import styled from 'styled-components';
+
+// Media imports
+import Logo from '../Images/Company-Logos/Logo-Sm.png'
 
 const StyledModalContainer = styled.div`
   margin: 0 auto;

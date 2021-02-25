@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from "react";
+
+// Local JSON file
 import JSONData from "../JSON_Data/TestimonialData.json";
-import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import SectionTitle from "./SectionTitle";
-import Modal from '@material-ui/core/Modal';
-import Button from '@material-ui/core/Button';
+
+// Package imports
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from 'swiper';
-import CloseIcon from '@material-ui/icons/Close';
 import 'swiper/swiper-bundle.css';
+
+// styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
+
+// MaterialUI
+import Avatar from "@material-ui/core/Avatar";
+import Modal from '@material-ui/core/Modal';
+import Button from '@material-ui/core/Button';
+import CloseIcon from '@material-ui/icons/Close';
+
+// Component imports
+import SectionTitle from "./SectionTitle";
 
 const TestimonialBackground = styled.div`
   width: 100%;
@@ -75,52 +84,70 @@ const LimitedParagraph = styled.p`
   }
 `
 
-const Title = styled.h3`
-  font-size: 1.5em;
+const Title = styled.h3 `
+  color: ${colors.wh};
+  font-size: 1.3em;
   font-family: ${fonts.temp_font};
-  font-weight: 600;
+  font-weight: 500;
 `
 
-const Para = styled.p`
+const Para = styled.p `
   font-size: 1em;
   font-family: ${fonts.roboto};
   color: ${colors.wh};
   font-weight: 100;
   
   a {
-      text-decoration: none;
-      color: ${colors.wh};
+    text-decoration: none;
+    color: ${colors.wh};
   }
 `
 
 const CloseIconStyled = styled(CloseIcon)`
-  float:right;
-  padding-right:10px;
+  float: right;
+  padding-right: 10px;
   cursor: pointer;
 `
 const TestimonialCard = styled.div`
-  width: 60%;      
-  padding: 1.5em;
+  width: 60%;
+  padding: 1em;
   margin: 0 auto;
   max-height: 400px;
   overflow: hidden;
   background-color: ${colors.logo_purple};
   color: ${colors.wh};
-  border-radius: 14px;
+  border-radius: 7px;
 `
 
 const TestimonialCardHeaderDetails = styled.div`
   display: block;
-  padding-left: 0.5em;
+  padding-left: 1.5em;
   text-align: left;
+
+  img {
+    border-radius: 7px;
+  }
 `
 
 const TestimonialCardHeader = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  align-content: center;
+  padding: .5em;
 `
-const ButtonStyled = styled.button`
+
+const StyledAvatar = styled(Avatar) `
+  border-radius: 0%;
+  filter: grayscale(100%);
+  width: 80px;
+  height: 80px;
+
+  img {
+    border-radius: 7px;
+  }
+`
+
+const ButtonStyled = styled(Button)`
     box-shadow: none;
     background-color: ${colors.logo_blue};
     color: ${colors.wh};
@@ -131,8 +158,10 @@ const ButtonStyled = styled.button`
     border:none;
     cursor: pointer;
     font-family: ${fonts.roboto};
+    text-transform: uppercase;
+
     :hover {
-        background-color: ${colors.logo_green};
+      background-color: ${colors.logo_green};
     }
 
     @media only screen and ${breakpoint.device.xs} {
@@ -141,14 +170,12 @@ const ButtonStyled = styled.button`
     }
 
     @media only screen and ${breakpoint.device.sm} {
-      width: 30%;
+      width: auto;
       margin: 0;
     }
 
     @media only screen and ${breakpoint.device.lg} {
-    }
-
-    
+    }    
 `
 const ModalStyled = styled(Modal)`
     background-color: ${colors.logo_purple};
@@ -157,7 +184,7 @@ const ModalStyled = styled(Modal)`
     border: none;
     height: fit-content;
     padding: 1em;
-    border-radius: 14px;
+    border-radius: 7px;
 
     @media only screen and ${breakpoint.device.xs} {
       width: 90%;
@@ -172,34 +199,11 @@ const ModalStyled = styled(Modal)`
     @media only screen and ${breakpoint.device.lg} {
     }
 `
+
+
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-  large: {
-    width: "80px",
-    height: "80px",
-    // width: theme.spacing(7),
-    // height: theme.spacing(7),
-  },
-  button: {
-    backgroundColor: "#068095",
-    color: "#ffffff",
-    transition: ".3s ease-in background-color",
-    "&:hover": {
-        backgroundColor: "#b8d30c",
-    },
-  }
-}));
-
-export const Testimonial = () => {
-  const classes = useStyles();
+export default function Testimonial() {
   const [validData, setValidData] = useState(false);
   const [slides, setSlides] = useState([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -218,11 +222,9 @@ export const Testimonial = () => {
       setModalData([
           <>
             <CloseIconStyled onClick={handleClose} />
-            
-              <Avatar
+              <StyledAvatar
                 alt={JSONData[val].first_name + " " + JSONData[val].sur_name}
                 src={JSONData[val].profile_picture}
-                className={classes.large}
               />
               <TestimonialCardHeaderDetails>
                 <Title>
@@ -248,22 +250,21 @@ export const Testimonial = () => {
         <SwiperSlide key={`slide-${i}`} tag="li">
           <TestimonialCard>
               <TestimonialCardHeader>
-                <Avatar
+                <StyledAvatar
                   alt={JSONData[i].first_name + " " + JSONData[i].sur_name}
                   src={JSONData[i].profile_picture}
-                  className={classes.large}
                 />
                 <TestimonialCardHeaderDetails>
-                  <Title className="f-h3">
+                  <Title>
                     {JSONData[i].first_name + " " + JSONData[i].sur_name}
                   </Title>
                   <img alt={JSONData[i].company_name} src={JSONData[i].company_logo} />
                 </TestimonialCardHeaderDetails>              
-              </TestimonialCardHeader>            
-              <LimitedParagraph>{JSONData[i].testimonial}</LimitedParagraph>
-              <ButtonStyled type="button" onClick={handleOpen} data-id={i}>
-                View More
-              </ButtonStyled>
+              </TestimonialCardHeader>
+                <LimitedParagraph>{JSONData[i].testimonial}</LimitedParagraph>
+                <ButtonStyled type="button" onClick={handleOpen} data-id={i}>
+                  View More
+                </ButtonStyled>
           </TestimonialCard>
         </SwiperSlide>
       );

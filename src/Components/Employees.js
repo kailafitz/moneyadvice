@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react'
+
+// Local JSON file
 import EmployeeData from '../JSON_Data/EmployeeData.json'
-import { EmployeeProfileCard } from './EmployeeProfileCard';
-import { Container } from '@material-ui/core';
+
+// styled-components imports
 import styled from 'styled-components';
-import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
+
+// MaterialUI
+import { Container } from '@material-ui/core';
+
+// Component imports
+import { EmployeeProfileCard } from './EmployeeProfileCard';
 
 const TeamsContainer = styled(Container) `
     display: block;

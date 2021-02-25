@@ -1,8 +1,12 @@
 import React from 'react'
-import ProductComparisonTables from '../Components/ProductComparisonTables'
-import SectionTitle from '../Components/SectionTitle'
-import Footer from '../Components/Footer'
+
+// styled-components imports
 import styled from 'styled-components';
+
+// Component imports
+import ProductComparisonTables from '../Components/ProductComparisonTables';
+import SectionTitle from '../Components/SectionTitle';
+import Footer from '../Components/Footer';
 
 const PageContainer = styled.div `
     width: 100%;

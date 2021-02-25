@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from 'react'
+
+// Local JSON file
 import FeatureData from '../JSON_Data/FeatureData.json'
+
+// styled-components imports
+import styled from 'styled-components';
+import {colors} from '../colors'
+import {fonts} from '../fonts'
+
+// MaterialUI
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
@@ -9,7 +18,46 @@ import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import { Button } from '@material-ui/core';
+
+const StyledTabPanel = styled(TabPanel) `
+    background-color: $grey-light;
+    padding: 1em;
+    flex-grow: 1;
+
+    h2 {
+        font-size: 3em;
+        font-family: $temp-font;
+        color: $grey-dark;
+        padding-top: 1em;
+        font-weight: 800;
+        color: $logo-purple;
+        letter-spacing: -.035em;
+    }
+
+    #f-FeatureMainImage {
+        padding: 1em 0;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 5px 18px -2px #bebebe;
+        box-shadow: 0 5px 18px -2px #bebebe;
+    }
+
+    .f-FeatureImagesContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .f-FeatureCard {
+            width: 40%;
+            padding: 1em;
+            margin: 2em 0;
+
+            #f-FeatureImage {
+                width: 100%;
+            }
+        }
+    }
+`
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -139,7 +187,7 @@ export const ProductFeaturesComponentOne = () => {
                 {
                     data.map((feature) => {
                         return (
-                            <TabPanel value={value} index={feature.id} className="f-TabPanel">
+                            <StyledTabPanel value={value} index={feature.id}>
                                 {/* <Typography variant="h2">{feature.featureTitle}</Typography>
                                 <Typography variant="h4">{feature.featureSubtitle}</Typography> */}
                                 <h2 className="f-h2">{feature.featureTitle}</h2>
@@ -181,7 +229,7 @@ export const ProductFeaturesComponentOne = () => {
                                 {/* <div>
                                     <Button className={classes.button} href={feature.featureButtonHref}>{feature.featureButtonLabel}</Button>
                                 </div> */}
-                            </TabPanel>
+                            </StyledTabPanel>
                         );
                     })
                 

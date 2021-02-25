@@ -1,16 +1,25 @@
 import React from 'react'
-import { Employees } from '../Components/Employees'
-import Footer from '../Components/Footer'
-import ContactUsButton from '../Components/ContactUsButton';
-import ProductOverview from '../Components/ProductOverview';
-import SectionTitle from '../Components/SectionTitle';
-import Philip from '../Images/About-Imgs/Philip_OReilly.png'
-import Container from '@material-ui/core/Container';
-import BackgroundImage from '../Images/about-bg.jpg'
+
+// styled-components imports
 import styled from 'styled-components';
 import {colors} from '../colors';
 import {fonts} from '../fonts';
 import breakpoint from '../breakpoints';
+
+// MaterialUI
+import Container from '@material-ui/core/Container';
+
+// Component imports
+import { Employees } from '../Components/Employees';
+import Footer from '../Components/Footer';
+import ContactUsButton from '../Components/ContactUsButton';
+import ProductOverview from '../Components/ProductOverview';
+import SectionTitle from '../Components/SectionTitle';
+
+// Media imports
+import Philip from '../Images/About-Imgs/Philip.png';
+import BackgroundImage from '../Images/AboutBg-Header.jpg';
+
 
 const AboutHeader = styled.div `
   background-image: url(${BackgroundImage});

@@ -1,7 +1,16 @@
 import React from "react";
+
+// Package imports
 import Slider from 'infinite-react-carousel';
+
+// styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
+
+// Component imports
+import SectionTitle from "./SectionTitle";
+
+// Media imports
 import Aviva from "../Images/Customer-Logos/AcumenTrust.jpg"
 import BCP from "../Images/Customer-Logos/afsAylward.jpg"
 import Haven from "../Images/Customer-Logos/Alliance.jpg"
@@ -12,7 +21,7 @@ import StandardLife from "../Images/Customer-Logos/bhpInsurances.jpg"
 import Zurich from "../Images/Customer-Logos/Bluechip.jpg"
 import Conexim from "../Images/Customer-Logos/careycorbett.jpg"
 import cmlfinancial from "../Images/Customer-Logos/cmlfinancial.jpg"
-import SectionTitle from "./SectionTitle";
+
 
 const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim, cmlfinancial];
 

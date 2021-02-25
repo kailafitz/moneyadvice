@@ -1,20 +1,29 @@
 import React from "react";
+
+// styled-components imports
+import styled from 'styled-components';
+import breakpoint from '../breakpoints';
+import {colors} from '../colors'
+import {fonts} from '../fonts'
+
+// MaterialUI
 import LottieMediaCard from "../Components/LottieMediaCard";
-import Graphic from "../Images/IndexGraphic.png"
-import Finance from "../Lottie/Cash.json"
-import Chart from "../Lottie/Chart.json"
-import MachineCog from "../Lottie/MachineCog.json"
-import { Testimonial } from "../Components/Testimonial";
 import Footer from "../Components/Footer";
 import ContactUsButton from "../Components/ContactUsButton";
 import LottieAnimation from "../Components/LottieAnimation";
 import ContactUs from "../Lottie/ContactUs.json";
-import styled from 'styled-components';
+import Testimonial from "../Components/Testimonial";
+
+// Component imports
 import CustomerSlider from "../Components/CustomerSlider";
 import Partners from "../Components/Partners";
-import breakpoint from '../breakpoints';
-import {colors} from '../colors'
-import {fonts} from '../fonts'
+
+// Media imports
+import Graphic from "../Images/IndexGraphic.png"
+// Lottie animations (JSON files)
+import Finance from "../Lottie/Cash.json"
+import Chart from "../Lottie/Chart.json"
+import MachineCog from "../Lottie/MachineCog.json"
 
 const HeaderContainer = styled.div `
     position: relative;
@@ -46,6 +55,7 @@ const HeaderContainer = styled.div `
         padding-bottom: 3em;
 
         #f-BigLogo {
+            margin: 0 auto;
             display: block;
             width: 80%;
             padding-top: 1em;
@@ -147,17 +157,45 @@ const CardContainer = styled.div `
     }
 `
 
-export default function Home() {
+const ContactUsButtonContainer = styled.div `
+    
+    @media only screen and ${breakpoint.device.xs} {
+        padding: 2em;
+        display: block;
+        text-align: center;
 
+        #f-LottieDiv {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #f-LottieDiv {
+            width: 30%;
+            margin: 0;
+        }
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+    }
+`
+
+export default function Home() {
     return (
     <>
         <HeaderContainer>            
-            <div id="f-BigLogo" className="f-MarginAuto">
+            <div id="f-BigLogo">
                 <img alt="Logo" src={Graphic}/>
             </div>
             <div id="f-BigLogoContainer-Text">
-                <h1 className="f-h1 f-TextLeft">The complete CRM system for financial and mortgage advisors - all in one.</h1>
-                <h4 className="f-h4">Solutions around client portfolio management in financial services and mortgage affairs.</h4>
+                <h1>The complete CRM system for financial and mortgage advisors - all in one.</h1>
+                <h4>Solutions around client portfolio management in financial services and mortgage affairs.</h4>
                 <ContactUsButton label="Call us for your demo today!"/>
             </div>
         </HeaderContainer>
@@ -169,12 +207,12 @@ export default function Home() {
         <Partners />
         <Testimonial />
         <CustomerSlider />
-        <div id="f-ContactUsButtonContainer">
+        <ContactUsButtonContainer>
             <div id="f-LottieDiv">
                 <LottieAnimation animationData={ContactUs} />
             </div>
             <ContactUsButton label="Call us today for your demo and a quotation!"/>
-        </div>
+        </ContactUsButtonContainer>
         <Footer />
   </>
 )};

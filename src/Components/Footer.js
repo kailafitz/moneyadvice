@@ -1,11 +1,19 @@
 import React from 'react'
-import Link from '@material-ui/core/Link';
+
+// Package imports
 import { HashLink } from 'react-router-hash-link';
-import FooterLogo from '../Images/FooterLogo.png'
+
+// styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
+
+// MaterialUI
+import Link from '@material-ui/core/Link';
+
+// Media imports
+import FooterLogo from '../Images/Company-Logos/FooterLogo.png'
 
 const FooterDiv = styled.footer `
     background-color: ${colors.logo_blue};
@@ -162,7 +170,7 @@ export default function Footer() {
                             <li><Link href="/features">Features</Link></li>
                             <li><Link href="/contactus">Contact Us</Link></li>
                             <li><Link href="/privacypolicy">Privacy Policy</Link></li>
-                            <li><HashLink to="about/#f-CEOIntro">Meet our Team</HashLink></li>
+                            <li><HashLink to="about/#f-TeamType">Meet our Team</HashLink></li>
                             <li><Link href="/downloads">Downloads</Link></li>
                         </ul>
                     </div>

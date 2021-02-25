@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
+
+// Local JSON file
 import PolicyData from '../JSON_Data/PrivacyPolicyData.json'
+
+// MaterialUI
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -13,8 +17,6 @@ const useStyles = makeStyles((theme) => ({
       margin: "2em auto",
     },
     heading: {
-    //   fontSize: theme.typography.pxToRem(15),
-    //   fontWeight: theme.typography.fontWeightRegular,
         color: "#068095",
         fontWeight: "500",
         margin: ".2em 0",

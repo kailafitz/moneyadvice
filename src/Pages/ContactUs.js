@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Footer from '../Components/Footer';
+
+// Package imports
 import axios from 'axios';
-import SectionTitle from '../Components/SectionTitle';
-import AlertMessage from '../Components/AlertMessage';
+
+// styled-components imports
 import styled from 'styled-components';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
 import breakpoint from '../breakpoints';
-import BackgroundImage from '../Images/contact-bg.jpg'
+
+// MaterialUI
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
+// Component imports
+import Footer from '../Components/Footer';
+import SectionTitle from '../Components/SectionTitle';
+import AlertMessage from '../Components/AlertMessage';
+
+// Media imports
+import BackgroundImage from '../Images/ContactBg-Header.jpg'
 
 const HeaderImage = styled.div `
     width: 100vw;

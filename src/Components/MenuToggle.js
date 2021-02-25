@@ -1,5 +1,17 @@
-import { motion } from "framer-motion";
 import React from "react";
+
+// Package imports
+import { motion } from "framer-motion";
+
+// styled-components imports
+import styled from 'styled-components';
+
+const MobileMenuButton = styled.div `
+  z-index: 99;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+`
 
 const Path = (props) => (
   <motion.path
@@ -14,7 +26,7 @@ const transition = { duration: 0.33 };
 
 export function MenuToggle({ toggle, isOpen }) {
   return (
-    <div id="f-MobileMenuButton" onClick={toggle}>
+    <MobileMenuButton onClick={toggle}>
       <svg width="20" height="20" viewBox="0 0 23 23">
         <Path
           animate={isOpen ? "open" : "closed"}
@@ -46,6 +58,6 @@ export function MenuToggle({ toggle, isOpen }) {
           transition={transition}
         />
       </svg>
-    </div>
+    </MobileMenuButton>
   );
 }

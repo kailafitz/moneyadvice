@@ -1,16 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-import LoginModal from './LoginModal';
-import Popover from 'material-ui-popup-state/HoverPopover'
+
+// Package imports
+import {
+    usePopupState,
+    bindHover,
+    bindPopover,
+} from 'material-ui-popup-state/hooks'
+
+// styled-components imports
 import styled from 'styled-components';
-import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
-import {
-  usePopupState,
-  bindHover,
-  bindPopover,
-} from 'material-ui-popup-state/hooks'
+
+// MaterialUI
+import Popover from 'material-ui-popup-state/HoverPopover'
+
+// Component imports
+import LoginModal from './LoginModal';
 
 const LinksDiv = styled.div `
     display: flex;

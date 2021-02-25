@@ -1,17 +1,22 @@
 import React from 'react';
+
+// styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import { Container } from "@material-ui/core";
-import Aviva from "../Images/Partner-Logos/Aviva.png"
-import BCP from "../Images/Partner-Logos/BCP.png"
-import Haven from "../Images/Partner-Logos/Haven.png"
-import IrishLife from "../Images/Partner-Logos/IrishLife.png"
-import NewIreland from "../Images/Partner-Logos/NewIreland.png"
-import RoyalLondon from "../Images/Partner-Logos/RoyalLondon.png"
-import StandardLife from "../Images/Partner-Logos/StandardLife.png"
-import Zurich from "../Images/Partner-Logos/Zurich.png"
-import Conexim from "../Images/Partner-Logos/Conexim.png"
+
+// Componenr imports
 import SectionTitle from "../Components/SectionTitle";
+
+// Media imports
+import Aviva from "../Images/Partner-Logos/Aviva.png";
+import BCP from "../Images/Partner-Logos/BCP.png";
+import Haven from "../Images/Partner-Logos/Haven.png";
+import IrishLife from "../Images/Partner-Logos/IrishLife.png";
+import NewIreland from "../Images/Partner-Logos/NewIreland.png";
+import RoyalLondon from "../Images/Partner-Logos/RoyalLondon.png";
+import StandardLife from "../Images/Partner-Logos/StandardLife.png";
+import Zurich from "../Images/Partner-Logos/Zurich.png";
+import Conexim from "../Images/Partner-Logos/Conexim.png";
 
 const StyledContainer = styled.div `
     display: block;

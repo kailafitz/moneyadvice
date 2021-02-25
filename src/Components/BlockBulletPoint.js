@@ -1,4 +1,6 @@
 import React from 'react';
+
+// styled-components imports
 import styled from 'styled-components';
 import {colors} from '../colors';
 import {fonts} from '../fonts';
@@ -14,7 +16,7 @@ const StyledBlockBulletPointDiv = styled.div`
         color: ${colors.logo_green};
     }
 
-    h1 {
+    h4 {
         font-family: ${fonts.temp_font};
         font-weight: 300;
         color: ${colors.wh};
@@ -25,7 +27,7 @@ const StyledBlockBulletPointDiv = styled.div`
         padding: .5em;
         margin: .5em;
 
-        h1 {
+        h4 {
             font-size: 1.1em;
         }
 
@@ -39,7 +41,7 @@ const StyledBlockBulletPointDiv = styled.div`
         padding: 1em;
         margin: 1em;
 
-        h1 {
+        h4 {
             font-size: 1em;
         }
 
@@ -56,7 +58,7 @@ export const BlockBulletPoint = ({bulletPoint}) => {
     return (
         <StyledBlockBulletPointDiv>
             <i className="fas fa-check-square"></i>
-            <h1>{bulletPoint}</h1>
+            <h4>{bulletPoint}</h4>
         </StyledBlockBulletPointDiv>
     )
 }

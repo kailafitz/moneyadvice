@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+
+// Local JSON file
 import FeatureChecklistData from '../JSON_Data/FeatureChecklistData.json'
+
+// styled-components imports
+import styled from "styled-components";
+import breakpoint from '../breakpoints';
+import { colors }  from '../colors';
+
+// MaterialUI
+import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { DataGrid } from '@material-ui/data-grid';
-import styled from "styled-components";
-import breakpoint from '../breakpoints';
-import { colors }  from '../colors';
 
 const ContainerDiv = styled.div `
   height: 100%;

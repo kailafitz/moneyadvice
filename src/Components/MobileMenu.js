@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
-import { MenuToggle } from './MenuToggle';
-import LoginModal from './LoginModal';
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import styled from 'styled-components';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+
+// Package imports
 import {
   usePopupState,
   bindTrigger,
   bindMenu,
 } from 'material-ui-popup-state/hooks'
+
+// styled-components imports
+import styled from 'styled-components';
+import {fonts} from '../fonts';
+import {colors} from '../colors';
+
+// MaterialUI
+import Menu from '@material-ui/core/Menu'
+import MenuItem from '@material-ui/core/MenuItem'
+
+// Component imports
+import { MenuToggle } from './MenuToggle';
+import LoginModal from './LoginModal';
 
 const MobileMenuDiv = styled.div `
   height: 100%;

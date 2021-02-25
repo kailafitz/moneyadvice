@@ -1,9 +1,13 @@
 import React from 'react';
-import { Avatar } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
+
+// styled-components imports
 import styled from 'styled-components';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
+
+// MaterialUI
+import { Avatar } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
 
 const StyledAvatar = styled(Avatar) `
   margin: 1.5em auto;
@@ -19,7 +23,6 @@ const StyledAvatar = styled(Avatar) `
     object-fit: contain;
   }
 `
-
 const Styledh4 = styled.h4 `
   font-size: 1.2em;
   font-family: ${fonts.roboto};

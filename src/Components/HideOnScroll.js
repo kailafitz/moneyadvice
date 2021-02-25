@@ -1,4 +1,6 @@
 import React from 'react';
+
+// MaterialUI
 import { Slide, useScrollTrigger } from "@material-ui/core"
 
 export function HideOnScroll({children}) {

@@ -70,7 +70,6 @@ export default function LottieMediaCard( { animationData, title } ) {
     <StyledLottieCard className={classes.root}>
         <CardMedia
           className={classes.media}
-          id="f-CardMediaMobile"
         >
           <LottieAnimation animationData={animationData}/>
         </CardMedia>

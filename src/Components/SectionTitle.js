@@ -1,4 +1,6 @@
 import React from 'react';
+
+// styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 import {colors} from '../colors'

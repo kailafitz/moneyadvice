@@ -1,15 +1,15 @@
-$wh: #ffffff;
-$bl: #393939;
-$trans-wh: #ffffffc2;
-$grey-dark: #7d7d7d;
-$grey-light: #f3f3f3;
-$logo-blue: #068095;
-$logo-trans-blue: #067f95b6;
-$logo-purple: #732c4e;
-$logo-green: #b8d30c;
-$logo-peach: #f0ad8c;
-$roboto: 'Roboto', sans-serif;
-$temp-font: 'Inter', sans-serif;
+// $wh: #ffffff;
+// $bl: #393939;
+// $trans-wh: #ffffffc2;
+// $grey-dark: #7d7d7d;
+// $grey-light: #f3f3f3;
+// $logo-blue: #068095;
+// $logo-trans-blue: #067f95b6;
+// $logo-purple: #732c4e;
+// $logo-green: #b8d30c;
+// $logo-peach: #f0ad8c;
+// $roboto: 'Roboto', sans-serif;
+// $temp-font: 'Inter', sans-serif;
 
 body {
     position: relative;
@@ -21,47 +21,47 @@ body {
 }
 
 // Typography Styles ----------------------------
-.f-h1 {
-    font-size: 4em;
-    font-family: $temp-font;
-    font-weight: 800;
-    color: $logo-purple;
-    line-height: 1.1em;
-    letter-spacing: -.035em;
-}
+// .f-h1 {
+//     font-size: 4em;
+//     font-family: $temp-font;
+//     font-weight: 800;
+//     color: $logo-purple;
+//     line-height: 1.1em;
+//     letter-spacing: -.035em;
+// }
 
-.f-h2 {
-    font-size: 3em;
-    font-family: $temp-font;
-    color: $grey-dark;
-    padding-top: 1em;
-    font-weight: 800;
-    color: $logo-purple;
-    letter-spacing: -.035em;
-}
+// .f-h2 {
+//     font-size: 3em;
+//     font-family: $temp-font;
+//     color: $grey-dark;
+//     padding-top: 1em;
+//     font-weight: 800;
+//     color: $logo-purple;
+//     letter-spacing: -.035em;
+// }
 
-.f-h3 {
-    font-size: 1.5em;
-    font-family: $temp-font;
-    font-weight: 600;
-}
+// .f-h3 {
+//     font-size: 1.5em;
+//     font-family: $temp-font;
+//     font-weight: 600;
+// }
 
-.f-h4 {
-    font-size: 1.2em;
-    font-family: $temp-font;
-    font-weight: 300;
+// .f-h4 {
+//     font-size: 1.2em;
+//     font-family: $temp-font;
+//     font-weight: 300;
 
     // contact page p links with a tag
-    a {
-        text-decoration: none;
-        color: $bl;
-    }
-}
+//     a {
+//         text-decoration: none;
+//         color: $bl;
+//     }
+// }
 
-.f-p {
-    font-size: 1em;
-    font-family: $roboto;
-    color: $bl;
+// .f-p {
+//     font-size: 1em;
+//     font-family: $roboto;
+//     color: $bl;
     // display: -webkit-box;
     // overflow : hidden;
     // text-overflow: ellipsis;
@@ -69,36 +69,36 @@ body {
     // -webkit-box-orient: vertical;
 
     // footer p links with a tag
-    a {
-        text-decoration: none;
-        color: $wh;
-    }
-}
+//     a {
+//         text-decoration: none;
+//         color: $wh;
+//     }
+// }
 
-.f-BlueFont {
-    color: $logo-blue;
-}
+// .f-BlueFont {
+//     color: $logo-blue;
+// }
 
-.f-i {
-    font-style: italic;
-}
+// .f-i {
+//     font-style: italic;
+// }
 
-.f-b {
-    font-weight: 800;
-}
+// .f-b {
+//     font-weight: 800;
+// }
 
 // Utilities ----------------------------
-.f-TextCenter {
-    text-align: center;
-}
+// .f-TextCenter {
+//     text-align: center;
+// }
 
-.f-TextLeft {
-    text-align: left;
-}
+// .f-TextLeft {
+//     text-align: left;
+// }
 
-.f-MarginAuto {
-    margin: 0 auto;
-}
+// .f-MarginAuto {
+//     margin: 0 auto;
+// }
 
 // Icon Styles ----------------------------
 // .f-CheckListIcon {
@@ -110,23 +110,23 @@ body {
 // }
 
 // Button Style ----------------------------
-.f-Button {
-    background-color: $logo-blue;
-    color: $wh;
-    padding: .8em;
-    border-radius: 4px;
-    font-family: $roboto;
-    font-weight: 500;
-    text-decoration: none;
-    margin: .8em;
-    transition: .3s ease-in background-color, .2s ease-in color;
-    text-transform: uppercase;
+// .f-Button {
+//     background-color: $logo-blue;
+//     color: $wh;
+//     padding: .8em;
+//     border-radius: 4px;
+//     font-family: $roboto;
+//     font-weight: 500;
+//     text-decoration: none;
+//     margin: .8em;
+//     transition: .3s ease-in background-color, .2s ease-in color;
+//     text-transform: uppercase;
     
-    &:hover {
-        background-color: $logo-green;
-        color: $grey-dark;
-    }
-}
+//     &:hover {
+//         background-color: $logo-green;
+//         color: $grey-dark;
+//     }
+// }
 
 // SectionTitle.js ----------------------------
 // .f-SectionTitle {
@@ -137,47 +137,47 @@ body {
 // }
 
 // LottieAnimation.js ----------------------------
-.f-Lottie {
-    width: 30%;
-    margin: 0 1em;
-}
+// .f-Lottie {
+//     width: 30%;
+//     margin: 0 1em;
+// }
 
 // NavbarLinks.js ----------------------------
-#f-NavBarLinkDiv {
-    display: flex;
+// #f-NavBarLinkDiv {
+//     display: flex;
 
-    .is-active {
-        border-bottom: 2px solid $logo-blue;
-    }
+//     .is-active {
+//         border-bottom: 2px solid $logo-blue;
+//     }
 
-    .f-AppBarLinks {
-        color: $logo-blue;
-        font-family: $roboto;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 100%;
-        padding: .5em;
-        margin: .8em;
-        // border-bottom: 2px solid transparent;
-        transition: all 200ms ease-in-out;
+//     .f-AppBarLinks {
+//         color: $logo-blue;
+//         font-family: $roboto;
+//         text-decoration: none;
+//         font-weight: bold;
+//         font-size: 100%;
+//         padding: .5em;
+//         margin: .8em;
+//         // border-bottom: 2px solid transparent;
+//         transition: all 200ms ease-in-out;
 
-        &:hover {
-            border-bottom: 2px solid $logo-blue;
-        }
-    }
-}
+//         &:hover {
+//             border-bottom: 2px solid $logo-blue;
+//         }
+//     }
+// }
 
 // NavigationBar.js ----------------------------
-#f-NavigationBar {
-    width: 100%;
-    background-color: $wh;
-    display: flex;
-    align-items: center;
+// #f-NavigationBar {
+//     width: 100%;
+//     background-color: $wh;
+//     display: flex;
+//     align-items: center;
 
-    #f-NavbarLogo {
-        width: 25%;
-    }
-}
+//     #f-NavbarLogo {
+//         width: 25%;
+//     }
+// }
 
 // LoginModal.js ----------------------------
 // #f-ModalContainer {
@@ -313,84 +313,84 @@ body {
 // }
 
 // Testimonial.js ----------------------------
-#f-test {
-    width:80%;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;    
-}
+// #f-test {
+//     width:80%;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-flow: wrap;
+//     justify-content: space-evenly;    
+// }
 
-.swiper-container {
-    width: 80%;
-    margin: 0 auto;
-    color: transparent;
-}
+// .swiper-container {
+//     width: 80%;
+//     margin: 0 auto;
+//     color: transparent;
+// }
   
-.swiper-pagination {
-    bottom: 0;
-}
+// .swiper-pagination {
+//     bottom: 0;
+// }
 
-.swiper-wrapper {
-    padding-inline-start: 0;
-    display:flex;
-}
+// .swiper-wrapper {
+//     padding-inline-start: 0;
+//     display:flex;
+// }
 
-.swiper-button-prev, .swiper-button-next {
-    color: $logo-blue !important;
-}
+// .swiper-button-prev, .swiper-button-next {
+//     color: $logo-blue !important;
+// }
 
-.swiper-pagination-bullet {
-    background-color: $logo-blue !important;
-}
+// .swiper-pagination-bullet {
+//     background-color: $logo-blue !important;
+// }
 
-.f-testimonialBackground {
-    width:100%;
-    background-color: #E8DCE2;
-    padding: 3em 0;
+// .f-testimonialBackground {
+//     width:100%;
+//     background-color: #E8DCE2;
+//     padding: 3em 0;
 
-    .f-TestimonialCard {  
-        width: 60%;      
-        padding: 1.5em;
-        margin: 0 auto;
-        height: 400px;
-        overflow: hidden;
-        background-color: #8A4F6C;
-        color: $wh;
-        border-radius: 14px;
+//     .f-TestimonialCard {  
+//         width: 60%;      
+//         padding: 1.5em;
+//         margin: 0 auto;
+//         height: 400px;
+//         overflow: hidden;
+//         background-color: #8A4F6C;
+//         color: $wh;
+//         border-radius: 14px;
 
-        #f-TestimonialCardHeader {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+//         #f-TestimonialCardHeader {
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
 
-            #f-TestimonialHeaderDetails {
-                display: block;
-                text-align: left;
-            }
-        }
+//             #f-TestimonialHeaderDetails {
+//                 display: block;
+//                 text-align: left;
+//             }
+//         }
     
-        p {
-            color: $wh;
-            font-weight: 300;
-        }
+//         p {
+//             color: $wh;
+//             font-weight: 300;
+//         }
     
-        &:nth-child(even) {
-            background-color: $logo-purple;
-        }
-    }
-}
+//         &:nth-child(even) {
+//             background-color: $logo-purple;
+//         }
+//     }
+// }
 
-#f-ContactUsButtonContainer {
-    padding: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// #f-ContactUsButtonContainer {
+//     padding: 2em;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    #f-LottieDiv {
-        width: 30%;
-    }
-}
+//     #f-LottieDiv {
+//         width: 30%;
+//     }
+// }
 
 // ContactUsButton.js ----------------------------
 
@@ -475,35 +475,35 @@ body {
 // }
 
 // Features.js ---------------------
-.f-TabPanel {
-    background-color: $grey-light;
-    padding: 1em;
-    flex-grow: 1;
+// .f-TabPanel {
+//     background-color: $grey-light;
+//     padding: 1em;
+//     flex-grow: 1;
 
-    #f-FeatureMainImage {
-        padding: 1em 0;
-        border-radius: 4px;
-        -webkit-box-shadow: 0 5px 18px -2px #bebebe;
-        box-shadow: 0 5px 18px -2px #bebebe;
-    }
+//     #f-FeatureMainImage {
+//         padding: 1em 0;
+//         border-radius: 4px;
+//         -webkit-box-shadow: 0 5px 18px -2px #bebebe;
+//         box-shadow: 0 5px 18px -2px #bebebe;
+//     }
 
-    .f-FeatureImagesContainer {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
+//     .f-FeatureImagesContainer {
+//         display: flex;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         flex-wrap: wrap;
 
-        .f-FeatureCard {
-            width: 40%;
-            padding: 1em;
-            margin: 2em 0;
+//         .f-FeatureCard {
+//             width: 40%;
+//             padding: 1em;
+//             margin: 2em 0;
 
-            #f-FeatureImage {
-                width: 100%;
-            }
-        }
-    }
-}
+//             #f-FeatureImage {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
 
 // ------------------------ About ----------------------
 
@@ -550,28 +550,28 @@ body {
 //     }
 // }
 
-#f-BlockBulletPointWrapper {
-    width: 100%;
-    padding-bottom: 4em;
-    margin: 1em 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+// #f-BlockBulletPointWrapper {
+//     width: 100%;
+//     padding-bottom: 4em;
+//     margin: 1em 0;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
 
-    #f-BlockBulletPoint {
-        display: block;
-        background-color: $logo-blue;
-        color: $wh;
-        padding: 1em;
-        margin: 1em;
-        width: 20%;
-        border-radius: 4px;
+//     #f-BlockBulletPoint {
+//         display: block;
+//         background-color: $logo-blue;
+//         color: $wh;
+//         padding: 1em;
+//         margin: 1em;
+//         width: 20%;
+//         border-radius: 4px;
 
-        i {
-            font-size: 4em;
-        }
-    }
-}
+//         i {
+//             font-size: 4em;
+//         }
+//     }
+// }
 
 // #f-TeamDiv {
 //     width: 100%;
@@ -732,25 +732,25 @@ body {
 
 // PrivacyPolicy.js ---------------------
 
-#f-PrivacyPolicyBody {
-    padding: 2em .5em;
-}
+// #f-PrivacyPolicyBody {
+//     padding: 2em .5em;
+// }
 
 // Downloads.js ---------------------
 
-#f-DownloadsContainer{
-    display: flex;
-    flex-grow: 1;
-    padding: 2em .5em;
-}
+// #f-DownloadsContainer{
+//     display: flex;
+//     flex-grow: 1;
+//     padding: 2em .5em;
+// }
 
 // MenuToggle.js ---------------------
-#f-MobileMenuButton {
-    z-index: 99;
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-}
+// #f-MobileMenuButton {
+//     z-index: 99;
+//     cursor: pointer;
+//     height: 20px;
+//     width: 20px;
+// }
 
 // MobileMenu.js ---------------------
 // .f-MobileMenu {
@@ -793,24 +793,16 @@ body {
 
 @media only screen and (max-width: 768px) {
 
-    .f-h1 {
-        font-size: 4.5em;
-    }
-
-    .f-h3 {
-        font-size: 2em;
-    }
-
     // .f-h4 {
     //     font-size: 1.7em;
     // }
 
-    #f-NavigationBar {
+    // #f-NavigationBar {
 
-        #f-NavbarLogo {
-            width: 45%;
-        }
-    }
+    //     #f-NavbarLogo {
+    //         width: 45%;
+    //     }
+    // }
 
     // #f-ModalContainer {
     //     width: 90%;
@@ -852,19 +844,15 @@ body {
     //     }
     // }
 
-    #f-ContactUsButtonContainer {
-        padding: 2em;
-        display: block;
+    // #f-ContactUsButtonContainer {
+    //     padding: 2em;
+    //     display: block;
 
-        #f-LottieDiv {
-            width: 80%;
-            margin: 0 auto;
-        }
-    }
-
-    #f-CardMediaMobile {
-        width: 50%;
-    }
+    //     #f-LottieDiv {
+    //         width: 80%;
+    //         margin: 0 auto;
+    //     }
+    // }
 
     // footer {
     //     padding: 3em .5em;
