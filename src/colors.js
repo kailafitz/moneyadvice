@@ -7,6 +7,7 @@ export const colors = {
     logo_blue: "#068095",
     logo_trans_blue: "#067f95b6",
     logo_purple: "#732c4e",
+    logo_trans_purple: "rgba(115, 44, 78, 0.67)",
     logo_green: "#b8d30c",
     logo_peach: "#f0ad8c",
 }

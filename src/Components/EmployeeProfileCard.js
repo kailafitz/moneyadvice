@@ -2,6 +2,7 @@ import React from 'react';
 
 // styled-components imports
 import styled from 'styled-components';
+import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
 
@@ -11,8 +12,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const StyledAvatar = styled(Avatar) `
   margin: 1.5em auto;
-  width: 170px;
-  height: 170px;
+  width: 100%;
+  height: auto;
+  overflow: auto;
   border-radius: 0%;
   filter: grayscale(100%);
 
@@ -22,28 +24,70 @@ const StyledAvatar = styled(Avatar) `
     border-radius: 7px;
     object-fit: contain;
   }
+
 `
 const Styledh4 = styled.h4 `
-  font-size: 1.2em;
-  font-family: ${fonts.roboto};
-  font-weight: 300;
-  color: ${colors.logo_blue};
-  text-align: "center";
+    font-family: ${fonts.temp_font};
+    font-weight: 300;
+    color: ${colors.logo_blue};
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.1;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.15;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.2em;
+    }
+
 `
 
 const Styledp = styled.p `
-  font-size: 1em;
-  font-family: ${fonts.roboto};
-  color: ${colors.bl};
+    font-family: ${fonts.temp_font};
+    color: ${colors.bl};
+
+    a {
+        text-decoration : none;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1em;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1em;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: .95em;
+    }
+`
+
+const StyledCard = styled.div ` 
+  margin: .5em;
+  borderRadius: 4px;
+  display: block;
+
+  @media only screen and ${breakpoint.device.xs} {
+    width: 40%;
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+    width: 20vw;
+  }
+
 `
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: "auto",
-      padding: ".5em",
-      margin: ".5em",
-      borderRadius: "7px",
-      display: "block",
       // margin: "auto",
       '& > *': {
         margin: theme.spacing(1),
@@ -51,16 +95,16 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const EmployeeProfileCard = ({img, empName, role}) => {
+export const EmployeeProfileCard = (props) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <StyledCard>
         <StyledAvatar
         alt="Profile Image"
-        src={img}
+        src={props.img}
         />
-        <Styledh4>{empName}</Styledh4>
-        <Styledp>{role}</Styledp>
-    </div>
+        <Styledh4>{props.empName}</Styledh4>
+        <Styledp>{props.role}</Styledp>
+    </StyledCard>
   )
 }

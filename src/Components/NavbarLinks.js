@@ -21,6 +21,7 @@ import LoginModal from './LoginModal';
 
 const LinksDiv = styled.div `
     display: flex;
+    padding-right: 1em;
 
     .is-active {
         border-bottom: 2px solid ${colors.logo_blue};
@@ -33,13 +34,15 @@ const LinksDiv = styled.div `
         font-weight: bold;
         font-size: 100%;
         padding: .5em;
+        cursor: pointer;
         margin: .8em;
         border-top: 2px solid transparent;
         border-bottom: 2px solid transparent;
         transition: all 200ms ease-in-out;
 
-        &:hover {
+        &:hover, :active, :focus {
             border-bottom: 2px solid ${colors.logo_blue};
+            outline: none;
         }
     }
 `
@@ -52,6 +55,7 @@ const PopoverDiv = styled(Popover) `
 
     .f-DropdownLinks {
         display: block;
+        cursor: pointer;
         color: ${colors.logo_blue};
         font-family: ${fonts.roboto};
         text-decoration: none;
@@ -84,19 +88,10 @@ export default function NavbarLinks() {
             <p
                 {...bindHover(popupState)}
                 className="f-AppBarLinks"
-                activeClassName="is-active"
+                activeclassname="is-active"
             >
                 Features
             </p>
-            {/* <NavLink
-                {...bindHover(popupState)}
-                className="f-AppBarLinks"
-                activeClassName="is-active"
-                to="/"
-                exact
-            >
-                Features
-            </NavLink> */}
             <NavLink className="f-AppBarLinks" activeClassName="is-active" to="/about" exact>
                 About
             </NavLink>
@@ -123,6 +118,9 @@ export default function NavbarLinks() {
             </NavLink>
             <NavLink className="f-DropdownLinks" activeClassName="is-active" to="/productfeatures" exact>
                 Product Features
+            </NavLink>
+            <NavLink className="f-DropdownLinks" activeClassName="is-active" to="/additionalservices" exact>
+                Additional Services
             </NavLink>
         </PopoverDiv>
         </>

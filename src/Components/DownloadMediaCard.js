@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 // styled-components imports
 import styled from 'styled-components';
+import breakpoint from '../breakpoints';
 import {fonts} from '../fonts';
 import {colors} from '../colors';
 
@@ -9,27 +11,69 @@ import {colors} from '../colors';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
 
-// Component imports
-import DownloadableLink from './DownloadableLink';
-
-const Styledh4 = styled.h4`
-  font-size: 1.2em;
-  font-family: ${fonts.roboto};
-  font-weight: 300;
+const Styledh3 = styled.h3 `
+  font-family: ${fonts.temp_font};
   color: ${colors.wh};
-  text-align: "left";
+  font-weight: 300;
+  text-align: left;
+
+  a {
+      text-decoration: none;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.1;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.15;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.2em;
+  }
+
+`
+
+const StyledButton = styled(Button) `
+  font-family: ${fonts.roboto};
+  text-transform: uppercase;
+  background-color: ${colors.logo_blue};
+  color: ${colors.wh};
+  margin: .8em;
+  transition: .3s ease-in background-color, .3s ease-in color;
+
+  &:hover {
+    background-color: ${colors.logo_green};
+    color: ${colors.grey_dark};
+  }
+`
+
+const StyledCard = styled(Card) `
+  @media only screen and ${breakpoint.device.xs} {
+    width: 90vw;
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+    width: 40vw;
+  }
+
+  @media only screen and ${breakpoint.device.lg} {
+    width: 25vw;
+  }
+  
 `
 
 const useStyles = makeStyles({
   root: {
     // maxWidth: 345,
-    width: "30vw",
     backgroundColor: "#7d7d7d",
     border: "none",
     transition: "none",
     boxShadow: "none",
-    margin: "0 2em",
+    margin: "2em",
     borderRadius: "4px",
   },
   media: {
@@ -42,14 +86,9 @@ const useStyles = makeStyles({
   content: {
     display: "block",
   },
-  button: {
-    backgroundColor: "#068095",
+  link: {
     color: "#ffffff",
-    transition: ".3s ease-in background-color, .2s ease-in color",
-    "&:hover": {
-        backgroundColor: "#b8d30c",
-        color: "#7d7d7d",
-    },
+    textDecoration: "none",
   }
 });
 
@@ -57,16 +96,25 @@ export default function DownloadMediaCard( { src, title, doc } ) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <StyledCard className={classes.root}>
         {/* <CardMedia
           className={classes.media}
         >
 
         </CardMedia> */}
       <CardContent className={classes.content}>
-        <Styledh4>{title}</Styledh4>
-        <DownloadableLink src={src} doc={doc}/>
+        <Styledh3>{title}</Styledh3>
+        <StyledButton>
+            <Link
+                to={src}
+                className={classes.link}
+                target="_blank"
+                download={doc}
+            >
+                Download
+            </Link>
+        </StyledButton>
       </CardContent>
-    </Card>
+    </StyledCard>
   );
 }

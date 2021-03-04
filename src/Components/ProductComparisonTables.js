@@ -6,6 +6,7 @@ import FeatureChecklistData from '../JSON_Data/FeatureChecklistData.json'
 // styled-components imports
 import styled from "styled-components";
 import breakpoint from '../breakpoints';
+import {fonts} from '../fonts'
 import { colors }  from '../colors';
 
 // MaterialUI
@@ -16,6 +17,29 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { DataGrid } from '@material-ui/data-grid';
+
+const Styledh3 = styled.h3 `
+  font-family: ${fonts.temp_font};
+  font-weight: 300;
+  color: ${colors.logo_blue};
+  line-height: 20px;
+
+  a {
+      text-decoration: none;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.1;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.15;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+      font-size: 1.2em;
+  }
+`
 
 const ContainerDiv = styled.div `
   height: 100%;
@@ -31,8 +55,7 @@ const StyledAccordion = styled(Accordion)`
 
   @media only screen and ${breakpoint.device.sm} {
     overflow-x: auto;
-  }
-  
+  }  
 `
 
 const DataGridDiv = styled.div `
@@ -159,7 +182,7 @@ export default function ProductComparisonTables() {
           } </>
         })
       }   
-    </div> : <h2>No Data</h2>
+    </div> : <Styledh3>No Data</Styledh3>
     }
     </ContainerDiv>
   );

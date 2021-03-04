@@ -6,40 +6,46 @@ import breakpoint from '../breakpoints';
 import {colors} from '../colors'
 import {fonts} from '../fonts'
 
-const StyledTitle = styled.div `
-    width: 70%;
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-
-    h1 {
-        font-family: ${fonts.temp_font};
-        color: ${colors.grey_dark};
-        margin: 0;
-        padding-top: 1em;
-        font-weight: 800;
-        color: ${colors.logo_purple};
-        line-height: 1.2em;
-        letter-spacing: -.035em;
-    }
+const Styledh1 = styled.h1 `
+    font-family: ${fonts.temp_font};
+    font-weight: 800;
+    color: ${colors.logo_purple};
+    line-height: 1.2em;
+    letter-spacing: -.035em;
 
     @media only screen and ${breakpoint.device.xs} {
-        margin-bottom: 2em;
+        font-size: 2em;
+    }
+    
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 2.5em;
     }
 
     @media only screen and ${breakpoint.device.lg} {
-        margin-bottom: 4em;
-
-        h1 {
-            font-size: 3em;
-        }
+        font-size: 3em;
     }
 `
 
-export default function SectionTitle({title}) {
+const StyledTitle = styled.div `
+    margin: 0 auto;
+    text-align: center;
+
+    @media only screen and ${breakpoint.device.xs} {
+        width: 90%;
+    }
+    
+    @media only screen and ${breakpoint.device.sm} {
+        width: 70%;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+    }
+`
+
+export default function SectionTitle(props) {
     return (
         <StyledTitle>
-            <h1>{title}</h1>
+            <Styledh1 style={{"color": props.color}}>{props.title}</Styledh1>
         </StyledTitle>
     )
 }

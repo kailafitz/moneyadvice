@@ -15,15 +15,85 @@ import Link from '@material-ui/core/Link';
 // Media imports
 import FooterLogo from '../Images/Company-Logos/FooterLogo.png'
 
-const FooterDiv = styled.footer `
-    background-color: ${colors.logo_blue};
+const Styledh3 = styled.h3 `
+    font-family: ${fonts.temp_font};
     color: ${colors.wh};
-    font-family: ${fonts.roboto};
+    font-weight: 600;
+
+    a {
+        text-decoration: none;
+    }
 
     @media only screen and ${breakpoint.device.xs} {
-        padding: 3em .5em;
+        font-size: 1.2em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1.3em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: 1.5em;
+    }
+`
+
+const Styledp = styled.p `
+    font-family: ${fonts.roboto};
+    color: ${colors.wh};
+
+    a {
+        ${fonts.roboto};
+        color: ${colors.wh};
+        text-decoration : none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: .95em;
+    }
+`
+
+const FooterDiv = styled.footer `
+    background-color: ${colors.logo_blue};
+
+    .f-FooterIconContainer {
+        display: flex;
+        align-items: center;
+
+        i {
+            color: ${colors.wh};
+        }
+
+        a {
+            padding-left: .5em;
+            text-decoration: none;
+        }
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+
+        #f-CopyrightDiv {
+            text-align: left;
+
+            p {
+                padding: 1em;
+                margin: 0;
+            }
+        }
 
         #f-FooterWrapper {
+            padding: 3em .5em;
             width: 80%;
             display: block;
             margin: 0 auto;
@@ -48,18 +118,6 @@ const FooterDiv = styled.footer `
     
                         li {
                             list-style-type: none;
-                            font-weight: 300;
-                            margin: 6px 0;
-                            
-                            a {
-                                color: ${colors.wh};
-                                text-decoration: none;
-                                font-size: 1.3em;
-    
-                                &:hover {
-                                    text-decoration: underline;
-                                }
-                            }
                         }
                     }
                 }
@@ -67,76 +125,40 @@ const FooterDiv = styled.footer `
 
             #f-ContactUsColumn {
                 width: 80%;
-
-                p {
-                    font-size: 1.3em;
-                }
             }
     
             .f-FooterColumn {
                 margin: 0 2em;
-    
-                h3 {
-                    font-size: 1.5em;
-                    font-family: ${fonts.temp_font};
-                    font-weight: 600;
-                }
             }
-
-
         }
+
         .f-FooterIconContainer {
-            display: flex;
-            align-items: center;
     
             i {
                 font-size: 2em;
-            }
-    
-            a {
-                text-decoration: none;
-                color: ${colors.wh};
-                padding-left: 10px;
-                font-size: 1.3em;
             }
         }
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        padding: 2em 1em;
+        
+
+        #f-CopyrightDiv {
+            text-align: center;
+        }
 
         #f-FooterWrapper {
-            flex-grow: 1;
+            padding: 2em .5em;
+            width: 95%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-content: flex-start;
-
-            #f-OurCompanyColumn {
-
-                #f-FooterLinks {
-                    ul {
-                        li {
-                            a {
-                                font-size: 1em;
-                            }
-                        }
-                    }
-                }
-            }
-
-            #f-ContactUsColumn {
-                p {
-                    font-size: 1em;
-                }
-            }
         }
+
         .f-FooterIconContainer {
+
             i {
                 font-size: 1.5em;
-            }
-    
-            a {
-                font-size: 1em;
             }
         }
     }
@@ -164,24 +186,23 @@ export default function Footer() {
                 </div>
                 <div className="f-FooterColumn" id="f-OurCompanyColumn">
                     <div id="f-FooterLinks">
-                        <h3>Our Company</h3>
+                        <Styledh3>Our Company</Styledh3>
                         <ul>
-                            <li><Link href="/about">About</Link></li>
-                            <li><Link href="/features">Features</Link></li>
-                            <li><Link href="/contactus">Contact Us</Link></li>
-                            <li><Link href="/privacypolicy">Privacy Policy</Link></li>
-                            <li><HashLink to="about/#f-TeamType">Meet our Team</HashLink></li>
-                            <li><Link href="/downloads">Downloads</Link></li>
+                            <li><Styledp><Link href="/about">About</Link></Styledp></li>
+                            <li><Styledp><Link href="/contactus">Contact Us</Link></Styledp></li>
+                            <li><Styledp><Link href="/privacypolicy">Privacy Policy</Link></Styledp></li>
+                            <li><Styledp><HashLink to="about/#f-TeamType">Meet our Team</HashLink></Styledp></li>
+                            <li><Styledp><Link href="/downloads">Downloads</Link></Styledp></li>
                         </ul>
                     </div>
                     <div className="f-FooterIconContainer">
-                        <i className="f-FooterIcon" class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/company/money-advice/">Follow us on LinkedIn</a>
+                        <i className="fab fa-linkedin f-FooterIcon"></i>
+                        <a href="https://www.linkedin.com/company/money-advice/" target="_blank"><Styledp>Follow us on LinkedIn</Styledp></a>
                     </div>
                 </div>
                 <div className="f-FooterColumn" id="f-ContactUsColumn">
-                    <h3>Contact Us</h3>
-                    <p>Lunar Technologies Ltd t/a Money Advice,
+                    <Styledh3>Contact Us</Styledh3>
+                    <Styledp>Lunar Technologies Ltd t/a Money Advice,
                         Registered in Ireland, Registered No: 504675.
                         <br/>
                         <br/>
@@ -191,17 +212,20 @@ export default function Footer() {
                         Ireland<br/>
                         V95 FN79
                         <br/>
-                    </p>
+                    </Styledp>
                     <div className="f-FooterIconContainer">
-                        <i class="fas fa-phone-square-alt"></i>
-                        <a href="tel:00353656849675">+353 65 684 9675</a>
+                        <i className="fas fa-phone-square-alt"></i>
+                        <a href="tel:00353656849675"><Styledp>+353 65 684 9675</Styledp></a>
                     </div>
                     <div className="f-FooterIconContainer">
-                        <i class="fas fa-envelope-square"></i>
-                        <a href="mailto:support@moneyadvice.ie">support@moneyadvice.ie</a>
+                        <i className="fas fa-envelope-square"></i>
+                        <a href="mailto:support@moneyadvice.ie"><Styledp>support@moneyadvice.ie</Styledp></a>
                     </div>                    
                 </div>
-            </div>            
+            </div>
+            <div id="f-CopyrightDiv">
+                <Styledp>Copyright <i className="far fa-copyright"></i> 2021 <a href="https://kailafitz.com" target="_blank">fizzyDesigns</a></Styledp>
+            </div>          
         </FooterDiv>
     )
 }

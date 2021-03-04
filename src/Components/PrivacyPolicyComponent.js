@@ -3,6 +3,12 @@ import React, { useEffect, useState } from 'react'
 // Local JSON file
 import PolicyData from '../JSON_Data/PrivacyPolicyData.json'
 
+// styled-components imports
+import styled from 'styled-components';
+import {colors} from '../colors';
+import {fonts} from '../fonts'
+import breakpoint from '../breakpoints';
+
 // MaterialUI
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
@@ -11,16 +17,78 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+const Styledh3 = styled.h3 `
+    font-family: ${fonts.temp_font};
+    font-weight: 300;
+    color: ${colors.logo_blue};
+    line-height: 20px;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1.15;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: 1.2em;
+    }
+`
+
+const Styledp = styled.p `
+    font-family: ${fonts.roboto};
+    color: ${colors.bl};
+
+    a {
+        ${fonts.roboto};
+        text-decoration : none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .f-BulletPointIcon {
+        color: ${colors.logo_purple};
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: .95em;
+    }
+`
+
+const StyledContainer = styled.div `
+
+    @media only screen and ${breakpoint.device.xs} {
+        width: 90%;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        width: 80%:
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        width: 70%:
+    }
+`
+
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: '70%',
-      margin: "2em auto",
-    },
-    heading: {
-        color: "#068095",
-        fontWeight: "500",
-        margin: ".2em 0",
-        fontFamily: "Roboto",
+        margin: "0 auto",
     },
     displayBulletpoints: {
         "display": "block",
@@ -47,7 +115,7 @@ export const PrivacyPolicyComponent = () => {
 
     return (
         <>         
-            <div className={classes.root}>
+            <StyledContainer className={classes.root}>
             {
                 validData ? (
                     data.map((policy) => {
@@ -58,28 +126,28 @@ export const PrivacyPolicyComponent = () => {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                     >
-                                        <p className={classes.heading}>{policy.title}</p>
+                                        <Styledh3>{policy.title}</Styledh3>
                                     </AccordionSummary>
                                     <AccordionDetails className={classes.displayBulletpoints}>
                                         <Typography>
                                             {policy.details}
                                         </Typography>
-                                        <div>
+                                        <ul className="fa-ul">
                                         {
                                             policy.policyBulletPoints ?
                                             policy.policyBulletPoints.map((bulletpoint) => {
                                                 return (
-                                                    <p className="f-p"><i class="fas fa-genderless f-BulletPointIcon"></i> {bulletpoint}</p>
+                                                    <li><Styledp><span className="fa-li"><i class="fas fa-genderless f-BulletPointIcon"></i></span> {bulletpoint}</Styledp></li>
                                                 );
                                             }): null
                                         }
-                                        </div>
+                                        </ul>
                                     </AccordionDetails>
                                 </Accordion>
                         );
                     })
-                )  : ( <h2>Data not found</h2>)
-            } </div>
+                )  : ( <Styledh3>Data not found</Styledh3> )
+            } </StyledContainer>
         </>
     )
 }

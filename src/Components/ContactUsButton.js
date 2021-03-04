@@ -25,13 +25,13 @@ const StyledContactUsButton = styled(Button)`
 
   &:hover {
     cursor: pointer;
-    background-color: ${colors.wh};
+    background-color: ${colors.trans_wh};
     color: ${colors.logo_blue};
     transform: scale(1.06);
   }
 
   @media only screen and ${breakpoint.device.xs} {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   @media only screen and ${breakpoint.device.sm} {
@@ -39,13 +39,16 @@ const StyledContactUsButton = styled(Button)`
   }
 
   @media only screen and ${breakpoint.device.lg} {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 `
 
 export default function ContactUsButton({label}) {
   return (
-    <StyledContactUsButton href="/contactus">
+    <StyledContactUsButton
+      href="/contactus"
+      disableRipple={true}
+    >
       {label}
     </StyledContactUsButton>
   );

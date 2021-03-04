@@ -1,5 +1,11 @@
 import React from 'react';
 
+// styled-components imports
+import styled from 'styled-components';
+import {colors} from '../colors';
+import {fonts} from '../fonts';
+import breakpoint from '../breakpoints';
+
 // MaterialUI
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -10,6 +16,64 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
+
+const StyledButton = styled(Button) `
+  font-family: ${fonts.roboto};
+  text-transform: uppercase;
+  background-color: ${colors.logo_blue};
+  color: ${colors.wh};
+  margin: .8em;
+  border: 1px solid ${colors.wh};
+  transition: .3s ease-in background-color, .3s ease-in color;
+
+  &:hover {
+    background-color: ${colors.logo_green};
+    border: 1px solid ${colors.logo_green};
+    color: ${colors.wh};
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+    font-size: 1.1em;
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+    font-size: 1em;
+  }
+
+  @media only screen and ${breakpoint.device.lg} {
+    font-size: .95em;
+  }
+`
+
+const StyledTextField = styled(TextField) `
+  
+  @media only screen and ${breakpoint.device.xs} {
+    width: 100%;
+    margin: 8px auto;
+
+    .MuiInputBase-root {
+        input {
+          font-size: 1.1em;
+        }
+    }
+
+    .MuiFormLabel-root {
+      font-size: 1.3em;
+    }
+  }
+  
+  @media only screen and ${breakpoint.device.sm} {
+    .MuiInputBase-root {
+        input {
+          font-size: 1em;
+        }
+    }
+
+    .MuiFormLabel-root {
+        font-size: 0.8em;
+    }
+  }       
+`
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,15 +123,6 @@ const useStyles = makeStyles((theme) => ({
   tabPanel: {
     backgroundColor: "#068095"
   },
-  button: {
-    backgroundColor: "#068095",
-    color: "#ffffff",
-    margin: ".8em",
-    transition: ".3s ease-in background-color",
-    "&:hover": {
-        backgroundColor: "#b8d30c",
-    },
-  }
 }
 ));
 
@@ -118,11 +173,13 @@ export default function DataCaptureLogin() {
             label="Advisor Login"
             classes={{ selected: classes.selected }}
             {...a11yProps(0)}
+            disableRipple
           />
           <Tab
             label="Client Login" 
             classes={{ selected: classes.selected }}
             {...a11yProps(1)}
+            disableRipple
           />
         </Tabs>
       </AppBar>
@@ -137,7 +194,7 @@ export default function DataCaptureLogin() {
             action="/"
             method="post"
           >
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Username"
               variant="filled"
@@ -145,7 +202,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Password"
               variant="filled"
@@ -153,7 +210,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Pin"
               variant="filled"
@@ -161,7 +218,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-              <Button type="button" className={classes.button}>Login</Button>
+              <StyledButton type="button">Login</StyledButton>
           </form>
         </TabPanel>
         <TabPanel
@@ -176,7 +233,7 @@ export default function DataCaptureLogin() {
             action="/"
             method="post"
           >
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Forename"
               variant="filled"
@@ -184,7 +241,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Surname"
               variant="filled"
@@ -192,7 +249,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Email"
               variant="filled"
@@ -200,7 +257,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <TextField
+            <StyledTextField
               id="filled-basic"
               label="Security Code"
               variant="filled"
@@ -208,7 +265,7 @@ export default function DataCaptureLogin() {
               required={true}
               InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
             />
-            <Button type="button" className={classes.button}>Login</Button>
+            <StyledButton type="button">Login</StyledButton>
           </form>
         </TabPanel>
     </div>

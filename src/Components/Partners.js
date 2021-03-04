@@ -20,6 +20,8 @@ import Conexim from "../Images/Partner-Logos/Conexim.png";
 
 const StyledContainer = styled.div `
     display: block;
+    padding: 4em 0;
+    margin: 0 auto;
 
     #f-PartnerLogosContainer-Logos {
         margin: 0 auto;
@@ -31,14 +33,12 @@ const StyledContainer = styled.div `
 
     @media only screen and ${breakpoint.device.xs} {
         width: 90%;
-        padding: 0;
-        margin: 5em auto;
 
         #f-PartnerLogosContainer-Logos {
             width: 90%;
 
             .f-PartnerLogo {
-                width: 20vw;
+                width: 15vw;
                 padding: 0.5em;
                 margin: 0 1em;
             }
@@ -58,8 +58,6 @@ const StyledContainer = styled.div `
 
     @media only screen and ${breakpoint.device.lg} {
         width: 80%;
-        margin: 7em auto;
-        padding: 3em;
 
         #f-PartnerLogosContainer-Logos {
 

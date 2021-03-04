@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 // Package imports
-import axios from 'axios';
+import emailjs from 'emailjs-com'
+import{ init } from 'emailjs-com';
 
 // styled-components imports
 import styled from 'styled-components';
@@ -13,14 +14,114 @@ import breakpoint from '../breakpoints';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
 // Component imports
 import Footer from '../Components/Footer';
 import SectionTitle from '../Components/SectionTitle';
-import AlertMessage from '../Components/AlertMessage';
+import ScrollTopButton from '../Components/ScrollTopButton';
 
 // Media imports
 import BackgroundImage from '../Images/ContactBg-Header.jpg'
+
+const Styledh4 = styled.h4 `
+    font-family: ${fonts.temp_font};
+    font-weight: 300;
+    color: ${colors.bl};
+    line-height: 20px;
+
+    a {
+        text-decoration: none;
+        color: ${colors.bl};
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.3em;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.25em;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.2em;
+    }
+`
+
+const Styledp = styled.p `
+    font-family: ${fonts.roboto};
+    color: ${colors.bl};
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2em;
+
+    a {
+        ${fonts.roboto};
+        text-decoration : none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: .95em;
+    }
+`
+
+const StyledSpan = styled.span `
+    font-family: ${fonts.temp_font};
+    font-weight: 300;
+    color: ${colors.logo_blue};
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.15em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1.19em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: 1.2em;
+    }
+`
+
+const StyledButton = styled(Button) `
+    font-family: ${fonts.roboto};
+    text-transform: uppercase;
+    background-color: ${colors.logo_blue};
+    color: ${colors.wh};
+    margin: .8em;
+    transition: .3s ease-in background-color, .3s ease-in color;
+
+    &:hover {
+        background-color: ${colors.logo_green};
+        color: ${colors.wh};
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1em;
+    }
+    
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1em;
+    }
+    
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: .95em;
+    }
+`
 
 const HeaderImage = styled.div `
     width: 100vw;
@@ -33,12 +134,18 @@ const HeaderImage = styled.div `
     background-size: cover;
     z-index: -6;
 
+    .f-Overlay {
+        background-color: ${colors.logo_trans_blue};
+        height: 100%;
+        width: 100%;
+    }
+
     @media only screen and ${breakpoint.device.xs} {
         height: 50vh;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        height: 40vh;
+        
     }
 
     @media only screen and ${breakpoint.device.lg} {
@@ -56,13 +163,6 @@ const ContactPageContainer = styled.div `
     display: block;
     box-shadow: 0px -10px 14px -9px #515151;
 
-    p {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        padding-bottom: 5em;
-    }
-
     #f-ContactWrapper {
 
         #f-ContactIconWrapper {
@@ -76,11 +176,7 @@ const ContactPageContainer = styled.div `
                     color: ${colors.logo_blue};
                 }
 
-                h4 {
-                    font-family: ${fonts.temp_font};
-                    font-weight: 300;
-                    color: ${colors.bl};
-                }
+                
             }
         }
 
@@ -108,12 +204,7 @@ const ContactPageContainer = styled.div `
     @media only screen and ${breakpoint.device.xs} {
         width: 90%;
 
-        p {
-            font-size: 1.1em;
-        }
-
         #f-ContactWrapper {
-            margin: 0 auto;
             width: 100%;
             display: block;
 
@@ -127,7 +218,6 @@ const ContactPageContainer = styled.div `
                 }
 
                 h4 {
-                    font-size: 1em;
                     padding-left: 2em;
                 }
             }
@@ -136,20 +226,16 @@ const ContactPageContainer = styled.div `
                 width: 90%;
 
                 form {
-    
                     .f-ContactFormInput {
-                        
-    
-                        .f-FormField {
-                            .MuiInputBase-root {
-                                input {
-                                    font-size: 1.5em;
-                                }
+                        .f-FormField {                         
+
+                            .MuiFilledInput-root {
+                                font-size: 1.35em;
                             }
 
                             .MuiFormLabel-root {
                                 font-size: 1.3em;
-                            }                            
+                            }                        
                         }
                     }
                 }
@@ -160,19 +246,10 @@ const ContactPageContainer = styled.div `
     @media only screen and ${breakpoint.device.sm} {
         width: 85%;
 
-        p {
-            font-size: 1em;
-        }
-
         #f-ContactWrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-content: flex-start;
     
             #f-ContactIconWrapper {
-                width: 30%;
-                margin: 0 auto;
+                width: 50%;
     
                 .f-ContactIconContainer {
                     display: flex;
@@ -182,28 +259,21 @@ const ContactPageContainer = styled.div `
                     i {
                         font-size: 3em;
                     }
-    
-                    h4 {
-                        font-size: 1.2em;
-                        padding-left: 2em;
-                    }
                 }
             }
     
             #f-ContactFormWrapper {
-                width: 40%;
+                width: 80%;
+                padding-top: 5em;
                 margin: 0 auto;
                 text-align: right;
     
                 form {
-    
                     .f-ContactFormInput {
-    
                         .f-FormField {
-                            .MuiInputBase-root {
-                                input {
-                                    font-size: 1em;
-                                }
+
+                            .MuiFilledInput-root {
+                                font-size: 1em;
                             }
 
                             .MuiFormLabel-root {
@@ -218,67 +288,15 @@ const ContactPageContainer = styled.div `
 
     @media only screen and ${breakpoint.device.lg} {
         max-width: 70%;
-
-        p {
-            font-size: 1em;
-        }
-
-        #f-ContactWrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-content: flex-start; 
-    
-            #f-ContactIconWrapper {
-                width: 30%;
-                margin: 0 auto;
-    
-                .f-ContactIconContainer {
-                    display: flex;
-                    align-items: center;
-                    margin: 1em 0;
-    
-                    i {
-                        font-size: 3em;
-                    }
-    
-                    h4 {
-                        font-size: 1.2em;
-                        padding-left: 2em;
-                    }
-                }
-            }
-    
-            #f-ContactFormWrapper {
-                width: 40%;
-                margin: 0 auto;
-                text-align: right;
-    
-                form {
-    
-                    .f-ContactFormInput {
-    
-                        .f-FormField {
-                            .MuiInputBase-root {
-                                input {
-                                    font-size: 1em;
-                                }
-                            }
-
-                            .MuiFormLabel-root {
-                                font-size: 0.8em;
-                            }                            
-                        }
-                    }
-                }
-            }
-        }
     }
 `
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
             margin: theme.spacing(1),
+        },
+        '& .MuiFilledInput-root': {
+            backgroundColor: "#ffffff",
         },
         '& .MuiFilledInput-underline:after': { 
             borderBottomColor: "#b8d30c",
@@ -289,127 +307,135 @@ const useStyles = makeStyles((theme) => ({
     },
     floatingLabelFocusStyle: {
         color: "#7d7d7d",
-    },
-    button: {
-        backgroundColor: "#068095",
-        color: "#ffffff",
-        margin: ".8em",
-        transition: ".3s ease-in background-color",
-        "&:hover": {
-            backgroundColor: "#b8d30c",
-        },
     }
 }));
 
 export default function ContactUs() {
+    init("user_nbna29mf7GTYIJguCdCEE");
     const classes = useStyles();
-    const [alertDetails, setAlertDetails] = useState({
-        display: false,
-        message: "Message sent successfully",
-        severity: "success"
-    })
 
-    const [input, setInput] = useState({
-        email: '',
-        name: '',
-        message: ''
-    });
+    const [errorValue, setErrorValue] = useState(false);
+    const [open, setOpen] = React.useState(false);
 
-    function handleChange(event) {
-        const {name, value} = event.target;
-        setInput(prevInput => {
-            return {
-                ...prevInput,
-                [name] : value
-            }
-        })
+    function Alert(props) {
+        return <MuiAlert elevation={6} variant="filled" {...props} />;
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        const newMessage = {
-            email: input.email,
-            name: input.name,
-            message: input.message
-        }
-        
-        axios.post('api/form', newMessage).then(response => {
-            setAlertDetails({...AlertMessage, display: true});
-            if(response.status == 200){
-                setAlertDetails({...AlertMessage, message: "Message sent successfully"});
-                setAlertDetails({...AlertMessage, severity: "success"});
-            }else{
-                setAlertDetails({...AlertMessage, message: "Message sent unsuccessfully"});
-                setAlertDetails({...AlertMessage, severity: "error"});
-            }
-        });
-        
-    }
+    const handleClose = () => {        
+        setOpen(false);
+    };    
 
     useEffect(() => {
-        if(alertDetails){
-            console.log(alertDetails);
-        }
-    }, [alertDetails])
+        
+    }, [errorValue])
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log("output", e);
+
+        emailjs.sendForm('gmail', 'websiteform', e.target, 'user_nbna29mf7GTYIJguCdCEE')
+        .then((result) => {
+            setErrorValue(true);
+            setOpen(true);
+            console.log(result.text);
+            
+        }, (error) => {
+            setErrorValue(false);
+            setOpen(true);
+            console.log(error.text);
+        });
+
+        console.log("open: ", open);
+        e.target.reset();        
+    }    
 
     return (
         <>
-        <HeaderImage className="f-HeaderImage"></HeaderImage>
-            <AlertMessage {...alertDetails}/>
+            <HeaderImage className="f-HeaderImage">
+                <div className="f-Overlay"></div>
+            </HeaderImage>
+            <Snackbar
+                anchorOrigin={{'vertical': 'top', 'horizontal': 'center' }}
+                open={open}
+                autoHideDuration={5000}
+                onClose={handleClose}
+                key={'top' + 'center'}
+            >
+                { 
+                    errorValue ?  
+                    
+                    <Alert onClose={handleClose} severity="success">
+                        Your message has been sent!
+                    </Alert>
+
+                    :
+
+                    <Alert onClose={handleClose} severity="error">
+                        An error has occurred. Please contact us through the email and number provided.
+                    </Alert>
+                }
+                
+            </Snackbar>        
             <ContactPageContainer>
                 <SectionTitle title="Contact Us" />
-                <p className="f-p">If you have any queries, please fill out the form below and we will respond as soon as possible.
-                <br/>
-                <br/>
-                For any urgent matters, please call us on the number below. Though our offices are based in Ennis, we do not facilitate walk-ins.</p>
+                <Styledp>For any direct queries about Money Advice CRM, we are available through telephone and email.
+                    <br />
+                    <br />                    
+                    <StyledSpan>Our expert team is on hand to take care of any questions around quotations, demos and how our system can benefit your business.</StyledSpan>
+                    <br />
+                    <br />
+                    Please note that although our offices are based in Ennis, we do not facilitate walk-ins.</Styledp>
                 <div id="f-ContactWrapper">
                     <div id="f-ContactIconWrapper">
                         <div className="f-ContactIconContainer">
                             <i class="fas fa-map-marker-alt"></i>
-                            <h4 className="f-h4">
+                            <Styledh4>
                                 Station Road,
                                 Ennis,
                                 Co. Clare,
                                 Ireland
                                 V95 FN79
-                            </h4>
+                            </Styledh4>
                         </div>
                         <div className="f-ContactIconContainer">
                             <i class="fas fa-phone-square-alt"></i>
-                            <h4 className="f-h4"><a href="tel:00353656849675">+353 65 684 9675</a></h4>
+                            <Styledh4><a href="tel:00353656849675">+353 65 684 9675</a></Styledh4>
                         </div>
                         <div className="f-ContactIconContainer">
                             <i class="fas fa-envelope-square"></i>
-                            <h4 className="f-h4"><a href="mailto:support@moneyadvice.ie">support@moneyadvice.ie</a></h4>
+                            <Styledh4><a href="mailto:support@moneyadvice.ie">support@moneyadvice.ie</a></Styledh4>
                         </div>
                     </div>
                     <div id="f-ContactFormWrapper">
-                        <form className={classes.root} noValidate autoComplete="off" onSubmit={handleSubmit}>
+                    <Styledp>Want to leave us a message? We're happy to help. Fill out our form and a member of our team will respond as soon as possible.</Styledp>
+                        <form className={classes.root} autoComplete="off" onSubmit={handleSubmit}>
                             <div className="f-ContactFormInput">
                                 <TextField
+                                    type="email"
                                     name="email"
-                                    required
+                                    required={true}
                                     id="filled-full-width"
                                     label="Your Email"
                                     variant="filled"
                                     size="normal"
                                     fullWidth
                                     className="f-FormField"
-                                    value={input.email}
-                                    onChange={handleChange}
+                                    // value={input.email}
+                                    // onChange={handleChange}
                                     InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
                                 />
                                 <TextField
+                                    type="text"
                                     name="name"
-                                    required
+                                    required={true}
                                     id="filled-full-width"
                                     label="Your Name"
                                     variant="filled"
                                     size="normal"
                                     fullWidth
                                     className="f-FormField"
-                                    value={input.name}
-                                    onChange={handleChange}
+                                    // value={input.name}
+                                    // onChange={handleChange}
                                     InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
                                 />
                             </div>
@@ -420,8 +446,8 @@ export default function ContactUs() {
                                     label="Your Message"
                                     multiline
                                     rows={8}
-                                    value={input.message}
-                                    onChange={handleChange}
+                                    // value={input.message}
+                                    // onChange={handleChange}
                                     variant="filled"
                                     size="normal"
                                     fullWidth
@@ -429,17 +455,17 @@ export default function ContactUs() {
                                     InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
                                 />
                             </div>
-                            <Button
-                                className={classes.button}
+                            <StyledButton
                                 type="submit"
                                 variant="contained"
                             >
                             Submit
-                            </Button>                 
+                            </StyledButton>
                         </form>
                     </div>
                 </div>
-                </ContactPageContainer>               
+                </ContactPageContainer>
+                <ScrollTopButton />             
             <Footer />
         </>
     )

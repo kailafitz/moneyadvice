@@ -17,30 +17,94 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
+import KeyboardArrowIcon from '@material-ui/icons/KeyboardArrowDown';
 
-const DownloadLink = styled(Button)`
+const Styledh2 = styled.h2 `
+    font-family: ${fonts.temp_font};
+    font-weight: 800;
+    color: ${colors.logo_purple};
+    letter-spacing: -.035em;
+    margin: .5em 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 2em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 2.5em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: 4vw;
+    }
+`
+
+const Styledh3 = styled.h3 `
+    font-family: ${fonts.temp_font};
+    color: ${colors.grey_dark};
+    font-weight: 500;
+
+    a {
+        text-decoration: none;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.2em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1.3em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: 1.5em;
+    }
+`
+
+const Styledp = styled.p `
+    font-family: ${fonts.temp_font};
+    color: ${colors.bl};
+
+    a {
+        text-decoration : none;
+    }
+
+    @media only screen and ${breakpoint.device.xs} {
+        font-size: 1.1em;
+    }
+
+    @media only screen and ${breakpoint.device.sm} {
+        font-size: 1em;
+    }
+
+    @media only screen and ${breakpoint.device.lg} {
+        font-size: .95em;
+    }
+`
+
+const StyledButton = styled(Button) `
+    font-family: ${fonts.roboto};
+    text-transform: uppercase;
     background-color: ${colors.logo_blue};
     color: ${colors.wh};
-    transition: .3s ease-in background-color, .2s ease-in color;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
+    margin: .8em;
+    transition: .3s ease-in background-color, .3s ease-in color;
 
-    :hover {
+    &:hover {
         background-color: ${colors.logo_green};
         color: ${colors.grey_dark};
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        width:100%;
+        width: 100%;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        width: 20%;
-    }
-
-    @media only screen and ${breakpoint.device.lg} {
+        width: auto;
     }
 `
 
@@ -50,95 +114,120 @@ const FeaturesPage = styled.div `
     .f-CheckListIcon {
         color: ${colors.logo_green};
     }
-
-    h2 {
-        font-size: 3em;
-        font-family: ${fonts.temp_font};
-        color: ${colors.grey_dark};
-        padding-top: 1em;
-        font-weight: 800;
-        color: ${colors.logo_purple};
-        letter-spacing: -.035em;
-    }
-
-    h3 {
-        font-size: 1.5em;
-        font-family: ${fonts.temp_font};
-        font-weight: 500;
-        color: ${colors.grey_dark};
-    }
-
-    p {
-        font-family: ${fonts.roboto};
-        color: ${colors.bl};
-    }
 `
 
-const FeaturesPageInfo =styled.div` 
+const FeaturesPageInfo =styled.div ` 
     margin: 0.8em;
     z-index: 999;
     width: 100%;
     
     .f-TabPanel {
-        padding: 3em;
-    }
-
-    #f-FeatureMainImage {
-        display: block;
-        width: 100%;
-        margin: 1em auto;
-        padding: 0;
-    }
-
-    @media only screen and ${breakpoint.device.xs} {
-        margin:0;
-
-        .f-FeatureImagesContainer {
-            width: 100%;
-            align-items: normal;
-
-            .MuiCard-root {
-                width: 100%;
+        #f-CoreInformation {        
+            #f-InnerContainer {
+                #f-FeatureMainImage {
+                    border-radius: 4px;
+                    -webkit-box-shadow: 0 5px 18px -2px #bebebe;
+                    box-shadow: 0 5px 18px -2px #bebebe;
+                }
             }
         }
 
-        .f-TabPanel{
-            padding: 2em;
+        .f-FeatureImagesContainer {
+            padding: 1em;
+            background-color: ${colors.grey_light};
+    
+            .f-FeatureCard #f-FeatureImage {
+                width: 100%;
+            }
         }
+    }    
+
+    @media only screen and ${breakpoint.device.xs} {
+        margin: 0;
+
+        .f-TabPanel {
+
+            #f-CoreInformation {
+                padding: 1em;
+
+                #f-InnerContainer {
+                    padding: 1em;
+                    display: block;
+        
+                    #f-FeatureMainImage {
+                        width: 80%;
+                        display: block;
+                        margin: 0 auto;
+                    }
+        
+                    #f-InnerInformation {
+                        padding: 2em 0;
+                        display: block;
+                    }
+                }
+            }
+
+            .f-FeatureImagesContainer {
+                margin-top: 2em;
+                padding: 2em 0;
+    
+                .MuiCard-root {
+                    width: 80%;
+                    margin: 1.5em auto;
+                }
+            }
+        }        
     }
 
     @media only screen and ${breakpoint.device.sm} {
 
-        #f-FeatureMainImage {
-            width: 40%;
-        }
+        .f-TabPanel {
 
-        .f-FeatureImagesContainer {
-            align-items: normal;
-            justify-content: space-between;
-            .MuiCard-root{
-                width: 100%;
+            #f-CoreInformation {
+                padding: 1em 3em;
+
+                #f-InnerContainer {
+                    display: block;
+        
+                    #f-FeatureMainImage {
+                        width: 70%;
+                    }
+                }
             }
-        }
+
+            .f-FeatureImagesContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+    
+                .MuiCard-root {
+                    width: 40%;
+                    padding: 1em;
+                    margin: 1em;          
+                }
+            }
+        }        
     }
 
     @media only screen and ${breakpoint.device.lg} {
 
-        #f-FeatureMainImage {
-            width: 40%;
-        }
+        #f-InnerContainer {
+            display: flex;
+            align-items: flex-start;
 
-        .f-FeatureImagesContainer {
-            align-items: normal;
-            justify-content: space-between;
-            .MuiCard-root {
-                width: 40%;            
+            #f-FeatureMainImage {
+                width: 40%;
+                margin-right: 2em;
+            }
+
+            #f-InnerInformation {
+                padding: 0;
             }
         }
     }
 `
-const FeaturesPageMenu = styled.div`
-
+const FeaturesPageMenu = styled.div `
     position: sticky;
     top: 0;
     border-radius: 4px;
@@ -156,7 +245,7 @@ const FeaturesPageMenu = styled.div`
     button { 
         width: 30%;
         background-color: ${colors.logo_purple}!important;
-        color: white;
+        color: ${colors.wh};
         padding: 0.5em 0 0.5em 0.5em;
         position: sticky;
         top: 0.8em;
@@ -169,12 +258,14 @@ const FeaturesPageMenu = styled.div`
             width: 90%;
         }
     }   
+
     @media only screen and ${breakpoint.device.sm}{
         margin: 0.8em;
         button { 
             width: 40%;
         }
     }
+
     @media only screen and ${breakpoint.device.lg}{
         margin: 0.8em;
     }
@@ -220,12 +311,13 @@ export const ProductFeaturesComponentTwo = () => {
   
     return (
         <FeaturesPage>
-      {
+        {
           validData ?
           <>
             <FeaturesPageMenu>
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                     {feature.featureTitle}
+                    <KeyboardArrowIcon />
                 </Button>
                 <Menu
                     id="simple-menu"
@@ -241,49 +333,55 @@ export const ProductFeaturesComponentTwo = () => {
                     }
                 </Menu>
             </FeaturesPageMenu>
-          <FeaturesPageInfo>
-              <div className="f-TabPanel">
-                    {/* <Typography variant="h2">{feature.featureTitle}</Typography>
-                    <Typography variant="h4">{feature.featureSubtitle}</Typography> */}
-                    <h2>{feature.featureTitle}</h2>
-                    <h3>{feature.featureSubtitle}</h3>
-                    <p>{feature.featureParagraph}</p>
-                    <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/>
+            <FeaturesPageInfo>
+                <div className="f-TabPanel">
+                    <div id="f-CoreInformation">
+                        <Styledh2>{feature.featureTitle}</Styledh2>
+                        <Styledh3>{feature.featureSubtitle}</Styledh3>
+                        <div id="f-InnerContainer">
+                            <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/>
+                            <div id="f-InnerInformation">
+                                <ul id="f-BulletpointDiv" className="fa-ul">
+                                {
+                                    feature.featureBulletPoints ?
+                                    feature.featureBulletPoints.map((bulletpoint) => {
+                                        return (
+                                            <li><span className="fa-li"><i className="fas fa-check-square f-CheckListIcon"></i></span><Styledp>  {bulletpoint}</Styledp></li>
+                                        );
+                                    }) : null
+                                }
+                                </ul>
+                                {
+                                    feature.featureButtonHref ?
+                                    <StyledButton download={feature.featureDownloadFile} href={feature.featureButtonHref} target="_blank">{feature.featureButtonLabel}</StyledButton> :
+                                    null
+                                }
+                                <Styledp>{feature.featureParagraph}</Styledp>
+                            </div>
+                        </div>
+                    </div>
                     {
-                        feature.featureBulletPoints.map((bulletpoint) => {
-                            return (
-                                <p><i class="fas fa-check-square f-CheckListIcon"></i>  {bulletpoint}</p>
-                            );
-                        })
-                    }
-                    {
-                        feature.featureButtonHref ?
-                        <DownloadLink download="WebsiteContentReview.pdf" href={feature.featureButtonHref}>{feature.featureButtonLabel}</DownloadLink>:
-                        null
-                    }
-                    <div className="f-FeatureImagesContainer">
-                        {
-                            feature.featureImages.map((imageObject) => {
-                                return (
-                                    <Card className="f-FeatureCard">
-                                        <CardActionArea>
+                        feature.featureImages ?
+                        <div className="f-FeatureImagesContainer">
+                            {
+                                feature.featureImages.map((imageObject) => {
+                                    return (
+                                        <Card className="f-FeatureCard">
                                             <img id="f-FeatureImage" src={imageObject.featureImageURL}
                                             title={imageObject.featureImageTitle} alt="Feature"
                                             />
                                             <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">
-                                                {imageObject.featureImageTitle}
-                                            </Typography>
+                                            <Styledh3>{imageObject.featureImageTitle}</Styledh3>
                                             <Typography variant="body2" color="textSecondary" component="p">
                                                 {imageObject.featureImageDescription}
                                             </Typography>
                                             </CardContent>
-                                        </CardActionArea>
-                                    </Card>
-                                );
-                            })
-                        }
-                    </div>
+                                        </Card>
+                                    );
+                                })
+                            }
+                        </div> : null
+                    }
                 </div>
             </FeaturesPageInfo>
         </>: null

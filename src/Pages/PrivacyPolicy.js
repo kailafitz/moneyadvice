@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // Component imports
 import Footer from '../Components/Footer';
 import { PrivacyPolicyComponent } from '../Components/PrivacyPolicyComponent';
+import ScrollTopButton from '../Components/ScrollTopButton';
 import SectionTitle from '../Components/SectionTitle';
 
 const PrivacyPolicyDiv = styled.div `
@@ -19,6 +20,7 @@ export default function PrivacyPolicy() {
                 <SectionTitle title="Privacy Policy" />
                 <PrivacyPolicyComponent />
             </PrivacyPolicyDiv>
+            <ScrollTopButton />
             <Footer />
         </>
     )

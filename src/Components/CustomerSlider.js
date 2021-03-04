@@ -6,6 +6,7 @@ import Slider from 'infinite-react-carousel';
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
+import {colors} from '../colors';
 
 // Component imports
 import SectionTitle from "./SectionTitle";
@@ -26,22 +27,36 @@ import cmlfinancial from "../Images/Customer-Logos/cmlfinancial.jpg"
 const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim, cmlfinancial];
 
 const StyledSlider = styled(Slider) `
-    width: 80%;
     margin: 0 auto;
+    width: 70%;
 
-    div {        
-
-        #f-CustomerLogo {
-            width: 90%;
-        }
+    #f-CustomerLogo {
+        border-radius: 4px;
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        padding: 2em 0;
+        padding: 1em 0;
+
+        div {
+            .carousel-item {
+                width: 100px;
+            }     
+
+            #f-CustomerLogo {
+                width: 90%;
+            }
+        }
     }
 
     @media only screen and ${breakpoint.device.sm} {
         padding: 4em 0;
+
+        div {
+
+            #f-CustomerLogo {
+                width: 70%;
+            }
+        }
     }
 
     @media only screen and ${breakpoint.device.lg} {
@@ -49,13 +64,22 @@ const StyledSlider = styled(Slider) `
     }
 `
 
+const StyledContainer = styled.div `
+    // background-color: ${colors.logo_blue};
+    background-image: linear-gradient(45deg, ${colors.logo_blue}, ${colors.logo_green});
+
+    @media only screen and ${breakpoint.device.xs} {
+        padding: 2em 0;
+    }
+`
+
 const CustomerSlider = () => {
     return (
-        <>
-            <SectionTitle title="Our Customers"/>
+        <StyledContainer>
+            <SectionTitle title="Our Customers" color="#ffffff"/>
             <StyledSlider
                 autoplay={true}
-                autoplaySpeed="600"
+                autoplaySpeed="800"
                 arrows={false}
                 arrowsBlock={false}
                 slidesToShow={5}
@@ -64,14 +88,14 @@ const CustomerSlider = () => {
                 {
                     CustomerLogos.map((logo) => {
                         return (
-                            <div >
+                            <div>
                                 <img alt="Customers" src={logo} id="f-CustomerLogo"/>
                             </div>
                         );
                     })
                 }
             </StyledSlider>
-        </>
+        </StyledContainer>
     );
 }
 

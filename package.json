@@ -5,6 +5,9 @@
   "proxy": "http://localhost:3001",
   "homepage": "http://kailafitz.github.io/",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@material-ui/core": "^4.11.2",
     "@material-ui/data-grid": "^4.0.0-alpha.20",
     "@material-ui/icons": "^4.11.2",
@@ -13,6 +16,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
+    "emailjs-com": "^2.6.4",
     "framer": "^1.2.24",
     "framer-motion": "^3.3.0",
     "infinite-react-carousel": "^1.2.11",
