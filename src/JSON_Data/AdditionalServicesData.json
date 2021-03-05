@@ -3,7 +3,7 @@
         "id": 0,
         "featureTitle": "Broker Websites",
         "featureSubtitle": "Delivering user-friendly websites that work closely with your Money Advice CRM",
-        "featureMainImage": "http://moneyadvice.ie/images/services_img1.jpg",
+        "featureMainImage": "../Images/AdditionalServices-Imgs/websites-main.jpg",
         "featureBulletPoints": ["An integrated approach with Money Advice CRM from the start where we build and deliver broker websites ensuring maximum results and return on investment from both the new web site and Money Advice CRM", "Clear focus on user experience so as to make it easy to use and navigate for your clients", "Aftercare and support to keep the website updated always. We can provide life protection quotes, with the broker selecting if they wish to provide discounts to their clients", "We can also provide client access through broker websites to client portfolio reports with updated values etc."],
         "featureImages": []
     },
@@ -11,28 +11,28 @@
         "id": 1,
         "featureTitle": "Protection Quotations for Broker Websites",
         "featureSubtitle": "Delivering user-friendly websites that work closely with your Money Advice CRM",
-        "featureMainImage": "http://moneyadvice.ie/images/bestprice_img2.jpg",
+        "featureMainImage": "../Images/AdditionalServices-Imgs/protection-main.jpg",
         "featureBulletPoints": ["Integrate with existing broker web sites seamlessly", "The screens can be customized to look similar to the broker website colours", "The service provides all term assurance, specified illness, income protection and mortgage protection quotations"],
         "featureImages": [
             {
                 "featureImageTitle": "",
                 "featureImageDescription": "Only the best price quotation would be shown without identifying the insurer.",
-                "featureImageURL": "http://moneyadvice.ie/images/bestprice_img3.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg.jpg"
             },
             {
                 "featureImageTitle": "Client Enquiry Wizard",
                 "featureImageDescription": "Discounts provided by the brokers can also be accommodated.",
-                "featureImageURL": "http://moneyadvice.ie/images/bestprice_img4.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg2.jpg"
             },
             {
                 "featureImageTitle": "Client Enquiry Wizard",
                 "featureImageDescription": "Capture key contact information of the lead generated. All enquiries are emailed to a pre-configured email address.",
-                "featureImageURL": "http://moneyadvice.ie/images/bestprice_img5.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg3.jpg"
             },
             {
                 "featureImageTitle": "Client Enquiry Wizard",
                 "featureImageDescription": "For Money Advice CRM users, the key details of the lead and quote are pre-populated as a new enquiry.",
-                "featureImageURL": "http://moneyadvice.ie/images/bestprice_img6.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg4.jpg"
             }
         ]
     },
@@ -45,51 +45,52 @@
         "featureImages": [
             {
                 "featureImageBulletPoints": ["Integrate with existing broker web sites seamlessly", "A secure area to which the client logs in using their email address and PIN to view their portfolio information", "The broker can chose the clients who will have access to the system and send them their individual login details from Money Advice CRM"],
-                "featureImageURL": "http://moneyadvice.ie/images/clientportfolio_img1.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/clientportfolio-featureimg.jpg"
             },
             {
                 "featureImageBulletPoints": ["An online daily snapshot of client’s pension, protection and investment policy information and associated values across all the insurers.", "Updates from insurer data feeds reflect on the site immediately. Broker also has an option to update policy information as appropriate using Money Advice.", "Detailed benefit, fund information as relevant for each policy."],
-                "featureImageURL": "http://moneyadvice.ie/images/clientportfolio_img2.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/clientportfolio-featureimg2.jpg"
             }
         ]
     },
     {
         "id": 3,
+        "featureTitle": "Client Data Capture for Broker Websites",
         "featureSubtitle": "Fact finding online and save the need for redundant visits for the broker and customer",
-        "featureMainImage": "http://moneyadvice.ie/images/clientportfolio_img3.jpg",
-        "featureBulletPoints": ["Integrate with existing broker web sites seamlessly", "The service is tailored for both existing customers and new prospects. Both financial and mortgage data captures are available", "Existing customers can log in using a unique PIN & update any changes in their circumstances. These changes directly Money Advice CRM automatically", "New clients can enter their details in a secure fashion and these will be created as enquiries in Money Advice CRM"]
+        "featureMainImage": "../Images/AdditionalServices-Imgs/clientdatacapture-main.jpg",
+        "featureBulletPoints": ["Integrate with existing broker web sites seamlessly", "The service is tailored for both existing customers and new prospects. Both financial and mortgage data captures are available", "Existing customers can log in using a unique PIN and update any changes in their circumstances. These changes directly Money Advice CRM automatically", "New clients can enter their details in a secure fashion and these will be created as enquiries in Money Advice CRM"]
     },
     {
         "id": 4,
         "featureTitle": "Mobile Optimised Websites",
         "featureSubtitle": "How does your website look on a mobile?",
         "featureParagraph": "Then you may not be providing an ideal user experience to about 61% of people (based on a report from Google) who search for your business on their phones before calling you. A mobile optimised website overcomes this problem by presenting just the right and relevant set of information in a specifically tailored format that works on the various smart phone devices. It not only increases the traffic to your web site by better SEO ranking but also helps in improving the conversion rate of the visitors. We at Money Advice can help you create your own mobile optimised web site incorporating all the features that users to your site would be looking for in one complete package. When a prospect/ customer opens your web site from a mobile, they will be redirected to the mobile optimised version.",
-        "featureMainImage": "http://moneyadvice.ie/images/mobileoptimised_img1.jpg",
+        "featureMainImage": "../Images/AdditionalServices-Imgs/mobile-main.jpg",
         "featureBulletPoints": ["Very small and you can not read without pinching and zooming?", "Takes a long time to load because of all the images?"],
         "featureImages": [
             {
                 "featureImageDescription": "Provide advice through best price quotes.",
-                "featureImageURL": "http://moneyadvice.ie/images/mobileoptimised_img2.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/mobile-featureimg.jpg"
             },
             {
                 "featureImageDescription": "Deliver policy, porfolio information to clients in an interactive manner.",
-                "featureImageURL": "http://moneyadvice.ie/images/mobileoptimised_img3.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/mobile-featureimg2.jpg"
             },
             {
                 "featureImageDescription": "Client data capture (financial/ mortgage) for existing clients in a protected area so that they can update their information.",
-                "featureImageURL": "http://moneyadvice.ie/images/mobileoptimised_img4.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/mobile-featureimg3.jpg"
             },
             {
                 "featureImageDescription": "Client data capture (financial/ mortgage) for new clients so that they can enter their information in a secure area.",
-                "featureImageURL": "http://moneyadvice.ie/images/mobileoptimised_img5.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/mobile-featureimg4.jpg"
             },
             {
                 "featureImageDescription": "Tell your customers more about your services more about your services, new, blogs, and events through mobile optimised content. Choose the content you would like to include in the site and manage the content through a Content Management System (CMS).",
-                "featureImageURL": "http://moneyadvice.ie/images/mobileoptimised_img6.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/mobile-featureimg5.jpg"
             },
             {
                 "featureImageDescription": "Deliver policy, porfolio information to clients in an interactive manner. Utilities include social media integration, book an appointment / leave a secure message from the mobile site and one click to call, location based directions and contact forms.",
-                "featureImageURL": "http://moneyadvice.ie/images/mobileoptimised_img7.jpg"
+                "featureImageURL": "../Images/AdditionalServices-Imgs/mobileo-featureimg6.jpg"
             }
         ]
     },
@@ -97,14 +98,14 @@
         "id": 5,
         "featureTitle": "Mobile/ Tablet Apps",
         "featureSubtitle": "For advisors who would like to offer premium servies to their clients through native apps on iPhone, iPad and Android devices",
-        "featureMainImage": "http://moneyadvice.ie/images/mobiletab_img1.jpg",
+        "featureMainImage": "../Images/AdditionalServices-Imgs/apps-main.jpg",
         "featureBulletPoints": ["Manage the customers who have access to the application through Money Advice CRM","Deliver policy details including fund values, and other product information to clients in an interactive manner", "Secure communication of client information", "Allow customers update or create their own fact find information, which automatically updates Money Advice CRM", "Protection quotes and all other features of mobile web site"]
     },
     {
         "id": 6,
         "featureTitle": "Zurich Home Insurance Quotes",
         "featureSubtitle": "Get quotations and place business online",
-        "featureMainImage": "http://moneyadvice.ie/images/zurichhome_img1.jpg",
+        "featureMainImage": "../Images/AdditionalServices-Imgs/zurich-main.jpg",
         "featureBulletPoints": ["Zurich General Insurance have established a major bridge between their in-house quotation, underwriting and administration systems with Money Advice enabling Money Advice clients sell the Zurich quality house insurance product", "This facility provides Brokers with competitive quotation, proposal and policy documents on line and in real time",
         "This facility is designed to give Financial Brokers a quality product, a new source of income, and an enhanced relationship with their clients", "Brokers have placed substantial household business through lenders and can now easily recover this."]
     }

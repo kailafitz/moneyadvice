@@ -18,6 +18,7 @@ import StandardLife from "../Images/Partner-Logos/StandardLife.png";
 import Zurich from "../Images/Partner-Logos/Zurich.png";
 import Conexim from "../Images/Partner-Logos/Conexim.png";
 
+// styled-components
 const StyledContainer = styled.div `
     display: block;
     padding: 4em 0;

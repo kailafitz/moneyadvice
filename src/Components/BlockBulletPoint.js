@@ -9,6 +9,7 @@ import {colors} from '../colors';
 import {fonts} from '../fonts';
 import breakpoint from '../breakpoints';
 
+// styled-components
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -32,7 +33,6 @@ const Styledh3 = styled.h3 `
     }
 
 `
-
 const StyledBlockBulletPointDiv = styled.div`
     display: block;
     background-color: ${colors.logo_blue};
@@ -66,7 +66,7 @@ const StyledBlockBulletPointDiv = styled.div`
     @media only screen and ${breakpoint.device.lg} {
     }
 `
-
+// framer motion
 const myVariants = {
     hover: {
         scale: 1.1,

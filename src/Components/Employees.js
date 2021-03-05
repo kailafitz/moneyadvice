@@ -15,6 +15,7 @@ import { Container } from '@material-ui/core';
 // Component imports
 import { EmployeeProfileCard } from './EmployeeProfileCard';
 
+// styled-components
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     color: ${colors.logo_purple};
@@ -38,7 +39,6 @@ const Styledh3 = styled.h3 `
         font-size: 1.5em;
     }
 `
-
 const TeamsContainer = styled(Container) `
     display: block;
     padding-top: 3em;
@@ -99,6 +99,8 @@ export const Employees = () => {
                             {Data.get("Development Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
+                                        key={employee.id}
+                                        id={employee.id}
                                         img={employee.profile_img}
                                         empName={employee.first_name + " " + employee.sur_name}
                                         role={employee.role}
@@ -116,7 +118,9 @@ export const Employees = () => {
                         <div id="f-EmployeeCardContainer">
                             {Data.get("Support Team").map((employee) => {
                                 return (
-                                    <EmployeeProfileCard                                        
+                                    <EmployeeProfileCard
+                                        key={employee.id}
+                                        id={employee.id}                                    
                                         img={employee.profile_img}
                                         empName={employee.first_name + " " + employee.sur_name}
                                         role={employee.role}
@@ -135,6 +139,8 @@ export const Employees = () => {
                             {Data.get("Admin Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
+                                        key={employee.id}
+                                        id={employee.id}
                                         img={employee.profile_img}
                                         empName={employee.first_name + " " + employee.sur_name}
                                         role={employee.role}

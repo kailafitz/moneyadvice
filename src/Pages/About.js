@@ -21,9 +21,11 @@ import SectionTitle from '../Components/SectionTitle';
 import ScrollTopButton from '../Components/ScrollTopButton';
 
 // Media imports
-import Philip from '../Images/Employee-Imgs/Philip.png';
+import Philip from '../Images/Philip.png';
 import BackgroundImage from '../Images/AboutBg-Header.jpg';
 
+
+// styled-components
 const Styledh1 = styled.h1 `
   font-family: ${fonts.temp_font};
   color: ${colors.wh};
@@ -50,7 +52,6 @@ const Styledh1 = styled.h1 `
     font-size: 3em;
   }
 `
-
 const Styledh2 = styled.h2 `
   font-family: ${fonts.temp_font};
   color: ${colors.wh};
@@ -72,7 +73,6 @@ const Styledh2 = styled.h2 `
       font-size: 1.5em;
   }
 `
-
 const Styledh3 = styled.h3 `
   font-family: ${fonts.temp_font};
   font-size: 1.5em;
@@ -95,7 +95,6 @@ const Styledh3 = styled.h3 `
     font-size: 1.5em;
   }
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.roboto};
     color: ${colors.bl};
@@ -121,7 +120,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledSpan = styled.span `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -139,7 +137,6 @@ const StyledSpan = styled.span `
         font-size: 1.3em;
     }
 `
-
 const AboutHeader = styled.div `
   background-image: url(${BackgroundImage});
   background-position: center;
@@ -184,7 +181,6 @@ const AboutHeader = styled.div `
   @media only screen and ${breakpoint.device.lg} {
   }
 `
-
 const StyledTeamDiv = styled.div `
   width: 100%;
   padding: 2em 0;
@@ -239,6 +235,8 @@ const StyledTeamDiv = styled.div `
     
   }
 `
+
+// framer motione
 const myVariants = {
   visible: {
     backgroundColor: [ "#067f95b6", "rgba(115, 44, 78, 0.67)" ],
@@ -265,8 +263,6 @@ export default function About() {
           </div>
         </motion.div>
       </AboutHeader>
-
-      {/* <Timeline /> */}
 
       <ProductOverview />
       

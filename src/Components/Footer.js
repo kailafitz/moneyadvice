@@ -15,6 +15,7 @@ import Link from '@material-ui/core/Link';
 // Media imports
 import FooterLogo from '../Images/Company-Logos/FooterLogo.png'
 
+// styled-components
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     color: ${colors.wh};
@@ -36,7 +37,6 @@ const Styledh3 = styled.h3 `
         font-size: 1.5em;
     }
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.roboto};
     color: ${colors.wh};
@@ -63,7 +63,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const FooterDiv = styled.footer `
     background-color: ${colors.logo_blue};
 
@@ -197,7 +196,7 @@ export default function Footer() {
                     </div>
                     <div className="f-FooterIconContainer">
                         <i className="fab fa-linkedin f-FooterIcon"></i>
-                        <a href="https://www.linkedin.com/company/money-advice/" target="_blank"><Styledp>Follow us on LinkedIn</Styledp></a>
+                        <a href="https://www.linkedin.com/company/money-advice/" rel="noopener noreferrer" target="_blank"><Styledp>Follow us on LinkedIn</Styledp></a>
                     </div>
                 </div>
                 <div className="f-FooterColumn" id="f-ContactUsColumn">
@@ -224,7 +223,7 @@ export default function Footer() {
                 </div>
             </div>
             <div id="f-CopyrightDiv">
-                <Styledp>Copyright <i className="far fa-copyright"></i> 2021 <a href="https://kailafitz.com" target="_blank">fizzyDesigns</a></Styledp>
+                <Styledp>Copyright <i className="far fa-copyright"></i> 2021 <a rel="noopener noreferrer" href="https://kailafitz.com" target="_blank">fizzyDesigns</a></Styledp>
             </div>          
         </FooterDiv>
     )

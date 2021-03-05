@@ -9,6 +9,7 @@ import { PrivacyPolicyComponent } from '../Components/PrivacyPolicyComponent';
 import ScrollTopButton from '../Components/ScrollTopButton';
 import SectionTitle from '../Components/SectionTitle';
 
+// styled-components
 const PrivacyPolicyDiv = styled.div `
     padding: 2em .5em;
 `

@@ -13,6 +13,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
+// styled-components
 const Styledh3 = styled.h3 `
   font-family: ${fonts.temp_font};
   color: ${colors.wh};
@@ -36,7 +37,6 @@ const Styledh3 = styled.h3 `
   }
 
 `
-
 const StyledButton = styled(Button) `
   font-family: ${fonts.roboto};
   text-transform: uppercase;
@@ -50,7 +50,6 @@ const StyledButton = styled(Button) `
     color: ${colors.grey_dark};
   }
 `
-
 const StyledCard = styled(Card) `
   @media only screen and ${breakpoint.device.xs} {
     width: 90vw;
@@ -66,9 +65,9 @@ const StyledCard = styled(Card) `
   
 `
 
+// MaterialUI makeStyles
 const useStyles = makeStyles({
   root: {
-    // maxWidth: 345,
     backgroundColor: "#7d7d7d",
     border: "none",
     transition: "none",

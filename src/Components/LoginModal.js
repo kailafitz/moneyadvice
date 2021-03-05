@@ -14,6 +14,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 // Component imports
 import DataCaptureLogin from "./DataCaptureLogin";
 
+// styled-components
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -36,7 +37,6 @@ const Styledh3 = styled.h3 `
         font-size: 1.2em;
     }
 `
-
 const Styledp = styled.p `
   margin-top: 2em;
   font-family: ${fonts.roboto};
@@ -63,7 +63,6 @@ const Styledp = styled.p `
       font-size: .95em;
   }
 `
-
 const StyledButton = styled(Button) `
   font-family: ${fonts.roboto};
   text-transform: uppercase;
@@ -95,7 +94,6 @@ const StyledButton = styled(Button) `
     font-size: .95em;
   }
 `
-
 const StyledLoginButton = styled(StyledButton) `
 
   @media only screen and ${breakpoint.device.xs} {
@@ -115,7 +113,6 @@ const StyledLoginButton = styled(StyledButton) `
     font-size: .95em;
   }
 `
-
 const StyledModalContainer = styled.div`
   margin: 0 auto;
   text-align: center;
@@ -147,7 +144,6 @@ const StyledModalContainer = styled.div`
     
   }
 `
-
 const StyledDialog = styled(Dialog) `
   @media only screen and ${breakpoint.device.xs} {
 

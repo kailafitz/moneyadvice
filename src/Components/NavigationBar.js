@@ -35,7 +35,7 @@ import LoginModal from './LoginModal';
 // Media imports
 import Logo from '../Images/Company-Logos/Logo-Sm.png';
 
-
+// styled-components
 const MobileNavLink = styled(NavLink) `
   margin: 0;
   padding: .5em;
@@ -50,7 +50,6 @@ const MobileNavLink = styled(NavLink) `
     cursor: pointer;
   }
 `
-
 const MobileLinkp = styled.p `
   margin: 0;
   padding: .5em;
@@ -65,16 +64,13 @@ const MobileLinkp = styled.p `
     cursor: pointer;
   }
 `
-
 const MobileMenu = styled(Menu) `
 
   .MuiMenu-paper {
     width: 100%;
   }
 `
-
 const MobileDropdownItem = styled(MenuItem) `
-
   a {
     font-size: 1rem;
     font-family: ${fonts.roboto};
@@ -92,7 +88,6 @@ const MobileDropdownItem = styled(MenuItem) `
     color: ${colors.wh};
   }
 `
-
 const StyledAppBar = styled(AppBar) `
   width: 100%;
   background-color: ${colors.wh};
@@ -128,6 +123,7 @@ const StyledAppBar = styled(AppBar) `
   }
 `
 
+// MaterialUI makeStyles
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -166,6 +162,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+    height: "100%",
     paddingTop: ".5em",
     backgroundColor: "#068095",
   },
@@ -175,23 +172,6 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
-  },
-  content: {
-    flexGrow: 1,
-    // padding: theme.spacing(3),
-    paddingRight: "20px",
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginRight: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginRight: 0,
   },
   toolbar: {
     justifyContent: "space-between",
@@ -203,6 +183,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// framer motion
 const myVariants = {
   hidden: {
     y: -20,
@@ -219,15 +200,6 @@ const myVariants = {
   }
 }
 
-// function HideOnScroll({children}) {
-//   const trigger = useScrollTrigger();
-
-//   return React.cloneElement(children, {
-//     elevation: trigger ? 4 : 0,
-//   });
-// }
-
-// const drawerWidth = 240;
 const drawerWidth = "100%";
 
 export default function NavigationBar() {
@@ -242,6 +214,7 @@ export default function NavigationBar() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+    popupState.close();
   };
 
   return (
@@ -251,94 +224,99 @@ export default function NavigationBar() {
       initial='hidden'
       animate='visible'
     >
-      {/* <HideOnScroll> */}
-          <StyledAppBar position="sticky" id="back-to-top-anchor" elevation={0}>
-              <Toolbar className={classes.toolbar}>
-                  <a
-                    id="f-NavbarLogo"
-                    href="/"
-                  >
-                  <img
-                    alt="Logo"
-                    src={Logo}
-                  /></a>
-                  {!isMobile && <NavbarLinks />}
-                  {/* {isMobile && <MobileMenu />} */}
-                  {isMobile &&  
-                    <IconButton
-                      color="inherit"
-                      aria-label="open drawer"
-                      onClick={handleDrawerOpen}
-                      edge="start"
-                      className={clsx(classes.menuButton, isOpen && classes.hide)}
-                    >
-                      <ChevronLeftIcon />
-                    </IconButton>
-                  }
-              </Toolbar>
-              <Drawer
-                className={classes.drawer}
-                variant="persistent"
-                anchor="down"
-                open={isOpen}
-                classes={{
-                  paper: classes.drawerPaper,
-                }}
+      <StyledAppBar position="sticky" id="back-to-top-anchor" elevation={0}>
+          <Toolbar className={classes.toolbar}>
+              <a
+                id="f-NavbarLogo"
+                href="/"
               >
-              <div className={classes.drawerHeader}>
-                <IconButton onClick={handleDrawerClose} className={classes.closeMenuButton}>
-                  <ChevronRightIcon />
-                </IconButton>
-              </div>
-                <MobileNavLink to="/" exact onClick={handleDrawerClose}>
-                  Home
-                </MobileNavLink>
-                <MobileLinkp {...bindTrigger(popupState)}>
-                  Features
-                </MobileLinkp>
-                <MobileNavLink to="/about" exact onClick={handleDrawerClose}>
-                  About
-                </MobileNavLink>
-                <MobileNavLink to="/contactus" exact onClick={handleDrawerClose}>
-                  Contact Us
-                </MobileNavLink>
-                <MobileMenu
-                  className={classes.root}
-                  {...bindMenu(popupState)}
-                  getContentAnchorEl={null}
-                  anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-                  transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              <img
+                alt="Logo"
+                src={Logo}
+              /></a>
+              {!isMobile && <NavbarLinks />}
+              {isMobile &&  
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  onClick={handleDrawerOpen}
+                  edge="start"
+                  className={clsx(classes.menuButton, isOpen && classes.hide)}
                 >
-                  <MobileDropdownItem 
-                    onClick={popupState.close}
-                    disableRipple
-                  >
-                    <a href="/productcomparison">
-                      Product Comparison
-                    </a>
-                  </MobileDropdownItem>
-                  <MobileDropdownItem
-                    onClick={popupState.close}
-                    disableRipple
-                  >
-                    <a href="/productfeatures"
-                    >
-                      Product Features
-                    </a>
-                  </MobileDropdownItem>
-                  <MobileDropdownItem 
-                    onClick={popupState.close}
-                    disableRipple
-                  >
-                    <a href="/additionalservices">
-                      Additional Services
-                    </a>
-                  </MobileDropdownItem>
-                </MobileMenu>
-                <LoginModal />
-            </Drawer>
-          </StyledAppBar>
-      {/* </HideOnScroll> */}
+                  <ChevronLeftIcon />
+                </IconButton>
+              }
+          </Toolbar>
+          <Drawer
+            className={classes.drawer}
+            variant="persistent"
+            anchor='top'
+            open={isOpen}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+          <div className={classes.drawerHeader}>
+            <IconButton onClick={handleDrawerClose} className={classes.closeMenuButton}>
+              <ChevronRightIcon />
+            </IconButton>
+          </div>
+            <MobileNavLink to="/" exact onClick={handleDrawerClose}>
+              Home
+            </MobileNavLink>
+            <MobileLinkp {...bindTrigger(popupState)}>
+              Features
+            </MobileLinkp>
+            <MobileNavLink to="/about" exact onClick={handleDrawerClose}>
+              About
+            </MobileNavLink>
+            <MobileNavLink to="/contactus" exact onClick={handleDrawerClose}>
+              Contact Us
+            </MobileNavLink>
+            <MobileMenu
+              className={classes.root}
+              {...bindMenu(popupState)}
+              getContentAnchorEl={null}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+            >
+              <MobileDropdownItem 
+                disableRipple
+              >
+                <NavLink
+                  to="/productcomparison"
+                  exact
+                  onClick={handleDrawerClose}
+                >
+                  Product Comparison
+                </NavLink>                
+              </MobileDropdownItem>
+              <MobileDropdownItem
+                disableRipple
+              >
+                <NavLink
+                  to="/productfeatures"
+                  exact
+                  onClick={handleDrawerClose}
+                >
+                  Product Features
+                </NavLink>
+              </MobileDropdownItem>
+              <MobileDropdownItem
+                disableRipple
+              >
+                <NavLink
+                  to="/additionalservices"
+                  exact
+                  onClick={handleDrawerClose}
+                >
+                  Additional Services
+                  </NavLink>
+              </MobileDropdownItem>
+            </MobileMenu>
+            <LoginModal />
+        </Drawer>
+      </StyledAppBar>
     </motion.div>
   );
 }

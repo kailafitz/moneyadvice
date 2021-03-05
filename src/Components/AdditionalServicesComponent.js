@@ -18,6 +18,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import KeyboardArrowIcon from '@material-ui/icons/KeyboardArrowDown';
 
+// styled-components
 const Styledh2 = styled.h2 `
     font-family: ${fonts.temp_font};
     font-weight: 800;
@@ -41,7 +42,6 @@ const Styledh2 = styled.h2 `
         font-size: 4vw;
     }
 `
-
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     color: ${colors.grey_dark};
@@ -63,7 +63,6 @@ const Styledh3 = styled.h3 `
         font-size: 1.5em;
     }
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.temp_font};
     color: ${colors.bl};
@@ -84,7 +83,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledButton = styled(Button) `
     font-family: ${fonts.roboto};
     text-transform: uppercase;
@@ -106,7 +104,6 @@ const StyledButton = styled(Button) `
         width: auto;
     }
 `
-
 const FeaturesPage = styled.div `
     width: 100%;
 
@@ -114,7 +111,6 @@ const FeaturesPage = styled.div `
         color: ${colors.logo_green};
     }
 `
-
 const FeaturesPageInfo = styled.div ` 
     margin: 0.8em;
     z-index: 999;
@@ -343,7 +339,11 @@ export const AdditionalServicesComponent = () => {
                 <div className="f-TabPanel">
                     <div id="f-CoreInformation">
                         <Styledh2>{feature.featureTitle}</Styledh2>
-                        <Styledh3>{feature.featureSubtitle}</Styledh3>
+                        {
+                            feature.featureSubtitle ?
+                            <Styledh3>{feature.featureSubtitle}</Styledh3> : null
+
+                        }
                         <div id="f-InnerContainer">
                             {
                                 feature.featureMainImage ?
@@ -368,7 +368,10 @@ export const AdditionalServicesComponent = () => {
                                     <StyledButton download={feature.featureDownloadFile} href={feature.featureButtonHref}>{feature.featureButtonLabel}</StyledButton> :
                                     null
                                 }
-                                <Styledp>{feature.featureParagraph}</Styledp>
+                                {
+                                    feature.featureParagraph ?
+                                    <Styledp>{feature.featureParagraph}</Styledp> : null
+                                }
                             </div>
                         </div>
                     </div>
@@ -407,7 +410,7 @@ export const AdditionalServicesComponent = () => {
                                                             );
                                                         })
                                                     }
-                                    </ul> : null
+                                                </ul> : null
                                             }
                                             </CardContent>
                                         </Card>
@@ -418,7 +421,7 @@ export const AdditionalServicesComponent = () => {
                     }
                 </div>
             </FeaturesPageInfo>
-        </>: null
+        </> : null
       }
       </FeaturesPage>
     );

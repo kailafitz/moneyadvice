@@ -25,6 +25,7 @@ import ScrollTopButton from '../Components/ScrollTopButton';
 // Media imports
 import BackgroundImage from '../Images/ContactBg-Header.jpg'
 
+// styled-components
 const Styledh4 = styled.h4 `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -48,7 +49,6 @@ const Styledh4 = styled.h4 `
         font-size: 1.2em;
     }
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.roboto};
     color: ${colors.bl};
@@ -78,7 +78,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledSpan = styled.span `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -96,7 +95,6 @@ const StyledSpan = styled.span `
         font-size: 1.2em;
     }
 `
-
 const StyledButton = styled(Button) `
     font-family: ${fonts.roboto};
     text-transform: uppercase;
@@ -122,7 +120,6 @@ const StyledButton = styled(Button) `
         font-size: .95em;
     }
 `
-
 const HeaderImage = styled.div `
     width: 100vw;
     position: absolute;
@@ -152,7 +149,6 @@ const HeaderImage = styled.div `
         height: 45vh;
     }
 `
-
 const ContactPageContainer = styled.div `
     background-color: ${colors.wh};
     margin: 0 auto;
@@ -290,6 +286,8 @@ const ContactPageContainer = styled.div `
         max-width: 70%;
     }
 `
+
+// MaterialUI makeStyles
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > *': {
@@ -359,10 +357,10 @@ export default function ContactUs() {
                 open={open}
                 autoHideDuration={5000}
                 onClose={handleClose}
-                key={'top' + 'center'}
+                key={{'vertical': 'top', 'horizontal': 'center' }}
             >
                 { 
-                    errorValue ?  
+                    errorValue ?
                     
                     <Alert onClose={handleClose} severity="success">
                         Your message has been sent!
@@ -380,7 +378,7 @@ export default function ContactUs() {
                 <SectionTitle title="Contact Us" />
                 <Styledp>For any direct queries about Money Advice CRM, we are available through telephone and email.
                     <br />
-                    <br />                    
+                    <br />
                     <StyledSpan>Our expert team is on hand to take care of any questions around quotations, demos and how our system can benefit your business.</StyledSpan>
                     <br />
                     <br />
@@ -417,7 +415,6 @@ export default function ContactUs() {
                                     id="filled-full-width"
                                     label="Your Email"
                                     variant="filled"
-                                    size="normal"
                                     fullWidth
                                     className="f-FormField"
                                     // value={input.email}
@@ -431,7 +428,6 @@ export default function ContactUs() {
                                     id="filled-full-width"
                                     label="Your Name"
                                     variant="filled"
-                                    size="normal"
                                     fullWidth
                                     className="f-FormField"
                                     // value={input.name}
@@ -449,7 +445,6 @@ export default function ContactUs() {
                                     // value={input.message}
                                     // onChange={handleChange}
                                     variant="filled"
-                                    size="normal"
                                     fullWidth
                                     className="f-FormField"
                                     InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}

@@ -18,6 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { DataGrid } from '@material-ui/data-grid';
 
+// styled-components
 const Styledh3 = styled.h3 `
   font-family: ${fonts.temp_font};
   font-weight: 300;
@@ -40,13 +41,11 @@ const Styledh3 = styled.h3 `
       font-size: 1.2em;
   }
 `
-
 const ContainerDiv = styled.div `
   height: 100%;
   width: 90%;
   margin: 0 auto;
 `
-
 const StyledAccordion = styled(Accordion)`
 
   @media only screen and ${breakpoint.device.xs} {
@@ -57,7 +56,6 @@ const StyledAccordion = styled(Accordion)`
     overflow-x: auto;
   }  
 `
-
 const DataGridDiv = styled.div `
   width: 100%;
 
@@ -93,7 +91,7 @@ const DataGridDiv = styled.div `
   }
 
 `
-
+// MaterialUI makeStyles
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -111,7 +109,6 @@ const columns = [
   { field: 'featureOfMoneyCRM', headerName: 'MoneAdvice+CRM', flex: 1, headerClassName: 'table-header'},
 ];
 
-
 export default function ProductComparisonTables() {
   const [data, setData] = useState([]);
   const [validData, setValidData] = useState(false);
@@ -122,13 +119,10 @@ export default function ProductComparisonTables() {
   }
 
   const addTickOrCross = (data) => {
-    for(let [key, value] of Object.entries(data)){
-      console.log(value)
+    for(let [key, value] of Object.entries(data)) {
       if (value == "Yes") {
-        console.log(value)
         data[key] = "✓"
       } else if (value == "No"){
-        console.log(value)
         data[key] = "✗"
       }
     }

@@ -7,9 +7,9 @@ import {fonts} from '../fonts';
 import {colors} from '../colors';
 
 // MaterialUI
-import { Avatar } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
+import { Avatar } from '@material-ui/core';
 
+// styled-components
 const StyledAvatar = styled(Avatar) `
   margin: 1.5em auto;
   width: 100%;
@@ -49,7 +49,6 @@ const Styledh4 = styled.h4 `
     }
 
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.temp_font};
     color: ${colors.bl};
@@ -70,7 +69,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledCard = styled.div ` 
   margin: .5em;
   borderRadius: 4px;
@@ -86,19 +84,9 @@ const StyledCard = styled.div `
 
 `
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      // margin: "auto",
-      '& > *': {
-        margin: theme.spacing(1),
-      },
-    },
-}));
-
 export const EmployeeProfileCard = (props) => {
-  const classes = useStyles();
   return (
-    <StyledCard>
+    <StyledCard key={props.id}>
         <StyledAvatar
         alt="Profile Image"
         src={props.img}

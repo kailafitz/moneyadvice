@@ -16,11 +16,11 @@ import {colors} from '../colors';
 
 // MaterialUI
 import Avatar from "@material-ui/core/Avatar";
-import Button from '@material-ui/core/Button';
 
 // Component imports
 import SectionTitle from "./SectionTitle";
 
+// styled-components
 const TestimonialBackground = styled.div `
   width: 100%;
   padding: 1em 0;
@@ -65,7 +65,6 @@ const TestimonialBackground = styled.div `
   @media only screen and ${breakpoint.device.lg} {
   }
 `
-
 const Styledh3 = styled.h3 `
   color: ${colors.logo_blue};
   font-size: 1.3em;
@@ -73,7 +72,6 @@ const Styledh3 = styled.h3 `
   font-weight: 500;
   margin: .5em 0;
 `
-
 const Styledp = styled.p `
   font-family: ${fonts.roboto};
   color: ${colors.grey};
@@ -99,7 +97,6 @@ const Styledp = styled.p `
       font-size: .95em;
   }
 `
-
 const LimitedParagraph = styled(Styledp) `
   display: -webkit-box;
   overflow-y: scroll;
@@ -107,7 +104,6 @@ const LimitedParagraph = styled(Styledp) `
   // text-overflow: ellipsis;
   -webkit-box-orient: vertical;
 `
-
 const TestimonialCard = styled.div `
   width: 60%;
   padding: 1em;
@@ -128,8 +124,7 @@ const TestimonialCard = styled.div `
     color: ${colors.grey_dark};
   }
 `
-
-const TestimonialCardHeaderDetails = styled.div`
+const TestimonialCardHeaderDetails = styled.div `
   display: block;
   text-align: center;
 
@@ -137,12 +132,10 @@ const TestimonialCardHeaderDetails = styled.div`
     border-radius: 7px;
   }
 `
-
-const TestimonialCardHeader = styled.div`
+const TestimonialCardHeader = styled.div `
   display: block;
   padding: .5em;
 `
-
 const StyledAvatar = styled(Avatar) `
   border-radius: 0%;
   filter: grayscale(100%);
@@ -155,31 +148,6 @@ const StyledAvatar = styled(Avatar) `
     border-radius: 7px;
   }
 `
-const StyledButton = styled(Button) `
-  font-family: ${fonts.roboto};
-  text-transform: lowercase;
-  background-color: ${colors.logo_blue};
-  color: ${colors.wh};
-  margin: .8em;
-  transition: .3s ease-in background-color, .3s ease-in color;
-
-  &:hover {
-    background-color: ${colors.wh};
-    color: ${colors.logo_blue};
-  }
-
-  @media only screen and ${breakpoint.device.xs} {
-  }
-
-  @media only screen and ${breakpoint.device.sm} {
-    width: auto;
-    margin: 0;
-  }
-
-  @media only screen and ${breakpoint.device.xs} {
-  }
-`
-
 const StyledContainer = styled.div `
   padding: 2em 0;
 `
@@ -198,9 +166,8 @@ export default function Testimonial() {
       slides.push(
         <SwiperSlide key={`slide-${i}`} tag="li">
           <TestimonialCard>
-            <i class="fas fa-quote-right" id="f-QuoteIcon"></i>              
+            <i className="fas fa-quote-right" id="f-QuoteIcon"></i>              
             <LimitedParagraph>{TestimonialData[i].testimonial}</LimitedParagraph>
-            {/* <Styledp>{TestimonialData[i].testimonial}</Styledp> */}
               <TestimonialCardHeader>
                 <TestimonialCardHeaderDetails>
                   <StyledAvatar

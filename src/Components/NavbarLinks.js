@@ -19,6 +19,7 @@ import Popover from 'material-ui-popup-state/HoverPopover'
 // Component imports
 import LoginModal from './LoginModal';
 
+// styled-components
 const LinksDiv = styled.div `
     display: flex;
     padding-right: 1em;
@@ -37,10 +38,9 @@ const LinksDiv = styled.div `
         cursor: pointer;
         margin: .8em;
         border-top: 2px solid transparent;
-        border-bottom: 2px solid transparent;
-        transition: all 200ms ease-in-out;
+        transition: all 350ms ease-in-out;
 
-        &:hover, :active, :focus {
+        &:hover {
             border-bottom: 2px solid ${colors.logo_blue};
             outline: none;
         }

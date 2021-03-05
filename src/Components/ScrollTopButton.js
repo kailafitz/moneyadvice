@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 // MaterialUI
 import { makeStyles } from '@material-ui/core/styles';
 import { useScrollTrigger } from "@material-ui/core"
@@ -8,7 +7,7 @@ import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 
-
+// MaterialUI makeStyles
 const buttonStyle = makeStyles((theme) => ({
     root: {
       position: 'fixed',
@@ -19,9 +18,9 @@ const buttonStyle = makeStyles((theme) => ({
       borderRadius: "4px",
       backgroundColor: "#732c4e",
       color: "#ffffff",
-      "&hover": {
-        backgroundColor: "#ffffff",
-        color: "#732c4e",
+      "&:hover": {
+        backgroundColor: "#b8d30c",
+        color: "#f3f3f3",
       }
     }
 }));

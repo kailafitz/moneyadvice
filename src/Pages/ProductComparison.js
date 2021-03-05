@@ -10,6 +10,7 @@ import SectionTitle from '../Components/SectionTitle';
 import Footer from '../Components/Footer';
 import ScrollTopButton from '../Components/ScrollTopButton';
 
+// styled-components
 const PageContainer = styled.div `
     width: 100%;
     height: 100%;

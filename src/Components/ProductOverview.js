@@ -25,6 +25,7 @@ import Container from '@material-ui/core/Container';
 import SectionTitle from './SectionTitle';
 import { BlockBulletPoint } from './BlockBulletPoint';
 
+// styled-components
 const Styledh4 = styled.h4 `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -50,7 +51,6 @@ const Styledh4 = styled.h4 `
     }
 
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.roboto};
     color: ${colors.bl};
@@ -77,7 +77,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledSpan = styled.span `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -94,7 +93,6 @@ const StyledSpan = styled.span `
     @media only screen and ${breakpoint.device.lg} {
     }
 `
-
 const OverviewContainer = styled(Container) `
     margin: 0 auto;
 
@@ -188,6 +186,7 @@ const StyledTable = styled(TableContainer) `
     }
 `
 
+// framer motion
 const myVariants = {
     hover: {
         scale: 1.3,
@@ -215,7 +214,7 @@ export default function ProductOverview() {
                 {
                     data.map((overview) => {
                         return (
-                            <>
+                            <div key="index">
                                 <Styledh4>Money Advice CRM and Money Advice are web-based software packages developed to provide Financial Advisors, Financial Planners, Mortgage Advisors, and Finance Consultants, with comprehensive quotations and CRM platforms to empower them to compliantly provide in-depth, quality advice and on-going services to their clients.</Styledh4>
                                 <div id="f-OverviwMainDescription">
                                     <Styledp>In building software solutions for our advisor customers we have also committed to providing full support across all financial services, mortgage and broker lending products and to integrate with the other systems and providers where we can improve on services to our clients. Our objective is to provide substantial saving in administration time, compliance management, and creation of revenue opportunities for advisors though marketing capabilities.</Styledp>
@@ -223,6 +222,7 @@ export default function ProductOverview() {
                                     <Styledp>Money Advice systems are linked to MoneyMate's new platform Fund Focus providing fund information and performance data on more than 850 investment funds with supporting fact sheets where available. <StyledSpan>Customers of Money Advice systems, can upload client model portfolios directly into Fund Focus where users can analyse the portfolio's overall risk and performance.</StyledSpan> Our Financial Planning module incorporates full client needs analysis, client portfolio details, client assets and liabilities graphically displayed, and cash flow charts with future needs mapped showing calculations.<br />
                                     <br />
                                     <StyledSpan>Mortgage Advisors</StyledSpan> can avail of the quotations system with up-to-date mortgage rates from MoneyMate. A new data capture facility has been created specifically to deal with mortgage enquiries which asks the relevant questions to establish affordability and qualify the lead. The affordability calculators of Haven, KBC, Permanent TSB have been integrated so that the advisor can check the affordability against each lender or all of them at once. These enquiries can also be converted and submitted as Online applications to Haven Mortgages Limited (AIB Group).<br />For the lenders who do not provide online services we have provided a generic mortgage application section, which has all the information fields required by any lender. Additionally the system provides the following mortgage related calculators: Repayment (monthly, interest only, and bi-weekly), Stamp duty, Loan consolidation, Extra monthly payment and/or lump sum, Mortgage comparison (different rates, terms, amounts).</Styledp>
+                                    <Styledp>Protection Quotations and policy data downloads from Insurers are provided under the Brokers Ireland scheme. Product Providers providing data downloads under the Brokers Ireland scheme to Money Advice CRM are:</Styledp><StyledSpan>Aviva Life, BCP Asset Management, Royal London, Friends First, Irish Life, New Ireland, Standard Life, Zurich Life</StyledSpan>
                                 </div>
                                 <Styledh4>{overview.overviewSubtitle}</Styledh4>
                                 <div id="f-BlockBulletPointWrapper">
@@ -248,7 +248,7 @@ export default function ProductOverview() {
                                                         <TableRow
                                                             as={motion.tr}
                                                             variants={myVariants}
-                                                            whileHover='hover'
+                                                            whilehover='hover'
                                                         >
                                                             <TableCell
                                                                 component="th"
@@ -265,7 +265,7 @@ export default function ProductOverview() {
                                         </Table>
                                     </StyledTable>
                                 </div>      
-                            </>
+                            </div>
                         );
                     })
                 }

@@ -17,6 +17,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+// styled-components
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     font-weight: 300;
@@ -40,7 +41,6 @@ const Styledh3 = styled.h3 `
         font-size: 1.2em;
     }
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.roboto};
     color: ${colors.bl};
@@ -48,6 +48,7 @@ const Styledp = styled.p `
     a {
         ${fonts.roboto};
         text-decoration : none;
+        color: ${colors.bl};
 
         &:hover {
             text-decoration: underline;
@@ -70,8 +71,15 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledContainer = styled.div `
+
+    #f-DataProtection {
+        display: flex;
+        
+        p {
+            margin-right: 5px;
+        }
+    }
 
     @media only screen and ${breakpoint.device.xs} {
         width: 90%;
@@ -85,7 +93,7 @@ const StyledContainer = styled.div `
         width: 70%:
     }
 `
-
+// MaterialUI makeStyles
 const useStyles = makeStyles((theme) => ({
     root: {
         margin: "0 auto",
@@ -114,12 +122,12 @@ export const PrivacyPolicyComponent = () => {
     }, [data]);
 
     return (
-        <>         
+        <>
             <StyledContainer className={classes.root}>
-            {
-                validData ? (
-                    data.map((policy) => {
-                        return (
+                {
+                    validData ? (
+                        data.map((policy) => {
+                            return (
                                 <Accordion>
                                     <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -132,6 +140,19 @@ export const PrivacyPolicyComponent = () => {
                                         <Typography>
                                             {policy.details}
                                         </Typography>
+                                        {
+                                            policy.emailHref ?
+                                            <>
+                                                <Styledp><a href={policy.emailHref}>{policy.emailOne}</a></Styledp>
+                                                <Styledp><a href={policy.numberHref}>{policy.numberOne}</a></Styledp>
+                                                <div id="f-DataProtection">
+                                                <Styledp>{policy.dataProtection}</Styledp>
+                                                <Styledp><a href={policy.emailTwoHref}>{policy.emailTwo}</a></Styledp>
+
+                                                </div>
+                                                
+                                            </> : null
+                                        }
                                         <ul className="fa-ul">
                                         {
                                             policy.policyBulletPoints ?
@@ -144,10 +165,11 @@ export const PrivacyPolicyComponent = () => {
                                         </ul>
                                     </AccordionDetails>
                                 </Accordion>
-                        );
-                    })
-                )  : ( <Styledh3>Data not found</Styledh3> )
-            } </StyledContainer>
+                            );
+                        })
+                    )  : ( <Styledh3>Data not found</Styledh3> )
+                }
+            </StyledContainer>
         </>
     )
 }

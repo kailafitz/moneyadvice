@@ -9,6 +9,7 @@ import {fonts} from '../fonts';
 // MaterialUI
 import { Button } from '@material-ui/core';
 
+// styled-components
 const StyledContactUsButton = styled(Button)`
   background-color: ${colors.grey_light};
   font-family: ${fonts.temp_font};

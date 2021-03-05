@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 // Local JSON file
-import FeatureData from '../JSON_Data/FeatureData.json'
+import ProductFeatureData from '../JSON_Data/ProductFeatureData.json'
 
 // styled-components imports
 import styled from 'styled-components';
@@ -15,10 +15,10 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import KeyboardArrowIcon from '@material-ui/icons/KeyboardArrowDown';
 
+// styled-components
 const Styledh2 = styled.h2 `
     font-family: ${fonts.temp_font};
     font-weight: 800;
@@ -42,7 +42,6 @@ const Styledh2 = styled.h2 `
         font-size: 4vw;
     }
 `
-
 const Styledh3 = styled.h3 `
     font-family: ${fonts.temp_font};
     color: ${colors.grey_dark};
@@ -64,7 +63,6 @@ const Styledh3 = styled.h3 `
         font-size: 1.5em;
     }
 `
-
 const Styledp = styled.p `
     font-family: ${fonts.temp_font};
     color: ${colors.bl};
@@ -85,7 +83,6 @@ const Styledp = styled.p `
         font-size: .95em;
     }
 `
-
 const StyledButton = styled(Button) `
     font-family: ${fonts.roboto};
     text-transform: uppercase;
@@ -107,7 +104,6 @@ const StyledButton = styled(Button) `
         width: auto;
     }
 `
-
 const FeaturesPage = styled.div `
     width: 100%;
 
@@ -115,7 +111,6 @@ const FeaturesPage = styled.div `
         color: ${colors.logo_green};
     }
 `
-
 const FeaturesPageInfo =styled.div ` 
     margin: 0.8em;
     z-index: 999;
@@ -212,17 +207,24 @@ const FeaturesPageInfo =styled.div `
 
     @media only screen and ${breakpoint.device.lg} {
 
-        #f-InnerContainer {
-            display: flex;
-            align-items: flex-start;
+        .f-TabPanel {
 
-            #f-FeatureMainImage {
-                width: 40%;
-                margin-right: 2em;
-            }
-
-            #f-InnerInformation {
-                padding: 0;
+            #f-CoreInformation {
+                padding: 1em 3em;
+                
+                #f-InnerContainer {
+                    display: flex;
+                    align-items: flex-start;
+        
+                    #f-FeatureMainImage {
+                        width: 40%;
+                        margin-right: 2em;
+                    }
+        
+                    #f-InnerInformation {
+                        padding: 0;
+                    }
+                }
             }
         }
     }
@@ -296,7 +298,7 @@ export const ProductFeaturesComponentTwo = () => {
     };
 
     const createFunction = () => {
-        setData(FeatureData);
+        setData(ProductFeatureData);
     }
 
     useEffect(() => {
@@ -337,31 +339,46 @@ export const ProductFeaturesComponentTwo = () => {
                 <div className="f-TabPanel">
                     <div id="f-CoreInformation">
                         <Styledh2>{feature.featureTitle}</Styledh2>
-                        <Styledh3>{feature.featureSubtitle}</Styledh3>
+                        {
+                            feature.featureSubtitle ?
+                            <Styledh3>{feature.featureSubtitle}</Styledh3> : null
+
+                        }
                         <div id="f-InnerContainer">
-                            <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/>
+                            {
+                                feature.featureMainImage ?
+                                <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/> : null
+                            }
                             <div id="f-InnerInformation">
-                                <ul id="f-BulletpointDiv" className="fa-ul">
                                 {
                                     feature.featureBulletPoints ?
-                                    feature.featureBulletPoints.map((bulletpoint) => {
-                                        return (
-                                            <li><span className="fa-li"><i className="fas fa-check-square f-CheckListIcon"></i></span><Styledp>  {bulletpoint}</Styledp></li>
-                                        );
-                                    }) : null
+
+                                        <ul id="f-BulletpointDiv" className="fa-ul">
+                                            {
+                                                feature.featureBulletPoints.map((bulletpoint) => {
+                                                    return (
+                                                        <li><span className="fa-li"><i className="fas fa-check-square f-CheckListIcon"></i></span><Styledp>  {bulletpoint}</Styledp></li>
+                                                    );
+                                                })
+                                            }
+                                        </ul>
+                                    : null
                                 }
-                                </ul>
                                 {
                                     feature.featureButtonHref ?
                                     <StyledButton download={feature.featureDownloadFile} href={feature.featureButtonHref} target="_blank">{feature.featureButtonLabel}</StyledButton> :
                                     null
                                 }
-                                <Styledp>{feature.featureParagraph}</Styledp>
+                                {
+                                    feature.featureParagraph ?
+                                    <Styledp>{feature.featureParagraph}</Styledp> : null
+                                }
                             </div>
                         </div>
                     </div>
                     {
                         feature.featureImages ?
+
                         <div className="f-FeatureImagesContainer">
                             {
                                 feature.featureImages.map((imageObject) => {
@@ -371,10 +388,31 @@ export const ProductFeaturesComponentTwo = () => {
                                             title={imageObject.featureImageTitle} alt="Feature"
                                             />
                                             <CardContent>
-                                            <Styledh3>{imageObject.featureImageTitle}</Styledh3>
-                                            <Typography variant="body2" color="textSecondary" component="p">
-                                                {imageObject.featureImageDescription}
-                                            </Typography>
+                                            {
+                                                imageObject.featureImageTitle ?
+                                                <Styledh3>{imageObject.featureImageTitle}</Styledh3> : null
+
+                                            }
+                                            {
+                                                imageObject.featureImageDescription ?
+                                                <Typography variant="body2" color="textSecondary" component="p">
+                                                    {imageObject.featureImageDescription}
+                                                </Typography> : null
+
+                                            }
+                                            {
+                                                imageObject.featureImageBulletPoints ?
+
+                                                <ul id="f-BulletpointDiv" className="fa-ul">
+                                                    {
+                                                        imageObject.featureImageBulletPoints.map((bulletpoint) => {
+                                                            return (
+                                                                <li><span className="fa-li"><i className="fas fa-check-square f-CheckListIcon"></i></span><Styledp>  {bulletpoint}</Styledp></li>
+                                                            );
+                                                        })
+                                                    }
+                                                </ul> : null
+                                            }
                                             </CardContent>
                                         </Card>
                                     );
@@ -384,7 +422,7 @@ export const ProductFeaturesComponentTwo = () => {
                     }
                 </div>
             </FeaturesPageInfo>
-        </>: null
+        </> : null
       }
       </FeaturesPage>
     );

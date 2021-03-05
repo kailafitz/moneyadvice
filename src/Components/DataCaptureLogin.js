@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 
+// styled-components
 const StyledButton = styled(Button) `
   font-family: ${fonts.roboto};
   text-transform: uppercase;
@@ -44,7 +45,6 @@ const StyledButton = styled(Button) `
     font-size: .95em;
   }
 `
-
 const StyledTextField = styled(TextField) `
   
   @media only screen and ${breakpoint.device.xs} {

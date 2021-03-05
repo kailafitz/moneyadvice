@@ -25,12 +25,13 @@ import ScrollTopButton from "../Components/ScrollTopButton";
 import SectionTitle from "../Components/SectionTitle";
 
 // Media imports
-import IndexGraphic2 from '../Images/IndexGraphic2.png'
+import IndexGraphic2 from '../Images/IndexGraphic2.png';
 // Lottie animations (JSON files)
 import Calendar from "../Lottie/Calendar.json";
 import Chart from "../Lottie/Chart.json";
 import MachineCog from "../Lottie/MachineCog.json";
 
+// styled-components
 const Styledh1 = styled.h1 `
     font-family: ${fonts.temp_font};
     tex-align: left;
@@ -57,7 +58,6 @@ const Styledh1 = styled.h1 `
         font-size: 4.5vw;
     }
 `
-
 const Styledh3 = styled.h3 `
   font-family: ${fonts.temp_font};
   font-size: 1.5em;
@@ -81,7 +81,6 @@ const Styledh3 = styled.h3 `
     font-size: 1.5em;
   }
 `
-
 const HeaderContainer = styled.div `
     position: relative;
     padding: 1em;
@@ -172,7 +171,6 @@ const CardContainer = styled.div `
     @media only screen and ${breakpoint.device.lg} {
     }
 `
-
 const ContactUsButtonContainer = styled.div `
     height: 30%;
     display: flex;
@@ -205,6 +203,7 @@ const ContactUsButtonContainer = styled.div `
     }
 `
 
+// framer-motion
 const HeaderVariants = {
     hidden: {
         opacity: 0,
@@ -245,17 +244,17 @@ export default function Home() {
             <LottieMediaCard
                 animationData={Calendar}
                 title="Volatile Client Profiles"
-                subTitle="We make recording and managing your clients' profiles more than efficient. With various reports and tools on offer, tracking your clients is easy in whatever areas they need care and support. Keep them up-to-date with easy maintenance."
+                subTitle="We make recording and managing your clients' profiles more than efficient. Keep your client information up-to-date with easy maintenance."
             />
             <LottieMediaCard
                 animationData={Chart}
                 title="Reliable Calculations"
-                subTitle="Calculators are in place to aid and support client assessments and advisory services. With many factors to be considered in these calculations, we have you covered every step of the way."
+                subTitle="Calculators are in place to aid and support client assessments and advisory services. We have you covered every step of the way."
             />
             <LottieMediaCard
                 animationData={MachineCog}
-                title="Streamline"
-                subTitle="All the right tools to enable you to help your clients. We take care of all the little things as well as the big things! Streamline your business processes; let's make life easier for you as well as your clients."
+                title="Streamline Processes"
+                subTitle="All the right tools to enable you to help your clients. Streamline your business processes; let's make life easier for you as well as your clients."
             />
         </CardContainer>
         <Partners />

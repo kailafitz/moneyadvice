@@ -1,7 +1,14 @@
 [
     {
         "title": "About Us",
-        "details": "We are a software development and sales company providing and hosting software for financial, insurance, mortgage intermediaries, lenders and insurers. Our business is located at Station Road, Ennis, Co. Clare, Ireland where we may be contacted. Contact details; support@moneyadvice.ie; +353 65 6849675. Our Data Protection Officer may be contacted at dpo@moneyadvice.ie; 065 6849675"
+        "details": "We are a software development and sales company providing and hosting software for financial, insurance, mortgage intermediaries, lenders and insurers. Our business is located at Station Road, Ennis, Co. Clare, Ireland where we may be contacted.",
+        "emailHref": "mailto:support@moneyadvice.ie",
+        "emailOne": "support@moneyadvice.ie",
+        "numberHref": "tel:00353 65 6849675",
+        "numberOne": "+353 65 6849675",
+        "dataProtection": "Our Data Protection Officer may be contacted at",
+        "emailTwoHref": "mailto:dpo@moneyadvice.ie",
+        "emailTwo": "dpo@moneyadvice.ie"
     },
     {
         "title": "Your Information",

@@ -6,6 +6,7 @@ import breakpoint from '../breakpoints';
 import {colors} from '../colors'
 import {fonts} from '../fonts'
 
+// styled-components
 const Styledh1 = styled.h1 `
     font-family: ${fonts.temp_font};
     font-weight: 800;
@@ -25,7 +26,6 @@ const Styledh1 = styled.h1 `
         font-size: 3em;
     }
 `
-
 const StyledTitle = styled.div `
     margin: 0 auto;
     text-align: center;

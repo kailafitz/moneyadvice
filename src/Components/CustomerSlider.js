@@ -6,7 +6,6 @@ import Slider from 'infinite-react-carousel';
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {colors} from '../colors';
 
 // Component imports
 import SectionTitle from "./SectionTitle";
@@ -23,9 +22,7 @@ import Zurich from "../Images/Customer-Logos/Bluechip.jpg"
 import Conexim from "../Images/Customer-Logos/careycorbett.jpg"
 import cmlfinancial from "../Images/Customer-Logos/cmlfinancial.jpg"
 
-
-const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim, cmlfinancial];
-
+// styled-components
 const StyledSlider = styled(Slider) `
     margin: 0 auto;
     width: 70%;
@@ -63,20 +60,18 @@ const StyledSlider = styled(Slider) `
         padding: 6em 0;
     }
 `
-
 const StyledContainer = styled.div `
-    // background-color: ${colors.logo_blue};
-    background-image: linear-gradient(45deg, ${colors.logo_blue}, ${colors.logo_green});
-
     @media only screen and ${breakpoint.device.xs} {
         padding: 2em 0;
     }
 `
 
+const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim, cmlfinancial];
+
 const CustomerSlider = () => {
     return (
         <StyledContainer>
-            <SectionTitle title="Our Customers" color="#ffffff"/>
+            <SectionTitle title="Our Customers"/>
             <StyledSlider
                 autoplay={true}
                 autoplaySpeed="800"
