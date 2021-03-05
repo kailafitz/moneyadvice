@@ -13,7 +13,7 @@ import {colors} from '../colors';
 import { Container } from '@material-ui/core';
 
 // Component imports
-import { EmployeeProfileCard } from './EmployeeProfileCard';
+import EmployeeProfileCard from './EmployeeProfileCard';
 
 // styled-components
 const Styledh3 = styled.h3 `
@@ -58,7 +58,7 @@ const TeamsContainer = styled(Container) `
     }
 `
 
-export const Employees = () => {
+export default function Employees() {
 
     const [Data, setData] = useState(new Map());
     const [DataReady, setDataReady] = useState(false);

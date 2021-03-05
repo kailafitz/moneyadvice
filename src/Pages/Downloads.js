@@ -18,7 +18,7 @@ const DownloadsDiv = styled.div `
     padding: 2em .5em;
 `
 
-const Downloads = () => (
+export default function Downloads() {
     <>
         <SectionTitle title="Downloads" />
         <DownloadsDiv>
@@ -33,6 +33,4 @@ const Downloads = () => (
         <ScrollTopButton />
         <Footer />
     </>
-);
-
-export default Downloads;
+}

@@ -117,7 +117,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LottieMediaCard(props ) {
+export default function LottieMediaCard(props) {
   const classes = useStyles();
 
   return (

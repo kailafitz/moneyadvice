@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const PrivacyPolicyComponent = () => {
+export default function PrivacyPolicyComponent() {
     const classes = useStyles();
 
     const [data, setData] = useState([]);

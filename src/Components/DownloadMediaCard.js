@@ -91,7 +91,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function DownloadMediaCard( { src, title, doc } ) {
+export default function DownloadMediaCard( props ) {
   const classes = useStyles();
 
   return (
@@ -102,16 +102,16 @@ export default function DownloadMediaCard( { src, title, doc } ) {
 
         </CardMedia> */}
       <CardContent className={classes.content}>
-        <Styledh3>{title}</Styledh3>
+        <Styledh3>{props.title}</Styledh3>
         <StyledButton>
-            <Link
-                to={src}
-                className={classes.link}
-                target="_blank"
-                download={doc}
-            >
-                Download
-            </Link>
+          <Link
+            to={props.src}
+            className={classes.link}
+            target="_blank"
+            download={props.doc}
+          >
+            Download
+          </Link>
         </StyledButton>
       </CardContent>
     </StyledCard>

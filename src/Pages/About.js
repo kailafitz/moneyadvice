@@ -13,7 +13,7 @@ import breakpoint from '../breakpoints';
 import Container from '@material-ui/core/Container';
 
 // Component imports
-import { Employees } from '../Components/Employees';
+import Employees from '../Components/Employees';
 import Footer from '../Components/Footer';
 import ContactUsButton from '../Components/ContactUsButton';
 import ProductOverview from '../Components/ProductOverview';

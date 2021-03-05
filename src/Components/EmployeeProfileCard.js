@@ -81,10 +81,9 @@ const StyledCard = styled.div `
   @media only screen and ${breakpoint.device.sm} {
     width: 20vw;
   }
-
 `
 
-export const EmployeeProfileCard = (props) => {
+export default function EmployeeProfileCard( props ) {
   return (
     <StyledCard key={props.id}>
         <StyledAvatar
@@ -94,5 +93,5 @@ export const EmployeeProfileCard = (props) => {
         <Styledh4>{props.empName}</Styledh4>
         <Styledp>{props.role}</Styledp>
     </StyledCard>
-  )
+  );
 }

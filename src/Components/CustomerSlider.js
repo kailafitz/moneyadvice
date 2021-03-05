@@ -68,7 +68,7 @@ const StyledContainer = styled.div `
 
 const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim, cmlfinancial];
 
-const CustomerSlider = () => {
+export default function CustomerSlider() {
     return (
         <StyledContainer>
             <SectionTitle title="Our Customers"/>
@@ -93,5 +93,3 @@ const CustomerSlider = () => {
         </StyledContainer>
     );
 }
-
-export default CustomerSlider;

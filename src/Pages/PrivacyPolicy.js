@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 // Component imports
 import Footer from '../Components/Footer';
-import { PrivacyPolicyComponent } from '../Components/PrivacyPolicyComponent';
+import PrivacyPolicyComponent from '../Components/PrivacyPolicyComponent';
 import ScrollTopButton from '../Components/ScrollTopButton';
 import SectionTitle from '../Components/SectionTitle';
 
