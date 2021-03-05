@@ -113,6 +113,21 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     margin: "auto",
   },
+  formRoot: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '80%',
+      "& .MuiFilledInput-root": {
+        background: "#ffffff"
+      },
+      '& .MuiFilledInput-underline:after': { 
+        borderBottomColor: "#b8d30c"
+      },
+      '& .MuiFormLabel-root.Mui-focused': {
+        color: "#7d7d7d"
+      },
+    },
+  },
   indicator: {
     backgroundColor: "#ffffff",
   },
@@ -123,33 +138,13 @@ const useStyles = makeStyles((theme) => ({
   tabPanel: {
     backgroundColor: "#068095"
   },
-}
-));
-
-const formStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '80%',
-      "& .MuiFilledInput-root": {
-        background: "#ffffff"
-      },
-      '& .MuiFilledInput-underline:after': { 
-        borderBottomColor: "#b8d30c",
-      },
-      '& .MuiFormLabel-root.Mui-focused': {
-        color: "#7d7d7d",
-      }
-    },
-  },
   floatingLabelFocusStyle: {
     color: "#7d7d7d",
   },
 }));
 
-export function DataCaptureLogin() {
+export default function DataCaptureLogin() {
   const classes = useStyles();
-  const classesForms = formStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -189,7 +184,7 @@ export function DataCaptureLogin() {
           dir={theme.direction}
           className={classes.tabPanel}>
           <form
-            className={classesForms.root} 
+            className={classes.formRoot} 
             autoComplete="off"
             action="/"
             method="post"
@@ -200,7 +195,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="email"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
             <StyledTextField
               id="filled-basic"
@@ -208,7 +203,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="password"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
             <StyledTextField
               id="filled-basic"
@@ -216,7 +211,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="password"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
               <StyledButton type="button">Login</StyledButton>
           </form>
@@ -228,7 +223,7 @@ export function DataCaptureLogin() {
           className={classes.tabPanel}
         >
           <form
-            className={classesForms.root}
+            className={classes.formRoot}
             autoComplete="off"
             action="/"
             method="post"
@@ -239,7 +234,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="text"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
             <StyledTextField
               id="filled-basic"
@@ -247,7 +242,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="text"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
             <StyledTextField
               id="filled-basic"
@@ -255,7 +250,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="email"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
             <StyledTextField
               id="filled-basic"
@@ -263,7 +258,7 @@ export function DataCaptureLogin() {
               variant="filled"
               type="password"
               required={true}
-              InputLabelProps={{ className: classesForms.floatingLabelFocusStyle, }}
+              InputLabelProps={{ className: classes.floatingLabelFocusStyle, }}
             />
             <StyledButton type="button">Login</StyledButton>
           </form>
@@ -271,5 +266,3 @@ export function DataCaptureLogin() {
     </div>
   );
 }
-
-export default DataCaptureLogin();

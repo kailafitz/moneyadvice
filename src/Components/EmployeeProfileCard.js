@@ -83,17 +83,15 @@ const StyledCard = styled.div `
   }
 `
 
-export function EmployeeProfileCard(props) {
+export default function EmployeeProfileCard({img, empName, role}) {
   return (
-    <StyledCard key={props.id}>
+    <StyledCard>
         <StyledAvatar
         alt="Profile Image"
-        src={props.img}
+        src={img}
         />
-        <Styledh4>{props.empName}</Styledh4>
-        <Styledp>{props.role}</Styledp>
+        <Styledh4>{empName}</Styledh4>
+        <Styledp>{role}</Styledp>
     </StyledCard>
   );
 }
-
-export default EmployeeProfileCard();

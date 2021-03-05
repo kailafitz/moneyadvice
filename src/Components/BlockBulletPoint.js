@@ -84,7 +84,7 @@ const childVariants = {
     },
 }
 
-export function BlockBulletPoint({bulletPoint}) {
+export default function BlockBulletPoint({bulletPoint}) {
     return (
         <StyledBlockBulletPointDiv
             as={motion.div}
@@ -103,5 +103,3 @@ export function BlockBulletPoint({bulletPoint}) {
         </StyledBlockBulletPointDiv>
     )
 }
-
-export default BlockBulletPoint();

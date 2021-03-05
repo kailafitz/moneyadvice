@@ -25,7 +25,7 @@ const buttonStyle = makeStyles((theme) => ({
     }
 }));
 
-export function ScrollTopButton() {
+export default function ScrollTopButton() {
   const trigger = useScrollTrigger();
   const classes = buttonStyle();
 
@@ -47,5 +47,3 @@ export function ScrollTopButton() {
     </Zoom>
   );
 }
-
-export default ScrollTopButton();

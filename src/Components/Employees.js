@@ -58,7 +58,7 @@ const TeamsContainer = styled(Container) `
     }
 `
 
-export function Employees() {
+export default function Employees() {
 
     const [Data, setData] = useState(new Map());
     const [DataReady, setDataReady] = useState(false);
@@ -99,8 +99,6 @@ export function Employees() {
                             {Data.get("Development Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
-                                        key={employee.id}
-                                        id={employee.id}
                                         img={employee.profile_img}
                                         empName={employee.first_name + " " + employee.sur_name}
                                         role={employee.role}
@@ -118,9 +116,7 @@ export function Employees() {
                         <div id="f-EmployeeCardContainer">
                             {Data.get("Support Team").map((employee) => {
                                 return (
-                                    <EmployeeProfileCard
-                                        key={employee.id}
-                                        id={employee.id}                                    
+                                    <EmployeeProfileCard                                   
                                         img={employee.profile_img}
                                         empName={employee.first_name + " " + employee.sur_name}
                                         role={employee.role}
@@ -139,8 +135,6 @@ export function Employees() {
                             {Data.get("Admin Team").map((employee) => {
                                 return (
                                     <EmployeeProfileCard
-                                        key={employee.id}
-                                        id={employee.id}
                                         img={employee.profile_img}
                                         empName={employee.first_name + " " + employee.sur_name}
                                         role={employee.role}
@@ -157,5 +151,3 @@ export function Employees() {
         </>
     );
 }
-
-export default Employees();

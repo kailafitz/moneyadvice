@@ -247,7 +247,7 @@ const myVariants = {
   }
 }
 
-export function About() {
+export default function About() {
   return (
     <>
       <AboutHeader>
@@ -289,5 +289,3 @@ export function About() {
     </>
   )
 }
-
-export default About();

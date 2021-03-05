@@ -160,7 +160,7 @@ const StyledDialog = styled(Dialog) `
   }
 `
 
-export function LoginModal() {
+export default function LoginModal() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -194,5 +194,3 @@ export function LoginModal() {
     </div>
   );
 }
-
-export default LoginModal();

@@ -14,7 +14,7 @@ const PrivacyPolicyDiv = styled.div `
     padding: 2em .5em;
 `
 
-export function PrivacyPolicy() {
+export default function PrivacyPolicy() {
     return (
         <>
             <PrivacyPolicyDiv>
@@ -26,5 +26,3 @@ export function PrivacyPolicy() {
         </>
     )
 }
-
-export default PrivacyPolicy();

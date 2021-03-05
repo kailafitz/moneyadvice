@@ -274,7 +274,7 @@ const FeaturesPageMenu = styled.div `
     }
 `
 
-export function ProductFeaturesComponentTwo() {
+export default function ProductFeaturesComponentTwo() {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);
@@ -430,5 +430,3 @@ export function ProductFeaturesComponentTwo() {
       </FeaturesPage>
     );
 }
-
-export default ProductFeaturesComponentTwo();

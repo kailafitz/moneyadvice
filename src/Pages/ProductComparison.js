@@ -28,7 +28,7 @@ const PageContainer = styled.div `
     }
 `
 
-export function ProductComparison() {
+export default function ProductComparison() {
     return (
         <>
             <PageContainer>
@@ -40,5 +40,3 @@ export function ProductComparison() {
         </>
     )
 }
-
-export default ProductComparison();

@@ -196,7 +196,7 @@ const myVariants = {
     }
 }
 
-export function ProductOverview() {
+export default function ProductOverview() {
     const [data, setData] = useState([]);
 
     const createFunction = () => {
@@ -273,5 +273,3 @@ export function ProductOverview() {
     </>
     )
 }
-
-export default ProductOverview();

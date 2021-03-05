@@ -42,12 +42,10 @@ const StyledTitle = styled.div `
     }
 `
 
-export function SectionTitle(props) {
+export default function SectionTitle(props) {
     return (
         <StyledTitle>
             <Styledh1 style={{"color": props.color}}>{props.title}</Styledh1>
         </StyledTitle>
     )
 }
-
-export default SectionTitle();

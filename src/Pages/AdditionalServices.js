@@ -5,7 +5,7 @@ import Footer from '../Components/Footer';
 import AdditionalServicesComponent from '../Components/AdditionalServicesComponent'
 import ScrollTopButton from '../Components/ScrollTopButton';
 
-export function AdditionalServices() {
+export default function AdditionalServices() {
     return (
         <> 
             <AdditionalServicesComponent />
@@ -14,5 +14,3 @@ export function AdditionalServices() {
         </>
     )
 }
-
-export default AdditionalServices();

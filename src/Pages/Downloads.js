@@ -18,7 +18,7 @@ const DownloadsDiv = styled.div `
     padding: 2em .5em;
 `
 
-export function Downloads() {
+export default function Downloads() {
     <>
         <SectionTitle title="Downloads" />
         <DownloadsDiv>
@@ -34,5 +34,3 @@ export function Downloads() {
         <Footer />
     </>
 }
-
-export default Downloads();
