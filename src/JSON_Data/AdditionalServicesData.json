@@ -20,17 +20,17 @@
                 "featureImageURL": "https://i.imgur.com/j14UcKv.jpg"
             },
             {
-                "featureImageTitle": "Client Enquiry Wizard",
+                "featureImageTitle": "",
                 "featureImageDescription": "Discounts provided by the brokers can also be accommodated.",
-                "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg2.jpg"
+                "featureImageURL": "https://i.imgur.com/JhirwjJ.jpg"
             },
             {
-                "featureImageTitle": "Client Enquiry Wizard",
+                "featureImageTitle": "",
                 "featureImageDescription": "Capture key contact information of the lead generated. All enquiries are emailed to a pre-configured email address.",
                 "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg3.jpg"
             },
             {
-                "featureImageTitle": "Client Enquiry Wizard",
+                "featureImageTitle": "",
                 "featureImageDescription": "For Money Advice CRM users, the key details of the lead and quote are pre-populated as a new enquiry.",
                 "featureImageURL": "../Images/AdditionalServices-Imgs/protection-featureimg4.jpg"
             }

@@ -192,7 +192,7 @@ const FeaturesPageInfo = styled.div `
 
             .f-FeatureImagesContainer {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: flex-start;
                 flex-wrap: wrap;
     

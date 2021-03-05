@@ -232,7 +232,9 @@ const StyledTeamDiv = styled.div `
   }
 
   @media only screen and ${breakpoint.device.lg} {
-    
+    #f-ChairpersonAvatar {
+      min-width: 230px;
+    }
   }
 `
 

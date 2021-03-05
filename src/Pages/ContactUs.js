@@ -121,7 +121,7 @@ const StyledButton = styled(Button) `
     }
 `
 const HeaderImage = styled.div `
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -134,7 +134,6 @@ const HeaderImage = styled.div `
     .f-Overlay {
         background-color: ${colors.logo_trans_blue};
         height: 100%;
-        width: 100%;
     }
 
     @media only screen and ${breakpoint.device.xs} {
