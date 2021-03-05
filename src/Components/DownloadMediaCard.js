@@ -91,7 +91,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function DownloadMediaCard( props ) {
+function DownloadMediaCard(props) {
   const classes = useStyles();
 
   return (
@@ -117,3 +117,5 @@ export default function DownloadMediaCard( props ) {
     </StyledCard>
   );
 }
+
+export default DownloadMediaCard();

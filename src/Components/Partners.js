@@ -71,7 +71,7 @@ const StyledContainer = styled.div `
     }
 `
 
-export default function Partners() {
+function Partners() {
     const PartnerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim];
 
     return (
@@ -89,3 +89,5 @@ export default function Partners() {
         </StyledContainer>
     )
 }
+
+export default Partners();

@@ -58,7 +58,7 @@ const TeamsContainer = styled(Container) `
     }
 `
 
-export default function Employees() {
+function Employees() {
 
     const [Data, setData] = useState(new Map());
     const [DataReady, setDataReady] = useState(false);
@@ -157,3 +157,5 @@ export default function Employees() {
         </>
     );
 }
+
+export default Employees();

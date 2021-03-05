@@ -308,7 +308,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ContactUs() {
+function ContactUs() {
     init("user_nbna29mf7GTYIJguCdCEE");
     const classes = useStyles();
 
@@ -465,3 +465,5 @@ export default function ContactUs() {
         </>
     )
 }
+
+export default ContactUs();

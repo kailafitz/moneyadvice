@@ -147,7 +147,7 @@ const formStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DataCaptureLogin() {
+function DataCaptureLogin() {
   const classes = useStyles();
   const classesForms = formStyles();
   const theme = useTheme();
@@ -271,3 +271,5 @@ export default function DataCaptureLogin() {
     </div>
   );
 }
+
+export default DataCaptureLogin();

@@ -220,7 +220,7 @@ const HeaderVariants = {
     }
 }
 
-export default function Home() {
+function Home() {
     return (
     <>
         <HeaderContainer
@@ -269,3 +269,5 @@ export default function Home() {
         <Footer />
   </>
 )};
+
+export default Home();

@@ -5,7 +5,7 @@ import Footer from '../Components/Footer';
 import ProductFeaturesComponentTwo from '../Components/ProductFeaturesComponentTwo'
 import ScrollTopButton from '../Components/ScrollTopButton';
 
-export default function ProductFeatures() {
+function ProductFeatures() {
     return (
         <> 
             <ProductFeaturesComponentTwo />
@@ -14,3 +14,5 @@ export default function ProductFeatures() {
         </>
     )
 }
+
+export default ProductFeatures();

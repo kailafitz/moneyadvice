@@ -274,7 +274,7 @@ const FeaturesPageMenu = styled.div `
     }
 `
 
-export default function AdditionalServicesComponent() {
+function AdditionalServicesComponent() {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);
@@ -429,3 +429,5 @@ export default function AdditionalServicesComponent() {
       </FeaturesPage>
     );
 }
+
+export default AdditionalServicesComponent;

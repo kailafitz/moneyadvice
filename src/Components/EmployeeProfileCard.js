@@ -83,7 +83,7 @@ const StyledCard = styled.div `
   }
 `
 
-export default function EmployeeProfileCard( props ) {
+function EmployeeProfileCard(props) {
   return (
     <StyledCard key={props.id}>
         <StyledAvatar
@@ -95,3 +95,5 @@ export default function EmployeeProfileCard( props ) {
     </StyledCard>
   );
 }
+
+export default EmployeeProfileCard();

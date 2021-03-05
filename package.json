@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "http://kailafitz.github.io/",
   "dependencies": {
-    "@babel/runtime": "^7.12.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
