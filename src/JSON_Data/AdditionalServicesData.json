@@ -3,7 +3,7 @@
         "id": 0,
         "featureTitle": "Broker Websites",
         "featureSubtitle": "Delivering user-friendly websites that work closely with your Money Advice CRM",
-        "featureMainImage": "../Images/AdditionalServices-Imgs/websites-main.jpg",
+        "featureMainImage": "https://i.imgur.com/i636bZC.jpg",
         "featureBulletPoints": ["An integrated approach with Money Advice CRM from the start where we build and deliver broker websites ensuring maximum results and return on investment from both the new web site and Money Advice CRM", "Clear focus on user experience so as to make it easy to use and navigate for your clients", "Aftercare and support to keep the website updated always. We can provide life protection quotes, with the broker selecting if they wish to provide discounts to their clients", "We can also provide client access through broker websites to client portfolio reports with updated values etc."],
         "featureImages": []
     },
@@ -11,7 +11,7 @@
         "id": 1,
         "featureTitle": "Protection Quotations for Broker Websites",
         "featureSubtitle": "Delivering user-friendly websites that work closely with your Money Advice CRM",
-        "featureMainImage": "../Images/AdditionalServices-Imgs/protection-main.jpg",
+        "featureMainImage": "https://i.imgur.com/8JFxoIX.jpg",
         "featureBulletPoints": ["Integrate with existing broker web sites seamlessly", "The screens can be customized to look similar to the broker website colours", "The service provides all term assurance, specified illness, income protection and mortgage protection quotations"],
         "featureImages": [
             {
