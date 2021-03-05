@@ -196,7 +196,7 @@ const myVariants = {
     }
 }
 
-function ProductOverview() {
+export function ProductOverview() {
     const [data, setData] = useState([]);
 
     const createFunction = () => {

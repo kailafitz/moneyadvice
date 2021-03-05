@@ -83,7 +83,7 @@ const StyledCard = styled.div `
   }
 `
 
-function EmployeeProfileCard(props) {
+export function EmployeeProfileCard(props) {
   return (
     <StyledCard key={props.id}>
         <StyledAvatar

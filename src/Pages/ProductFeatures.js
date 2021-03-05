@@ -5,7 +5,7 @@ import Footer from '../Components/Footer';
 import ProductFeaturesComponentTwo from '../Components/ProductFeaturesComponentTwo'
 import ScrollTopButton from '../Components/ScrollTopButton';
 
-function ProductFeatures() {
+export function ProductFeatures() {
     return (
         <> 
             <ProductFeaturesComponentTwo />

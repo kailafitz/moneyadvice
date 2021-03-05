@@ -247,7 +247,7 @@ const myVariants = {
   }
 }
 
-function About() {
+export function About() {
   return (
     <>
       <AboutHeader>

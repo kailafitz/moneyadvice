@@ -147,7 +147,7 @@ const formStyles = makeStyles((theme) => ({
   },
 }));
 
-function DataCaptureLogin() {
+export function DataCaptureLogin() {
   const classes = useStyles();
   const classesForms = formStyles();
   const theme = useTheme();

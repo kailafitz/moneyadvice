@@ -274,7 +274,7 @@ const FeaturesPageMenu = styled.div `
     }
 `
 
-function AdditionalServicesComponent() {
+export function AdditionalServicesComponent() {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);

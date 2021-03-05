@@ -73,7 +73,7 @@ const PopoverDiv = styled(Popover) `
 
 `
 
-function NavbarLinks() {
+export function NavbarLinks() {
     const popupState = usePopupState({
         variant: 'popover',
         popupId: 'demoPopover',

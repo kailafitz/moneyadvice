@@ -202,7 +202,7 @@ const myVariants = {
 
 const drawerWidth = "100%";
 
-function NavigationBar() {
+export function NavigationBar() {
   const classes = useStyles();
   const isMobile = useMediaQuery({ maxWidth: breakpoint.size.sm });
   const [isOpen, setOpen] = useState(false);

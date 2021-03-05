@@ -44,7 +44,7 @@ const StyledContactUsButton = styled(Button)`
   }
 `
 
-function ContactUsButton({label}) {
+export function ContactUsButton({label}) {
   return (
     <StyledContactUsButton
       href="/contactus"

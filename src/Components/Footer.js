@@ -176,7 +176,7 @@ const FooterDiv = styled.footer `
     }
 `
 
-function Footer() {
+export function Footer() {
     return (
         <FooterDiv>
             <div id="f-FooterWrapper">

@@ -109,7 +109,7 @@ const columns = [
   { field: 'featureOfMoneyCRM', headerName: 'MoneAdvice+CRM', flex: 1, headerClassName: 'table-header'},
 ];
 
-function ProductComparisonTables() {
+export function ProductComparisonTables() {
   const [data, setData] = useState([]);
   const [validData, setValidData] = useState(false);
   const classes = useStyles();

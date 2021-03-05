@@ -58,7 +58,7 @@ const TeamsContainer = styled(Container) `
     }
 `
 
-function Employees() {
+export function Employees() {
 
     const [Data, setData] = useState(new Map());
     const [DataReady, setDataReady] = useState(false);

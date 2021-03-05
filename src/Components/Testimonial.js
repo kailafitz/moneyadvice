@@ -154,7 +154,7 @@ const StyledContainer = styled.div `
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
-function Testimonial() {
+export function Testimonial() {
   const [validData, setValidData] = useState(false);
   const [slides, setSlides] = useState([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

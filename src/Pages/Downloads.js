@@ -18,7 +18,7 @@ const DownloadsDiv = styled.div `
     padding: 2em .5em;
 `
 
-function Downloads() {
+export function Downloads() {
     <>
         <SectionTitle title="Downloads" />
         <DownloadsDiv>

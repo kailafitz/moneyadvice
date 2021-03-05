@@ -274,7 +274,7 @@ const FeaturesPageMenu = styled.div `
     }
 `
 
-function ProductFeaturesComponentTwo() {
+export function ProductFeaturesComponentTwo() {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);

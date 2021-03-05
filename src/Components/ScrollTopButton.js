@@ -25,7 +25,7 @@ const buttonStyle = makeStyles((theme) => ({
     }
 }));
 
-function ScrollTopButton() {
+export function ScrollTopButton() {
   const trigger = useScrollTrigger();
   const classes = buttonStyle();
 

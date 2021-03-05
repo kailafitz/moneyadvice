@@ -160,7 +160,7 @@ const StyledDialog = styled(Dialog) `
   }
 `
 
-function LoginModal() {
+export function LoginModal() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
