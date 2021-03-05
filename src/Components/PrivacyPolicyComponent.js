@@ -30,11 +30,11 @@ const Styledh3 = styled.h3 `
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        font-size: 1.1;
+        font-size: 1.1em;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        font-size: 1.15;
+        font-size: 1.15em;
     }
 
     @media only screen and ${breakpoint.device.lg} {
@@ -44,6 +44,9 @@ const Styledh3 = styled.h3 `
 const Styledp = styled.p `
     font-family: ${fonts.roboto};
     color: ${colors.bl};
+    display: flex;
+    align-content: center;
+    align-items: center;
 
     a {
         ${fonts.roboto};
@@ -52,6 +55,23 @@ const Styledp = styled.p `
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+
+    i {
+        color: ${colors.logo_blue};
+        margin-right: .5em;
+
+        @media only screen and ${breakpoint.device.xs} {
+            font-size: 1.5em;
+        }
+    
+        @media only screen and ${breakpoint.device.sm} {
+            font-size: 1.8em;
+        }
+    
+        @media only screen and ${breakpoint.device.lg} {
+            font-size: 2em;
         }
     }
 
@@ -72,21 +92,36 @@ const Styledp = styled.p `
     }
 `
 const StyledContainer = styled.div `
-
-    #f-DataProtection {
-        display: flex;
-        
-        p {
-            margin-right: 5px;
-        }
+    #f-AccordianDetails {
+        display: block;
     }
 
     @media only screen and ${breakpoint.device.xs} {
         width: 90%;
+
+        #f-AccordianDetails {
+            display: block;
+
+            #f-DataProtection {
+                display: block;
+            }
+        }
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        width: 80%:
+        width: 80%;
+
+        #f-AccordianDetails {
+            display: block;
+
+            #f-DataProtection {
+                display: flex;
+                
+                p {
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 
     @media only screen and ${breakpoint.device.lg} {
@@ -136,24 +171,22 @@ export const PrivacyPolicyComponent = () => {
                                     >
                                         <Styledh3>{policy.title}</Styledh3>
                                     </AccordionSummary>
-                                    <AccordionDetails className={classes.displayBulletpoints}>
+                                    <AccordionDetails id="f-AccordianDetails">
                                         <Typography>
                                             {policy.details}
                                         </Typography>
                                         {
                                             policy.emailHref ?
                                             <>
-                                                <Styledp><a href={policy.emailHref}>{policy.emailOne}</a></Styledp>
-                                                <Styledp><a href={policy.numberHref}>{policy.numberOne}</a></Styledp>
+                                                <Styledp><i className="fas fa-envelope-square"></i><a href={policy.emailHref}>{policy.emailOne}</a></Styledp>
+                                                <Styledp><i className="fas fa-phone-square-alt"></i><a href={policy.numberHref}>{policy.numberOne}</a></Styledp>
                                                 <div id="f-DataProtection">
-                                                <Styledp>{policy.dataProtection}</Styledp>
-                                                <Styledp><a href={policy.emailTwoHref}>{policy.emailTwo}</a></Styledp>
-
-                                                </div>
-                                                
+                                                    <Styledp>{policy.dataProtection}</Styledp>
+                                                    <Styledp><a href={policy.emailTwoHref}>{policy.emailTwo}</a></Styledp>
+                                                </div>                                                
                                             </> : null
                                         }
-                                        <ul className="fa-ul">
+                                        <ul className={classes.displayBulletpoints + " fa-ul"}>
                                         {
                                             policy.policyBulletPoints ?
                                             policy.policyBulletPoints.map((bulletpoint) => {
