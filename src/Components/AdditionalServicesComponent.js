@@ -222,6 +222,7 @@ const FeaturesPageInfo = styled.div `
                     }
         
                     #f-InnerInformation {
+                        width: 60%;
                         padding: 0;
                     }
                 }
@@ -347,7 +348,9 @@ export const AdditionalServicesComponent = () => {
                         <div id="f-InnerContainer">
                             {
                                 feature.featureMainImage ?
-                                <img id="f-FeatureMainImage" src={feature.featureMainImage} alt="Feature"/> : null
+                                <div id="f-FeatureMainImage">
+                                    <img src={feature.featureMainImage} alt="Feature"/>
+                                </div> : null
                             }
                             <div id="f-InnerInformation">
                                 {

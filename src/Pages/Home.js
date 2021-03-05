@@ -20,12 +20,11 @@ import Testimonial from "../Components/Testimonial";
 // Component imports
 import CustomerSlider from "../Components/CustomerSlider";
 import Partners from "../Components/Partners";
-import GraphicTest from "../Components/GraphicTest";
 import ScrollTopButton from "../Components/ScrollTopButton";
 import SectionTitle from "../Components/SectionTitle";
 
 // Media imports
-import IndexGraphic2 from '../Images/IndexGraphic2.png';
+import IndexGraphic2 from '../Images/IndexGraphic3.png';
 // Lottie animations (JSON files)
 import Calendar from "../Lottie/Calendar.json";
 import Chart from "../Lottie/Chart.json";

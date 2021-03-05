@@ -73,7 +73,7 @@
         "featureImages": []
     },
     {
-        "id": 3,
+        "id": 4,
         "featureTitle": "Mortgages (incl. Haven Online)",
         "featureSubtitle": "Money Advice CRM provides state of the art, fully integrated mortgage solution software free to all its users:",
         "featureParagraph": "You can also print mortgage applications for submission to other lenders who do not currently accept electronic submissions.",
@@ -106,14 +106,14 @@
         "featureButtonLabel": "Mortgage Process Guide"
     },
     {
-        "id": 4,
+        "id": 5,
         "featureTitle": "Insurer Data Downloads",
         "featureSubtitle": "From March 2014, Money Advice  was appointed by the Life offices as the second software firm to provide data policy data downloads and protection quotations under the Brokers Ireland scheme.",
         "featureParagraph": "Client and policy data are regularly updated on the system. Up to date policy data are received from: Aviva, BCP, Royal London, Friends First, Irish Life, New Ireland, Standard Life and Zurich. We have now created a tool in Money Advice which allows users to import policy data received in excel format from Aviva Health into the CRM system so that you get up to date health policy information.",
         "featureMainImage": "../Images/ProductFeature-Imgs/insurer-main.jpg"
     },
     {
-        "id": 5,
+        "id": 6,
         "featureTitle": "Sales and Pipeline Management",
         "featureSubtitle": "Critical to today’s modern intermediary is the ability to manage the entire sales process from start to finish, maintain client data, be compliant, treat customers fairly and ensure proper relationship management.Money Advice CRM has been built with this in mind and offers the following as standard:",
         "featureMainImage": "../Images/ProductFeature-Imgs/salespipelines-main.jpg",
@@ -132,35 +132,35 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "featureTitle": "Compliance",
         "featureSubtitle": "Money Advice CRM offers the user a comprehensive fact find checking facility which is continually monitored as the user completes the fact find.",
         "featureMainImage": "../Images/ProductFeature-Imgs/compliance-main.jpg",
         "featureBulletPoints": ["Each advisor firm is also able to define the compliance list they wish to use", "The user is able to click a compliance button at any time to produce a list of outstanding compliance items for tracking", "The user is then able to click on the individual items for detailed information and complete the missing compliance items and attach documents where required e.g. documents, proof of ID etc.", "The system is able to produce compliance reports by status, consultant, provider, policy number or search by level (policy,opportunity and client)", "Reports are transferred to Excel for ease of use"]
     },
     {
-        "id": 7,
+        "id": 8,
         "featureTitle": "CRM, Workflows and Reviews",
         "featureSubtitle": "As you might expect, Money Advice CRM has produced a market leading CRM proposition and delivers in depth functionality to assist with all your desired workflows to make your working day that much easier.",
         "featureParagraph": "Money Advice CRM offers the intermediary the perfect tool to manage client contact including client data/ information, appointments/ diary, tasks, logs, client interactions, meeting memo’s, fact-finding/ reviews, sourcing, quotations, compliance, marketing, commission reconciliation, document management, reporting, TCF (Treating Clients Fairly) needs, complaint recording, workflow reports at client and database levels. Communications such as letters, emails and mail merges are all easily managed.",
         "featureMainImage": "../Images/ProductFeature-Imgs/CRMworkflow-main.jpg"
     },
     {
-        "id": 8,
+        "id": 9,
         "featureTitle": "Commissions",
         "featureSubtitle": "Money Advice CRM hosts a comprehensive set of commission tracking tools allowing the busiest office to keep on top of commissions received, pipeline and keep admin to a minimum.",
         "featureMainImage": "../Images/ProductFeature-Imgs/commissions-main.jpg",
         "featureBulletPoints": ["The system produces commission reports on a product, advisor and office wide basis", "Full functionality is offered allowing product, product type, provider, type of commission, commission sum/ percentage and commission structures to be added as required", "The commissions/ fees can be apportioned individually to individual staff, firm and 3rd parties as needed", "Commissions are easily reconciled against individual policies and personal commission statements produced for Advisors, whilst a whole host of reports can easily be generated across a broad range of parameters by provider, product, agency code, staff member, introducer etc."]
     },
     {
-        "id": 9,
+        "id": 10,
         "featureTitle": "Fees and Invoices",
         "featureSubtitle": "Money Advice CRM hosts a comprehensive set of commission tracking tools allowing the busiest office to keep on top of billable hours, generate invoices for the billable hours and keep track of the status of fees received, pipeline and keep admin to a minimum.",
         "featureMainImage": "../Images/ProductFeature-Imgs/fees-main.jpg",
         "featureBulletPoints": ["The system allows for tracking of the billable hours against each action logged in the system", "Once the billable hours are setup you can select one/ more logs to generate an invoice after which the hours are updated with a status of ‘Billed’ (with or without VAT)", "A fees entry is created which can be apportioned individually to individual staff, firm and 3rd parties as needed", "These fee entries are easily reconciled and personal fees statements produced for Advisors, whilst a whole host of reports can easily be generated across a broad range of parameters by staff member, introducer etc."]
     },
     {
-        "id": 10,
+        "id": 11,
         "featureTitle": "Marketing",
         "featureSubtitle": "As professional advisors we all know the importance of maintaining regular contacts with our customers from a best practice point of view and ensuring that we treat our customers fairly.",
         "featureParagraph": "Money Advice CRM has a suite of marketing tools that enables advisors extensively mine their database at a client and policy level. It provides a comprehensive range of marketing tools including mail merge letters, text messaging and email messages. Crucially the software logs and records all these communications, even mass communications.",
@@ -181,21 +181,21 @@
         ]
     },
     {
-        "id": 11,
+        "id": 12,
         "featureTitle": "Document Management",
         "featureSubtitle": "Money Advice CRM provides a capacity to generate all the letter template a broker’s office would use:",
         "featureMainImage": "../Images/ProductFeature-Imgs/docmanagement-main.jpg",
         "featureBulletPoints": ["Users are additionally able to add/manage their own letter and e-mail templates", "Users are able to automatically brand all such communications with their own signatures/ logos as well", "Letters, emails and other documents generated on Money Advice CRM are automatically saved to the system. Inward emails (from Outlook) and other documents can be easily saved to the system and attached to the client or/ and the client policy/ product. This functionality allows all communication with a client to be recorded with ease, creating an invaluable record and save you substantial time managing your clients’ data and documents."]
     },
     {
-        "id": 12,
+        "id": 13,
         "featureTitle": "Cash Flow Planner",
         "featureSubtitle": "Cash flow projections and financial planning",
         "featureMainImage": "../Images/ProductFeature-Imgs/cashflow-main.jpg",
         "featureBulletPoints": ["The client financial cash flow planner can also be completed within Money Advice CRM by the advisor using a unique wizard reducing the time taken to enter client data", "The tool lets the user drag and drop various life time events onto the life time line of the client and calculate the savings required to meet the lifestyle expenses", "These expenses are then plotted into a client cash flow projections report to show the income, expenditure and balance sheet. A detailed asset, liability and net asset worth can also be generated from the tool. The tool will be improved further to include projections for what-if scenarios"]
     },
     {
-        "id": 13,
+        "id": 14,
         "featureTitle": "Fund Focus: Portfolio Modelling and Analysis Tools",
         "featureSubtitle": "Get quotations and place business online",
         "featureMainImage": "../Images/ProductFeature-Imgs/fundfocus-main.jpg",
@@ -204,7 +204,7 @@
         "featureButtonLabel": "Longboat Analytics"
     },
     {
-        "id": 14,
+        "id": 15,
         "featureTitle": "Document Scanner App",
         "featureSubtitle": "Integrated with camscanner app, this mobile app provides a way for the users to scan important documents using their phone",
         "featureMainImage": "../Images/ProductFeature-Imgs/scannerapp-main.jpg",
@@ -214,7 +214,7 @@
         "featureButtonLabel": "Download User Guide"
     },
     {
-        "id": 15,
+        "id": 16,
         "featureTitle": "Tablet and Smart Phone Quotations",
         "featureSubtitle": "A mobile version of the Money Advice quotation service is available ensuring you have access to the quotations even on the move",
         "featureMainImage": "../Images/ProductFeature-Imgs/tabletphone-main.jpg",
