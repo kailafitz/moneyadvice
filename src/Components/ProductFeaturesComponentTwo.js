@@ -123,6 +123,11 @@ const FeaturesPageInfo =styled.div `
                     border-radius: 4px;
                     -webkit-box-shadow: 0 5px 18px -2px #bebebe;
                     box-shadow: 0 5px 18px -2px #bebebe;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
                 }
             }
         }
