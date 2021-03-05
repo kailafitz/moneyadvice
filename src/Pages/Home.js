@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {colors} from '../colors';
-import {fonts} from '../fonts';
+import colors from '../colors';
+import fonts from '../fonts';
 
 // MaterialUI
 import LottieMediaCard from "../Components/LottieMediaCard";
@@ -24,7 +24,7 @@ import ScrollTopButton from "../Components/ScrollTopButton";
 import SectionTitle from "../Components/SectionTitle";
 
 // Media imports
-import IndexGraphic2 from '../Images/IndexGraphic3.png';
+import IndexGraphic from '../Images/IndexGraphic3.png';
 // Lottie animations (JSON files)
 import Calendar from "../Lottie/Calendar.json";
 import Chart from "../Lottie/Chart.json";
@@ -230,8 +230,7 @@ export default function Home() {
             animate="visible"
         >
             <div id="f-BigLogo">
-                {/* <GraphicTest /> */}
-                <img alt="Logo" src={IndexGraphic2}/>
+                <img alt="Logo" src={IndexGraphic}/>
             </div>
             <div id="f-BigLogoContainer-Text">
                 <Styledh1>The complete CRM system for financial and mortgage advisors - all in one.</Styledh1>

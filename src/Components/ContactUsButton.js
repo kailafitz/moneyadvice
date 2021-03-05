@@ -3,11 +3,11 @@ import React from 'react';
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {colors} from '../colors';
-import {fonts} from '../fonts';
+import colors from '../colors';
+import fonts from '../fonts';
 
 // MaterialUI
-import { Button } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
 // styled-components
 const StyledContactUsButton = styled(Button)`

@@ -6,8 +6,8 @@ import FeatureChecklistData from '../JSON_Data/FeatureChecklistData.json'
 // styled-components imports
 import styled from "styled-components";
 import breakpoint from '../breakpoints';
-import {fonts} from '../fonts'
-import { colors }  from '../colors';
+import fonts from '../fonts'
+import colors from '../colors';
 
 // MaterialUI
 import { makeStyles } from '@material-ui/core/styles';

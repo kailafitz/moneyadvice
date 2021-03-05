@@ -3,8 +3,8 @@ import React from 'react';
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {colors} from '../colors'
-import {fonts} from '../fonts'
+import colors from '../colors'
+import fonts from '../fonts'
 
 // MaterialUI
 import { makeStyles } from '@material-ui/core/styles';

@@ -6,8 +6,8 @@ import { HashLink } from 'react-router-hash-link';
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+import fonts from '../fonts';
+import colors from '../colors';
 
 // MaterialUI
 import Link from '@material-ui/core/Link';

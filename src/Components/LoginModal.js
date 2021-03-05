@@ -2,8 +2,8 @@ import React from "react";
 
 // styled-components imports
 import breakpoint from "../breakpoints";
-import {fonts} from "../fonts";
-import {colors} from "../colors";
+import fonts from "../fonts";
+import colors from "../colors";
 import styled from "styled-components";
 
 // MaterialUI

@@ -6,8 +6,8 @@ import AdditionalServicesData from '../JSON_Data/AdditionalServicesData.json'
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {colors} from '../colors';
-import {fonts} from '../fonts';
+import colors from '../colors';
+import fonts from '../fonts';
 
 // MaterialUI
 import Button from '@material-ui/core/Button';
@@ -274,7 +274,7 @@ const FeaturesPageMenu = styled.div `
     }
 `
 
-export const AdditionalServicesComponent = () => {
+export default function AdditionalServicesComponent() {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);

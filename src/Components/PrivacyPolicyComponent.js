@@ -5,8 +5,8 @@ import PolicyData from '../JSON_Data/PrivacyPolicyData.json'
 
 // styled-components imports
 import styled from 'styled-components';
-import {colors} from '../colors';
-import {fonts} from '../fonts'
+import colors from '../colors';
+import fonts from '../fonts'
 import breakpoint from '../breakpoints';
 
 // MaterialUI

@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
     wh: "#ffffff",
     bl: "#393939",
     trans_wh: "#ffffffc2",
@@ -11,3 +11,5 @@ export const colors = {
     logo_green: "#b8d30c",
     logo_peach: "#f0ad8c",
 }
+
+export default colors;

@@ -13,8 +13,8 @@ import {
 // styled-components imports
 import breakpoint from '../breakpoints';
 import styled from 'styled-components';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+import fonts from '../fonts';
+import colors from '../colors';
 
 // MaterialUI
 import { makeStyles } from '@material-ui/core/styles';

@@ -11,8 +11,8 @@ import 'swiper/swiper-bundle.css';
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+import fonts from '../fonts';
+import colors from '../colors';
 
 // MaterialUI
 import Avatar from "@material-ui/core/Avatar";

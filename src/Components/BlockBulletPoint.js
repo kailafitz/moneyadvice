@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 
 // styled-components imports
 import styled from 'styled-components';
-import {colors} from '../colors';
-import {fonts} from '../fonts';
+import colors from '../colors';
+import fonts from '../fonts';
 import breakpoint from '../breakpoints';
 
 // styled-components
@@ -84,7 +84,7 @@ const childVariants = {
     },
 }
 
-export const BlockBulletPoint = ({bulletPoint}) => {
+export default function BlockBulletPoint({bulletPoint}) {
     return (
         <StyledBlockBulletPointDiv
             as={motion.div}

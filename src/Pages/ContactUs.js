@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 
 // Package imports
 import emailjs from 'emailjs-com'
-import{ init } from 'emailjs-com';
+import { init } from 'emailjs-com';
 
 // styled-components imports
 import styled from 'styled-components';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+import fonts from '../fonts';
+import colors from '../colors';
 import breakpoint from '../breakpoints';
 
 // MaterialUI

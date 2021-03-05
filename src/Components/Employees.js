@@ -6,11 +6,11 @@ import EmployeeData from '../JSON_Data/EmployeeData.json'
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+import fonts from '../fonts';
+import colors from '../colors';
 
 // MaterialUI
-import { Container } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 // Component imports
 import EmployeeProfileCard from './EmployeeProfileCard';

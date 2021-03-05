@@ -10,8 +10,8 @@ import {
 
 // styled-components imports
 import styled from 'styled-components';
-import {fonts} from '../fonts';
-import {colors} from '../colors';
+import fonts from '../fonts';
+import colors from '../colors';
 
 // MaterialUI
 import Popover from 'material-ui-popup-state/HoverPopover'

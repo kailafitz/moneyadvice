@@ -8,8 +8,8 @@ import OverviewData from '../JSON_Data/ProductOverview.json'
 
 // styled-components imports
 import styled from 'styled-components';
-import {colors} from '../colors';
-import {fonts} from '../fonts'
+import colors from '../colors';
+import fonts from '../fonts'
 import breakpoint from '../breakpoints';
 
 // MaterialUI
@@ -23,7 +23,7 @@ import Container from '@material-ui/core/Container';
 
 // Component imports
 import SectionTitle from './SectionTitle';
-import { BlockBulletPoint } from './BlockBulletPoint';
+import BlockBulletPoint from './BlockBulletPoint';
 
 // styled-components
 const Styledh4 = styled.h4 `
