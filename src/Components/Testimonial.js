@@ -67,26 +67,41 @@ const TestimonialBackground = styled.div `
 `
 const Styledh3 = styled.h3 `
   color: ${colors.logo_blue};
-  font-size: 1.3em;
   font-family: ${fonts.temp_font};
   font-weight: 500;
   margin: .5em 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media only screen and ${breakpoint.device.xs} {
+    font-size: 1.2em;
+  }
+
+  @media only screen and ${breakpoint.device.sm} {
+    font-size: 1.3em;
+  }
+
+  @media only screen and ${breakpoint.device.lg} {
+    font-size: 1.5em;
+  }
 `
 const Styledp = styled.p `
   font-family: ${fonts.roboto};
   color: ${colors.grey};
 
   a {
-      ${fonts.roboto};
-      text-decoration : none;
+    ${fonts.roboto};
+    text-decoration : none;
 
-      &:hover {
-        text-decoration: underline;
-      }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media only screen and ${breakpoint.device.xs} {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   @media only screen and ${breakpoint.device.sm} {
@@ -94,7 +109,7 @@ const Styledp = styled.p `
   }
 
   @media only screen and ${breakpoint.device.lg} {
-      font-size: .95em;
+    font-size: .95em;
   }
 `
 const LimitedParagraph = styled(Styledp) `

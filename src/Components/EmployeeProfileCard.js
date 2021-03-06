@@ -58,11 +58,10 @@ const Styledp = styled.p `
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.xs} {
@@ -71,7 +70,7 @@ const Styledp = styled.p `
 `
 const StyledCard = styled.div ` 
   margin: .5em;
-  borderRadius: 4px;
+  border-radius: 4px;
   display: block;
 
   @media only screen and ${breakpoint.device.xs} {

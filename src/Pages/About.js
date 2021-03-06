@@ -110,15 +110,14 @@ const Styledp = styled.p `
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        font-size: 1.1em;
+      font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.lg} {
-        font-size: .95em;
+      font-size: .95em;
     }
 `
 const StyledSpan = styled.span `
@@ -127,15 +126,15 @@ const StyledSpan = styled.span `
     color: ${colors.logo_blue};
 
     @media only screen and ${breakpoint.device.xs} {
-        font-size: 1.2em;
+      font-size: 1.2em;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        font-size: 1.25em;
+      font-size: 1.25em;
     }
 
     @media only screen and ${breakpoint.device.lg} {
-        font-size: 1.3em;
+      font-size: 1.3em;
     }
 `
 const AboutHeader = styled.div `

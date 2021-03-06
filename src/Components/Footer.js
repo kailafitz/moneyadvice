@@ -52,11 +52,10 @@ const Styledp = styled.p `
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.lg} {

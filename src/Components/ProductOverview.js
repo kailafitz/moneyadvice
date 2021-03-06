@@ -66,11 +66,10 @@ const Styledp = styled.p `
 
     @media only screen and ${breakpoint.device.xs} {
         line-height: 26px;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        font-size: 1em;
     }
 
     @media only screen and ${breakpoint.device.lg} {
@@ -169,16 +168,12 @@ const StyledTable = styled(TableContainer) `
         width: 100%;
 
         .MuiTableCell-root {
-            font-size: 1.1em;
+            font-size: 1em;
         }
     }
 
     @media only screen and ${breakpoint.device.sm} {
         width: 55%;
-
-        .MuiTableCell-root {
-            font-size: 1em;
-        }
     }
 
     @media only screen and ${breakpoint.device.lg} {
