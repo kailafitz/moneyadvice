@@ -193,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // framer motion
-const myVariants = {
+const navbarVariants = {
   hidden: {
     y: -20,
     opacity: 0
@@ -202,6 +202,23 @@ const myVariants = {
     y: 0, 
     opacity: 1,
     transition: {
+      duration: 1.2,
+      type: 'spring',
+      stiffness: 500
+    }
+  }
+}
+
+const menuVariants = {
+  hidden: {
+    x: "-30%",
+    opacity: 0
+  },
+  visible: {
+    x: 0, 
+    opacity: 1,
+    transition: {
+      delay: .3,
       duration: 1.2,
       type: 'spring',
       stiffness: 500
@@ -229,7 +246,7 @@ export const NavigationBar = () => {
   return (
     <motion.div
       className={classes.root}
-      variants={myVariants}
+      variants={navbarVariants}
       initial='hidden'
       animate='visible'
     >
@@ -271,16 +288,42 @@ export const NavigationBar = () => {
               <ChevronRightIcon />
             </IconButton>
           </div>
-            <MobileNavLink to="/" exact onClick={handleDrawerClose}>
+            <MobileNavLink
+              to="/"
+              exact
+              onClick={handleDrawerClose}
+              component={motion.a}
+              variants={menuVariants}
+              animate={isOpen ? "visible" : "hidden"}
+            >
               Home
             </MobileNavLink>
-            <MobileLinkp {...bindTrigger(popupState)}>
+            <MobileLinkp
+              {...bindTrigger(popupState)}
+              as={motion.p}
+              variants={menuVariants}
+              animate={isOpen ? "visible" : "hidden"}
+            >
               Features
             </MobileLinkp>
-            <MobileNavLink to="/about" exact onClick={handleDrawerClose}>
+            <MobileNavLink
+              to="/about"
+              exact
+              onClick={handleDrawerClose}
+              component={motion.a}
+              variants={menuVariants}
+              animate={isOpen ? "visible" : "hidden"}
+            >
               About
             </MobileNavLink>
-            <MobileNavLink to="/contactus" exact onClick={handleDrawerClose}>
+            <MobileNavLink
+              to="/contactus"
+              exact
+              onClick={handleDrawerClose}
+              component={motion.a}
+              variants={menuVariants}
+              animate={isOpen ? "visible" : "hidden"}
+            >
               Contact Us
             </MobileNavLink>
             <MobileMenu
@@ -290,7 +333,7 @@ export const NavigationBar = () => {
               anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
               transformOrigin={{ vertical: 'top', horizontal: 'left' }}
             >
-              <MobileDropdownItem 
+              <MobileDropdownItem
                 disableRipple
               >
                 <NavLink

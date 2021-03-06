@@ -239,7 +239,7 @@ export const Home = () => {
         <CardContainer>
             <LottieMediaCard
                 animationData={Calendar}
-                title="Volatile Client Profiles"
+                title="Client Profiles"
                 subTitle="We make recording and managing your clients' profiles more than efficient. Keep your client information up-to-date with easy maintenance."
             />
             <LottieMediaCard
