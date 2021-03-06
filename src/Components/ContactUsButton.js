@@ -44,7 +44,7 @@ const StyledContactUsButton = styled(Button)`
   }
 `
 
-export default function ContactUsButton({label}) {
+export const ContactUsButton = ({label}) => {
   return (
     <StyledContactUsButton
       href="/contactus"

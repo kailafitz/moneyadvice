@@ -123,6 +123,12 @@ const FeaturesPageInfo = styled.div `
                     border-radius: 4px;
                     -webkit-box-shadow: 0 5px 18px -2px #bebebe;
                     box-shadow: 0 5px 18px -2px #bebebe;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -274,7 +280,7 @@ const FeaturesPageMenu = styled.div `
     }
 `
 
-export default function AdditionalServicesComponent() {
+export const AdditionalServicesComponent = () => {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [data, setData] = useState([]);

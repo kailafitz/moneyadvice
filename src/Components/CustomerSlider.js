@@ -24,40 +24,23 @@ import cmlfinancial from "../Images/Customer-Logos/cmlfinancial.jpg"
 
 // styled-components
 const StyledSlider = styled(Slider) `
-    margin: 0 auto;
-    width: 70%;
-
-    #f-CustomerLogo {
-        border-radius: 4px;
-    }
 
     @media only screen and ${breakpoint.device.xs} {
-        padding: 1em 0;
-
-        div {
-            .carousel-item {
-                width: 100px;
-            }     
-
-            #f-CustomerLogo {
-                width: 90%;
-            }
+        padding: 4em 0;
+        
+        .f-CustomerLogo {
+            width: 100%;
         }
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        padding: 4em 0;
-
-        div {
-
-            #f-CustomerLogo {
-                width: 70%;
-            }
-        }
+        
     }
 
     @media only screen and ${breakpoint.device.lg} {
-        padding: 6em 0;
+        .f-CustomerLogo {
+            max-width: 60%;
+        }
     }
 `
 const StyledContainer = styled.div `
@@ -68,23 +51,26 @@ const StyledContainer = styled.div `
 
 const CustomerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim, cmlfinancial];
 
-export default function CustomerSlider() {
+export const CustomerSlider = () => {
+
     return (
         <StyledContainer>
             <SectionTitle title="Our Customers"/>
             <StyledSlider
                 autoplay={true}
-                autoplaySpeed="800"
+                autoplaySpeed={800}
                 arrows={false}
                 arrowsBlock={false}
                 slidesToShow={5}
+                adaptiveHeight={true}
                 pauseOnHover={false}
+                overScan={2}
             >
                 {
                     CustomerLogos.map((logo) => {
                         return (
                             <div>
-                                <img alt="Customers" src={logo} id="f-CustomerLogo"/>
+                                <img alt="Customers" src={logo} className="f-CustomerLogo"/>
                             </div>
                         );
                     })

@@ -15,7 +15,7 @@ import Container from '@material-ui/core/Container';
 // Component imports
 import Employees from '../Components/Employees';
 import Footer from '../Components/Footer';
-import ContactUsButton from '../Components/ContactUsButton';
+import {ContactUsButton} from '../Components/ContactUsButton';
 import ProductOverview from '../Components/ProductOverview';
 import SectionTitle from '../Components/SectionTitle';
 import ScrollTopButton from '../Components/ScrollTopButton';

@@ -23,7 +23,7 @@ import Container from '@material-ui/core/Container';
 
 // Component imports
 import SectionTitle from './SectionTitle';
-import BlockBulletPoint from './BlockBulletPoint';
+import {BlockBulletPoint} from './BlockBulletPoint';
 
 // styled-components
 const Styledh4 = styled.h4 `

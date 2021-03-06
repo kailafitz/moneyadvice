@@ -12,13 +12,13 @@ import fonts from '../fonts';
 // MaterialUI
 import LottieMediaCard from "../Components/LottieMediaCard";
 import Footer from "../Components/Footer";
-import ContactUsButton from "../Components/ContactUsButton";
+import {ContactUsButton} from "../Components/ContactUsButton";
 import LottieAnimation from "../Components/LottieAnimation";
 import ContactUs from "../Lottie/ContactUs.json";
 import Testimonial from "../Components/Testimonial";
 
 // Component imports
-import CustomerSlider from "../Components/CustomerSlider";
+import {CustomerSlider} from "../Components/CustomerSlider";
 import Partners from "../Components/Partners";
 import ScrollTopButton from "../Components/ScrollTopButton";
 import SectionTitle from "../Components/SectionTitle";
