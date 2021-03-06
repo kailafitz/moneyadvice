@@ -153,7 +153,8 @@ const HeaderContainer = styled.div `
 `
 const CardContainer = styled.div `
     width: 100%;
-    padding: 2em 0;    
+    padding: 2em 0; 
+    margin: 2em 0;   
     background-image: linear-gradient(45deg, ${colors.logo_blue}, ${colors.logo_green});
 
     @media only screen and ${breakpoint.device.xs} {
@@ -173,9 +174,9 @@ const ContactUsButtonContainer = styled.div `
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 2em;
     
     @media only screen and ${breakpoint.device.xs} {
-        padding: 2em;
         text-align: center;
 
         #f-LottieDiv {
@@ -185,7 +186,6 @@ const ContactUsButtonContainer = styled.div `
     }
 
     @media only screen and ${breakpoint.device.sm} {
-        padding: 2em;
         display: flex;
         justify-content: center;
         align-items: center;

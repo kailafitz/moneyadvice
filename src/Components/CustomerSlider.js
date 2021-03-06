@@ -26,7 +26,7 @@ import cmlfinancial from "../Images/Customer-Logos/cmlfinancial.jpg"
 const StyledSlider = styled(Slider) `
 
     @media only screen and ${breakpoint.device.xs} {
-        padding: 4em 0;
+        padding: 1em 0;
         
         .f-CustomerLogo {
             width: 100%;

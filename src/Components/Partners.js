@@ -21,7 +21,7 @@ import Conexim from "../Images/Partner-Logos/Conexim.png";
 // styled-components
 const StyledContainer = styled.div `
     display: block;
-    padding: 4em 0;
+    padding: 2em 0;
     margin: 0 auto;
 
     #f-PartnerLogosContainer-Logos {

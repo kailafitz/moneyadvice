@@ -45,8 +45,11 @@ const MobileNavLink = styled(NavLink) `
   font-family: ${fonts.roboto};
   color: ${colors.wh};
   text-decoration: none;
+  transition: background-color .3s ease-in, color .3s ease-in;
 
   &:hover {
+    background-color: ${colors.wh};
+    color: ${colors.logo_blue};
     cursor: pointer;
   }
 `
@@ -59,8 +62,11 @@ const MobileLinkp = styled.p `
   font-family: ${fonts.roboto};
   color: ${colors.wh};
   text-decoration: none;
+  transition: background-color .3s ease-in, color .3s ease-in;
 
   &:hover {
+    background-color: ${colors.wh};
+    color: ${colors.logo_blue};
     cursor: pointer;
   }
 `
@@ -70,8 +76,11 @@ const MobileMenu = styled(Menu) `
     width: 100%;
   }
 `
-const MobileDropdownItem = styled(MenuItem) `
+const MobileDropdownItem = styled(MenuItem) `  
+  transition: background-color .3s ease-in, color .3s ease-in;
+
   a {
+    padding: .5em;
     font-size: 1rem;
     font-family: ${fonts.roboto};
     color: ${colors.logo_blue};
@@ -81,11 +90,11 @@ const MobileDropdownItem = styled(MenuItem) `
   }
 
   &:hover {
-    background: ${colors.logo_blue};
+    background: ${colors.logo_green};
   }
 
   &:hover a {
-    color: ${colors.wh};
+    color: ${colors.logo_blue};
   }
 `
 const StyledAppBar = styled(AppBar) `
@@ -230,10 +239,11 @@ export const NavigationBar = () => {
                 id="f-NavbarLogo"
                 href="/"
               >
-              <img
-                alt="Logo"
-                src={Logo}
-              /></a>
+                <img
+                  alt="Logo"
+                  src={Logo}
+                />
+              </a>
               {!isMobile && <NavbarLinks />}
               {isMobile &&  
                 <IconButton
