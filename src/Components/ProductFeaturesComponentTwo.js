@@ -96,7 +96,8 @@ const StyledButton = styled(Button) `
     }
 
     @media only screen and ${breakpoint.device.xs} {
-        width: 100%;
+        width: 90%;
+        margin: .8em auto;
     }
 
     @media only screen and ${breakpoint.device.sm} {
