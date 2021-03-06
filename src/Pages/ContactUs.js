@@ -42,11 +42,11 @@ const Styledh4 = styled.h4 `
         font-size: 1.3em;
     }
 
-    @media only screen and ${breakpoint.device.xs} {
+    @media only screen and ${breakpoint.device.sm} {
         font-size: 1.25em;
     }
 
-    @media only screen and ${breakpoint.device.xs} {
+    @media only screen and ${breakpoint.device.lg} {
         font-size: 1.2em;
     }
 `
