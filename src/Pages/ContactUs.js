@@ -23,6 +23,7 @@ import {SectionTitle} from '../Components/SectionTitle';
 import {ScrollTopButton} from '../Components/ScrollTopButton';
 
 // Media imports
+// Photo by PhotoMIX Company from Pexels
 import BackgroundImage from '../Images/ContactBg-Header.jpg'
 
 // styled-components

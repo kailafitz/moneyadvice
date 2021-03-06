@@ -106,7 +106,7 @@ const columns = [
 
   { field: 'featureName', headerName: 'Name', flex: 2, headerClassName: 'table-header'},
   { field: 'featureOfMoney', headerName: 'MoneyAdvice', flex: 1, headerClassName: 'table-header'},
-  { field: 'featureOfMoneyCRM', headerName: 'MoneAdvice+CRM', flex: 1, headerClassName: 'table-header'},
+  { field: 'featureOfMoneyCRM', headerName: 'MoneAdviceCRM', flex: 1, headerClassName: 'table-header'},
 ];
 
 export const ProductComparisonTables = () => {

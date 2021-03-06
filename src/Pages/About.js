@@ -22,6 +22,7 @@ import {ScrollTopButton} from '../Components/ScrollTopButton';
 
 // Media imports
 import Philip from '../Images/Philip.png';
+// Photo by Pixabay from Pexels
 import BackgroundImage from '../Images/AboutBg-Header.jpg';
 
 

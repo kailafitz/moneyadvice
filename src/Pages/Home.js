@@ -23,9 +23,11 @@ import {Testimonial} from "../Components/Testimonial";
 // Media imports
 import IndexGraphic from '../Images/IndexGraphic3.png';
 // Lottie animations (JSON files)
+// Credit to Sherry Sun from LottieFiles for animations as seen here --> https://lottiefiles.com/user67357
 import Calendar from "../Lottie/Calendar.json";
 import Chart from "../Lottie/Chart.json";
 import MachineCog from "../Lottie/MachineCog.json";
+// Credit to Artem Peretrukhin from LottieFiles for animations as seen here --> https://lottiefiles.com/othila
 import ContactUs from "../Lottie/ContactUs.json";
 
 // styled-components
@@ -89,7 +91,6 @@ const HeaderContainer = styled.div `
     @media only screen and ${breakpoint.device.xs} {
         height: 100%;
         display: block;
-        padding-bottom: 3em;
 
         #f-BigLogo {
             margin: 0 auto;
@@ -99,7 +100,7 @@ const HeaderContainer = styled.div `
             text-align: center;
 
             img {
-                width: 75%;
+                width: 95%;
             }
         }
 
@@ -181,7 +182,7 @@ const ContactUsButtonContainer = styled.div `
 
         #f-LottieDiv {
             width: 80%;
-            margin: 2em auto;
+            margin: 0 auto;
         }
     }
 

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Package imports
+import { motion } from "framer-motion";
+
 // styled-components imports
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
@@ -43,12 +46,25 @@ const StyledContactUsButton = styled(Button)`
     font-size: 1.2em;
   }
 `
+// framer motion
+const myVariants = {
+  visible: {
+    scale: [ 1.1, 0.9 ],
+    transition: {
+      yoyo: Infinity,
+      duration: 1
+    }
+  }
+}
 
 export const ContactUsButton = ({label}) => {
   return (
     <StyledContactUsButton
       href="/contactus"
       disableRipple={true}
+      component={motion.button}
+      variants={myVariants}
+      animate="visible"
     >
       {label}
     </StyledContactUsButton>

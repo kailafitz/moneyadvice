@@ -81,7 +81,7 @@ const MobileDropdownItem = styled(MenuItem) `
 
   a {
     padding: .5em;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: ${fonts.roboto};
     color: ${colors.logo_blue};
     text-decoration: none;
@@ -94,7 +94,7 @@ const MobileDropdownItem = styled(MenuItem) `
   }
 
   &:hover a {
-    color: ${colors.logo_blue};
+    color: ${colors.grey_dark};
   }
 `
 const StyledAppBar = styled(AppBar) `
