@@ -4,8 +4,8 @@ import React from 'react';
 import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 
-// Componenr imports
-import SectionTitle from "../Components/SectionTitle";
+// Component imports
+import {SectionTitle} from "../Components/SectionTitle";
 
 // Media imports
 import Aviva from "../Images/Partner-Logos/Aviva.png";
@@ -71,7 +71,7 @@ const StyledContainer = styled.div `
     }
 `
 
-export default function Partners() {
+export const Partners = () => {
     const PartnerLogos = [Aviva, BCP, Haven, IrishLife, NewIreland, RoyalLondon, StandardLife, Zurich, Conexim];
 
     return (

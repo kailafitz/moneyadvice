@@ -176,7 +176,7 @@ const FooterDiv = styled.footer `
     }
 `
 
-export default function Footer() {
+export const Footer = () => {
     return (
         <FooterDiv>
             <div id="f-FooterWrapper">

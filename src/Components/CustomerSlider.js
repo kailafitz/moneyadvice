@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 
 // Component imports
-import SectionTitle from "./SectionTitle";
+import {SectionTitle} from "./SectionTitle";
 
 // Media imports
 import Aviva from "../Images/Customer-Logos/AcumenTrust.jpg"

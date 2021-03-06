@@ -12,7 +12,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 
 // Component imports
-import DataCaptureLogin from "./DataCaptureLogin";
+import {DataCaptureLogin} from "./DataCaptureLogin";
 
 // styled-components
 const Styledh3 = styled.h3 `
@@ -160,7 +160,7 @@ const StyledDialog = styled(Dialog) `
   }
 `
 
-export default function LoginModal() {
+export const LoginModal = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {

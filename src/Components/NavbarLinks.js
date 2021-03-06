@@ -17,7 +17,7 @@ import colors from '../colors';
 import Popover from 'material-ui-popup-state/HoverPopover'
 
 // Component imports
-import LoginModal from './LoginModal';
+import {LoginModal} from './LoginModal';
 
 // styled-components
 const LinksDiv = styled.div `
@@ -73,7 +73,7 @@ const PopoverDiv = styled(Popover) `
 
 `
 
-export default function NavbarLinks() {
+export const NavbarLinks = () => {
     const popupState = usePopupState({
         variant: 'popover',
         popupId: 'demoPopover',

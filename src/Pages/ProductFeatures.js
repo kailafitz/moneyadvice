@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Component imports
-import Footer from '../Components/Footer';
-import ProductFeaturesComponentTwo from '../Components/ProductFeaturesComponentTwo'
-import ScrollTopButton from '../Components/ScrollTopButton';
+import {Footer} from '../Components/Footer';
+import {ProductFeaturesComponentTwo} from '../Components/ProductFeaturesComponentTwo'
+import {ScrollTopButton} from '../Components/ScrollTopButton';
 
-export default function ProductFeatures() {
+export const ProductFeatures = () => {
     return (
         <> 
             <ProductFeaturesComponentTwo />

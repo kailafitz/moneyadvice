@@ -4,10 +4,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Component imports
-import Footer from '../Components/Footer';
-import SectionTitle from '../Components/SectionTitle';
-import DownloadMediaCard from '../Components/DownloadMediaCard';
-import ScrollTopButton from '../Components/ScrollTopButton';
+import {Footer} from '../Components/Footer';
+import {SectionTitle} from '../Components/SectionTitle';
+import {DownloadMediaCard} from '../Components/DownloadMediaCard';
+import {ScrollTopButton} from '../Components/ScrollTopButton';
 
 // styled-components
 const DownloadsDiv = styled.div `
@@ -18,7 +18,7 @@ const DownloadsDiv = styled.div `
     padding: 2em .5em;
 `
 
-export default function Downloads() {
+export const Downloads = () => {
     <>
         <SectionTitle title="Downloads" />
         <DownloadsDiv>

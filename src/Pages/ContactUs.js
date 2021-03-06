@@ -18,9 +18,9 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 
 // Component imports
-import Footer from '../Components/Footer';
-import SectionTitle from '../Components/SectionTitle';
-import ScrollTopButton from '../Components/ScrollTopButton';
+import {Footer} from '../Components/Footer';
+import {SectionTitle} from '../Components/SectionTitle';
+import {ScrollTopButton} from '../Components/ScrollTopButton';
 
 // Media imports
 import BackgroundImage from '../Images/ContactBg-Header.jpg'
@@ -307,7 +307,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ContactUs() {
+export const ContactUs = () => {
     init("user_nbna29mf7GTYIJguCdCEE");
     const classes = useStyles();
 

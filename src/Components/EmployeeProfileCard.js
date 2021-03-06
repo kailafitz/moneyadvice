@@ -83,7 +83,7 @@ const StyledCard = styled.div `
   }
 `
 
-export default function EmployeeProfileCard({img, empName, role}) {
+export const EmployeeProfileCard = ({img, empName, role}) => {
   return (
     <StyledCard>
         <StyledAvatar

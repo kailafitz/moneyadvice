@@ -4,17 +4,17 @@ import React from 'react'
 import styled from 'styled-components';
 
 // Component imports
-import Footer from '../Components/Footer';
-import PrivacyPolicyComponent from '../Components/PrivacyPolicyComponent';
-import ScrollTopButton from '../Components/ScrollTopButton';
-import SectionTitle from '../Components/SectionTitle';
+import {Footer} from '../Components/Footer';
+import {PrivacyPolicyComponent} from '../Components/PrivacyPolicyComponent';
+import {ScrollTopButton} from '../Components/ScrollTopButton';
+import {SectionTitle} from '../Components/SectionTitle';
 
 // styled-components
 const PrivacyPolicyDiv = styled.div `
     padding: 2em .5em;
 `
 
-export default function PrivacyPolicy() {
+export const PrivacyPolicy = () => {
     return (
         <>
             <PrivacyPolicyDiv>

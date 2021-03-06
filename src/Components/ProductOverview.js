@@ -22,7 +22,7 @@ import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 
 // Component imports
-import SectionTitle from './SectionTitle';
+import {SectionTitle} from './SectionTitle';
 import {BlockBulletPoint} from './BlockBulletPoint';
 
 // styled-components
@@ -196,7 +196,7 @@ const myVariants = {
     }
 }
 
-export default function ProductOverview() {
+export const ProductOverview = () => {
     const [data, setData] = useState([]);
 
     const createFunction = () => {

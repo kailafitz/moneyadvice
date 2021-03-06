@@ -14,7 +14,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 
 // Component imports
-import LottieAnimation from './LottieAnimation';
+import {LottieAnimation} from './LottieAnimation';
 
 // styled-components
 const Styledh3 = styled.h3 `
@@ -117,7 +117,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function LottieMediaCard(props) {
+export const LottieMediaCard = (props) => {
   const classes = useStyles();
 
   return (

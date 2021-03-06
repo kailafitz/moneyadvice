@@ -29,8 +29,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 // Component imports
-import NavbarLinks from './NavbarLinks';
-import LoginModal from './LoginModal';
+import {NavbarLinks} from './NavbarLinks';
+import {LoginModal} from './LoginModal';
 
 // Media imports
 import Logo from '../Images/Company-Logos/Logo-Sm.png';
@@ -202,7 +202,7 @@ const myVariants = {
 
 const drawerWidth = "100%";
 
-export default function NavigationBar() {
+export const NavigationBar = () => {
   const classes = useStyles();
   const isMobile = useMediaQuery({ maxWidth: breakpoint.size.sm });
   const [isOpen, setOpen] = useState(false);

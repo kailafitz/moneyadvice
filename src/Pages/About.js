@@ -13,12 +13,12 @@ import breakpoint from '../breakpoints';
 import Container from '@material-ui/core/Container';
 
 // Component imports
-import Employees from '../Components/Employees';
-import Footer from '../Components/Footer';
+import {Employees} from '../Components/Employees';
+import {Footer} from '../Components/Footer';
 import {ContactUsButton} from '../Components/ContactUsButton';
-import ProductOverview from '../Components/ProductOverview';
-import SectionTitle from '../Components/SectionTitle';
-import ScrollTopButton from '../Components/ScrollTopButton';
+import {ProductOverview} from '../Components/ProductOverview';
+import {SectionTitle} from '../Components/SectionTitle';
+import {ScrollTopButton} from '../Components/ScrollTopButton';
 
 // Media imports
 import Philip from '../Images/Philip.png';
@@ -190,8 +190,11 @@ const StyledTeamDiv = styled.div `
   @media only screen and ${breakpoint.device.xs} {
 
     #f-CEOIntro {
-      display: block;
+      display: flex;
+      justify-content: stretch;
+      align-items: flex-start;
       padding: 2em 1em;
+      flex-flow: column-reverse;
   
       #f-CEOIntroText {
         border-radius: 4px;
@@ -211,21 +214,14 @@ const StyledTeamDiv = styled.div `
   @media only screen and ${breakpoint.device.sm} {
 
     #f-CEOIntro {
-      display: flex;
-      justify-content: stretch;
-      align-items: flex-start;
-      position: relative;
-      padding: 2em 1em;
+      flex-flow: initial;
   
       #f-CEOIntroText {
         padding: 1em;
-        border-radius: 4px;
       }
   
       #f-ChairpersonAvatar {
         width: 25%;
-        height: auto;
-        border-radius: 85px;
       }
     }
     
@@ -249,7 +245,7 @@ const myVariants = {
   }
 }
 
-export default function About() {
+export const About = () => {
   return (
     <>
       <AboutHeader>

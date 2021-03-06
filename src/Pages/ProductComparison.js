@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import breakpoint from '../breakpoints';
 
 // Component imports
-import ProductComparisonTables from '../Components/ProductComparisonTables';
-import SectionTitle from '../Components/SectionTitle';
-import Footer from '../Components/Footer';
-import ScrollTopButton from '../Components/ScrollTopButton';
+import {ProductComparisonTables} from '../Components/ProductComparisonTables';
+import {SectionTitle} from '../Components/SectionTitle';
+import {Footer} from '../Components/Footer';
+import {ScrollTopButton} from '../Components/ScrollTopButton';
 
 // styled-components
 const PageContainer = styled.div `
@@ -28,7 +28,7 @@ const PageContainer = styled.div `
     }
 `
 
-export default function ProductComparison() {
+export const ProductComparison = () => {
     return (
         <>
             <PageContainer>

@@ -9,19 +9,16 @@ import breakpoint from '../breakpoints';
 import colors from '../colors';
 import fonts from '../fonts';
 
-// MaterialUI
-import LottieMediaCard from "../Components/LottieMediaCard";
-import Footer from "../Components/Footer";
-import {ContactUsButton} from "../Components/ContactUsButton";
-import LottieAnimation from "../Components/LottieAnimation";
-import ContactUs from "../Lottie/ContactUs.json";
-import Testimonial from "../Components/Testimonial";
-
 // Component imports
 import {CustomerSlider} from "../Components/CustomerSlider";
-import Partners from "../Components/Partners";
-import ScrollTopButton from "../Components/ScrollTopButton";
-import SectionTitle from "../Components/SectionTitle";
+import {Partners} from "../Components/Partners";
+import {ScrollTopButton} from "../Components/ScrollTopButton";
+import {SectionTitle} from "../Components/SectionTitle";
+import {LottieMediaCard} from "../Components/LottieMediaCard";
+import {Footer} from "../Components/Footer";
+import {ContactUsButton} from "../Components/ContactUsButton";
+import {LottieAnimation} from "../Components/LottieAnimation";
+import {Testimonial} from "../Components/Testimonial";
 
 // Media imports
 import IndexGraphic from '../Images/IndexGraphic3.png';
@@ -29,6 +26,7 @@ import IndexGraphic from '../Images/IndexGraphic3.png';
 import Calendar from "../Lottie/Calendar.json";
 import Chart from "../Lottie/Chart.json";
 import MachineCog from "../Lottie/MachineCog.json";
+import ContactUs from "../Lottie/ContactUs.json";
 
 // styled-components
 const Styledh1 = styled.h1 `
@@ -220,7 +218,7 @@ const HeaderVariants = {
     }
 }
 
-export default function Home() {
+export const Home = () => {
     return (
     <>
         <HeaderContainer

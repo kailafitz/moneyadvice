@@ -13,7 +13,7 @@ const StyledLottie = styled(Lottie) `
   margin: 0 1em;
 `
 
-export default function LottieAnimation({animationData}) {
+export const LottieAnimation = ({animationData}) => {
 
   const defaultOptions = {
     loop: true,

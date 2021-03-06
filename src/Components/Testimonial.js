@@ -18,7 +18,7 @@ import colors from '../colors';
 import Avatar from "@material-ui/core/Avatar";
 
 // Component imports
-import SectionTitle from "./SectionTitle";
+import {SectionTitle} from "./SectionTitle";
 
 // styled-components
 const TestimonialBackground = styled.div `
@@ -154,7 +154,7 @@ const StyledContainer = styled.div `
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
-export default function Testimonial() {
+export const Testimonial = () => {
   const [validData, setValidData] = useState(false);
   const [slides, setSlides] = useState([]);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

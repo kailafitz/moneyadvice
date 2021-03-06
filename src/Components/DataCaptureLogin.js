@@ -143,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DataCaptureLogin() {
+export const DataCaptureLogin = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
